@@ -1,0 +1,600 @@
+# README File For Kepler Mission Data at MAST
+--------------------------------------------------------------------------------
+
+## Directory Contents
+--------------------------------------------------------------------------------
+abstracts/				| Guest Observer Abstracts Directory.
+   go<#>				|    Guest observer subdirectory (1-4).
+      *.pdf				|       PDF version of the abstract.
+      *.txt				|	Text version of the abstract.
+   psp<#>				|    Participating Scientist Program subdirectory.
+      *.pdf				|       PDF version of the abstract.
+      *.txt				|	Text version of the abstract.
+
+anc-eng/				| Ancillary Engineering Files Directory.
+   anc-history/			  	|    Ancillary processing history subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|	calendar year ranging from 2009/ to 2013/.
+         *_anc-history.fits.gz	     	|          Processing history file, archive users
+      					|          can ignore these.
+   lcs-anc-eng/				|    Long-cadence ancillary engineering files subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2013/.
+         kplr*_anc-eng.fits.gz		|          Long-cadence ancillary engineering data files.
+   lcs-bkg/				|    Long-cadence background data subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2012/.
+      	 kplr*_lcs-bkg.fits.gz		|    	   Long-cadence background pixel files.
+   lcs-col/				|    Long-cadence collateral data subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2012/.
+      	 kplr*_lcs-col.fits.gz		|    	   Long-cadence collateral files.
+   lcs-crcc/				|    Collateral cosmic ray correction table subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_lcs-crcc.fits.gz		|    	   Long-cadence collateral cosmic ray correction
+	 				| 	   tables.
+   lcs-crct/				|    Cosmic ray correction table subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_lcs-crct.fits.gz		|    	   Long-cadence cosmic ray correction tables.
+   lcs-history/				|     Long-cadence processing history subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2012/.
+      	 kplr*_lcs-history.fits.gz	|    	   Long-cadence processing history files, archive
+	 				|	   users can ignore these.
+   lcs-targ/				|    Long-cadence target data subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2012/.
+      	 kplr*_lcs-targ.fits.gz		|    	   Long-cadence target data files.
+   parameter-bundled/			|    Ancillary engineering data bundled by parameter.
+   				     	|    The prefix for each file starts with "kplr_anc-eng_".
+					|    Each file has both a FITS and csv.gz format available.
+      *AttitudeErrors.*			|       Attitude error.
+      *BoardTemperatures.*		|       Temperatures on boards.
+      *MountTemperature.*		|       Temperatures on mounts.
+      *OpticsTemperatures1of2.*		|       Temperatures of the optics; subset 1.
+      *OpticsTemperatures2of2.*		|       Temperatures of the optics; subset 2.
+      *ReactionWheelSpeeds.*		|       Reaction wheel speeds.
+      *TelescopeTemperatures1of2.*	|       Temperatures on parts of the telescope; subset 1.
+      *TelescopeTemperatures2of2.*	|       Temperatures on parts of the telescope; subset 2.
+      *TH1RW3T.*			|       Reaction wheel #3 housing temperatures.
+      *TH1RW4T.*			|       Reaction wheel #4 housing temperatures.
+      *TH2LVAT.*			|       Spacecraft launch vehicle assembly temperatures.
+      *TH2PMAT.*			|       Spacecraft primary mirror assembly temperatures.
+   scs-anc-eng/				|    Ancillary engineering files subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+         kplr*_anc-eng.fits.gz		|          Short-cadence ancillary engineering data files.
+   scs-col/				|    Short-cadence collateral data subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_scs-col.fits.gz		|    	   Short-cadence collateral files.
+   scs-crcc/				|    Collateral cosmic ray correction table subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_scs-crcc.fits.gz		|    	   Short-cadence collateral cosmic ray correction
+	 				| 	   tables.
+   scs-crct/				|    Short-cadence cosmic ray correction table subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_scs-crct.fits.gz		|    	   Short-cadence cosmic ray correction tables.
+   scs-set-history/			|     Short-cadence processing history subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_scs-set-history.fits.gz	|    	   Short-cadence processing history files, archive
+	 				|	   users can ignore these.
+   scs-targ/				|    Short-cadence target data subdirectory.
+      <year>/				|       The files are sorted into subdirectories by
+      					|       calendar year ranging from 2009/ to 2010/.
+      	 kplr*_scs-targ.fits.gz		|    	   Short-cadence target data files.
+      					|
+					|
+arp/					| Artifact Removal Pixel Data Directory.
+   <year>/				|    The files are sorted into subdirectories by
+      					|    calendar year ranging from 2009/ to 2013/.
+      kplr*_arp.fits.gz			|       Artifact removal pixel files.
+   					|
+					|
+bkg/					| Background Data Directory.
+   <year>/				|    The files are sorted into subdirectories by
+      					|    calendar year ranging from 2009/ to 2013/.
+      kplr*_bkg.fits.gz			|       Background pixel files.
+   					|
+					|
+catalogs/				| Kepler Catalog Directory. NOTE: all catalog files under
+					| this directory end in ".csv.gz" unless otherwise noted.
+   CATALOGS-README.txt			|    Description of catalogs present in this directory.
+   column-descriptions/			|    Catalog column description subdirectory.
+      kepler_kic_v10_*.csv		|       Column names, units, and descriptions for the KIC.
+   kepler_kic_v10			|    Version 10 of the Kepler Input Catalog.
+   kepler_ktc_kic_science_v		|    A combination of the Kepler Target catalog with the
+   					|    KIC, Kepler SCIENCE table, and other parameters added
+					|    by MAST. This was used to power the Kepler Data Search
+					|    Web Form at MAST. It only includes targets that got at
+					|    least one target pixel or light curve file created.
+   kepler_object_search_with_colors	|    A combination of the KIC and other catalogs combined by
+   					|    MAST. This was used to power the Kepler Target Search
+					|    Web Form at MAST. It included all targets within the
+					|    field-of-view, not just those that got light curve or
+					|    target pixel files produced.
+   kepler_stellar_17.csv.gz		|    A table containing the stellar parameters of Kepler
+   					|    targets as determined by the Stellar Parameter Working
+					|    Group. This was used to power the Kepler Stellar17 Web
+					|    Form. The stellar parameters come from a wide variety
+					|    of sources, but were the best estimates of a given
+					|    star's parameters at the time of the DR25 final planet
+					|    search release.
+					|
+					|
+cbv/					| Cotrending Basis Vector Directory.
+   kplr*-q##-d##_lcbv.fits		|    CBV file for a given Quarter and data release number.
+   					|    NOTE: Quarter and data release numbers are two-digit
+					|    zero-padded, e.g., "07".
+					|
+					|
+cll/					| Long-cadence Collateral Directory.
+   <year>/				|    The files are sorted into subdirectories by
+      					|    calendar year ranging from 2009/ to 2013/.
+      kplr*_coll.fits.gz		|       Long-cadence collateral data files.
+					|
+					|
+cls/					| Short-cadence Collateral Directory.
+   <year>/				|    The files are sorted into subdirectories by
+      					|    calendar year ranging from 2009/ to 2013/.
+      kplr_cols.fits.gz			|       Short-cadence collateral data files.
+					|
+					|
+commissioning_prfs/			| Commissioning Pixel Mapping Reference Files Directory.
+   <ch>/				|    Channel subdirectories as two-digit zero-padded
+   					|    numbers, e.g., "07/".
+      kplr*_lpd-targ.fits		|       Pixel mapping reference file.
+   PMRF-README.txt			|    Information on the PMRF in this directory.
+   tar_files/				|    Bundles of pixel mapping reference files subdirectory.
+      prf_<ch>.tar.gz			|       Bundle of PMRF for a given channel. NOTE: the
+      					|	channel is given as a two-digit, zero-padded number
+					|	e.g., "07".
+					|
+					|
+datadelivery_cache/			| Cache For Use In MAST Portal Previewer Directory.
+   kplr*_sc_*.cache			|    JSON file containing the light curve times and fluxes
+   					|    for a given short-cadence target. Used by the MAST
+					|    Portal previewer, archive users can ignore these.
+					|
+					|
+detection_metrics/			| Detection Metrics Directory.
+   kplr*_dr25_onesigdepth.fits		|    One-sigma depth function file.
+   kplr*_dr25_window.fits		|    Window function file.
+   PDM.log				|    Processing log, this file can be ignored by archive
+   					|    users.
+					|
+					|
+doc/					| Documentation Directory.
+   archvie_manual.pdf			|    Official, mission Kepler Archive Manual. The MAST
+   					|    Kepler Archive Manual in this directory supersedes
+					|    this document and is strongly preferred.
+   Data_Characteristics.pdf		|    Same as KSCI-19040-005.pdf in this directory.
+   drn/					|    Data release notes subdirectory.
+      release_notes<##>/		|       Specific data release note subdirectory, the data
+      					|	release number is two-digit and zero-padded, e.g.,
+					|	"07".
+         DataRelease_*.pdf		|	   Data release notes.
+	 DataReleaseNotes*Full.tar	|	   Full set of supplemental files (only DRN 2-17).
+	 DataReleaseNotes*Short.tar	|	   Small set of supplemental files (only DRN 2-17).
+   DVTimeSeries-Description.pdf		|    Description of the data validation timeseries files.
+   KSCI-19033-002.pdf			|    Kepler Instrument Handbook.
+   KSCI-19040-005.pdf			|    Data Characteristics document.
+   KSCI-19065-002DRN25.pdf		|    Same as drn/release_notes25/KSCI-19065-002DRN25.pdf.
+   KSCI-19080-002.pdf			|    Global erratum for short cadence collateral smear data.
+   					|    This impacted Kepler DR 1-14 and K2 DR 1-7.
+   KSCI-19081-002-KDPH.pdf		|    Kepler Data Processing Handbook, version 2.
+   KSCI-19081-003-KDPH.pdf		|    Kepler Data Processing Handbook, version 3.
+   KSCI-19086-004.pdf			|    Planet Detection Metrics: Statistical Bootstrap Test.
+   KSCI-19093-003.pdf			|    Kepler Certified False Positive Table document.
+   KSCI-19097-004.pdf			|    Kepler Stellar Properties Catalg Update Q1-Q17 DR25.
+   KSCI-19101-002.pdf			|    Planet Detection Metrics: Window and One-Sigma Depths.
+   KSCI-19105-002.pdf			|    Description of TCERT Vetting Reports for DR25.
+   KSCI-19108-001.pdf			|    Planet Reliability Metrics: Positional Probabilities.
+   KSCI-19109-002.pdf			|    Planet Detection Metrics: Per-Target Flux-Level Transit
+   					|    Injection Tests.
+   KSCI-19110-001.pdf			|    Planet Detection Metrics: Pixel-Level Transit
+   					|    Injection Tests.
+   KSCI-19111-002.pdf			|    Planet Detection Metrics: Per-Target Detection
+   					|    Contours.
+   KSCI-19112-001.pdf			|    Fine Guidance Sensor Data document.
+   KSCI-19113-001.pdf			|    Uniform Modeling of KOIs: MCMC Notes.
+   KSCI-19114-002.pdf			|    Planet Detection Metrics: Robovetter Completeness for
+   					|    DR25.
+   KSCI-19115-001.pdf			|    Planet Detection Metrics: Automatic Detection of
+   					|    Background Objects Using the Centroid Robovetter.
+   MAST_Kepler_Archive_Manual_2020.pdff	|    The MAST version of the Kepler Archive Manual. This is
+   					|    preferred over the archive_manual.pdf file in this
+					|    directory.
+   release_notes/			|    The same as the drn/ subdirectory here.
+   					|
+					|
+download_scripts/			| Bulk Download Script Directory. NOTE: Files end in ".sh".
+   anc-eng/				|    Ancillary engineering subdirectory.
+      kepler_aed_parameter_bundled_csv	|       Bulk script of parameter-bundled AED csv files.
+      kepler_aed_parameter_bundled_fits	|       Bulk script of parameter-bundled AED FITS files.
+      kepler_anc-history_<yyyy>		|	Bulk script of anc-history files for a given year,
+      					|	ranging from 2009-2013.
+      kepler_lcs-anc-eng_<yyyy>		|	Bulk script of long-cadence ancillary engineering
+      					| 	files for a given year, ranging from 2009-2013.
+      kepler_lcs-bkg_<yyyy>		|	Bulk script of background files for a
+      					|	given year, ranging from 2009-2012.
+      kepler_lcs-col_<yyyy>		|	Bulk script of long-cadence collateral files for a
+      					|	given year, ranging from 2009-2012.
+      kepler_lcs-crcc_<yyyy>		|	Bulk script of long-cadence collateral cosmic ray
+      					| 	correction tables for a given year, ranging from
+					| 	2009-2010.
+      kepler_lcs-crct_<yyyy>		|	Bulk script of long-cadence cosmic ray correction
+      					| 	tables for a given year, ranging from 2009-2010.
+      kepler_lcs-history_<yyyy>		|	Bulk script of long-cadence processing files for a
+      					|	given year, ranging from 2009-2012.
+      kepler_lcs-targ_<yyyy>		|	Bulk script of long-cadence target pixel files for a
+      					|	given year, ranging from 2009-2012.
+      kepler_scs-anc-eng_<yyyy>		|	Bulk script of short-cadence ancillary engineering
+      					| 	files for a given year, ranging from 2009-2010.
+      kepler_scs-col_<yyyy>		|	Bulk script of short-cadence collateral files for a
+      					|	given year, ranging from 2009-2010.
+      kepler_scs-crcc_<yyyy>		|	Bulk script of short-cadence collateral cosmic ray
+      					| 	correction tables for a given year, ranging from
+					| 	2009-2010.
+      kepler_scs-crct_<yyyy>		|	Bulk script of short-cadence cosmic ray correction
+      					| 	tables for a given year, ranging from 2009-2010.
+      kepler_scs-set-history_<yyyy>	|	Bulk script of short-cadence processing files for a
+      					|	given year, ranging from 2009-2010.
+      kepler_scs-targ_<yyyy>		|	Bulk script of short-cadence target pixel files for
+      					| 	a given year, ranging from 2009-2010.
+   arp/					|    Artifact removal pixels subdirectory.
+      kepler_arp_<year>			|       Bulk script for artifact removal pixel files for a
+      					|	given year, ranging from 2009-2013.
+   bkg/					|    Background subdirectory.
+      kepler_bkg_<year>			|       Bulk script for background files for a given year,
+      					|	ranging from 2009-2013.
+   cll/					|    Long-cadence collateral subdirectory.
+      kepler_cll_<year>			|       Bulk script for long-cadence collateral files for a
+      					| 	given year, ranging from 2009-2013.
+   cls/					|    Short-cadence collateral subdirectory.
+      kepler_cls_<year>			|       Bulk script for short-cadence collateral files for a
+      					| 	given year, ranging from 2009-2013.
+   ffi/					|    Full frame images subdirectory.
+      kepler_ffi_cal			|       Bulk script for calibrated FFIs.
+      kepler_ffi_orig			|	Bulk script for raw FFIs.
+      kepler_ffi_uncert			|	Bulk script for uncertainty FFIs.
+   lightcurves/				|    Light curves subdirectory (final version).
+      kepler_lightcurves_Q<##>_long	|       Long cadence light curves for a given Quarter. Note
+      					|	that the Quarter part is two-digit, zero-padded,
+					|	e.g., '07'.
+      kepler_lightcurves_Q<##>_short	|       Short cadence light curves for a given Quarter. Note
+      					|	that the Quarter part is two-digit, zero-padded,
+					|	e.g., '07'.
+					|
+					|
+   rvc/					|    Reverse clock file subdirectory.
+      kepler_rvc_<year>			|       Bulk script for reverse clock files for a given
+      					|	year, ranging from 2009-2013.
+   target_pixel_files/			|    Target pixel file subdirectory (final version).
+      kepler_targetpixel_Q<##>_long	|       Long cadence target pixel files for a given Quarter.
+      					| 	Note that the Quarter part is two-digit,
+					| 	zero-padded, e.g., '07'.
+      kepler_targetpixel_Q<##>_short	|       Short cadence target pixel files for a given
+      					| 	Quarter. Note that the Quarter part is two-digit,
+					| 	zero-padded, e.g., '07'.
+					|
+					|
+dv_files/				| Data Validation Files Directory.
+   <####>/				|    Subdirectory based on the first four digits of the zero
+   					|    padded, nine-digit Kepler ID.
+      <#########>/			|       Subdirectory based on the zero-padded, nine-digit
+      					| 	Kepler ID.
+         kplr*-##_dvs.pdf		|	   Data validation summary file, one per TCE number.
+	 				|	   The TCE part is a two-digit, zero-padded number,
+					|	   e.g., "01".
+	 kplr*_dvt.fits			|	   Data validation timeseries file, one per target.
+	 kplr_dvr.pdf			|	   Data validation report, one per target.
+	 kplr_*obs_tcert.pdf		|	   TCERT vetting report, one per target.
+      DV-README.txt			|	Information about the DV files in this directory.
+      dv_xml/				|	Subdirectory containing the data validation XML.
+         kplr*_dv.xml			|	   XML file containing the tabulated data validation
+	 				|	   results for all targets with threshold crossing
+					|	   events from a single run of the planet search
+					| 	   pipeline.
+      tar_files_dr25/			|       Subdirectory containing bundles of DV files.
+         dv_<####>.tar.gz		|	   Bundle of all DV files organized based on the
+	 				|	   first four digits of the zero-padded, nine-digit
+					|	   Kepler ID.
+					|
+					|
+ffi/					| Full Frame Images Directory.
+   FFI-README.txt			|    Documentation and descriptions of the types of FFIs.
+   kplr*ffi-orig.fits			|    Raw full frame image.
+   kplr*ffi-cal.fits			|    Calibrated full frame image.
+   kplr*ffi-uncert.fits			|    Uncertainty full frame image.
+   kplr_ffi_manifest.sha256		|    Checksum file for FFIs.
+					|
+					|
+ffi_footprints/				| Full Frame Image Footprints Directory.
+   FFIFOOTPRINT-README.md		|    Information about the FFI footprints in this directory.
+   morc_2_ra_dec_4_seasons.csv		|    Estimates of the positions on sky of the corners for
+   					|    each channel+module+output for each of the seasonal
+					|    rotations as a csv file.
+   morc_2_ra_dec_4_seasons.txt		|    Estimates of the positions on sky of the corners for
+   					|    each channel+module+output for each of the seasonal
+					|    rotations as a text file.
+   FFIFOOTPRINTS-README.md		|    Documentation about the origin of these files.
+   					|
+					|
+fgs/					| Fine Guidance Sensor Directory.
+   ffi/					|    FGS full frame images subdirectory.
+      kplr-fgi-q00-*.fits		|       FGS full frame image files.
+   FGS-README.txt			|    Documentation about the origin of these files.
+   flc/					|    FGS flux and centroid data subdirectory.
+      kplr-anc-2019060091800.txt	|       Kepler ancillary FGS reference data.
+      kplr-flc-q##-xx.txt.tar.gz	|	Collection of FGS FLC data for a given Quarter.
+      					|	Note: the Campaign part if zero-padded, e.g.,
+					|	q02.
+					|
+					|
+fpc/					| Focal Plane Characterization Directory.
+   1d-black/				|    1D black subdirectory.
+      extract_one_d_black_from_blob.m	|       Matlab file to return the 1D black level and its
+      					|	uncertainty for a set of pixel rows.
+      is_scene_dependent.m		|	Matlab file to map the scene dependent CCD rows for
+      					|	each channel/season pair.
+      kplr*-dr25_blackrowmask.txt	|	Indicates rows that are potentially corrupted and
+      					|	should be excluded from the 1D black model fit if
+					|	users wish to do their own 1D black model fits.
+   1d-black-blobs/			|    1D black blobs subdirectory.
+      q<##>				|       Quarter subdirectory.  Note the Quarter part is a
+      					|	two-digit, zero-padded number, e.g., "07".
+         kplr*_1dblack.mat		|	   1D black blob file.
+   clock_state_mask_KADN-26205_20081218	|       Clock state file (note: this is a .fits.gz file).
+   dynablack/				|    Dynablack subdirectory.
+      dynablack_reader.m		|       Matlab file to read dynablack files.
+      extract_blacks_from_dynablack_blob|	Matlab file to extract blacks and uncertainties.
+      initialize_dynablack_reader.m	|	Matlab file to initialize the reader.
+      @modelClass/			|	Subdirectory containing Matlab files.
+      @modelComponentClass/		|	Subdirectory containing Matlab files.
+      @modelParametersClass		|	Subdirectory containing Matlab files.
+   dynablack-blobs/			|    Dynablack blobs subdirectory.
+      q<##>				|       Quarter subdirectory.  Note the Quarter part is a
+      					|	two-digit, zero-padded number, e.g., "07".
+         kplr*-dr25_dynablack.mat	|	   Dynablack file.
+   is_saturated_smear_column.m		|    Bad smear columns.
+   kplr2008072318_gain.txt		|    Gain.
+   kplr2008102416_read-noise.txt	|    Read noise.
+   kplr2008102809_undershoot.txt	|    Undershoot.
+   kplr2009060215_linearity.txt		|    Linearity.
+   kplr2009060418_geometry.txt		|    Focal plane geometry.
+   kplr2013040800_rolltime.txt		|    Roll-time.
+   kplr2013050211_pointing.txt		|    Pointing.
+   kplr_*_video_crosstalk_rec_src.csv	|    Video crosstalk.
+   kplr_*_spectral_response.csv		|    Spectral response.
+   kplr2015236_largeflat.fits.gz	|    Large-scale flat.
+   kplr2015236_smallflat.fits.gz	|    Small-scale flat.
+   kplr2015236_smallflat-uncert.fits.gz	|    Small-scale flat uncertainty.
+   kplr2015238_2dblack.fits.gz		|    Two-dimensional black.
+   kplr2015238_2dblack-uncert.fits.gz	|    Two-dimensional black uncertainty.
+   prf/					|    Pixel response function files subdirectory.
+      kplr*_prf.fits			|       Pixel response function files.
+      					|
+					|
+lightcurves/				| Light Curve Directory.
+   <####>/				|    Subdirectory based on the first four digits of the zero
+   					|    padded, nine-digit Kepler ID.
+      <#########>/			|       Subdirectory based on the zero-padded, nine-digit
+      					| 	Kepler ID.
+         kplr*llc.fits			|	   Long-cadence light curve file.
+	 kplr*slc.fits			|	   Short-cadence light curve file.
+	 kplr*_lc_*.tar			|	   Bundle of all long-cadence light curves.
+	 kplr*_sc_*.tar			|	   Bundle of all short-cadence light curves.
+   kplr_lightcurves_manifest.sha256	|    Checksum file for light curves.
+   tarfiles/				|    Light curve bundle subdirectory.
+      Q<##>_public/			|       Quarter subdirectories. Note: the Quarter part is
+      					|	not zero-padded, e.g., "1".
+         pulbic_*_long_*.tgz		|	   Bundle of long cadence light curves.
+         pulbic_*_short_*.tgz		|	   Bundle of short cadence light curves.
+					|
+					|
+pmrfs/					| Pixel Mapping Reference File Directory.
+   <year>*/				|    PMRF for a given date subdirectory.  The year ranges
+   					|    from 2009-2013.
+      *bgm.fits				|	Background pixel mapping table.
+      *lcc.fits				|       Long cadence collateral pixel mapping table.
+      *lcm.fits				|	Long cadence target pixel mapping table.
+      *scc.fits				|	Short cadence collateral pixel mapping table.
+      *scm.fits				|	Short cadence target pixel mapping table.
+   PMRF-README.txt			|    Information about the PMRF files.
+      					|
+					|
+previews/				| Preview Plots Directory.
+   <####>/				|    Subdirectory based on the first four digits of the zero
+   					|    padded, nine-digit Kepler ID.
+      <#########>/			|       Subdirectory based on the zero-padded, nine-digit
+      					| 	Kepler ID.
+         *llc*.png			|	   Long-cadence light curve previews of different
+	    				|	   sizes and syles.
+         *slc*.png			|	   Short-cadence light curve previews of different
+	    				|	   sizes and styles
+   ffi/					|    Full frame image previews subdirectory.
+      ch/				|       Subdirectory for previews at the channel level.
+         kplr*_ch??.png			|	   Preview file for a given Channel.
+      FFIPREV-README.txt		|	Brief description of the preview file types.
+      kplr*_ffi-cal.png			|	Preview file for the entire full frame image.
+      mod/				|	Subdirectory for previews at the module level.
+         kplr*_mod??.png		|	   Preview file for a given Module.
+   tpf-only-plots/			|    Subdirectory containing default plots for targets with
+   					|    no light curves available.
+      kepler-tpf-only-target_*.png	|       Preview plots to use when no light curve exists for
+      					|	a target, these are not relevant for users.
+					|
+					|
+prev_ver/				| Previous Versions Of Light Curves And TPFs Directory.
+   dr20-dr23/				|    Subdirectory containing files from DR20 - DR23.
+   dr24/				|    Subdirectory containing files from DR24.
+      lightcurves/			|       Subdirectory containing previous versions of light
+   					|       curves.
+         <####>/			|          Subdirectory based on the first four digits of
+	 				| 	   the zero padded, nine-digit Kepler ID.
+            <#########>/		|             Subdirectory based on the zero-padded,
+	    				| 	      nine-digit Kepler ID.
+               kplr*llc.fits		|	         Long-cadence light curve file.
+	       kplr*slc.fits		|	         Short-cadence light curve file.
+      target_pixel_files/		|       Subdirectory containing previous versions of target
+   					|       pixel files.
+         <####>/			|          Subdirectory based on the first four digits of
+	 				| 	   the zero padded, nine-digit Kepler ID.
+            <#########>/		|             Subdirectory based on the zero-padded,
+	    				| 	      nine-digit Kepler ID.
+               *lpd-targ.fits.gz	|	   Long-cadence target pixel file.
+	       *spd-targ.fits.gz	|	   Short-cadence target pixel file.
+					|
+					|
+raw_cadence_data/			| Raw Cadence Data Directory.
+   q#<#>/				|    Quarter subdirectories. Note: the Quarter part of
+   					|    the directory is not zero-padded, e.g., q0, q1.
+      yyyyddd/				|       Subdirectory containing files for a given day, the
+      					|       format is 4-digit year and 3-digit day of year.
+         kplr*-lcs-bkg.fits		|	   Long-cadence background pixels.
+         kplr*-lcs-col.fits		|	   Long-cadence collateral data.
+         kplr*-lcs-history.fits		|	   Long-cadence processing history file.
+         kplr*-lcs-targ.fits		|	   Long-cadence target data.
+         kplr*-scs-col.fits		|	   Short-cadence collateral data.
+         kplr*-scs-targ.fits		|	   Short-cadence target data.
+         kplr*-scs-set-history.fits	|	   Short-cadence processing history file.
+					|
+					|
+rvc/					| Reverse Clock File Directory.
+   <year>				|    Subdirectory based on year, ranging from 2009-2013.
+      kplr*_lcs-bkg.fits.gz		|       Reverse clock data file: background pixels.
+      kplr*_lcs-col.fits.gz		|	Reverse clock data file: collateral pixels.
+      kplr*_lcs-history.fits.gz		|	Reverse clock data file: processing history file,
+      					|	this can be ignored by archive users.
+      kplr*_lcs-targ.fits.gz		|	Reverse clock data file: target pixels.
+      					|
+					|
+simulations/				| Simulations Directory.
+   documents/				|    Subdirectory with documentation about the simulations.
+      KSCI-19105-002.pdf		|       Description of the TCERT vetting reports.
+      KSCI-19109-002.pdf		|	Planet Detection Metrics: Per-Target Flux-Level
+      					| 	Transit Injection Tests.
+      KSCI-19110-001.pdf		|	Planet Detection Metrics: Pixel-Level Transit
+   					|    	Injection Tests.
+      KSCI-19114-002.pdf		|	Planet Detection Metrics: Robovetter Completeness
+      					| 	for DR25.
+   inj1/				|    Single "on-target" simulated planets subdirectory.
+      <####>/				|       Subdirectory based on the first four digits of
+	 				| 	the zero padded, nine-digit Kepler ID.
+         <#########>/			|          Subdirectory based on the zero-padded,
+	    				| 	   nine-digit Kepler ID.
+	    kplr*llc.fits.gz		|	      Light curve with injected signal.
+      dv_files/				|       Subdirectory containing data validation files.
+         <####>/			|          Subdirectory based on the first four digits of
+	 				| 	   the zero padded, nine-digit Kepler ID.
+            <#########>/		|             Subdirectory based on the zero-padded,
+	    				| 	      nine-digit Kepler ID.
+	       kplr*_dvs.pdf		|	         Data validation summary file.
+	       kplr*_dvr.pdf		|		 Data validation report file.
+         TCERT-Vetting-Forms-DR25-INJ1	|          Bundle of TCERT reports (note: this is a
+	 				| 	   .tar.gz file).
+      kplr_dr25_inj1_plti.txt		|	Average detection efficiency.
+      kplr_dr25_inj1_robovetter_input	|	Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_inj1_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_inj1_tces.txt		|	Robovetter results.
+   inj2/				|    Single "off-target" simulated planets subdirectory.
+      <####>/				|       Subdirectory based on the first four digits of
+	 				| 	the zero padded, nine-digit Kepler ID.
+         <#########>/			|          Subdirectory based on the zero-padded,
+	    				| 	   nine-digit Kepler ID.
+	    kplr*llc.fits.gz		|	      Light curve with injected signal.
+      dv_files/				|       Subdirectory containing data validation files.
+         <####>/			|          Subdirectory based on the first four digits of
+	 				| 	   the zero padded, nine-digit Kepler ID.
+            <#########>/		|             Subdirectory based on the zero-padded,
+	    				| 	      nine-digit Kepler ID.
+	       kplr*_dvs.pdf		|	         Data validation summary file.
+	       kplr*_dvr.pdf		|		 Data validation report file.
+         TCERT-Vetting-Forms-DR25-INJ2	|          Bundle of TCERT reports (note: this is a
+	 				| 	   .tar.gz file).
+      kplr_dr25_inj2_plti.txt		|	Average detection efficiency.
+      kplr_dr25_inj2_robovetter_input	|	Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_inj2_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_inj2_tces.txt		|	Robovetter results.
+   inj3/				|    "On-target" simulated eclipsing binaries subdirectory.
+      <####>/				|       Subdirectory based on the first four digits of
+	 				| 	the zero padded, nine-digit Kepler ID.
+         <#########>/			|          Subdirectory based on the zero-padded,
+	    				| 	   nine-digit Kepler ID.
+	    kplr*llc.fits.gz		|	      Light curve with injected signal.
+      dv_files/				|       Subdirectory containing data validation files.
+         <####>/			|          Subdirectory based on the first four digits of
+	 				| 	   the zero padded, nine-digit Kepler ID.
+            <#########>/		|             Subdirectory based on the zero-padded,
+	    				| 	      nine-digit Kepler ID.
+	       kplr*_dvs.pdf		|	         Data validation summary file.
+	       kplr*_dvr.pdf		|		 Data validation report file.
+         TCERT-Vetting-Forms-DR25-INJ3	|          Bundle of TCERT reports (note: this is a
+	 				| 	   .tar.gz file).
+      kplr_dr25_inj3_plti.txt		|	Average detection efficiency.
+      kplr_dr25_inj3_robovetter_input	|	Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_inj3_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_inj3_tces.txt		|	Robovetter results.
+   inv/					|    "Inverted" observed light curves subdirectory.
+      kplr_dr25_inv_robovetter_input	|       Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_inv_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_inv_tces.txt		|	Robovetter results.
+      TCERT-Vetting-Forms-DR25-INV	|	Bundle of TCERT reports (note: this is a .tar.gz
+      					| 	file).
+   scr1/				|    Scrambled observed light curves subdirectory (1/3).
+      kplr_dr25_scr1_robovetter_input	|       Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_scr1_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_scr1_tces.txt		|	Robovetter results.
+      TCERT-Vetting-Forms-DR25-SCR1	|	Bundle of TCERT reports (note: this is a .tar.gz
+      					|	file).
+   scr2/				|    Scrambled observed light curves subdirectory (2/3).
+      kplr_dr25_scr2_robovetter_input	|       Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_scr2_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_scr2_tces.txt		|	Robovetter results.
+      TCERT-Vetting-Forms-DR25-SCR2	|	Bundle of TCERT reports (note: this is a .tar.gz
+      					|	file).
+   scr3/				|    Scrambled observed light curves subdirectory (3/3).
+      kplr_dr25_scr3_robovetter_input	|       Robovetter input (note: this is a .tar.gz file).
+      kplr_dr25_scr3_robovetter_output	|	Robovetter output (note: this is a .txt file).
+      kplr_dr25_scr3_tces.txt		|	Robovetter results.
+      TCERT-Vetting-Forms-DR25-SCR3	|	Bundle of TCERT reports (note: this is a .tar.gz
+      					|	file).
+   SIMUATIONS-README.txt		|    Information on the simulation files in this directory.
+   transit_injection_products/		|    Flux-level transit injection products subdirectory.
+      FLTI-DR25-KSOC-5004.tar.gz	|       Injection products for run KSOC-5004.
+      FLTI-DR25-KSOC-5006.tar.gz	|	Injection products for run KSOC-5006.
+      FLTI-DR25-KSOC-5008.tar.gz	|	Injection products for run KSOC-5008.
+      FLTI-DR25-KSOC-5104.tar.gz	|	Injection products for run KSOC-5104.
+      FLTI-DR25-KSOC-5125.tar.gz	|	Injection products for run KSOC-5125.
+   					|
+					|
+spice/					| Spice Kernel Directory.
+   kplr*.tsc				|    Spacecraft clock correlation file.
+   spk_*_kplr.bsp			|    Ephemeris data file.
+					|
+					|
+target_pixel_files/			| Target Pixel File Directory.
+   <####>/				|    Subdirectory based on the first four digits of the zero
+   					|    padded, nine-digit Kepler ID.
+      <#########>/			|       Subdirectory based on the zero-padded, nine-digit
+      					| 	Kepler ID.
+         kplr*lpd-targ.fits.gz		|	   Long-cadence target pixel file.
+	 kplr*spd-targ.fits.gz		|	   Short-cadence target pixel file.
+	 kplr*_lc_*.tar			|	   Bundle of all long-cadence target pixel files.
+	 kplr*_sc_*.tar			|	   Bundle of all short-cadence target pixel files.
+   bundles/				|    Light curve bundle subdirectory.
+      <####>_<#########>.tar		|       A target pixel bundle for the given target.
+      					| 	Note: the first part is composed of the first four
+					| 	digits of the zero-padded, nine-digit Kepler ID. The
+					| 	second part is the zero-padded, nine-digit Kepler
+					| 	ID.
+      get_all_tpf_curl.sh		|	cURL script to sequentially download each bundle.
+      get_all_tpf_wget.sh		|	wget script to sequentially download each bundle.
+   kplr_targetpixel_manifest.sha256	|    Checksum file for light curves.
+
