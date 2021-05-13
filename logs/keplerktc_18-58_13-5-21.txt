@@ -1,0 +1,79 @@
+C:\Users\Prannaya\Anaconda3\envs\ThreeBody\python.exe "C:\Program Files\JetBrains\PyCharm Professional Edition with Anaconda plugin 2020.1.1\plugins\python\helpers\pydev\pydevconsole.py" --mode=client --port=53130
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\Prannaya\\Documents\\GitHub\\ThreeBody', 'C:/Users/Prannaya/Documents/GitHub/ThreeBody'])
+Python 3.8.8 (default, Apr 13 2021, 15:08:03) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.22.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.22.0
+Python 3.8.8 (default, Apr 13 2021, 15:08:03) [MSC v.1916 64 bit (AMD64)] on win32
+import pandas as pd
+  ...: import matplotlib.pyplot as plt
+  ...: import np
+  ...: import scipy as sp
+  ...:
+df = pd.read_csv("../data/kepler_ktc.csv")
+  ...: df
+  ...:
+Traceback (most recent call last):
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\IPython\core\interactiveshell.py", line 3437, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-3-0ef0ed0632bf>", line 1, in <module>
+    df = pd.read_csv("../data/kepler_ktc.csv")
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 610, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 462, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 819, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1050, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1867, in __init__
+    self._open_handles(src, kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1362, in _open_handles
+    self.handles = get_handle(
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\common.py", line 642, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../data/kepler_ktc.csv'
+df = pd.read_csv("data/kepler_ktc.csv")
+  ...: df
+  ...:
+Traceback (most recent call last):
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\IPython\core\interactiveshell.py", line 3437, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-4-4f5a378c7d0e>", line 1, in <module>
+    df = pd.read_csv("data/kepler_ktc.csv")
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 610, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 462, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 819, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1050, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1867, in __init__
+    self._open_handles(src, kwds)
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\parsers.py", line 1362, in _open_handles
+    self.handles = get_handle(
+  File "C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\pandas\io\common.py", line 642, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/kepler_ktc.csv'
+df = pd.read_csv("data/kepler_ktc_kic.csv")
+  ...: df
+  ...:
+C:\Users\Prannaya\Anaconda3\envs\ThreeBody\lib\site-packages\IPython\core\interactiveshell.py:3165: DtypeWarning: Columns (61) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+Out[5]:
+        ktc_investigation_id  ktc_kepler_id  ... sci_output  sci_dct_purp
+0                         EX         757076  ...          4           NaN
+1                         EX         757076  ...          4           NaN
+2                         EX         757076  ...          4           NaN
+3                         EX         757076  ...          4           NaN
+4                         EX         757076  ...          4           NaN
+                      ...            ...  ...        ...           ...
+2895752              GO40015      100004297  ...          2           NaN
+2895753              GO40015      100004297  ...          2           NaN
+2895754              GO40004      100004298  ...          1           NaN
+2895755              GO40038      100004299  ...          1           NaN
+2895756              GO40038      100004300  ...          1           NaN
+[2895757 rows x 75 columns]
+df
