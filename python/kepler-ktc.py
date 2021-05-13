@@ -8,13 +8,16 @@ import scipy as sp
 #%%
 
 df = pd.read_csv("data/kepler_ktc_kic.csv")
-df
+print(df)
+
 #%%
 
 for i in df.columns:
     print(i)
 
 #%%
+
+df.summary()
 
 """
         ktc_investigation_id  ktc_kepler_id  ... sci_output  sci_dct_purp
