@@ -1,10 +1,20 @@
+#%%
+
 import pandas as pd
+import matplotlib.pyplot as plt
+import np
+import scipy as sp
 
-df = pd.read_csv("kepler_ktc_kic_science_v.csv")
+#%%
 
-print(df)
+df = pd.read_csv("data/kepler_ktc_kic.csv")
+df
+#%%
 
-for i in df.columns: print(i)
+for i in df.columns:
+    print(i)
+
+#%%
 
 """
         ktc_investigation_id  ktc_kepler_id  ... sci_output  sci_dct_purp
