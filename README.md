@@ -26,11 +26,14 @@ Vikram's Schedule:
 - [K2 Mission Page](https://archive.stsci.edu/missions-and-data/k2)
 - [Other Missions](https://archive.stsci.edu/missions-and-data)
 - [Data Products Page](https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_Data_Products_Overview.html)
+- [Data Products Diagram](https://exoplanetarchive.ipac.caltech.edu/images/Kepler_Data_Products_Diagram.pdf)
 - [Documents](https://archive.stsci.edu/missions-and-data/kepler/documents)
 - [Dataset](https://exoplanetarchive.ipac.caltech.edu/docs/data.html)
+
 - [Transit Light Curve Tutorial](https://lweb.cfa.harvard.edu/~avanderb/tutorial/tutorial.html)
 
 #### Data
+- [directory](https://archive.stsci.edu/missions/kepler/)
 - [keplerktc](https://archive.stsci.edu/missions/kepler/catalogs/kepler_ktc_kic_science_v.csv.gz)
 
 #### Code
@@ -41,4 +44,7 @@ Vikram's Schedule:
     - [Google AI Blog](https://ai.googleblog.com/2018/03/open-sourcing-hunt-for-exoplanets.html)
     - [Actual Acknoweledgement](https://blog.google/technology/ai/hunting-planets-machine-learning/)
 - [Asteroseismic Modeling of 16 Cyg A & B using the complete Kepler Data Set](https://arxiv.org/pdf/1508.00946.pdf)
+
+#### Guides
+- [Batch File Download](https://irsa.ipac.caltech.edu/docs/batch_download_help.html)
 
