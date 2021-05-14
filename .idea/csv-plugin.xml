@@ -3,7 +3,7 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\data\kplr000757099.csv">
+        <entry key="\data\kepler_ktc_filtered.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -11,13 +11,6 @@
           </value>
         </entry>
         <entry key="\data\kplr000757099\kplr000757099stats.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data\kplr000757099tce1.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
