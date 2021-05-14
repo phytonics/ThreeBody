@@ -6,8 +6,8 @@ def retrieveCollection(kplrId):
     klc = search_result.download_all().stitch()
     ax = klc.plot(column='pdcsap_flux', label='PDCSAP Flux', normalize=True)
     klc.plot(column='sap_flux', label='SAP Flux', normalize=True, ax=ax)
-    klc.plot(ax=ax)
-    ax.set_title(f"PDCSAP light curve of {kplrId}")
+    klc.plot(ax=ax, label="Actual Data")
+    ax.set_title(f"Light curve of {kplrId}")
     ax.figure.savefig(f'..plots/{kplrId}.png')
     return lc
 
