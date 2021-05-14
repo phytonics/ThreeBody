@@ -3,3 +3,4 @@ np==1.0.2
 scipy~=1.6.3
 pandas~=1.2.4
 pyodbc~=4.0.30
+astropy~=4.2.1
