@@ -4,3 +4,4 @@ scipy~=1.6.3
 pandas~=1.2.4
 pyodbc~=4.0.30
 astropy~=4.2.1
+lightkurve==2.0.9
