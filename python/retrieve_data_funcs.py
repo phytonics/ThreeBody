@@ -1,13 +1,19 @@
 import lightkurve as lk
-from astroquery.mast import Observations
-from astropy.timeseries import TimeSeries
 
 def retrieveCollection(kplrId):
     search_result = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
     # Download and stitch the data together
-    lc = search_result.download_all().stitch()
-    lc.plot()
+    klc = search_result.download_all().stitch()
+    ax = klc.plot(column='pdcsap_flux', label='PDCSAP Flux', normalize=True)
+    klc.plot(column='sap_flux', label='SAP Flux', normalize=True, ax=ax)
+    klc.plot(ax=ax)
+    ax.set_title(f"PDCSAP light curve of {kplrId}")
+    ax.figure.savefig(f'..plots/{kplrId}.png')
     return lc
 
 
+lcs = []
 
+with open("../data/kepler_ids.txt") as ids_file:
+    lc = retrieveCollection(int(float(ids_file.readline())))
+    lcs.append(lcs)
