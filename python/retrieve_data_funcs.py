@@ -1,5 +1,11 @@
 import lightkurve as lk
 
+def getIds():
+    ids_file = open("../data/kepler_ids.txt")
+    ids = list(map(int, ids_file.readlines()))
+    ids_file.close()
+    return ids
+
 def retrieveCollection(kplrId):
     search_result = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
     # Download and stitch the data together
@@ -9,11 +15,11 @@ def retrieveCollection(kplrId):
     klc.plot(ax=ax, label="Actual Data")
     ax.set_title(f"Light curve of {kplrId}")
     ax.figure.savefig(f'..plots/{kplrId}.png')
-    return lc
+    return klc
 
+def getId(index=0):
+    return getIds()[index]
 
-lcs = []
+def retrieveLightCurve(index=0):
+    return retrieveCollection(getIds()[index])
 
-with open("../data/kepler_ids.txt") as ids_file:
-    lc = retrieveCollection(int(float(ids_file.readline())))
-    lcs.append(lcs)
