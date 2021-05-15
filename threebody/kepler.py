@@ -3,6 +3,7 @@ from lightkurve.lightcurve import KeplerLightCurve
 import os
 from typing import Union, List, Callable, Any
 
+
 def getKplrIds() -> List[int]:
     """
     :returns: A list containing all the certified Kepler Ids.
@@ -32,34 +33,7 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve
     klc.delete = lambda self: os.remove(self.filename)
     return klc
 
-def plotKeplerLightCurve(klc: KeplerLightCurve) -> Any:
-    """
-    :param klc: The KeplerLightCurve object
-    :returns: The axes upon which the data has been plotted
-    """
-    # ax = klc.plot(column='pdcsap_flux', label='PDCSAP Flux', normalize=True)
-    # klc.plot(column='sap_flux', label='SAP Flux', normalize=True, ax=ax)
-    ax = klc.plot()
-    ax.set_title(f"Light curve of {klc.id}")
-    return ax
 
-def plotKeplerSAPLightCurve(klc: KeplerLightCurve) -> Any:
-    """
-    :param klc: The KeplerLightCurve object
-    :returns: The axes upon which the data has been plotted
-    """
-    ax = klc.plot(column='sap_flux', normalize=True)
-    ax.set_title(f"SAP Flux Light curve of {klc.id}")
-    return ax
-
-def plotKeplerPDCSAPLightCurve(klc: KeplerLightCurve) -> Any:
-    """
-    :param klc: The KeplerLightCurve object
-    :returns: The axes upon which the data has been plotted
-    """
-    ax = klc.plot(column='pdcsap_flux', normalize=True)
-    ax.set_title(f"PDCSAP Flux Light curve of {klc.id}")
-    return ax
 
 def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
     """
