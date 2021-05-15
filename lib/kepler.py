@@ -33,17 +33,23 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve
     return klc
 
 
-def plotKeplerLightCurve(klc: KeplerLightCurve):
+def plotKeplerLightCurve(klc: KeplerLightCurve) -> Any:
     """
     :param klc: The KeplerLightCurve object
+    :returns: The axes upon which the data has been plotted
     """
-    ax = klc.plot(column='pdcsap_flux', label='PDCSAP Flux', normalize=True)
-    klc.plot(column='sap_flux', label='SAP Flux', normalize=True, ax=ax)
-    klc.plot(ax=ax, label="Actual Data")
+    # ax = klc.plot(column='pdcsap_flux', label='PDCSAP Flux', normalize=True)
+    # klc.plot(column='sap_flux', label='SAP Flux', normalize=True, ax=ax)
+    ax = klc.plot()
     ax.set_title(f"Light curve of {klc.id}")
-    # ax.figure.savefig(f'..plots/{kplrId}.png')
+    return ax
 
 def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
+    """
+    :param kplrId: The Kepler Id, as an Integer, String or Float
+    :param func: The function to be ran, with the modified KeplerLightCurve as a parameter
+    :return: Result of func
+    """
     klc = retrieveKeplerLightCurve(kplrId)
     result = func(klc)
     klc.delete()
