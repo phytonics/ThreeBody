@@ -1,6 +1,6 @@
 import lightkurve as lk
 
-def getIds():
+def getKplrIds():
     """
     :returns: A list containing all the certified Kepler Ids.
     """
@@ -9,17 +9,17 @@ def getIds():
     ids_file.close()
     return ids
 
-def getId(index=0):
+def getKplrId(index=0):
     """
-    :param index: Literally the index you want from the Ids List
-    :returns: Id as an Integer
+    :param index: Literally the index you want from the Kepler Ids List
+    :returns: Kepler Id as an Integer
     """
-    return getIds()[index]
+    return getKplrIds()[index]
 
 def retrieveKeplerCollection(kplrId):
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
-    :returns: A Tuple containing the kplrId as an Integer and a LightCurve object
+    :returns: A Tuple containing the Kepler Id as an Integer and a LightCurve object
     """
     kplrId = int(kplrId)
     search_result = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
@@ -29,10 +29,10 @@ def retrieveKeplerCollection(kplrId):
 def retrieveKeplerLightCurve(index=0):
     """
 
-    :param index: Literally the index you want from the Ids List
+    :param index: Literally the index you want from the Kepler Ids List
     :returns: A LightCurve object containing data from the entire thing
     """
-    return retrieveKeplerCollection(getId(index))[-1]
+    return retrieveKeplerCollection(getKplrId(index))[-1]
 
 def plotLightCurve(kplrId, klc):
     """
