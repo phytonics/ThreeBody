@@ -4,7 +4,7 @@ import np
 df = pd.read_csv("../data/kepler_ktc_kic.csv", low_memory=False)
 print(df)
 
-ids = np.unique(df.ktc_kepler_id.to_numpy())
+ids = np.unique(df.ktc_kepler_id.to_numpy()).astype(int)
 print(ids)
 
 with open("../data/kepler_ids.txt", "w+") as ids_file:
