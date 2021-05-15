@@ -53,5 +53,6 @@ def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[Kepl
     klc = retrieveKeplerLightCurve(kplrId)
     result = func(klc)
     klc.delete()
+    del klc
     return result
 
