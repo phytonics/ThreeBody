@@ -26,7 +26,7 @@ def retrieveKeplerCollection(kplrId):
     klc = search_result.download_all().stitch()
     return kplrId, klc
 
-def retrieveLightCurve(index=0):
+def retrieveKeplerLightCurve(index=0):
     """
 
     :param index: Literally the index you want from the Ids List
