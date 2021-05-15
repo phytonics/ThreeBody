@@ -21,7 +21,7 @@ def getK2Id(index: int = 0) -> int:
 
 def retrieveK2LightCurve(k2Id: Union[int, str, float]) -> KeplerLightCurve:
     """
-    :param k2Id: The Kepler Id, as an Integer, String or Float
+    :param k2Id: The K2 Id, as an Integer, String or Float
     :returns: A KeplerLightCurve object
     """
     k2Id = int(k2Id)
@@ -46,7 +46,7 @@ def plotK2LightCurve(klc: KeplerLightCurve) -> Any:
 
 def analyseK2LightCurve(k2Id: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
     """
-    :param k2Id: The Kepler Id, as an Integer, String or Float
+    :param k2Id: The K2 Id, as an Integer, String or Float
     :param func: The function to be ran, with the modified KeplerLightCurve as a parameter
     :return: Result of func
     """
