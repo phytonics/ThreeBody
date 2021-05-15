@@ -8,7 +8,7 @@ ids = np.unique(df.ktc_kepler_id.to_numpy())
 print(ids)
 
 with open("../data/kepler_ids.txt", "w+") as ids_file:
-    np.savetxt(ids_file, ids, fmt ='%.0f\n')
+    np.savetxt(ids_file, ids, fmt='%i')
 
 """
         ktc_investigation_id  ktc_kepler_id  ... sci_output  sci_dct_purp
