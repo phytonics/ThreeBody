@@ -44,4 +44,3 @@ def analyseK2LightCurve(k2Id: Union[int, str, float], func: Callable[[KeplerLigh
     klc.delete()
     del klc
     return result
-
