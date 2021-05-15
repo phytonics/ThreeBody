@@ -1,7 +1,7 @@
 import lightkurve as lk
 from lightkurve.lightcurve import KeplerLightCurve
 import os
-from typing import Union, List
+from typing import Union, List, Callable, Any
 
 def getKplrIds() -> List[int]:
     """
@@ -42,4 +42,10 @@ def plotKeplerLightCurve(klc: KeplerLightCurve):
     klc.plot(ax=ax, label="Actual Data")
     ax.set_title(f"Light curve of {klc.id}")
     # ax.figure.savefig(f'..plots/{kplrId}.png')
+
+def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
+    klc = retrieveKeplerLightCurve(kplrId)
+    result = func(klc)
+    klc.delete()
+    return result
 
