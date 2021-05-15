@@ -33,8 +33,6 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve
     klc.delete = lambda self: os.remove(self.filename)
     return klc
 
-
-
 def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
@@ -46,4 +44,3 @@ def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[Kepl
     klc.delete()
     del klc
     return result
-
