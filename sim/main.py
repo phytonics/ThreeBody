@@ -1,14 +1,9 @@
-# Matt Sprengel
-# 4/23/16
 # A Simulation of the Three Body System
+# Adapted from 'GravitySim' by Matt Sprengel
 
 from tkinter import *
 import math
 import time
-
-
-title = "A Simulation of a Three-Body Systems"
-
 
 def globalReset():  # utility function used by both speedTest() and 'reset' button
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
@@ -43,12 +38,12 @@ def setMass3():
     mass3.delete(0, 'end')
 
 
-def speedup():  # bound to speed up button
+def speedUp():  # bound to speed up button
     global dt
     dt *= 2
 
 
-def slowdown():
+def slowDown():
     global dt
     dt /= 2
 
@@ -81,11 +76,6 @@ def drag(event):  # changes the location of the body to current mouse coordinate
         canvas.delete("tres")
 
 
-pressed1 = 0  # toggles for wasRightClicked handler
-pressed2 = 0
-pressed3 = 0
-
-
 def wasRightClicked(event):  # checks to see if ball was right-clicked
     global pressed1, pressed2, pressed3
     xm, ym = event.x, event.y
@@ -104,11 +94,6 @@ def wasRightClicked(event):  # checks to see if ball was right-clicked
     clickableRadius3 = size3 / 2
     if rm3 < clickableRadius3:
         pressed3 = 1
-
-
-newVel1 = [0, 0]  # toggles for drag set velocity handler
-newVel2 = [0, 0]  # newVel interim global allows the actual velocity to not instantly
-newVel3 = [0, 0]  # and continuously change during the right-click+drag
 
 
 def makeVelLine(event):  # this func is called upon right-click-motion. Draws.
@@ -216,34 +201,15 @@ def updateScreen():  # deletes old, draws new circles at current position
     root.update()
 
 
-# GLOBAL PHYSICS VARIABLES#
-# r = position, v = velocity, a = acceleration, m = mass
-G = 1000
+def calculate(x, x_dot):
+    global dt
+    x1, x2, x3 = x
+    x_dot1, x_dot2, x_dot3 = x_dot
+    x2 = [x2[0] + x_dot2[0] * dt, x2[1] + x_dot2[1] * dt]
+    x1 = [x1[0] + x_dot1[0] * dt, x1[1] + x_dot1[1] * dt]
+    x3 = [x3[0] + x_dot3[0] * dt, x3[1] + x_dot3[1] * dt]
+    return x1, x2, x3
 
-s = 200
-u = math.sqrt(5)
-
-m1 = 1.0
-r1, v1, a1 = [1400, 300], [-u / 2, (u / 2) * math.sqrt(3)], [0, 0]
-size1 = 7.5 * m1 ** (1.0 / 3.0)
-
-m2 = 0.5
-r2, v2, a2 = [1300, 300 - 100 * math.sqrt(3)], [u, 0], [0, 0]
-size2 = 7.5 * m2 ** (1.0 / 3.0)
-
-m3 = 1.0
-r3, v3, a3 = [1200, 300], [-u / 2, -(u / 2) * math.sqrt(3)], [0, 0]
-size3 = 7.5 * m3 ** (1.0 / 3.0)
-
-# center of mass of the system
-rcm = [
-    (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-    (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
-]
-
-
-def normalise(num):
-    return num  # function died here sorry
 
 def calculate_trajectories():  # Euler-Cromer Method
     global G, m1, r1, v1, a1, m2, r2, v2, a2, m3, r3, v3, a3, rcm
@@ -268,14 +234,20 @@ def calculate_trajectories():  # Euler-Cromer Method
           (rHat_12[1] * a12Mag) + (rHat_13[1] * a13Mag)]
     a3 = [(rHat_31[0] * a31Mag) + (rHat_32[0] * a32Mag),
           (rHat_31[1] * a31Mag) + (rHat_32[1] * a32Mag)]
-    v2 = [v2[0] + a2[0] * dt, v2[1] + a2[1] * dt]
-    v1 = [v1[0] + a1[0] * dt, v1[1] + a1[1] * dt]
-    v3 = [v3[0] + a3[0] * dt, v3[1] + a3[1] * dt]
-    r2 = [normalise(r2[0] + v2[0] * dt), r2[1] + v2[1] * dt]
-    r1 = [normalise(r1[0] + v1[0] * dt), r1[1] + v1[1] * dt]
-    r3 = [normalise(r3[0] + v3[0] * dt), r3[1] + v3[1] * dt]
-    rcm = [(m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-           ((m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3))]
+
+    v1, v2, v3 = calculate(
+        (v1, v2, v3),
+        (a1, a2, a3)
+    )
+    r1, r2, r3 = calculate(
+        (r1, r2, r3),
+        (v1, v2, v3)
+    )
+
+    rcm = [
+        (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
+        (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
+    ]
 
 
 def car():  # draws scene whenever the calculations aren't running
@@ -306,12 +278,50 @@ def gameOn():  # runs the physics in a loop until told to stop
             updateScreen()
 
 
+title = "A Simulation of a Three-Body Systems"
+
+pressed1 = 0  # toggles for wasRightClicked handler
+pressed2 = 0
+pressed3 = 0
+
+newVel1 = [0, 0]  # toggles for drag set velocity handler
+newVel2 = [0, 0]  # newVel interim global allows the actual velocity to not instantly
+newVel3 = [0, 0]  # and continuously change during the right-click+drag
+
+
+# GLOBAL PHYSICS VARIABLES
+# r = position, v = velocity, a = acceleration, m = mass
+G = 1000
+
+s = 200
+u = math.sqrt(5)
+
+m1 = 1.0
+r1, v1, a1 = [1400, 300], [-u / 2, (u / 2) * math.sqrt(3)], [0, 0]
+size1 = 7.5 * m1 ** (1.0 / 3.0)
+
+m2 = 0.5
+r2, v2, a2 = [1300, 300 - 100 * math.sqrt(3)], [u, 0], [0, 0]
+size2 = 7.5 * m2 ** (1.0 / 3.0)
+
+m3 = 1.0
+r3, v3, a3 = [1200, 300], [-u / 2, -(u / 2) * math.sqrt(3)], [0, 0]
+size3 = 7.5 * m3 ** (1.0 / 3.0)
+
+# center of mass of the system
+rcm = [
+    (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
+    (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
+]
+
+
 # GUI Screen, widgets, buttons, bindings
 root = Tk()
 root.state('zoomed')
 root.title(title)
 frame = Frame(width=1000, height=50, bg="black")
 frame.pack(fill=BOTH)
+
 
 # Creating start, stop, reset buttons. Binding them to relevent functions.
 start = Button(frame, text="Start", command=gameOn, bg="green")
@@ -320,6 +330,7 @@ stop = Button(frame, text="Stop", command=car, bg="green")
 stop.pack(side=LEFT, padx=5)
 reset = Button(frame, text="Reset", command=globalReset, bg="green")
 reset.pack(side=LEFT, padx=5)
+
 
 # Creating mass editing entry box and buttons
 mb1 = Button(frame, text="Set Mass", command=setMass1, bg="Blue", fg="white")
@@ -335,11 +346,13 @@ mb3.pack(side=RIGHT, padx=10)
 mass3 = Entry(frame, width=5, bg="black", fg="white", insertbackground="white", insertwidth=1)
 mass3.pack(side=RIGHT, padx=5)
 
+
 # Creating speed up and slow down buttons
-speedup = Button(frame, text="Speed Up", command=speedup, bg="Black", fg="White")
+speedup = Button(frame, text="Speed Up", command=speedUp, bg="Black", fg="White")
 speedup.pack(side=LEFT, padx=20)
-slowdown = Button(frame, text="Slow Down", command=slowdown, bg="Black", fg="White")
+slowdown = Button(frame, text="Slow Down", command=slowDown, bg="Black", fg="White")
 slowdown.pack(side=LEFT, padx=5)
+
 
 # Creating main black canvas under all of the buttons we just made
 canvas = Canvas(root, width=1000, height=600, bg="black")
@@ -351,7 +364,7 @@ canvas.bind('<B3-Motion>', makeVelLine)
 canvas.bind('<ButtonRelease-3>', velLineSet)
 
 
-# Timing the user's CPU on a dummy runthrough of the calculations###
+# Timing the user's CPU on a dummy run through of the calculations
 def speedTest():
     global refreshScale, dt
     t1 = time.time()
@@ -363,13 +376,13 @@ def speedTest():
             t2 = time.time()
             iters_per_second = 20000.0 / (t2 - t1)
             print("Euler-Cromer iterations per second: %d" % int(iters_per_second))
-            refreshScale = int(iters_per_second / 120.0)  # 120 hz desired
+            refreshScale = int(iters_per_second / 120.0)  # 120 Hz desired
             dt = 1 / (refreshScale * 4.3859)  # 4.3859 works well.. experimentally
             globalReset()
             break
 
 
 updateScreen()
-refreshScale, dt = 0, 0.0  # initializing refreshScale and timestep
+refreshScale, dt = 0, 0.0  # initializing refreshScale and time-step
 gameState = 2
 speedTest()  # computes dt and refresh scale ---> also starts main loop
