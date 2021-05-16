@@ -343,10 +343,14 @@ newVel3 = [0, 0]  # and continuously change during the right-click+drag
 
 # GLOBAL PHYSICS VARIABLES
 # r = position, v = velocity, a = acceleration, m = mass
+
 G = 1000
 
 s = 200
 u = math.sqrt(5)
+
+# sqrt(GM rc) /s = v
+
 
 m1, m2, m3 = 1.0, 0.5, 1.0
 
