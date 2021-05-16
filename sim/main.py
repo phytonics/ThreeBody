@@ -139,6 +139,14 @@ def velLineSet(_):  # this function is called upon mouse release. Sets vel.
         pressed3 = 0
 
 
+def setCM():
+    global m1, m2, m3, r1, r2, r3, rcm
+    rcm = [
+        (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
+        (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
+    ]
+
+
 def showInfo():
     # This function runs once every time step. Shows vel, position.
     # The below conditionals allow for the velocity info to be updated on the screen WHILE drawing velset line
@@ -244,10 +252,7 @@ def calculate_trajectories():  # Euler-Cromer Method
         (v1, v2, v3)
     )
 
-    rcm = [
-        (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-        (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
-    ]
+    setCM()
 
 
 def car():  # draws scene whenever the calculations aren't running
@@ -257,10 +262,7 @@ def car():  # draws scene whenever the calculations aren't running
     j = 0
     while gameState == 0:
         j += 1
-        rcm = [
-            (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-            (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
-        ]
+        setCM()
         if j % refreshScale == 0:
             updateScreen()
             j = 0
@@ -325,7 +327,7 @@ frame = Frame(width=1000, height=50, bg="black")
 frame.pack(fill=BOTH)
 
 
-# Creating start, stop, reset buttons. Binding them to relevent functions.
+# Creating start, stop, reset buttons. Binding them to relevant functions.
 start = Button(frame, text="Start", command=gameOn, bg="green")
 start.pack(side=LEFT, padx=5)
 stop = Button(frame, text="Stop", command=car, bg="green")
