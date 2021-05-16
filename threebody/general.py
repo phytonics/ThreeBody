@@ -11,6 +11,7 @@ def plotKeplerLightCurve(klc: KeplerLightCurve) -> Any:
     ax.set_title(f"Light curve of {klc.id}")
     return ax
 
+
 def plotKeplerSAPLightCurve(klc: KeplerLightCurve) -> Any:
     """
     :param klc: The KeplerLightCurve object
@@ -19,6 +20,7 @@ def plotKeplerSAPLightCurve(klc: KeplerLightCurve) -> Any:
     ax = klc.plot(column='sap_flux', normalize=True)
     ax.set_title(f"SAP Flux Light curve of {klc.id}")
     return ax
+
 
 def plotKeplerPDCSAPLightCurve(klc: KeplerLightCurve) -> Any:
     """

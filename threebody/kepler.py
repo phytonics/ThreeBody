@@ -13,12 +13,14 @@ def getKplrIds() -> List[int]:
     ids_file.close()
     return ids
 
+
 def getKplrId(index: int = 0) -> int:
     """
     :param index: Literally the index you want from the Kepler Ids List
     :returns: Kepler Id as an Integer
     """
     return getKplrIds()[index]
+
 
 def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve:
     """
@@ -32,6 +34,7 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve
     klc.filename = klc.meta["FILENAME"]
     klc.delete = lambda self: os.remove(self.filename)
     return klc
+
 
 def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
     """

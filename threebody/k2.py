@@ -13,12 +13,14 @@ def getK2Ids() -> List[int]:
     ids_file.close()
     return ids
 
+
 def getK2Id(index: int = 0) -> int:
     """
     :param index: Literally the index you want from the K2 Ids List
     :returns: K2 Id as an Integer
     """
     return getK2Ids()[index]
+
 
 def retrieveK2LightCurve(k2Id: Union[int, str, float]) -> KeplerLightCurve:
     """
@@ -32,6 +34,7 @@ def retrieveK2LightCurve(k2Id: Union[int, str, float]) -> KeplerLightCurve:
     klc.filename = klc.meta["FILENAME"]
     klc.delete = lambda self: os.remove(self.filename)
     return klc
+
 
 def analyseK2LightCurve(k2Id: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
     """
