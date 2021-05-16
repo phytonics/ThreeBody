@@ -257,8 +257,10 @@ def car():  # draws scene whenever the calculations aren't running
     j = 0
     while gameState == 0:
         j += 1
-        rcm = [(m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-               ((m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3))]
+        rcm = [
+            (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
+            (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
+        ]
         if j % refreshScale == 0:
             updateScreen()
             j = 0
