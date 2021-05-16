@@ -330,7 +330,7 @@ def gameOn():
             updateScreen()
 
 
-title = "A Simulation of a Three-Body Systems"
+title = "A Simulation of a Three-Body System"
 
 pressed1 = 0  # toggles for wasRightClicked handler
 pressed2 = 0
