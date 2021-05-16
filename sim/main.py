@@ -1,4 +1,4 @@
-# A Simulation of the Three Body System
+# A Simulation of a Three Body System
 # Adapted from 'GravitySim' by Matt Sprengel
 
 from tkinter import *
@@ -7,40 +7,50 @@ import time
 from np.magic import np
 import numpy.linalg as la
 
-def globalReset():  # utility function used by both speedTest() and 'reset' button
+def globalReset():
+    """
+    Utility function used by both speedTest() and 'reset' button
+    """
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
     r1, v1, a1 = np[1400, 300], np[-0.5, math.sqrt(3)/2] * u, np[0, 0]
     r2, v2, a2 = np[1300, 300 - 100 * math.sqrt(3)], np[u, 0], np[0, 0]
     r3, v3, a3 = np[1200, 300], np[-0.5, -math.sqrt(3)/2] * u, np[0, 0]
 
-    size1, size2, size3 = 7.5 * m1 ** (1.0 / 3.0), 7.5 * m2 ** (1.0 / 3.0), 7.5 * m3 ** (1.0 / 3.0)
+    size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))
+
     canvas.delete("uno", "dos", "tres")  # deleting velocity indicator lines
     car()
 
 
-def setMass1():  # gets the value inside entry box, sets mass to that value
+def setMass1():
+    """
+    Gets the value inside entry box, sets mass to that value
+    """
     global m1, size1
     m1 = float(mass1.get())
-    size1 = 7.5 * m1 ** (1.0 / 3.0)
+    size1 = 7.5 * m1 ** (1 / 3)
     mass1.delete(0, 'end')
 
 
 def setMass2():
     global m2, size2
     m2 = float(mass2.get())
-    size2 = 7.5 * m2 ** (1.0 / 3.0)
+    size2 = 7.5 * m2 ** (1 / 3)
     mass2.delete(0, 'end')
 
 
 def setMass3():
     global m3, size3
     m3 = float(mass3.get())
-    size3 = 7.5 * m3 ** (1.0 / 3.0)
+    size3 = 7.5 * m3 ** (1 / 3)
     mass3.delete(0, 'end')
 
 
-def speedUp():  # bound to speed up button
+def speedUp():
+    """
+    Bound to speed up button
+    """
     global dt
     dt *= 2
 
@@ -50,7 +60,10 @@ def slowDown():
     dt /= 2
 
 
-def drag(event):  # changes the location of the body to current mouse coordinates
+def drag(event):
+    """
+    Changes the location of the body to current mouse coordinates
+    """
     global r1, r2, r3
     xm, ym = event.x, event.y
 
@@ -80,7 +93,10 @@ def drag(event):  # changes the location of the body to current mouse coordinate
         canvas.delete("tres")
 
 
-def wasRightClicked(event):  # checks to see if ball was right-clicked
+def wasRightClicked(event):
+    """
+    Checks to see if ball was right-clicked
+    """
     global pressed1, pressed2, pressed3
     xm, ym = event.x, event.y
 
@@ -102,7 +118,10 @@ def wasRightClicked(event):  # checks to see if ball was right-clicked
         pressed3 = 1
 
 
-def makeVelLine(event):  # this func is called upon right-click-motion. Draws.
+def makeVelLine(event):
+    """
+    This func is called upon right-click-motion. Draws.
+    """
     global pressed1, newVel1, pressed2, newVel2, pressed3, newVel3
     vxm, vym = event.x, event.y
     vm = np[vxm, vym]
@@ -125,7 +144,10 @@ def makeVelLine(event):  # this func is called upon right-click-motion. Draws.
         newVel3 = (vm - r3) / velScale
 
 
-def velLineSet(_):  # this function is called upon mouse release. Sets vel.
+def velLineSet(_):
+    """
+    This function is called upon mouse release. Sets vel.
+    """
     global pressed1, pressed2, pressed3, v1, v2, v3
 
     if pressed1 == 1:
@@ -156,47 +178,39 @@ def setCM():
 
 
 def showInfo():
-    # This function runs once every time step. Shows vel, position.
-    # The below conditionals allow for the velocity info to be updated on the screen WHILE drawing velset line
-    # and not just after vel line is released
+    """
+    This function runs once every time step. Shows vel, position.
+    The below conditionals allow for the velocity info to be updated on the screen WHILE drawing vel set line
+    and not just after vel line is released
+    """
     if pressed2 == 1:
         str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
-               "lue:       v = [%.3f, %.3f]" % (newVel2[0], newVel2[1], v3[0],
-                                                v3[1], v1[0], v1[1])
+               "lue:       v = [%.3f, %.3f]" % (newVel2[0], newVel2[1], v3[0], v3[1], v1[0], v1[1])
         canvas.delete("velinfo")
-        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
-                           tags="velinfo")
+        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT, tags="velinfo")
     if pressed1 == 1:
         str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
-               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1],
-                                                newVel1[0], newVel1[1])
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1], newVel1[0], newVel1[1])
         canvas.delete("velinfo")
-        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
-                           tags="velinfo")
+        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT, tags="velinfo")
     if pressed3 == 1:
         str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
-               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], newVel3[0],
-                                                newVel3[1], v1[0], v1[1])
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], newVel3[0], newVel3[1], v1[0], v1[1])
         canvas.delete("velinfo")
-        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
-                           tags="velinfo")
+        canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT, tags="velinfo")
     if pressed2 == 0 and pressed1 == 0 and pressed3 == 0:
         str2 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
-               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1], v1[0],
-                                                v1[1])
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1], v1[0], v1[1])
         canvas.delete("velinfo")
-        canvas.create_text(10, 30, text=str2, fill="green", anchor=W, justify=LEFT,
-                           tags="velinfo")
+        canvas.create_text(10, 30, text=str2, fill="green", anchor=W, justify=LEFT, tags="velinfo")
     str3 = "Yellow:   r = [%d, %d]\nRed:        r = [%d, %d]\nB" \
            "lue:       r = [%d, %d]" % (r2[0], r2[1], r3[0], r3[1], r1[0], r1[1])
     canvas.delete("posinfo")
-    canvas.create_text(10, 570, text=str3, fill="green", anchor=W, justify=LEFT,
-                       tags="posinfo")
+    canvas.create_text(10, 570, text=str3, fill="green", anchor=W, justify=LEFT, tags="posinfo")
     str4 = "Yellow:   Mass = %.3f\nRed:        Mass = %.3f\nB" \
            "lue:       Mass = %.3f" % (m2, m3, m1)
     canvas.delete("massinfo")
-    canvas.create_text(990, 30, text=str4, fill="green", anchor=E, justify=RIGHT,
-                       tags="massinfo")
+    canvas.create_text(990, 30, text=str4, fill="green", anchor=E, justify=RIGHT, tags="massinfo")
     str5 = "Euler-Cromer Method"
     canvas.delete("RAWR")
     canvas.create_text(990, 590, text=str5, fill="green", anchor=E, justify=RIGHT, tags="RAWR")
@@ -209,7 +223,10 @@ def getX(r, size):
     return xStart, xEnd
 
 
-def updateScreen():  # deletes old, draws new circles at current position
+def updateScreen():
+    """
+    Deletes old, draws new circles at current position
+    """
     canvas.delete("blue", "yellow", "red", "cm")
 
     x1Start, x1End = getX(r1, size1)
@@ -238,7 +255,10 @@ def calculate(x, x_dot):
     return x1, x2, x3
 
 
-def calculate_trajectories():  # Euler-Cromer Method
+def calculate_trajectories():
+    """
+    Euler-Cromer Method
+    """
     global G, m1, r1, v1, a1, m2, r2, v2, a2, m3, r3, v3, a3, rcm
 
     r12 = la.norm(r1 - r2)
@@ -277,7 +297,10 @@ def calculate_trajectories():  # Euler-Cromer Method
     setCM()
 
 
-def car():  # draws scene whenever the calculations aren't running
+def car():
+    """
+    Draws scene whenever the calculations aren't running
+    """
     global gameState, rcm
     root.title(title)
     gameState = 0
@@ -290,7 +313,10 @@ def car():  # draws scene whenever the calculations aren't running
             j = 0
 
 
-def gameOn():  # runs the physics in a loop until told to stop
+def gameOn():
+    """
+    Runs the physics in a loop until told to stop
+    """
     global gameState
     root.title("Calculating...")
     canvas.delete("uno", "dos", "tres")  # deleting velocity indicator lines
@@ -390,8 +416,10 @@ canvas.bind('<B3-Motion>', makeVelLine)
 canvas.bind('<ButtonRelease-3>', velLineSet)
 
 
-# Timing the user's CPU on a dummy run through of the calculations
 def speedTest():
+    """
+    Timing the user's CPU on a dummy run through of the calculations
+    """
     global refreshScale, dt
     t1 = time.time()
     i = 0
