@@ -10,7 +10,7 @@ import time
 title = "A Simulation of a Three-Body Systems"
 
 
-def globalReset():  # utility function used by both speedtest() and 'reset' button
+def globalReset():  # utility function used by both speedTest() and 'reset' button
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
     r1, v1, a1 = [1400, 300], [-u/2, (u/2) * math.sqrt(3)], [0, 0]
@@ -45,31 +45,35 @@ def setMass3():
 
 def speedup():  # bound to speed up button
     global dt
-    dt += dt
+    dt *= 2
 
 
 def slowdown():
     global dt
-    dt -= dt * .5
+    dt /= 2
 
 
 def drag(event):  # changes the location of the body to current mouse coordinates
     xm, ym = event.x, event.y
+
     rm1 = math.sqrt(((xm - r1[0]) ** 2) + ((ym - r1[1]) ** 2))
     rm2 = math.sqrt(((xm - r2[0]) ** 2) + ((ym - r2[1]) ** 2))
     rm3 = math.sqrt(((xm - r3[0]) ** 2) + ((ym - r3[1]) ** 2))
-    clickableRadius1, clickableRadius2, clickableRadius3 = (2 * size1, 2 * size2,
-                                                            2 * size3)
+
+    clickableRadius1, clickableRadius2, clickableRadius3 = 2 * size1, 2 * size2, 2 * size3
+
     if rm1 < clickableRadius1:
         a1[0], a1[1] = 0, 0
         v1[0], v1[1] = 0, 0
         r1[0], r1[1] = xm, ym
         canvas.delete("uno")
+
     if rm2 < clickableRadius2:
         a2[0], a2[1] = 0, 0
         v2[0], v2[1] = 0, 0
         r2[0], r2[1] = xm, ym
         canvas.delete("dos")
+
     if rm3 < clickableRadius3:
         a3[0], a3[1] = 0, 0
         v3[0], v3[1] = 0, 0
@@ -82,66 +86,69 @@ pressed2 = 0
 pressed3 = 0
 
 
-def wasRightClicked(event):  # checks to see if ball was rightclicked
+def wasRightClicked(event):  # checks to see if ball was right-clicked
     global pressed1, pressed2, pressed3
     xm, ym = event.x, event.y
+
     rm1 = math.sqrt(((xm - r1[0]) ** 2) + ((ym - r1[1]) ** 2))
     clickableRadius1 = size1 / 2
     if rm1 < clickableRadius1:
-        pressed1 = 1  # toggles "pressed" to on, allowing for velset function
+        pressed1 = 1  # toggles "pressed" to on, allowing for velSet function
+
     rm2 = math.sqrt(((xm - r2[0]) ** 2) + ((ym - r2[1]) ** 2))
     clickableRadius2 = size2 / 2
     if rm2 < clickableRadius2:
         pressed2 = 1
+
     rm3 = math.sqrt(((xm - r3[0]) ** 2) + ((ym - r3[1]) ** 2))
     clickableRadius3 = size3 / 2
     if rm3 < clickableRadius3:
         pressed3 = 1
 
 
-newvel1 = [0, 0]  # toggles for drag set velocity handler
-newvel2 = [0, 0]  # newvel interim global allows the actual velocity to not instantly
-newvel3 = [0, 0]  # and continuously change during the right-click+drag
+newVel1 = [0, 0]  # toggles for drag set velocity handler
+newVel2 = [0, 0]  # newVel interim global allows the actual velocity to not instantly
+newVel3 = [0, 0]  # and continuously change during the right-click+drag
 
 
 def makeVelLine(event):  # this func is called upon right-click-motion. Draws.
-    global pressed1, newvel1, pressed2, newvel2, pressed3, newvel3
+    global pressed1, newVel1, pressed2, newVel2, pressed3, newVel3
     vxm, vym = event.x, event.y
-    velscale = 10  # bigger velscale ---> less velocity in relation to how far user dragged mouse away from body
+    velScale = 10  # bigger velScale ---> less velocity in relation to how far user dragged mouse away from body
     if pressed1 == 1:
         canvas.delete("uno")
         canvas.create_line(r1[0], r1[1], vxm, vym, fill="green", width=1,
                            tags="uno")
-        newvel1[0], newvel1[1] = (vxm - r1[0]) / velscale, (vym - r1[1]) / velscale
+        newVel1[0], newVel1[1] = (vxm - r1[0]) / velScale, (vym - r1[1]) / velScale
     if pressed2 == 1:
         canvas.delete("dos")
         canvas.create_line(r2[0], r2[1], vxm, vym, fill="green", width=1,
                            tags="dos")
-        newvel2[0], newvel2[1] = (vxm - r2[0]) / velscale, (vym - r2[1]) / velscale
+        newVel2[0], newVel2[1] = (vxm - r2[0]) / velScale, (vym - r2[1]) / velScale
     if pressed3 == 1:
         canvas.delete("tres")
         canvas.create_line(r3[0], r3[1], vxm, vym, fill="green", width=1,
                            tags="tres")
-        newvel3[0], newvel3[1] = (vxm - r3[0]) / velscale, (vym - r3[1]) / velscale
+        newVel3[0], newVel3[1] = (vxm - r3[0]) / velScale, (vym - r3[1]) / velScale
 
 
 def velLineSet(_):  # this function is called upon mouse release. Sets vel.
-    global newvel1, newvel2, newvel3, pressed1, pressed2, pressed3
+    global newVel1, newVel2, newVel3, pressed1, pressed2, pressed3
     if pressed1 == 1:
-        v1[0], v1[1] = newvel1[0], newvel1[1]
-        newvel1[0], newvel1[1] = 0, 0
+        v1[0], v1[1] = newVel1[0], newVel1[1]
+        newVel1[0], newVel1[1] = 0, 0
         if gameState == 1:
             canvas.delete("uno")
         pressed1 = 0
     if pressed2 == 1:
-        v2[0], v2[1] = newvel2[0], newvel2[1]
-        newvel2[0], newvel2[1] = 0, 0
+        v2[0], v2[1] = newVel2[0], newVel2[1]
+        newVel2[0], newVel2[1] = 0, 0
         if gameState == 1:
             canvas.delete("dos")
         pressed2 = 0
     if pressed3 == 1:
-        v3[0], v3[1] = newvel3[0], newvel3[1]
-        newvel3[0], newvel3[1] = 0, 0
+        v3[0], v3[1] = newVel3[0], newVel3[1]
+        newVel3[0], newVel3[1] = 0, 0
         if gameState == 1:
             canvas.delete("tres")
         pressed3 = 0
@@ -152,29 +159,29 @@ def showInfo():
     # The below conditionals allow for the velocity info to be updated on the screen WHILE drawing velset line
     # and not just after vel line is released
     if pressed2 == 1:
-        str1 = "Yellow:   v = [%.2f, %.2f]\nRed:        v = [%.2f, %.2f]\nB" \
-               "lue:       v = [%.2f, %.2f]" % (newvel2[0], newvel2[1], v3[0],
+        str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
+               "lue:       v = [%.3f, %.3f]" % (newVel2[0], newVel2[1], v3[0],
                                                 v3[1], v1[0], v1[1])
         canvas.delete("velinfo")
         canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
                            tags="velinfo")
     if pressed1 == 1:
-        str1 = "Yellow:   v = [%.2f, %.2f]\nRed:        v = [%.2f, %.2f]\nB" \
-               "lue:       v = [%.2f, %.2f]" % (v2[0], v2[1], v3[0], v3[1],
-                                                newvel1[0], newvel1[1])
+        str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1],
+                                                newVel1[0], newVel1[1])
         canvas.delete("velinfo")
         canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
                            tags="velinfo")
     if pressed3 == 1:
-        str1 = "Yellow:   v = [%.2f, %.2f]\nRed:        v = [%.2f, %.2f]\nB" \
-               "lue:       v = [%.2f, %.2f]" % (v2[0], v2[1], newvel3[0],
-                                                newvel3[1], v1[0], v1[1])
+        str1 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], newVel3[0],
+                                                newVel3[1], v1[0], v1[1])
         canvas.delete("velinfo")
         canvas.create_text(10, 30, text=str1, fill="green", anchor=W, justify=LEFT,
                            tags="velinfo")
     if pressed2 == 0 and pressed1 == 0 and pressed3 == 0:
-        str2 = "Yellow:   v = [%.2f, %.2f]\nRed:        v = [%.2f, %.2f]\nB" \
-               "lue:       v = [%.2f, %.2f]" % (v2[0], v2[1], v3[0], v3[1], v1[0],
+        str2 = "Yellow:   v = [%.3f, %.3f]\nRed:        v = [%.3f, %.3f]\nB" \
+               "lue:       v = [%.3f, %.3f]" % (v2[0], v2[1], v3[0], v3[1], v1[0],
                                                 v1[1])
         canvas.delete("velinfo")
         canvas.create_text(10, 30, text=str2, fill="green", anchor=W, justify=LEFT,
@@ -184,8 +191,8 @@ def showInfo():
     canvas.delete("posinfo")
     canvas.create_text(10, 570, text=str3, fill="green", anchor=W, justify=LEFT,
                        tags="posinfo")
-    str4 = "Yellow:   Mass = %.1f\nRed:        Mass = %.1f\nB" \
-           "lue:       Mass = %.1f" % (m2, m3, m1)
+    str4 = "Yellow:   Mass = %.3f\nRed:        Mass = %.3f\nB" \
+           "lue:       Mass = %.3f" % (m2, m3, m1)
     canvas.delete("massinfo")
     canvas.create_text(990, 30, text=str4, fill="green", anchor=E, justify=RIGHT,
                        tags="massinfo")
