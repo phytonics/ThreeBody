@@ -4,13 +4,15 @@
 from tkinter import *
 import math
 import time
+from np.magic import np
+import numpy.linalg as la
 
 def globalReset():  # utility function used by both speedTest() and 'reset' button
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
-    r1, v1, a1 = [1400, 300], [-u/2, (u/2) * math.sqrt(3)], [0, 0]
-    r2, v2, a2 = [1300, 300 - 100 * math.sqrt(3)], [u, 0], [0, 0]
-    r3, v3, a3 = [1200, 300], [-u/2, -(u/2) * math.sqrt(3)], [0, 0]
+    r1, v1, a1 = np[1400, 300], np[-0.5, math.sqrt(3)/2] * u, np[0, 0]
+    r2, v2, a2 = np[1300, 300 - 100 * math.sqrt(3)], np[u, 0], np[0, 0]
+    r3, v3, a3 = np[1200, 300], np[-0.5, -math.sqrt(3)/2] * u, np[0, 0]
 
     size1, size2, size3 = 7.5 * m1 ** (1.0 / 3.0), 7.5 * m2 ** (1.0 / 3.0), 7.5 * m3 ** (1.0 / 3.0)
     canvas.delete("uno", "dos", "tres")  # deleting velocity indicator lines
@@ -49,30 +51,32 @@ def slowDown():
 
 
 def drag(event):  # changes the location of the body to current mouse coordinates
+    global r1, r2, r3
     xm, ym = event.x, event.y
 
-    rm1 = math.sqrt(((xm - r1[0]) ** 2) + ((ym - r1[1]) ** 2))
-    rm2 = math.sqrt(((xm - r2[0]) ** 2) + ((ym - r2[1]) ** 2))
-    rm3 = math.sqrt(((xm - r3[0]) ** 2) + ((ym - r3[1]) ** 2))
+    m = np[xm, ym]
+    rm1 = la.norm(m - r1)
+    rm2 = la.norm(m - r2)
+    rm3 = la.norm(m - r3)
 
     clickableRadius1, clickableRadius2, clickableRadius3 = 2 * size1, 2 * size2, 2 * size3
 
     if rm1 < clickableRadius1:
-        a1[0], a1[1] = 0, 0
-        v1[0], v1[1] = 0, 0
-        r1[0], r1[1] = xm, ym
+        a1[:] = 0
+        v1[:] = 0
+        r1 = m
         canvas.delete("uno")
 
     if rm2 < clickableRadius2:
-        a2[0], a2[1] = 0, 0
-        v2[0], v2[1] = 0, 0
-        r2[0], r2[1] = xm, ym
+        a2[:] = 0
+        v2[:] = 0
+        r2 = m
         canvas.delete("dos")
 
     if rm3 < clickableRadius3:
-        a3[0], a3[1] = 0, 0
-        v3[0], v3[1] = 0, 0
-        r3[0], r3[1] = xm, ym
+        a3[:] = 0
+        v3[:] = 0
+        r3 = m
         canvas.delete("tres")
 
 
@@ -80,17 +84,19 @@ def wasRightClicked(event):  # checks to see if ball was right-clicked
     global pressed1, pressed2, pressed3
     xm, ym = event.x, event.y
 
-    rm1 = math.sqrt(((xm - r1[0]) ** 2) + ((ym - r1[1]) ** 2))
+    m = np[xm, ym]
+    rm1 = la.norm(m - r1)
+    rm2 = la.norm(m - r2)
+    rm3 = la.norm(m - r3)
+
     clickableRadius1 = size1 / 2
     if rm1 < clickableRadius1:
         pressed1 = 1  # toggles "pressed" to on, allowing for velSet function
 
-    rm2 = math.sqrt(((xm - r2[0]) ** 2) + ((ym - r2[1]) ** 2))
     clickableRadius2 = size2 / 2
     if rm2 < clickableRadius2:
         pressed2 = 1
 
-    rm3 = math.sqrt(((xm - r3[0]) ** 2) + ((ym - r3[1]) ** 2))
     clickableRadius3 = size3 / 2
     if rm3 < clickableRadius3:
         pressed3 = 1
@@ -99,52 +105,54 @@ def wasRightClicked(event):  # checks to see if ball was right-clicked
 def makeVelLine(event):  # this func is called upon right-click-motion. Draws.
     global pressed1, newVel1, pressed2, newVel2, pressed3, newVel3
     vxm, vym = event.x, event.y
+    vm = np[vxm, vym]
+
     velScale = 10  # bigger velScale ---> less velocity in relation to how far user dragged mouse away from body
+
     if pressed1 == 1:
         canvas.delete("uno")
-        canvas.create_line(r1[0], r1[1], vxm, vym, fill="green", width=1,
-                           tags="uno")
-        newVel1[0], newVel1[1] = (vxm - r1[0]) / velScale, (vym - r1[1]) / velScale
+        canvas.create_line(r1[0], r1[1], vxm, vym, fill="green", width=1, tags="uno")
+        newVel1 = (vm - r1) / velScale
+
     if pressed2 == 1:
         canvas.delete("dos")
-        canvas.create_line(r2[0], r2[1], vxm, vym, fill="green", width=1,
-                           tags="dos")
-        newVel2[0], newVel2[1] = (vxm - r2[0]) / velScale, (vym - r2[1]) / velScale
+        canvas.create_line(r2[0], r2[1], vxm, vym, fill="green", width=1, tags="dos")
+        newVel2 = (vm - r2) / velScale
+
     if pressed3 == 1:
         canvas.delete("tres")
-        canvas.create_line(r3[0], r3[1], vxm, vym, fill="green", width=1,
-                           tags="tres")
-        newVel3[0], newVel3[1] = (vxm - r3[0]) / velScale, (vym - r3[1]) / velScale
+        canvas.create_line(r3[0], r3[1], vxm, vym, fill="green", width=1, tags="tres")
+        newVel3 = (vm - r3) / velScale
 
 
 def velLineSet(_):  # this function is called upon mouse release. Sets vel.
-    global newVel1, newVel2, newVel3, pressed1, pressed2, pressed3
+    global pressed1, pressed2, pressed3, v1, v2, v3
+
     if pressed1 == 1:
-        v1[0], v1[1] = newVel1[0], newVel1[1]
-        newVel1[0], newVel1[1] = 0, 0
+        v1 = newVel1
+        newVel1[:] = 0
         if gameState == 1:
             canvas.delete("uno")
         pressed1 = 0
+
     if pressed2 == 1:
-        v2[0], v2[1] = newVel2[0], newVel2[1]
-        newVel2[0], newVel2[1] = 0, 0
+        v2 = newVel2
+        newVel2[:] = 0
         if gameState == 1:
             canvas.delete("dos")
         pressed2 = 0
+
     if pressed3 == 1:
-        v3[0], v3[1] = newVel3[0], newVel3[1]
-        newVel3[0], newVel3[1] = 0, 0
+        v3 = newVel3
+        newVel3[:] = 0
         if gameState == 1:
             canvas.delete("tres")
         pressed3 = 0
 
 
 def setCM():
-    global m1, m2, m3, r1, r2, r3, rcm
-    rcm = [
-        (m1 * r1[0] + m2 * r2[0] + m3 * r3[0]) / (m1 + m2 + m3),
-        (m1 * r1[1] + m2 * r2[1] + m3 * r3[1]) / (m1 + m2 + m3)
-    ]
+    global rcm
+    rcm = (m1 * r1 + m2 * r2 + m3 * r3) / (m1 + m2 + m3)
 
 
 def showInfo():
@@ -194,54 +202,68 @@ def showInfo():
     canvas.create_text(990, 590, text=str5, fill="green", anchor=E, justify=RIGHT, tags="RAWR")
 
 
+def getX(r, size):
+    x = np[r[0] % canvas.winfo_width(), r[1] % canvas.winfo_height()]
+    xStart = x - (size / 2)
+    xEnd = x + (size / 2)
+    return xStart, xEnd
+
+
 def updateScreen():  # deletes old, draws new circles at current position
     canvas.delete("blue", "yellow", "red", "cm")
-    canvas.create_oval(r1[0] % 2000 - (size1 / 2), r1[1] - (size1 / 2), r1[0] % 2000 + (size1 / 2), r1[1] +
-                       (size1 / 2), outline="blue", fill="blue", tags="blue")
-    canvas.create_oval(r2[0] % 2000 - (size2 / 2), r2[1] - (size2 / 2), r2[0] % 2000 + (size2 / 2), r2[1] +
-                       (size2 / 2), outline="yellow", fill="yellow",
-                       tags="yellow")
-    canvas.create_oval(r3[0] % 2000 - (size3 / 2), r3[1] - (size3 / 2), r3[0] % 2000 + (size3 / 2), r3[1] +
-                       (size3 / 2), outline="red", fill="red", tags="red")
-    canvas.create_oval(rcm[0] % 2000 - 1, rcm[1] - 1, rcm[0] % 2000 + 1, rcm[1] + 1,
-                       outline="white", fill="white", tags="cm")
+
+    x1Start, x1End = getX(r1, size1)
+    x2Start, x2End = getX(r2, size2)
+    x3Start, x3End = getX(r3, size3)
+    xCMStart, xCMEnd = getX(rcm, 2)
+
+    canvas.create_oval(x1Start[0], x1Start[1], x1End[0], x1End[1], outline="blue", fill="blue", tags="blue")
+    canvas.create_oval(x2Start[0], x2Start[1], x2End[0], x2End[1], outline="yellow", fill="yellow", tags="yellow")
+    canvas.create_oval(x3Start[0], x3Start[1], x3End[0], x3End[1], outline="red", fill="red", tags="red")
+    canvas.create_oval(xCMStart[0], xCMStart[1], xCMEnd[0], xCMEnd[1], outline="white", fill="white", tags="cm")
     showInfo()
     root.update()
 
 
 def calculate(x, x_dot):
     global dt
+
     x1, x2, x3 = x
     x_dot1, x_dot2, x_dot3 = x_dot
-    x2 = [x2[0] + x_dot2[0] * dt, x2[1] + x_dot2[1] * dt]
-    x1 = [x1[0] + x_dot1[0] * dt, x1[1] + x_dot1[1] * dt]
-    x3 = [x3[0] + x_dot3[0] * dt, x3[1] + x_dot3[1] * dt]
+
+    x1 = x1 + x_dot1 * dt
+    x2 = x2 + x_dot2 * dt
+    x3 = x3 + x_dot3 * dt
+
     return x1, x2, x3
 
 
 def calculate_trajectories():  # Euler-Cromer Method
     global G, m1, r1, v1, a1, m2, r2, v2, a2, m3, r3, v3, a3, rcm
-    rMag_12 = math.sqrt((r1[0] - r2[0]) ** 2 + (r1[1] - r2[1]) ** 2)
-    rMag_13 = math.sqrt((r1[0] - r3[0]) ** 2 + (r1[1] - r3[1]) ** 2)
-    rMag_23 = math.sqrt((r2[0] - r3[0]) ** 2 + (r2[1] - r3[1]) ** 2)
-    rHat_21 = [(r2[0] - r1[0]) / rMag_12, (r2[1] - r1[1]) / rMag_12]
-    rHat_12 = [-rHat_21[0], -rHat_21[1]]
-    rHat_23 = [(r2[0] - r3[0]) / rMag_23, (r2[1] - r3[1]) / rMag_23]
-    rHat_32 = [-rHat_23[0], -rHat_23[1]]
-    rHat_13 = [(r1[0] - r3[0]) / rMag_13, (r1[1] - r3[1]) / rMag_13]
-    rHat_31 = [-rHat_13[0], -rHat_13[1]]
-    a21Mag = -m1 * G / (rMag_12 ** 2)
+
+    r12 = la.norm(r1 - r2)
+    r13 = la.norm(r1 - r3)
+    r23 = la.norm(r2 - r3)
+
+    rHat_21 = (r2 - r1) / r12
+    rHat_12 = -rHat_21
+
+    rHat_23 = (r2 - r3) / r23
+    rHat_32 = -rHat_23
+
+    rHat_13 = (r1 - r3) / r13
+    rHat_31 = -rHat_13
+
+    a21Mag = -m1 * G / (r12 ** 2)
     a12Mag = a21Mag * (m2 / m1)
-    a23Mag = -m3 * G / (rMag_23 ** 2)
+    a23Mag = -m3 * G / (r23 ** 2)
     a32Mag = a23Mag * (m2 / m3)
-    a13Mag = -m3 * G / (rMag_13 ** 2)
+    a13Mag = -m3 * G / (r13 ** 2)
     a31Mag = a13Mag * (m1 / m3)
-    a2 = [(rHat_21[0] * a21Mag) + (rHat_23[0] * a23Mag),
-          (rHat_21[1] * a21Mag) + (rHat_23[1] * a23Mag)]
-    a1 = [(rHat_12[0] * a12Mag) + (rHat_13[0] * a13Mag),
-          (rHat_12[1] * a12Mag) + (rHat_13[1] * a13Mag)]
-    a3 = [(rHat_31[0] * a31Mag) + (rHat_32[0] * a32Mag),
-          (rHat_31[1] * a31Mag) + (rHat_32[1] * a32Mag)]
+
+    a1 = rHat_12 * a12Mag + rHat_13 * a13Mag
+    a2 = rHat_21 * a21Mag + rHat_23 * a23Mag
+    a3 = rHat_31 * a31Mag + rHat_32 * a32Mag
 
     v1, v2, v3 = calculate(
         (v1, v2, v3),
@@ -301,15 +323,15 @@ s = 200
 u = math.sqrt(5)
 
 m1 = 1.0
-r1, v1, a1 = [1400, 300], [-u / 2, (u / 2) * math.sqrt(3)], [0, 0]
+r1, v1, a1 = np[1400, 300], np[-0.5, math.sqrt(3) / 2] * u, np[0, 0]
 size1 = 7.5 * m1 ** (1.0 / 3.0)
 
 m2 = 0.5
-r2, v2, a2 = [1300, 300 - 100 * math.sqrt(3)], [u, 0], [0, 0]
+r2, v2, a2 = np[1300, 300 - 100 * math.sqrt(3)], np[u, 0], np[0, 0]
 size2 = 7.5 * m2 ** (1.0 / 3.0)
 
 m3 = 1.0
-r3, v3, a3 = [1200, 300], [-u / 2, -(u / 2) * math.sqrt(3)], [0, 0]
+r3, v3, a3 = np[1200, 300], np[-0.5, -math.sqrt(3) / 2] * u, np[0, 0]
 size3 = 7.5 * m3 ** (1.0 / 3.0)
 
 # center of mass of the system
