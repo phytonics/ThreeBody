@@ -13,9 +13,9 @@ def globalReset():
     """
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
-    r1, v1, a1 = np[root.winfo_width() / 2 - 100, 300], np[1, 1] * u, np[0, 0]
-    r2, v2, a2 = np[root.winfo_width() / 2, 300], np[0, 1] * u, np[0, 0]
-    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300], np[-1, 1] * u, np[0, 0]
+    r1, v1, a1 = np[root.winfo_width() / 2 - 100, 300 + 50 * math.sqrt(2)], np[0, -1] * u, np[0, 0]
+    r2, v2, a2 = np[root.winfo_width() / 2, 300 - 50 * math.sqrt(2)], np[0, 0] * u, np[0, 0]
+    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300 + 50 * math.sqrt(2)], np[0, -1] * u, np[0, 0]
 
     size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))  # assuming they're all balls of similar density
 
@@ -344,7 +344,7 @@ newVel3 = [0, 0]  # and continuously change during the right-click+drag
 # GLOBAL PHYSICS VARIABLES
 # r = position, v = velocity, a = acceleration, m = mass
 
-G = 1000
+G = 10000
 
 s = 200
 u = 10
