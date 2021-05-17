@@ -13,11 +13,11 @@ def globalReset():
     """
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
-    r1, v1, a1 = np[1400, 300], np[-0.5, math.sqrt(3)/2] * u, np[0, 0]
-    r2, v2, a2 = np[1300, 300 - 100 * math.sqrt(3)], np[u, 0], np[0, 0]
-    r3, v3, a3 = np[1200, 300], np[-0.5, -math.sqrt(3)/2] * u, np[0, 0]
+    r1, v1, a1 = np[root.winfo_width() / 2 - 100, 300], np[1, 1] * u, np[0, 0]
+    r2, v2, a2 = np[root.winfo_width() / 2, 300], np[0, 1] * u, np[0, 0]
+    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300], np[-1, 1] * u, np[0, 0]
 
-    size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))
+    size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))  # assuming they're all balls of similar density
 
     canvas.delete("uno", "dos", "tres")  # deleting velocity indicator lines
     car()
@@ -255,7 +255,7 @@ def calculate(x, x_dot):
     return x1, x2, x3
 
 
-def calculate_trajectories():
+def calculateTrajectories():
     """
     Euler-Cromer Method
     """
@@ -324,7 +324,7 @@ def gameOn():
     gameState = 1
     while gameState == 1:
         i += 1
-        calculate_trajectories()
+        calculateTrajectories()
         if i % refreshScale == 0:  # only updates screen here
             i = 0
             updateScreen()
@@ -347,7 +347,7 @@ newVel3 = [0, 0]  # and continuously change during the right-click+drag
 G = 1000
 
 s = 200
-u = math.sqrt(5)
+u = 10
 
 # sqrt(GM rc) /s = v
 
@@ -427,7 +427,7 @@ def speedTest():
     i = 0
     while gameState == 2:
         i += 1
-        calculate_trajectories()
+        calculateTrajectories()
         if i % 20000 == 0:
             t2 = time.time()
             iters_per_second = 20000.0 / (t2 - t1)
@@ -442,3 +442,6 @@ updateScreen()
 refreshScale, dt = 0, 0.0  # initializing refreshScale and time-step
 gameState = 2
 speedTest()  # computes dt and refresh scale ---> also starts main loop
+root.mainloop()
+globalReset()
+updateScreen()
