@@ -14,8 +14,8 @@ def globalReset():
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
     r1, v1, a1 = np[root.winfo_width() / 2 - 100, 300 + 50 * math.sqrt(2)], np[0, -1] * u, np[0, 0]
-    r2, v2, a2 = np[root.winfo_width() / 2, 300 - 50 * math.sqrt(2)], np[0, 0] * u, np[0, 0]
-    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300 + 50 * math.sqrt(2)], np[0, -1] * u, np[0, 0]
+    r2, v2, a2 = np[root.winfo_width() / 2, 300 - 50 * math.sqrt(2)], np[0, 1] * u, np[0, 0]
+    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300 + 50 * math.sqrt(2)], np[0, 1] * u, np[0, 0]
 
     size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))  # assuming they're all balls of similar density
 
@@ -25,24 +25,24 @@ def globalReset():
 
 def setMass1():
     """
-    Gets the value inside entry box, sets mass to that value
+    Gets the value/expression inside entry box, sets mass to that value
     """
     global m1, size1
-    m1 = float(mass1.get())
+    m1 = float(eval(mass1.get()))
     size1 = 7.5 * m1 ** (1 / 3)
     mass1.delete(0, 'end')
 
 
 def setMass2():
     global m2, size2
-    m2 = float(mass2.get())
+    m2 = float(eval(mass2.get()))
     size2 = 7.5 * m2 ** (1 / 3)
     mass2.delete(0, 'end')
 
 
 def setMass3():
     global m3, size3
-    m3 = float(mass3.get())
+    m3 = float(eval(mass3.get()))
     size3 = 7.5 * m3 ** (1 / 3)
     mass3.delete(0, 'end')
 
