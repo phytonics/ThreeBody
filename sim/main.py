@@ -13,15 +13,50 @@ def globalReset():
     """
     global r1, v1, a1, r2, v2, a2, r3, v3, a3, m1, m2, m3, size1, size2, size3
 
-    r1, v1, a1 = np[root.winfo_width() / 2 - 100, 300 + 50 * math.sqrt(2)], np[0, -1] * u, np[0, 0]
-    r2, v2, a2 = np[root.winfo_width() / 2, 300 - 50 * math.sqrt(2)], np[0, 1] * u, np[0, 0]
-    r3, v3, a3 = np[root.winfo_width() / 2 + 100, 300 + 50 * math.sqrt(2)], np[0, 1] * u, np[0, 0]
+    u1 = getU(m2, m3)
+    u2 = getU(m1, m3)
+    u3 = getU(m1, m2)
+
+    r1x = root.winfo_width() - s
+    r1y = root.winfo_height() + s * math.sqrt(3) / 2
+    r1 = np[r1x, r1y] / 2
+
+    r2x = root.winfo_width()
+    r2y = root.winfo_height() - s * math.sqrt(3) / 2
+    r2 = np[r2x, r2y] / 2
+
+    r3x = root.winfo_width() + s
+    r3y = root.winfo_height() + s * math.sqrt(3) / 2
+    r3 = np[r3x, r3y] / 2
+
+    angleComp1 = angleComp(r1 - rcm)
+    angleComp2 = angleComp(r2 - rcm)
+    angleComp3 = angleComp(r3 - rcm)
+
+    v1 = angleComp1 * u1
+    v2 = angleComp2 * u2
+    v3 = angleComp3 * u3
+
+    a1 = np[0, 0]
+    a2 = np[0, 0]
+    a3 = np[0, 0]
 
     size1, size2, size3 = tuple(7.5 * np[m1, m2, m3]**(1 / 3))  # assuming they're all balls of similar density
 
     canvas.delete("uno", "dos", "tres")  # deleting velocity indicator lines
     car()
 
+
+def getU(m, M):
+    return math.sqrt(
+        (G * (m ** 2 + M ** 2 + m * M)) / (s * (m1 + m2 + m3))
+    )
+
+
+def angleComp(x_relative):
+    x_relative /= la.norm(x_relative)
+    cmplx = (0 + 1j) * complex(*x_relative)
+    return np[cmplx.real, cmplx.imag]
 
 def setMass1():
     """
