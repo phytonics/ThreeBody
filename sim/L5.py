@@ -258,7 +258,7 @@ def showInfo():
 
 
 def getX(r, size):
-    x = np[r[0] % canvas.winfo_width(), r[1] % canvas.winfo_height()]
+    x = np[r[0], r[1]]  # % canvas.winfo_width()  % canvas.winfo_height() --> no need to see what ejecting does
     xStart = x - (size / 2)
     xEnd = x + (size / 2)
     return xStart, xEnd
@@ -413,6 +413,7 @@ rcm = [
 # GUI Screen, widgets, buttons, bindings
 root = Tk()
 root.state('zoomed')
+root.iconbitmap('phyton.ico')
 root.title(title)
 frame = Frame(width=1000, height=50, bg="black")
 frame.pack(fill=BOTH)
