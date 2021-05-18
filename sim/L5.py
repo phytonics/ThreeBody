@@ -2,7 +2,6 @@
 # Adapted from 'GravitySim' by Matt Sprengel
 
 from tkinter import *
-import threebody
 import time
 from np.magic import np
 import numpy.linalg as la
@@ -18,7 +17,7 @@ def globalReset():
     u3 = getU(m1, m2)
 
     r1x = root.winfo_width() - s
-    r1y = root.winfo_height() + s * threebody.sqrt(3)
+    r1y = root.winfo_height() + s * np.sqrt(3)
     r1 = np[r1x, r1y] / 2
 
     r2x = root.winfo_width()
@@ -26,7 +25,7 @@ def globalReset():
     r2 = np[r2x, r2y] / 2
 
     r3x = root.winfo_width() + s
-    r3y = root.winfo_height() + s * threebody.sqrt(3)
+    r3y = root.winfo_height() + s * np.sqrt(3)
     r3 = np[r3x, r3y] / 2
 
     angleComp1 = angleComp(r1 - rcm)
@@ -48,7 +47,7 @@ def globalReset():
 
 
 def getU(m, M):
-    return threebody.sqrt(
+    return np.sqrt(
         (G * (m ** 2 + M ** 2 + m * M)) / (s * (m1 + m2 + m3))
     )
 
@@ -80,6 +79,13 @@ def setMass3():
     m3 = float(eval(mass3.get()))
     size3 = 7.5 * m3 ** (1 / 3)
     mass3.delete(0, 'end')
+
+def setSide():
+    global s
+    s = float(eval(side.get()))
+    side.delete(0, "end")
+    globalReset()
+    gameOn()
 
 
 def speedUp():
@@ -242,8 +248,8 @@ def showInfo():
            "lue:       r = [%d, %d]" % (r2[0], r2[1], r3[0], r3[1], r1[0], r1[1])
     canvas.delete("posinfo")
     canvas.create_text(10, 570, text=str3, fill="green", anchor=W, justify=LEFT, tags="posinfo")
-    str4 = "Yellow:   Mass = %.3f\nRed:        Mass = %.3f\nB" \
-           "lue:       Mass = %.3f" % (m2, m3, m1)
+    str4 = "Yellow:   Mass = %.3f\nRed:        Mass = %.3f\nBlue:       Mass = %.3f" \
+           "\nSide = %.3f" % (m2, m3, m1, s)
     canvas.delete("massinfo")
     canvas.create_text(990, 30, text=str4, fill="green", anchor=E, justify=RIGHT, tags="massinfo")
     str5 = "Euler-Cromer Method"
@@ -269,7 +275,7 @@ def updateScreen():
     x3Start, x3End = getX(r3, size3)
     xCMStart, xCMEnd = getX(rcm, 2)
 
-    canvas.create_oval(x1Start[0], x1Start[1], x1End[0], x1End[1], outline="blue", fill="blue", tags="blue")
+    canvas.create_oval(x1Start[0], x1Start[1], x1End[0], x1End[1], outline="Green", fill="Green", tags="blue")
     canvas.create_oval(x2Start[0], x2Start[1], x2End[0], x2End[1], outline="yellow", fill="yellow", tags="yellow")
     canvas.create_oval(x3Start[0], x3Start[1], x3End[0], x3End[1], outline="red", fill="red", tags="red")
     canvas.create_oval(xCMStart[0], xCMStart[1], xCMEnd[0], xCMEnd[1], outline="white", fill="white", tags="cm")
@@ -389,9 +395,9 @@ u = 10
 
 m1, m2, m3 = 0.1, 1000.0, 0.1
 
-r1, v1, a1 = np[1400, 300], np[-0.5, threebody.sqrt(3) / 2] * u, np[0, 0]
-r2, v2, a2 = np[1300, 300 - 100 * threebody.sqrt(3)], np[u, 0], np[0, 0]
-r3, v3, a3 = np[1200, 300], np[-0.5, -threebody.sqrt(3) / 2] * u, np[0, 0]
+r1, v1, a1 = np[1400, 300], np[0, 0], np[0, 0]
+r2, v2, a2 = np[1300, 300 - 100 * np.sqrt(3)], np[0, 0], np[0, 0]
+r3, v3, a3 = np[1200, 300], np[0, 0], np[0, 0]
 
 size1 = 7.5 * m1 ** (1.0 / 3.0)
 size2 = 7.5 * m2 ** (1.0 / 3.0)
@@ -422,7 +428,7 @@ reset.pack(side=LEFT, padx=5)
 
 
 # Creating mass editing entry box and buttons
-mb1 = Button(frame, text="Set Mass", command=setMass1, bg="Blue", fg="white")
+mb1 = Button(frame, text="Set Mass", command=setMass1, bg="Green", fg="white")
 mb1.pack(side=RIGHT, padx=10, pady=3)
 mass1 = Entry(frame, width=5, bg="black", fg="white", insertbackground="white", insertwidth=1)
 mass1.pack(side=RIGHT, padx=5)
@@ -434,6 +440,10 @@ mb3 = Button(frame, text="Set Mass", command=setMass3, bg="Red", fg="white")
 mb3.pack(side=RIGHT, padx=10)
 mass3 = Entry(frame, width=5, bg="black", fg="white", insertbackground="white", insertwidth=1)
 mass3.pack(side=RIGHT, padx=5)
+sb = Button(frame, text="Set Side", command=setSide, bg="Blue", fg="white")
+sb.pack(side=RIGHT, padx=10)
+side = Entry(frame, width=5, bg="black", fg="white", insertbackground="white", insertwidth=1)
+side.pack(side=RIGHT, padx=5)
 
 
 # Creating speed up and slow down buttons
