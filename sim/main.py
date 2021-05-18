@@ -2,7 +2,7 @@
 # Adapted from 'GravitySim' by Matt Sprengel
 
 from tkinter import *
-import math
+import threebody
 import time
 from np.magic import np
 import numpy.linalg as la
@@ -18,15 +18,15 @@ def globalReset():
     u3 = getU(m1, m2)
 
     r1x = root.winfo_width() - s
-    r1y = root.winfo_height() + s * math.sqrt(3) / 2
+    r1y = root.winfo_height() + s * threebody.sqrt(3) / 2
     r1 = np[r1x, r1y] / 2
 
     r2x = root.winfo_width()
-    r2y = root.winfo_height() - s * math.sqrt(3) / 2
+    r2y = root.winfo_height() - s * threebody.sqrt(3) / 2
     r2 = np[r2x, r2y] / 2
 
     r3x = root.winfo_width() + s
-    r3y = root.winfo_height() + s * math.sqrt(3) / 2
+    r3y = root.winfo_height() + s * threebody.sqrt(3) / 2
     r3 = np[r3x, r3y] / 2
 
     angleComp1 = angleComp(r1 - rcm)
@@ -48,7 +48,7 @@ def globalReset():
 
 
 def getU(m, M):
-    return math.sqrt(
+    return threebody.sqrt(
         (G * (m ** 2 + M ** 2 + m * M)) / (s * (m1 + m2 + m3))
     )
 
@@ -381,17 +381,17 @@ newVel3 = [0, 0]  # and continuously change during the right-click+drag
 
 G = 10000
 
-s = 200
+s = 400
 u = 10
 
 # sqrt(GM rc) /s = v
 
 
-m1, m2, m3 = 0.5, 400.0, 0.5
+m1, m2, m3 = 1000.0, 1000.0, 0.1
 
-r1, v1, a1 = np[1400, 300], np[-0.5, math.sqrt(3) / 2] * u, np[0, 0]
-r2, v2, a2 = np[1300, 300 - 100 * math.sqrt(3)], np[u, 0], np[0, 0]
-r3, v3, a3 = np[1200, 300], np[-0.5, -math.sqrt(3) / 2] * u, np[0, 0]
+r1, v1, a1 = np[1400, 300], np[-0.5, threebody.sqrt(3) / 2] * u, np[0, 0]
+r2, v2, a2 = np[1300, 300 - 100 * threebody.sqrt(3)], np[u, 0], np[0, 0]
+r3, v3, a3 = np[1200, 300], np[-0.5, -threebody.sqrt(3) / 2] * u, np[0, 0]
 
 size1 = 7.5 * m1 ** (1.0 / 3.0)
 size2 = 7.5 * m2 ** (1.0 / 3.0)
