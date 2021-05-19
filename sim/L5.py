@@ -257,8 +257,8 @@ def showInfo():
     canvas.create_text(990, 590, text=str5, fill="green", anchor=E, justify=RIGHT, tags="RAWR")
 
 
-def getX(r, size):
-    x = np[r[0], r[1]]  # % canvas.winfo_width()  % canvas.winfo_height() --> no need to see what ejecting does
+def getX(r: np.array, size):
+    x = np[r[0], r[1]]  # % canvas.winfo_width()  % canvas.winfo_height() --> no need to see ejecting effect
     xStart = x - (size / 2)
     xEnd = x + (size / 2)
     return xStart, xEnd
@@ -275,10 +275,10 @@ def updateScreen():
     x3Start, x3End = getX(r3, size3)
     xCMStart, xCMEnd = getX(rcm, 2)
 
-    canvas.create_oval(x1Start[0], x1Start[1], x1End[0], x1End[1], outline="Green", fill="Green", tags="blue")
-    canvas.create_oval(x2Start[0], x2Start[1], x2End[0], x2End[1], outline="yellow", fill="yellow", tags="yellow")
-    canvas.create_oval(x3Start[0], x3Start[1], x3End[0], x3End[1], outline="red", fill="red", tags="red")
-    canvas.create_oval(xCMStart[0], xCMStart[1], xCMEnd[0], xCMEnd[1], outline="white", fill="white", tags="cm")
+    canvas.create_oval(*x1Start, *x1End, outline="Green", fill="Green", tags="blue")
+    canvas.create_oval(*x2Start, *x2End, outline="yellow", fill="yellow", tags="yellow")
+    canvas.create_oval(*x3Start, *x3End, outline="red", fill="red", tags="red")
+    canvas.create_oval(*xCMStart, *xCMEnd, outline="white", fill="white", tags="cm")
     showInfo()
     root.update()
 
