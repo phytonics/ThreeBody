@@ -48,3 +48,7 @@ Vikram's Schedule:
 #### Guides
 - [Batch File Download](https://irsa.ipac.caltech.edu/docs/batch_download_help.html)
 
+### Configurations
+- [Meissel's Pythagorean Three-Body Configuration](http://www.ucolick.org/~laugh/oxide/projects/burrau.html#:~:text=In%201893%2C%20the%20mathematician%20Meissel,the%20Newtonian%20law%20of%20gravitation.)
+- [Figure 8](https://sites.math.washington.edu/~morrow/336_12/papers/adrian.pdf)
+
