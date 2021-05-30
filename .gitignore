@@ -131,4 +131,3 @@ dmypy.json
 # dump large manual datasets heres
 kepler_ktc_kic.csv
 k2_ktc_epic.csv
-sim/test.py
