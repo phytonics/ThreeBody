@@ -7,5 +7,8 @@ A) Two small bodies orbiting around a massive body, wherein the smaller bodies e
 B) One small body orbiting with a massive binary star configuration.
 
 For each of these scenarios, something that the great sir VIKRAM RAMANATHAN doesn't seem to understand is SCALING.
+
+Case A:
 """
+
 
