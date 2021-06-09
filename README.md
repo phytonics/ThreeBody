@@ -2,7 +2,7 @@
 Here, we analyze the Luminosity Time Series Data from the Kepler Space Probe in order to identify Stable Three-Body Systems, as part of an IRP at NUS High School.
 
 ## Detecting Stable Three-Body Systems
-Team: Ernest, Vikram
+Team: Ernest, Vikram, ~~Yuan Xi~~
 
 Mentor: Dr Bernard Ricardo
 
@@ -17,6 +17,9 @@ Prannaya's Schedule:
 
 Vikram's Schedule:
 1. Add on to this list
+
+Yuan Xi's Schedule:
+1. Get at least 100 possible 3 body system initial conditions by 13/6
 
 **My work**: get the data, clean up the data, and figure out what possible patterns we are looking for
 (essentially data preprocessing)
