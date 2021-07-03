@@ -9,6 +9,6 @@ from .general import plotKeplerLightCurve, plotKeplerSAPLightCurve, plotKeplerPD
 
 __all__ = [
     "retrieveKeplerLightCurve", "getKplrIds", "getKplrId", "analyseKeplerLightCurve",
-    "retriveK2LightCurve", "getK2Ids", "getK2Id", "analyseK2LightCurve",
+    "retrieveK2LightCurve", "getK2Ids", "getK2Id", "analyseK2LightCurve",
     "plotKeplerLightCurve", "plotKeplerSAPLightCurve", "plotKeplerPDCSAPLightCurve"
 ]
