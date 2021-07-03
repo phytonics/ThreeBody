@@ -8,7 +8,7 @@ def getK2Ids() -> List[int]:
     """
     :returns: A list containing all the certified K2 Ids.
     """
-    with open("../data/k2_ids.txt") as ids_file:
+    with open("data/k2_ids.txt") as ids_file:
         ids = list(map(int, ids_file.readlines()))
     return ids
 

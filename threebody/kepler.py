@@ -8,7 +8,7 @@ def getKplrIds() -> List[int]:
     """
     :returns: A list containing all the certified Kepler Ids.
     """
-    with open("../data/kepler_ids.txt") as ids_file:
+    with open("data/kepler_ids.txt") as ids_file:
         ids = list(map(int, ids_file.readlines()))
     return ids
 
