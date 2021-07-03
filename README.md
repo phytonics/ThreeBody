@@ -107,6 +107,7 @@ Yuan Xi's Schedule:
     - [Google AI Blog](https://ai.googleblog.com/2018/03/open-sourcing-hunt-for-exoplanets.html)
     - [Actual Acknoweledgement](https://blog.google/technology/ai/hunting-planets-machine-learning/)
 - [Asteroseismic Modeling of 16 Cyg A & B using the complete Kepler Data Set](https://arxiv.org/pdf/1508.00946.pdf)
+- [False Positives Vetting method](https://iopscience.iop.org/article/10.3847/1538-3881/aae582/pdf)
 
 #### Guides
 - [Batch File Download](https://irsa.ipac.caltech.edu/docs/batch_download_help.html)
