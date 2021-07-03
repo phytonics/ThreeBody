@@ -8,9 +8,8 @@ def getKplrIds() -> List[int]:
     """
     :returns: A list containing all the certified Kepler Ids.
     """
-    ids_file = open("../data/kepler_ids.txt")
-    ids = list(map(int, ids_file.readlines()))
-    ids_file.close()
+    with open("../data/kepler_ids.txt") as ids_file:
+        ids = list(map(int, ids_file.readlines()))
     return ids
 
 
@@ -47,3 +46,8 @@ def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[Kepl
     klc.delete()
     del klc
     return result
+
+
+__all__ = [
+    "retrieveKeplerLightCurve", "getKplrIds", "analyseKeplerLightCurve", "getKplrId"
+]

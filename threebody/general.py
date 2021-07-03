@@ -30,3 +30,8 @@ def plotKeplerPDCSAPLightCurve(klc: KeplerLightCurve) -> Any:
     ax = klc.plot(column='pdcsap_flux', normalize=True)
     ax.set_title(f"PDCSAP Flux Light curve of {klc.id}")
     return ax
+
+
+__all__ = [
+    "plotKeplerLightCurve", "plotKeplerSAPLightCurve", "plotKeplerPDCSAPLightCurve"
+]
