@@ -49,5 +49,5 @@ def analyseK2LightCurve(k2Id: Union[int, str, float], func: Callable[[KeplerLigh
 
 
 __all__ = [
-    "retriveK2LightCurve", "getK2Ids", "getK2Id", "analyseK2LightCurve"
+    "retrieveK2LightCurve", "getK2Ids", "getK2Id", "analyseK2LightCurve"
 ]
