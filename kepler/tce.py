@@ -7,14 +7,11 @@ def retrieveExoplanetArchives() -> pd.DataFrame:
     """
     :returns: DataFrame of TCE Data.
     """
-    df = pd.read_csv("data/kepler_tce.csv").set_index("kepid")
-    df["tce_duration"] /= 24  # Convert hours to days.
+    tce_table = pd.read_csv("data/kepler_tce.csv").set_index("kepid")
+    tce_table["tce_duration"] /= 24  # Convert hours to days.
 
-    # Name and values of the column in the input CSV file to use as training labels.
-    _LABEL_COLUMN = "av_training_set"
-    _ALLOWED_LABELS = {"PC", "AFP", "NTP"}
-    allowed_tces = df[_LABEL_COLUMN].apply(lambda l: l in _ALLOWED_LABELS)
-    tce_table = df[allowed_tces]
+    allowed_tces = tce_table.av_training_set.apply(lambda l: l in ["PC", "AFP", "NTP"])
+    tce_table = tce_table[allowed_tces]
 
     return tce_table
 
