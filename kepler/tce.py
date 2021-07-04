@@ -1,59 +1,22 @@
-import lightkurve as lk
-from lightkurve.lightcurve import KeplerLightCurve
-import os
+from .kepler import getKplrIds, getKplrId, retrieveKeplerLightCurve, analyseKeplerLightCurve
 import pandas as pd
 from typing import Union, List, Callable, Any, Tuple
-
-
-def getKplrIds() -> List[int]:
-    """
-    :returns: A list containing all the certified Kepler Ids.
-    """
-    with open("data/kepler_ids.txt") as ids_file:
-        ids = list(map(int, ids_file.readlines()))
-    return ids
-
-
-def getKplrId(index: int = 0) -> int:
-    """
-    :param index: Literally the index you want from the Kepler Ids List
-    :returns: Kepler Id as an Integer
-    """
-    return getKplrIds()[index]
-
-
-def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve:
-    """
-    :param kplrId: The Kepler Id, as an Integer, String or Float
-    :returns: A KeplerLightCurve object
-    """
-    kplrId = int(kplrId)
-    search_result: lk.SearchResult = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
-    klc: KeplerLightCurve = search_result.download_all().stitch()
-    klc.id = kplrId
-    klc.filename = klc.meta["FILENAME"]
-    klc.delete = lambda self: os.remove(self.filename)
-    return klc
-
-
-def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
-    """
-    :param kplrId: The Kepler Id, as an Integer, String or Float
-    :param func: The function to be ran, with the modified KeplerLightCurve as a parameter
-    :return: Result of func
-    """
-    klc = retrieveKeplerLightCurve(kplrId)
-    result = func(klc)
-    klc.delete()
-    del klc
-    return result
-
+from lightkurve import KeplerLightCurve
 
 def retrieveExoplanetArchives() -> pd.DataFrame:
     """
     :returns: DataFrame of TCE Data.
     """
-    return pd.read_csv("data/kepler_tce.csv").set_index("kepid")
+    df = pd.read_csv("data/kepler_tce.csv").set_index("kepid")
+    df["tce_duration"] /= 24  # Convert hours to days.
+
+    # Name and values of the column in the input CSV file to use as training labels.
+    _LABEL_COLUMN = "av_training_set"
+    _ALLOWED_LABELS = {"PC", "AFP", "NTP"}
+    allowed_tces = df[_LABEL_COLUMN].apply(lambda l: l in _ALLOWED_LABELS)
+    tce_table = df[allowed_tces]
+
+    return tce_table
 
 
 def getExoplanetArchiveIds() -> List[int]:
@@ -111,10 +74,7 @@ def analyseCompleteExoplanetArchive(kplrId: Union[int, str, float], func: Callab
     return result
 
 
-
 __all__ = [
-    "getKplrId", "getKplrIds",
-    "retrieveKeplerLightCurve", "analyseKeplerLightCurve",
     "getExoplanetArchiveIds", "getExoplanetArchiveId",
     "retrieveExoplanetArchives", "retrieveExoplanetArchive", "analyseExoplanetArchive",
     "retrieveCompleteExoplanetArchive", "analyseCompleteExoplanetArchive"

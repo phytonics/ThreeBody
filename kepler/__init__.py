@@ -1,8 +1,9 @@
-# threebody/__init__.py
+# kepler/__init__.py
 
-from .kepler import getKplrId, getKplrIds, retrieveKeplerLightCurve, analyseKeplerLightCurve, getExoplanetArchiveIds, \
-    getExoplanetArchiveId, retrieveExoplanetArchives, retrieveExoplanetArchive, analyseExoplanetArchive, \
-    retrieveCompleteExoplanetArchive, analyseCompleteExoplanetArchive
+from .kepler import getKplrId, getKplrIds, retrieveKeplerLightCurve, analyseKeplerLightCurve
+
+from .tce import getExoplanetArchiveIds, getExoplanetArchiveId, retrieveExoplanetArchives, retrieveExoplanetArchive, \
+    analyseExoplanetArchive, retrieveCompleteExoplanetArchive, analyseCompleteExoplanetArchive
 
 from .k2 import retrieveK2LightCurve, getK2Ids, getK2Id, analyseK2LightCurve
 
