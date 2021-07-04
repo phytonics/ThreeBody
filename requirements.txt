@@ -7,3 +7,4 @@ lightkurve==2.0.10
 numpy~=1.19.5
 six~=1.15.0
 pydl~=0.7.0
+ellc==1.8.5

@@ -1,8 +1,7 @@
 import lightkurve as lk
 from lightkurve.lightcurve import KeplerLightCurve
 import os
-import pandas as pd
-from typing import Union, List, Callable, Any, Tuple
+from typing import Union, List, Callable, Any
 
 
 def getKplrIds() -> List[int]:
@@ -22,7 +21,28 @@ def getKplrId(index: int = 0) -> int:
     return getKplrIds()[index]
 
 
-def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve:
+class LightCurve:
+    def __init__(self, klc: KeplerLightCurve, kplrId: Union[int, str, float]):
+        self.klc = klc
+        self.id = kplrId
+
+    def __enter__(self):
+        return self
+
+    def delete(self):
+        os.remove(self.klc.meta["FILENAME"])
+
+    def __del__(self):
+        self.delete()
+
+    def __exit__(self):
+        self.__del__()
+
+    def __getattr__(self, item):
+        return eval(f"self.klc.{item}")
+
+
+def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> LightCurve:
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
     :returns: A KeplerLightCurve object
@@ -30,29 +50,21 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> KeplerLightCurve
     kplrId = int(kplrId)
     search_result: lk.SearchResult = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
     klc: KeplerLightCurve = search_result.download_all().stitch()
-    klc.id = kplrId
-    klc.filename = klc.meta["FILENAME"]
-    klc.delete = lambda self: os.remove(self.filename)
-    return klc
+    return LightCurve(klc, kplrId)
 
 
-def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[KeplerLightCurve], Any]) -> Any:
+def analyseKeplerLightCurve(kplrId: Union[int, str, float], func: Callable[[LightCurve], Any]) -> Any:
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
     :param func: The function to be ran, with the modified KeplerLightCurve as a parameter
     :return: Result of func
     """
-    klc = retrieveKeplerLightCurve(kplrId)
-    result = func(klc)
-    klc.delete()
-    del klc
-    return result
-
-
-
+    with retrieveKeplerLightCurve(kplrId) as klc:
+        return func(klc)
 
 
 __all__ = [
     "getKplrId", "getKplrIds",
-    "retrieveKeplerLightCurve", "analyseKeplerLightCurve"
+    "retrieveKeplerLightCurve", "analyseKeplerLightCurve",
+    "LightCurve"
 ]

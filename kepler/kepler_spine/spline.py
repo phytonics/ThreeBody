@@ -81,13 +81,14 @@ def kepler_spline(time, flux, bkspace=1.5, maxiter=5, outlier_cut=3):
     return spline, mask
 
 
-def choose_kepler_spline(all_time,
-                         all_flux,
+def choose_kepler_spline(time,
+                         flux,
                          bkspaces,
                          maxiter=5,
                          penalty_coeff=1.0,
                          verbose=True):
-    """Computes the best-fit Kepler spline across a break-point spacings.
+    """
+  Computes the best-fit Kepler spline across a break-point spacings.
   Some Kepler light curves have low-frequency variability, while others have
   very high-frequency variability (e.g. due to rapid rotation). Therefore, it is
   suboptimal to use the same break-point spacing for every star. This function
@@ -98,8 +99,8 @@ def choose_kepler_spline(all_time,
   divided into different segments (e.g. split by quarter breaks or gaps in the
   in the data). A separate spline is fit for each segment.
   Args:
-    all_time: List of 1D numpy arrays; the time values of the light curve.
-    all_flux: List of 1D numpy arrays; the flux (brightness) values of the light
+    time: List of 1D numpy arrays; the time values of the light curve.
+    flux: List of 1D numpy arrays; the flux (brightness) values of the light
         curve.
     bkspaces: List of break-point spacings to try.
     maxiter: Maximum number of attempts to fit each spline after removing badly
@@ -121,7 +122,7 @@ def choose_kepler_spline(all_time,
   """
     # Compute the assumed standard deviation of Gaussian white noise about the
     # spline model.
-    abs_deviations = np.concatenate([np.abs(f[1:] - f[:-1]) for f in all_flux])
+    abs_deviations = np.abs(flux[1:] - flux[:-1])
     sigma = np.median(abs_deviations) * 1.48 / np.sqrt(2)
 
     best_bic = None
@@ -137,7 +138,7 @@ def choose_kepler_spline(all_time,
         spline = []
         spline_mask = []
         bad_bkspace = False  # Indicates that the current bkspace should be skipped.
-        for time, flux in zip(all_time, all_flux):
+        for time, flux in zip(time, flux):
             # Don't fit a spline on less than 4 points.
             if len(time) < 4:
                 spline.append(flux)

@@ -1,7 +1,7 @@
-from .kepler import getKplrIds, getKplrId, retrieveKeplerLightCurve, analyseKeplerLightCurve
+from .kepler import retrieveKeplerLightCurve, LightCurve
 import pandas as pd
 from typing import Union, List, Callable, Any, Tuple
-from lightkurve import KeplerLightCurve
+
 
 def retrieveExoplanetArchives() -> pd.DataFrame:
     """
@@ -9,10 +9,7 @@ def retrieveExoplanetArchives() -> pd.DataFrame:
     """
     tce_table = pd.read_csv("data/kepler_tce.csv").set_index("kepid")
     tce_table["tce_duration"] /= 24  # Convert hours to days.
-
-    allowed_tces = tce_table.av_training_set.apply(lambda l: l in ["PC", "AFP", "NTP"])
-    tce_table = tce_table[allowed_tces]
-
+    tce_table = tce_table[tce_table.av_training_set.apply(lambda l: l in ["PC", "AFP", "NTP"])]
     return tce_table
 
 
@@ -36,8 +33,7 @@ def retrieveExoplanetArchive(kplrId: Union[int, str, float]) -> pd.Series:
     :param kplrId: The Kepler Id, as an Integer, String or Float
     :return: The TCE Data
     """
-    df = retrieveExoplanetArchives()
-    return df.loc[int(kplrId)]
+    return retrieveExoplanetArchives().loc[int(kplrId)]
 
 
 def analyseExoplanetArchive(kplrId: Union[int, str, float], func: Callable[[pd.Series], Any]) -> Any:
@@ -46,11 +42,10 @@ def analyseExoplanetArchive(kplrId: Union[int, str, float], func: Callable[[pd.S
     :param func: The function to be ran, with the modified pd.Series as a parameter
     :return: Result of func
     """
-    data = retrieveExoplanetArchive(kplrId)
-    return func(data)
+    return func(retrieveExoplanetArchive(kplrId))
 
 
-def retrieveCompleteExoplanetArchive(kplrId: Union[int, str, float]) -> Tuple[pd.Series, KeplerLightCurve]:
+def retrieveCompleteExoplanetArchive(kplrId: Union[int, str, float]) -> Tuple[pd.Series, LightCurve]:
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
     :return: A Tuple containing the TCE Data and Kepler Light Curve Data
@@ -58,17 +53,14 @@ def retrieveCompleteExoplanetArchive(kplrId: Union[int, str, float]) -> Tuple[pd
     return retrieveExoplanetArchive(kplrId), retrieveKeplerLightCurve(kplrId)
 
 
-def analyseCompleteExoplanetArchive(kplrId: Union[int, str, float], func: Callable[[pd.Series, KeplerLightCurve], Any]) -> Any:
+def analyseCompleteExoplanetArchive(kplrId: Union[int, str, float], func: Callable[[pd.Series, LightCurve], Any]):
     """
     :param kplrId: The Kepler Id, as an Integer, String or Float
     :param func: The function to be ran, with the modified KeplerLightCurve and pd.Series as a parameter
     :return: Result of func
     """
-    data, klc = retrieveCompleteExoplanetArchive(kplrId)
-    result = func(data, klc)
-    klc.delete()
-    del klc
-    return result
+    with retrieveCompleteExoplanetArchive(kplrId) as (data, klc):
+        return func(data, klc)
 
 
 __all__ = [

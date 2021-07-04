@@ -1,10 +1,10 @@
-from lightkurve.lightcurve import KeplerLightCurve
+from .kepler import LightCurve
 from typing import Any
 
 
-def plotKeplerLightCurve(klc: KeplerLightCurve) -> Any:
+def plotKeplerLightCurve(klc: LightCurve) -> Any:
     """
-    :param klc: The KeplerLightCurve object
+    :param klc: The LightCurve object
     :returns: The axes upon which the data has been plotted
     """
     ax = klc.plot()
@@ -12,9 +12,9 @@ def plotKeplerLightCurve(klc: KeplerLightCurve) -> Any:
     return ax
 
 
-def plotKeplerSAPLightCurve(klc: KeplerLightCurve) -> Any:
+def plotKeplerSAPLightCurve(klc: LightCurve) -> Any:
     """
-    :param klc: The KeplerLightCurve object
+    :param klc: The LightCurve object
     :returns: The axes upon which the data has been plotted
     """
     ax = klc.plot(column='sap_flux', normalize=True)
@@ -22,9 +22,9 @@ def plotKeplerSAPLightCurve(klc: KeplerLightCurve) -> Any:
     return ax
 
 
-def plotKeplerPDCSAPLightCurve(klc: KeplerLightCurve) -> Any:
+def plotKeplerPDCSAPLightCurve(klc: LightCurve) -> Any:
     """
-    :param klc: The KeplerLightCurve object
+    :param klc: The LightCurve object
     :returns: The axes upon which the data has been plotted
     """
     ax = klc.plot(column='pdcsap_flux', normalize=True)
