@@ -1,5 +1,8 @@
+##
 ## Kepler Eclipsing Binary Catalog
-KIC,period,period_err,bjd0,bjd0_err,morph,GLon,GLat,kmag,Teff,SC
+##
+## Format:
+## KIC, period, period_err, bjd0, bjd0_err, morph, GLon, GLat, kmag, Teff, SC
 3863594,0.0532682,0.0000000,55000,0.004327,0.79,-1.0000,-1.0000,-1.0000,-1.0000,False
 10417986,0.0737309,0.0000000,55000.027476,0.004231,0.99,81.0390,11.0820,9.1280,-1.0000,True
 8912468,0.0948380,0.0000000,54953.576945,0.005326,0.98,80.1095,7.8882,11.7510,6194.0000,False
