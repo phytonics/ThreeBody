@@ -2,7 +2,7 @@
 Here, we analyze the Luminosity Time Series Data from the Kepler Space Probe in order to identify Stable Three-Body Systems, as part of an IRP at NUS High School.
 
 ## Detecting Stable Three-Body Systems
-Team: Ernest, Vikram, ~~Yuan Xi~~
+Team: Ernest, Prannaya, Vikram, ~~Yuan Xi~~
 
 Mentor: Dr Bernard Ricardo
 
@@ -61,28 +61,12 @@ We will primarily be using Python to analyse the luminosity data from NASA’s K
 3. [Space.com, Lada, 2006](https://www.space.com/1995-astronomers-wrong-stars-single.html)
 4. [Kobayashi, March 13, 2012](https://iopscience.iop.org/article/10.1088/0004-637X/748/2/105)
 
-
-
-
-
-
-
-
 # Admin
 
-Prannaya's Schedule:
-1. Retrieve Kepler Dataset by 14 May
-2. Find Possible Fluctuations in data by 26 May
-3. Send the findings to Vikram by 27 May
-
-Vikram's Schedule:
-1. Add on to this list
-
-Yuan Xi's Schedule:
-1. Get at least 100 possible 3 body system initial conditions by 13/6
-
-**My work**: get the data, clean up the data, and figure out what possible patterns we are looking for
+**Prannaya + Yuan Xi**: Get the data, clean up the data, and figure out binary star system light curve patterns
 (essentially data preprocessing)
+
+**Vikram**: Using the patterns, filter out the binary and exoplanet systems
 
 ### Links
 - [Kepler Mission Page](https://archive.stsci.edu/missions-and-data/kepler)
