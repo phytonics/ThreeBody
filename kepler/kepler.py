@@ -28,6 +28,12 @@ class LightCurve:
 
     def __enter__(self):
         return self
+    
+    def __repr__(self):
+        return self.klc.__repr__()
+    
+    def __str__(self):
+        return self.klc.__str__()
 
     def delete(self):
         os.remove(self.klc.meta["FILENAME"])
@@ -49,7 +55,7 @@ def retrieveKeplerLightCurve(kplrId: Union[int, str, float]) -> LightCurve:
     """
     kplrId = int(kplrId)
     search_result: lk.SearchResult = lk.search_lightcurve(f'KIC {kplrId}', mission='Kepler')
-    klc: KeplerLightCurve = search_result.download_all().stitch()
+    klc: KeplerLightCurve = search_result.download_all().stitch().remove_outliers()
     return LightCurve(klc, kplrId)
 
 
