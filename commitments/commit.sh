@@ -1,9 +1,15 @@
 # First let's check the status
 git status
 
+# Create a function for adding files to git.
+add() {
+    git add $1
+    echo "Committed $1"
+}
+
 # We now add the file as in the arguments
 for i in $(seq 2 $#);
-    do git add ${!i};
+    do add ${!i};
 done
 
 # Commit files based on first argument
