@@ -7,7 +7,7 @@ for i in $(seq 2 $#);
 done
 
 # Commit files based on first argument
-git commit -m $1
+git commit -m "$1"
 
 # Push repo to origin
 git push origin
