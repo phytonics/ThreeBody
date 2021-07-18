@@ -66,7 +66,7 @@ We will primarily be using Python to analyse the luminosity data from NASA’s K
 **Prannaya + Yuan Xi**: Get the data, clean up the data, and figure out binary star system light curve patterns
 (essentially data preprocessing)
 
-**Vikram**: Using the patterns, filter out the binary and exoplanet systems
+**Vikram**: Using the patterns, filter out the binary and exoplanet systems, but also apply many signal processing algorithms. This can only start from 2 August... so um yes.
 
 ### Links
 - [Kepler Mission Page](https://archive.stsci.edu/missions-and-data/kepler)
