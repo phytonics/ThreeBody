@@ -9,3 +9,6 @@ git commit -m "Update Retrieval Process"
 
 # Push to origin repository
 git push origin
+
+# Recheck status (for debugging purposes)
+git status
