@@ -2,7 +2,7 @@
 git status
 
 # Next, we must add all the files cuz why not right
-git add .
+git add */*retrieve*.* */*Retrieve*.*
 
 # Commit files with a very specific command
 git commit -m "Update Retrieval Process"
