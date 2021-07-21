@@ -18,11 +18,12 @@ def robust_mean(y, cut):
 
 
 @dataclass
-class PeriodicEvent:
+class Event:
     period: float
     duration: float
     t0: float
 
-    def equals(self, other: PeriodicEvent, period_rtol=0.001, t0_durations=1):
+    def equals(self, other, period_rtol=0.001, t0_durations=1):
         return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period
 ) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
