@@ -34,9 +34,8 @@ def phase_fold_time(time, period, t0):
   Returns:
     A 1D numpy array.
   """
-    half_period = period / 2
-    result = np.mod(time + (half_period - t0), period)
-    result -= half_period
+    result = np.mod(time + (period/2 - t0), period)
+    result -= period/2
     return result
 
 
