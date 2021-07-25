@@ -181,3 +181,39 @@ def choose_kepler_spline(time, flux, bkspaces, maxiter=5, penalty_coeff=1.0, ver
             best_bkspace = bkspace
 
     return best_spline, best_spline_mask, best_bkspace, bad_bkspaces
+
+
+
+def process_light_curve(all_time, all_flux, max_gap_width=0.75):
+    bkspaces = np.logspace(np.log10(0.5), np.log10(20), num=20)
+    spline = choose_kepler_spline(all_time, all_flux, bkspaces, penalty_coeff=1.0, verbose=False)
+    if spline is None: return None
+    time = np.concatenate(all_time)
+    flux = np.concatenate(all_flux)
+    spline = np.concatenate(all_spline)
+
+    finite_i = np.isfinite(spline)
+    time = time[finite_i]
+    flux = flux[finite_i]
+    spline = spline[finite_i]
+
+    flux /= spline
+
+    return time, flux
+
+def phase_fold_and_sort_light_curve(time, flux, period, t0):
+    time = phase_fold_time(time, period, t0)
+    sorted_i = np.argsort(time)
+    time = time[sorted_i]
+    flux = flux[sorted_i]
+
+    return time, flux
+
+def generate_view(time, flux, num_bins, bin_width, t_min, t_max, normalize=True):
+    view = median_filter(time, flux, num_bins, bin_width, t_min, t_max)
+    if normalize:
+        view -= np.median(view)
+        view /= np.abs(np.min(view))
+    
+    return view
+
