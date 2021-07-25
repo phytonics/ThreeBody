@@ -1,5 +1,4 @@
-from kepler.core.curve import LightCurve
-from kepler.core.base import LightCurveAction
+from kepler.core import LightCurve, LightCurveAction
 
 def reduceNoise(lc: LightCurve):
     """
@@ -10,7 +9,7 @@ def reduceNoise(lc: LightCurve):
     A corrector for the curve is created and then applied to itself.
     The result of that is returned.
 
-    NOTE: This intention of this function is to count exoplanet transits as noise
+    NOTE: The intention of this function is to count exoplanet transits as noise
 
     :param lc: The original light curve
     :return The light curve with reduced instrumental noise, and some values describing the extent of the noise reduction.

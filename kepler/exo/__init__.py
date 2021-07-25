@@ -1,4 +1,4 @@
-from .kepler import retrieveKeplerLightCurve, LightCurve
+from kepler.io.kepler import retrieveKeplerLightCurve, LightCurve
 import pandas as pd
 from typing import Union, List, Callable, Any, Tuple
 
