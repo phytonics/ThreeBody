@@ -1,9 +1,10 @@
-from kepler import LightCurve
+from kepler.core.curve import LightCurve
 import lightkurve as lk
 from matplotlib import axes
+from typing import Union
 
-def removeNoise(lcID: Union[int, str, float], quarters: int = 3) -> (LightCurve, axes):
-    """ Removes Instrument noise from the light curve.
+def removeNoise(lc: LightCurve):
+    """ Removes Instrumental noise from the light curve.
     
     This function uses the lightkurve library to perform this function
     The lightkurve library uses Pixel Level Decorrelation(PLD)
@@ -32,8 +33,7 @@ def removeNoise(lcID: Union[int, str, float], quarters: int = 3) -> (LightCurve,
         Some values describing the extent of noise reduction
     """
 
-    lc = lk.search_targetpixelfile(f"KIC {lcID}", mission = "Kepler")[:3].download_all().stitch()
     pld = lc.to_corrector('pld')
     correct_lc = pld.correct()
 
-    return (LightCurve(correct_lc, lcID), pld.diagnose())
+    return LightCurve(correct_lc, lc.id), pld.diagnose()

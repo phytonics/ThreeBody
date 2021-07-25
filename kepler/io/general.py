@@ -1,4 +1,4 @@
-from .kepler import LightCurve
+from kepler.core import LightCurve
 from typing import Any
 
 

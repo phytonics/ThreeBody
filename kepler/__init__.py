@@ -1,13 +1,14 @@
 # kepler/__init__.py
 
-from .kepler import getKplrId, getKplrIds, retrieveKeplerLightCurve, analyseKeplerLightCurve
+from kepler.io.kepler import getKplrId, getKplrIds, retrieveKeplerLightCurve, analyseKeplerLightCurve
 
-from .tce import getExoplanetArchiveIds, getExoplanetArchiveId, retrieveExoplanetArchives, retrieveExoplanetArchive, \
+from kepler.exo import getExoplanetArchiveIds, getExoplanetArchiveId, \
+    retrieveExoplanetArchives, retrieveExoplanetArchive, \
     analyseExoplanetArchive, retrieveCompleteExoplanetArchive, analyseCompleteExoplanetArchive
 
-from .k2 import retrieveK2LightCurve, getK2Ids, getK2Id, analyseK2LightCurve
+from kepler.io.k2 import retrieveK2LightCurve, getK2Ids, getK2Id, analyseK2LightCurve
 
-from .general import plotKeplerLightCurve, plotKeplerSAPLightCurve, plotKeplerPDCSAPLightCurve
+from kepler.io.general import plotKeplerLightCurve, plotKeplerSAPLightCurve, plotKeplerPDCSAPLightCurve
 
 
 __all__ = [
