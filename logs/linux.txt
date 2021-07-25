@@ -1,0 +1,3112 @@
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya$ cd ThreeBody
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ git status
+Refresh index: 100% (91/91), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   .idea/.gitignore
+        modified:   .idea/ThreeBody.iml
+        modified:   .idea/csv-plugin.xml
+        modified:   .idea/discord.xml
+        modified:   .idea/misc.xml
+        modified:   .idea/modules.xml
+        modified:   .idea/other.xml
+        modified:   .idea/vcs.xml
+        modified:   README.md
+        modified:   data/KIC8462852-century-long-data/castelaz_mm_magnitude.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pg.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pv.csv
+        modified:   data/KIC8462852-century-long-data/sternberg_all.csv
+        modified:   data/binaryconfigs.csv
+        modified:   data/data.csv
+        modified:   data/k2_ids.txt
+        modified:   data/kepler_binary.csv
+        modified:   data/kepler_binary_configs.csv
+        modified:   data/kepler_binary_stars.csv
+        modified:   data/kepler_ids.txt
+        modified:   data/testData.csv
+        modified:   info/kepler_mission_directory.txt
+        modified:   info/keplerktc/README.md
+        modified:   info/keplerktc/data-columns.txt
+        modified:   kepler/README.md
+        modified:   kepler/__init__.py
+        modified:   kepler/curve.py
+        modified:   kepler/k2.py
+        modified:   kepler/kepler_spine/spline.py
+        modified:   kepler/requirements.txt
+        modified:   kepler/tce.py
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/median_filter.py
+        modified:   kepler/util/periodic_event.py
+        modified:   kepler/util/robust_mean.py
+        modified:   logs/keplerktc_18-58_13-5-21.txt
+        modified:   patterns/lagrange5/README.md
+        modified:   patterns/lagrange5/l5.py
+        modified:   patterns/twobody/binary.py
+        modified:   proposal/proposal.html
+        modified:   proposal/proposal.md
+        modified:   python/k2-ktc.py
+        modified:   python/kepler-ktc.py
+        modified:   python/test_if_os_works.py
+        modified:   python/threebody.py
+        modified:   requirements.txt
+        modified:   sim/L5.py
+        modified:   sim/README.md
+        modified:   sim/main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ wslgit status
+
+Command 'wslgit' not found, did you mean:
+
+  command 'wslget' from deb wsl (0.2.1-1)
+
+Try: sudo apt install <deb name>
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cat commitments/commit.sh
+# First let's check the status
+git status
+
+# Create a function for adding files to git.
+add() {
+    git add $1
+    echo "Committed $1"
+}
+
+# We now add the file as in the arguments
+for i in $(seq 2 $#);
+    do add ${!i};
+done
+
+# Commit files based on first argument
+git commit -m "$1"
+
+# Push repo to origin
+git push origin
+
+# Check status again
+git status
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cat commitments
+cat: commitments: Is a directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cat commitments/*
+# First let's check the status
+git status
+
+# Create a function for adding files to git.
+add() {
+    git add $1
+    echo "Committed $1"
+}
+
+# We now add the file as in the arguments
+for i in $(seq 2 $#);
+    do add ${!i};
+done
+
+# Commit files based on first argument
+git commit -m "$1"
+
+# Push repo to origin
+git push origin
+
+# Check status again
+git status
+# First, we check status for the sake of checking
+git status
+
+# Next, we must add all the files cuz why not right
+git add */*retrieve*.* */*Retrieve*.*
+
+# Commit files with a very specific command
+git commit -m "Update Retrieval Process"
+
+# Push to origin repository
+git push origin
+
+# Recheck status (for debugging purposes)
+git status
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop install neovide
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ sudo apt install neovide
+[sudo] password for thepyprogrammer:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package neovide
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop install neovide
+Updating Scoop...
+Updating 'main' bucket...
+ * 36383ff7d ffmpeg-nightly: Update to version 102995                    2 hours ago
+ * 75f6065b7 ffmpeg-nightly-shared: Update to version 102995             2 hours ago
+ * 24a8387a1 yq: Update to version 4.11.0                                9 hours ago
+ * a8d70fe9a vim-nightly: Update to version 8.2.3174                     9 hours ago
+ * 996f50801 clink: Update to version 1.2.23                             19 hours ago
+ * cb3d5df63 imagemagick: Update to version 7.1.0-3                      24 hours ago
+ * 14d5d992e ffmpeg-nightly: Update to version 102989                    25 hours ago
+ * 63d759560 ffmpeg-nightly-shared: Update to version 102989             25 hours ago
+ * 75abaa601 invoke-build: Update to version 5.8.1                       28 hours ago
+ * e9449ba0f fnm: Update to version 1.26.0                               32 hours ago
+ * 442b76e32 vim-nightly: Update to version 8.2.3172                     32 hours ago
+ * b5094ca92 vector: Update to version 0.15.0                            32 hours ago
+ * de35f19c0 stoplight-prism: Update to version 4.3.1                    32 hours ago
+ * 09efc3092 omnisharp: Update to version 1.37.13                        32 hours ago
+ * 6475ee5e0 omnisharp-http: Update to version 1.37.13                   32 hours ago
+ * f4ed19d8e ispc: Update to version 1.16.1                              32 hours ago
+ * 783cde233 hashcat: Update to version 6.2.3                            32 hours ago
+ * 28d282d19 flow: Update to version 0.155.1                             2 days ago
+ * 86bebd99c edgedriver: Update to version 93.0.953.0                    2 days ago
+ * 5829538bf ffmpeg-nightly: Update to version 102981                    2 days ago
+ * 0a049543b ffmpeg-nightly-shared: Update to version 102981             2 days ago
+ * ae57de672 terraform-provider-ibm: Update to version 1.28.0            2 days ago
+ * d8c0ada4d minio: Update to version 2021-07-15T22-27-34Z               2 days ago
+ * 278705c3d jx: Update to version 3.2.172                               2 days ago
+ * b3131b3b9 eksctl: Update to version 0.57.0                            2 days ago
+ * 699dbad50 gitea: Update to version 1.14.5                             2 days ago
+ * f9dd14531 yq: Update to version 4.10.0                                2 days ago
+ * d3c048570 wrangler: Update to version 1.18.0                          2 days ago
+ * 244be392b traefik: Update to version 2.4.11                           2 days ago
+ * a25b36816 clink: Update to version 1.2.22                             2 days ago
+ * 99cc46e7b kubelet: Update to version 1.21.3                           3 days ago
+ * c2abbedf8 kubectl: Update to version 1.21.3                           3 days ago
+ * e94bfe644 kubeadm: Update to version 1.21.3                           3 days ago
+ * 5d204b023 bicep: Update to version 0.4.412                            3 days ago
+ * c3c24749c aws: Update to version 2.2.20                               3 days ago
+ * e4ee1fb52 consul: Update to version 1.10.1                            3 days ago
+ * 14103cf5c consul: Update to version 1.10.0                            3 days ago
+ * d132af236 consul: Update to version 1.10.1                            3 days ago
+ * 171bc785d edgedriver: Update to version 93.0.952.0                    3 days ago
+ * 9275623d6 serverless: Update to version 2.52.0                        3 days ago
+ * 4483ad664 sentry-cli: Update to version 1.67.2                        3 days ago
+ * 8ca3027f8 mill: Update to version 0.9.9                               3 days ago
+ * cd00e7a46 helm: Update to version 3.6.3                               3 days ago
+ * 0c2a9775b ffmpeg-nightly: Update to version 102971                    3 days ago
+ * d007794c9 ffmpeg-nightly-shared: Update to version 102971             3 days ago
+ * 683c2b538 gauge: Update to version 1.3.3                              3 days ago
+ * c72b33c2d 1password-cli: Update to version 1.11.0                     3 days ago
+ * b69d4517d vim-nightly: Update to version 8.2.3161                     3 days ago
+ * 69e9b2b31 tektoncd-cli: Update to version 0.20.0                      3 days ago
+ * f25678771 micronaut: Update to version 2.5.9                          3 days ago
+ * cac62d657 mdcat: Update to version 0.23.1                             3 days ago
+ * 19d6f4d93 jx: Update to version 3.2.171                               3 days ago
+ * 019c7b8f1 edgedriver: Update to version 93.0.951.0                    4 days ago
+ * 00e245817 julia: Update to version 1.6.2                              4 days ago
+ * a5a664c5f cygwin: Update to version 2.909                             4 days ago
+ * 7049229bc aws: Update to version 2.2.19                               4 days ago
+ * 8cd73a88d git-annex: Update to version 8.20210631                     4 days ago
+ * b093db3e3 ffmpeg-nightly: Update to version 102967                    4 days ago
+ * 1f3ba4678 ffmpeg-nightly-shared: Update to version 102967             4 days ago
+ * c9fd7b88a cmake: Update to version 3.21.0                             4 days ago
+ * a1b724532 pulumi: Update to version 3.7.0                             4 days ago
+ * e4ed06044 ffmpeg-nightly: Update to version 102966                    4 days ago
+ * 79962c4f7 ffmpeg-nightly-shared: Update to version 102966             4 days ago
+ * 3e367a2dc resharper-clt: Update to version 2021.1.4                   4 days ago
+ * f8a571cfc nodejs: Update to version 16.5.0                            4 days ago
+ * b8c85e608 azure-cli: Update to version 2.26.1                         4 days ago
+ * 4066cf1e8 llvm: Update to version 12.0.1                              4 days ago
+ * b286c6631 kompose: Update to version 1.23.0                           4 days ago
+ * eb432898a jfrog: Update to version 1.50.1                             4 days ago
+ * 941e5cc11 vim-nightly: Update to version 8.2.3159                     4 days ago
+ * fc0856c73 starship: Update to version 0.56.0                          4 days ago
+ * 6f1adf7f4 oh-my-posh3: Update to version 3.169.0                      4 days ago
+ * 112cb71e7 nu: Update to version 0.34.0                                4 days ago
+ * fc55eaeac octave: Update to version 6.3.0                             4 days ago
+ * 84d122856 dua: Update to version 2.14.2                               5 days ago
+ * f131a026c trid: Update to version 2.24-21.07.13                       5 days ago
+ * 0a4652fb8 containerd: Update to version 1.5.3                         5 days ago
+ * 8f86c2df7 cloud-sql-proxy: Update to version 1.23.1                   5 days ago
+ * 4a958cf77 aks-engine: Update to version 0.65.1                        5 days ago
+ * 0fc59a9fc jx: Update to version 3.2.170                               5 days ago
+ * 1f6ec8923 hostctl: Update to version 1.1.0                            5 days ago
+ * 30f1a60f3 ant: Update to version 1.10.11                              5 days ago
+ * a133e2835 dotnet-sdk: Update to version 5.0.302                       5 days ago
+ * 40166195e flyway: Update to version 7.11.2                            5 days ago
+ * 62a26eafb mongodb: Update to version 5.0.0                            5 days ago
+ * 3eb38005f deno: Update to version 1.12.0                              5 days ago
+ * 718a83993 kotlin: Update to version 1.5.21                            5 days ago
+ * e6ab01540 kotlin-native: Update to version 1.5.21                     5 days ago
+ * 309b80829 ffmpeg-nightly: Update to version 102965                    5 days ago
+ * 3b6867061 ffmpeg-nightly-shared: Update to version 102965             5 days ago
+ * 3f83f641a delta: Update to version 0.8.3                              5 days ago
+ * f24774092 bat: Update to version 0.18.2                               5 days ago
+ * ee7169ea0 gnuplot: Update to version 5.4.2                            5 days ago
+ * f95b072cd go: Update to version 1.16.6                                6 days ago
+ * 93f87eb6e puppet-bolt: Update to version 3.13.0                       6 days ago
+ * d3478ca38 heroku-cli: Update to version 7.56.1                        6 days ago
+ * e3b4f966e plex-server: Update to version 1.23.4.4805-186bae04e        6 days ago
+ * 2b4979d5e clink: Update to version 1.2.21                             6 days ago
+ * f343c2401 zeebe: Update to version 1.0.2                              6 days ago
+ * 3e0485fef ffmpeg-nightly: Update to version 102963                    6 days ago
+ * c035d6308 ffmpeg-nightly-shared: Update to version 102963             6 days ago
+ * c73c5f4f2 cloudflared: Update to version 2021.7.0                     6 days ago
+ * f1ace2539 camunda-operate: Update to version 1.0.2                    6 days ago
+ * 7247ea0e0 sbt: Update to version 1.5.5                                6 days ago
+ * d15866baa vim-nightly: Update to version 8.2.3154                     6 days ago
+ * d9c46f4ce oxipng: Update to version 5.0.0                             6 days ago
+ * 439d08a53 oh-my-posh3: Update to version 3.168.3                      6 days ago
+ * 74cac8243 minio: Update to version 2021-07-12T02-44-53Z               6 days ago
+ * 75ad3ad36 ffmpeg-nightly: Update to version 102948                    7 days ago
+ * 56f16210c ffmpeg-nightly-shared: Update to version 102948             7 days ago
+ * a32314216 clink: Update to version 1.2.20                             7 days ago
+ * 3596500cc vim-nightly: Update to version 8.2.3140                     7 days ago
+ * b2d01ce60 less: Update to version 590                                 7 days ago
+ * f247fce8c gauge: Update to version 1.3.2                              8 days ago
+ * 0fb25319d watchexec: Update to version 1.16.2                         8 days ago
+ * 82f6d0bb6 omnisharp: Update to version 1.37.12                        8 days ago
+ * abd2169aa omnisharp-http: Update to version 1.37.12                   8 days ago
+ * eeb939d34 oh-my-posh3: Update to version 3.168.2                      8 days ago
+ * 5c6351865 gitui: Update to version 0.16.2                             8 days ago
+ * 7d1733cbd ffmpeg-nightly: Update to version 102947                    8 days ago
+ * 836da6026 ffmpeg-nightly-shared: Update to version 102947             8 days ago
+ * 48ec1e63f trid: Update to version 2.24-21.07.10                       8 days ago
+ * 2eb60c317 clink: Update to version 1.2.19                             9 days ago
+ * 6c40d78df vim-nightly: Update to version 8.2.3134                     9 days ago
+ * a9fbf7060 terraform-provider-ibm: Update to version 1.27.2            9 days ago
+ * 8c8967ce6 liquibase: Update to version 4.4.1                          9 days ago
+ * d90901e59 jx: Update to version 3.2.169                               9 days ago
+ * 3691f263f go: Update to version 1.16.5                                9 days ago
+ * 3d5ac6b74 ffmpeg: Update to version 4.4-78                            9 days ago
+ * bdd3b0b05 ffmpeg-shared: Update to version 4.4-78                     9 days ago
+ * bc961cd67 ruby: Update to version 3.0.2-1                             9 days ago
+ * 7809ae6fc balena-cli: Update to version 12.44.24                      9 days ago
+ * 6edd8c788 glitter: Update to version 1.3.10                           9 days ago
+ * b0b5c5a08 svtplay-dl: Update to version 4.1                           9 days ago
+ * 5ee74215c edgedriver: Update to version 93.0.946.0                    9 days ago
+ * 639286486 doctl: Update to version 1.62.0                             9 days ago
+ * 4574a58fe exiftool: Update to version 12.29                           9 days ago
+ * 64f62246b ffmpeg-nightly: Update to version 102938                    9 days ago
+ * f02ad4ad4 ffmpeg-nightly-shared: Update to version 102938             9 days ago
+ * 84bd4b553 eksctl: Update to version 0.56.0                            9 days ago
+ * 33e952522 azure-ps: Update to version 6.2.1.34515                     9 days ago
+ * 780af4e14 git-chglog: Update to version 0.15.0                        9 days ago
+ * 2798526ea vim-nightly: Update to version 8.2.3131                     9 days ago
+ * 24ac9b14e serverless: Update to version 2.51.2                        9 days ago
+ * 9e3061a1c minio: Update to version 2021-07-08T19-43-25Z               9 days ago
+ * ea1190d02 micronaut: Update to version 2.5.8                          9 days ago
+ * ac4513b1b k9s: Update to version 0.24.14                              9 days ago
+ * 792929999 k3d: Update to version 4.4.7                                9 days ago
+ * 96553b1fb jx: Update to version 3.2.168                               9 days ago
+ * 756acfd87 freebasic: Update to version 1.08.1                         10 days ago
+ * e58782fc7 aws: Update to version 2.2.18                               10 days ago
+ * cad7a6157 aws-copilot: Update to version 1.8.3                        10 days ago
+ * b488fbadc edgedriver: Update to version 93.0.945.0                    10 days ago
+ * 68b55197e dvc: Update to version 2.5.4                                10 days ago
+ * 201747f7a flow: Update to version 0.155.0                             10 days ago
+ * e7be4b570 flux2: Update to version 0.16.1                             10 days ago
+ * 38ce29fef dvc: Update to version 2.5.3                                10 days ago
+ * 125b87eb1 dvc: Update to version 2.5.2                                10 days ago
+ * 5c0702ee3 dvc: Update to version 2.5.1                                10 days ago
+ * 53fd737f7 flyway: Update to version 7.11.1                            10 days ago
+ * ffff3bc40 stoplight-prism: Update to version 4.3.0                    10 days ago
+ * 527b6d9c7 yq: Update to version 4.9.8                                 10 days ago
+ * 016f6d224 vim-nightly: Update to version 8.2.3119                     10 days ago
+ * d59226b84 usql: Update to version 0.9.2                               10 days ago
+ * 7742dcb19 sass: Update to version 1.35.2                              10 days ago
+ * 8e651ad85 minio: Update to version 2021-07-08T01-15-01Z               10 days ago
+ * cf0fba808 minikube: Update to version 1.22.0                          10 days ago
+ * bd25b67bf telegraf: Update to version 1.19.1                          11 days ago
+ * 6cc84bd4e bitwarden-cli: Update to version 1.17.1                     11 days ago
+ * 8417278b9 vagrant: Update to version 2.2.17                           11 days ago
+ * bcb7de64a terraform: Update to version 1.0.2                          11 days ago
+ * 2b8004dd3 terraform: Update to version 1.0.1                          11 days ago
+ * ffdb4aeca cockroachdb: Update to version 21.1.5                       11 days ago
+ * 002dd67f6 aks-engine: Update to version 0.56.4                        11 days ago
+ * c158dd0ba terraform: Update to version 1.0.2                          11 days ago
+ * 22369f094 edgedriver: Update to version 93.0.944.0                    11 days ago
+ * d4fe1d7f3 enomic: Update to version 2.0.1                             11 days ago
+ * 32b6c86a0 edgedriver: Update to version 93.0.943.0                    11 days ago
+ * bf1ed5d8e edgedriver: Update to version 93.0.944.0                    11 days ago
+ * 2c72e6f72 yq: Update to version 4.9.7                                 11 days ago
+ * ef2eee59a sentry-cli: Update to version 1.67.1                        11 days ago
+ * 7e94e2b08 kubefwd: Update to version 1.20.0                           11 days ago
+ * 2b03c0875 jx: Update to version 3.2.167                               11 days ago
+ * 5f6a6c9fe pulumi: Update to version 3.6.1                             11 days ago
+ * d25ee1a20 trid: Update to version 2.24-21.07.07                       11 days ago
+ * 108957b53 ffmpeg-nightly: Update to version 102852                    11 days ago
+ * edca36cd6 ffmpeg-nightly-shared: Update to version 102852             11 days ago
+ * 1f0c10d81 deta: Update to version 1.1.4-beta                          11 days ago
+ * a00463bff edgedriver: Update to version 93.0.943.0                    11 days ago
+ * c1b039b89 gauge: Update to version 1.3.1                              11 days ago
+ * 385f02b7b edgedriver: Update to version 93.0.939.0                    11 days ago
+ * 964f52b68 vim-nightly: Update to version 8.2.3114                     11 days ago
+ * 4c7d985be serverless: Update to version 2.51.0                        11 days ago
+ * 9fce4693a purescript: Update to version 0.14.3                        11 days ago
+ * e6d5ec1a9 mingit: Update to version 2.32.0.windows.2                  11 days ago
+ * 7d990a653 mingit-busybox: Update to version 2.32.0.windows.2          11 days ago
+ * 35de3a33c kubens: Update to version 0.9.4                             11 days ago
+ * 00c6bc3ea kubectx: Update to version 0.9.4                            11 days ago
+ * 64c30d4de jx: Update to version 3.2.165                               11 days ago
+ * e700a1477 azure-cli: Update to version 2.26.0                         12 days ago
+ * af4c2e731 aws: Update to version 2.2.17                               12 days ago
+ * 879d45b84 edgedriver: Update to version 93.0.943.0                    12 days ago
+ * 7bee251fc mariadb: Update to version 10.6.3                           12 days ago
+ * 2221e0551 git: Update to version 2.32.0.windows.2                     12 days ago
+ * acd46a527 git-with-openssh: Update to version 2.32.0.windows.2        12 days ago
+ * 23ba19248 sonarqube: Update to version 8.9.1.44547                    12 days ago
+ * 16b2b8a73 puppet-bolt: Update to version 3.12.0                       12 days ago
+ * ca3eaf6b2 vulkan: Update to version 1.2.182.0                         12 days ago
+ * 105575eb2 nginx: Update to version 1.21.1                             12 days ago
+ * 7f1ef04b3 buffalo: Update to version 0.16.26                          12 days ago
+ * 226081bef goreleaser: Update to version 0.173.2                       12 days ago
+ * 5efbb31c1 ddev: Update to version 1.17.7                              12 days ago
+ * a4eed081b topgrade: Update to version 7.1.0                           12 days ago
+ * 7ba0a18fa syncthing: Update to version 1.18.0                         12 days ago
+ * 9ddcb0ce7 jx: Update to version 3.2.164                               12 days ago
+ * 283d5896c ffmpeg-nightly: Update to version 102848                    12 days ago
+ * ae6fdab0f ffmpeg-nightly-shared: Update to version 102848             12 days ago
+ * a078a49e2 aliyun: Update to version 3.0.81                            12 days ago
+ * e01a2b2c1 azure-ps: Update to version 6.2.0.34513                     12 days ago
+ * df6a076f4 vim-nightly: Update to version 8.2.3113                     12 days ago
+ * 51dc37f26 gauge: Update to version 1.3.0                              12 days ago
+ * 5c9d16326 buffalo: Update to version 0.16.25                          13 days ago
+ * da0b4353f trid: Update to version 2.24-21.07.06                       13 days ago
+ * 5d5367bae clink: Update to version 1.2.18                             13 days ago
+ * 377d1e76e cacert: Update to version 2021-07-05                        13 days ago
+ * 895b1dd51 circleci-cli: Update to version 0.1.15410                   13 days ago
+ * ba6c31c8c bit: Update to version 1.1.2                                13 days ago
+ * 24e4ce4b7 nodejs: Update to version 16.4.2                            13 days ago
+ * 0b111e409 nodejs-lts: Update to version 14.17.3                       13 days ago
+ * 36ccc9875 sentry-cli: Update to version 1.67.0                        13 days ago
+ * 27df55470 jx: Update to version 3.2.162                               13 days ago
+ * 05151840b hugo: Update to version 0.85.0                              13 days ago
+ * 2031a9d8b hugo-extended: Update to version 0.85.0                     13 days ago
+ * a1cac89f0 sonarqube: Update to version 8.9.0.43852                    13 days ago
+Updating 'versions' bucket...
+ * 00734dd imagemagick-ffmpeg: Update to version 7.1.0-3                 15 hours ago
+ * 993e7b4 rstudio-daily: Update to version 1.5.215                      2 days ago
+ * 0d39e30 vivaldi-beta: Update to version 4.1.2358.15                   3 days ago
+ * 714caec rstudio-daily: Update to version 1.5.212                      3 days ago
+ * 6eddba3 rclone-beta: Update to version 1.56.0-beta.5589.da36ce08e     3 days ago
+ * 0280a64 gitea-beta: Update to version 1.15.0-rc1                      3 days ago
+ * 10a01ef dotnet-sdk-preview: Update to version 6.0.100-preview.6.213.. 3 days ago
+ * 89deea6 rstudio-daily: Update to version 1.5.203                      4 days ago
+ * e732f2c rclone-beta: Update to version 1.56.0-beta.5587.94b143929     4 days ago
+ * aa9485d rstudio-daily: Update to version 1.5.198                      5 days ago
+ * 5b113ed ant19: Update to version 1.9.16                               5 days ago
+ * 8d17655 vivaldi-beta: Update to version 4.1.2355.3                    6 days ago
+ * 1f21ec5 rstudio-daily: Update to version 1.5.193                      6 days ago
+ * 4b2fce0 rstudio-daily: Update to version 1.5.190                      7 days ago
+ * b9e7ea2 rclone-beta: Update to version 1.56.0-beta.5585.c0b283250     7 days ago
+ * 5b9cba3 python-alpha: Update to version 3.10.0b4                      7 days ago
+
+ * 3861b4f rstudio-daily: Update to version 1.5.189                      8 days ago
+ * ee655f0 rclone-beta: Update to version 1.56.0-beta.5584.7436768d6     8 days ago
+ * b4164e0 xmplay-stuff: Update to version 3.8.5.26                      9 days ago
+ * d49f3c1 vivaldi-beta: Update to version 4.1.2352.3                    9 days ago
+ * 88ef41b ruby26: Update to version 2.6.8-1                             9 days ago
+ * 666fc7f rstudio-daily: Update to version 1.5.188                      9 days ago
+ * ec1c121 vivaldi-beta: Update to version 4.1.2350.3                    10 days ago
+ * f18c0ec rstudio-daily: Update to version 1.5.184                      10 days ago
+ * 1024999 rclone-beta: Update to version 1.56.0-beta.5580.aab29353d     10 days ago
+ * cb99b9f rstudio-daily: Update to version 1.5.176                      11 days ago
+ * 1dbc12f rclone-beta: Update to version 1.56.0-beta.5575.6b7d7d044     11 days ago
+ * e6e726a rstudio-daily: Update to version 1.5.168                      12 days ago
+ * 7095cb2 rclone-beta: Update to version 1.56.0-beta.5566.fb305b597     12 days ago
+ * 37e9d35 tomcat8: Update to version 8.5.69                             13 days ago
+ * 91eac62 rstudio-daily: Update to version 1.5.166                      13 days ago
+ * 6521561 rclone-beta: Update to version 1.56.0-beta.5565.5e91b93e5     13 days ago
+ * 82ae1f1 nodejs14: Update to version 14.17.3                           13 days ago
+ * 8830fc1 nodejs12: Update to version 12.22.3                           13 days ago
+Scoop was updated successfully!
+Couldn't find manifest for 'neovide'.
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop bucket list
+main
+versions
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop install extras
+Couldn't find manifest for 'extras'.
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop bucket add extras
+Checking repo... ok
+The extras bucket was added successfully.
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ scoop install neovide
+Installing 'neovide' (0.5.0) [64bit]
+neovide.exe (53.3 MB) [=====================================================================] 100%
+Checking hash of neovide.exe ... ok.
+Linking ~\scoop\apps\neovide\current => ~\scoop\apps\neovide\0.5.0
+Creating shim for 'neovide'.
+Creating shortcut for Neovide (neovide.exe)
+'neovide' (0.5.0) was installed successfully!
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ vim commitments/enigma.sh
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cat commitments/enigma.sh
+# First, we check status for the sake of checking all grounds
+git status
+
+# Next, we add the actual files to the blob
+git add notebooks/*8462852*.ipynb
+
+# Next, of course, we must commit
+git commit -m "Update KIC 8462852 Analysis"
+
+# We now push it to origin
+git push origin
+
+# We shall check the status again just in case
+git status
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ git -h
+unknown option: -h
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ git branch individual_stars
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ git init
+Reinitialized existing Git repository in /mnt/c/Users/Prannaya/ThreeBody/.git/
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ git status
+Refresh index: 100% (124/124), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   .idea/.gitignore
+        modified:   .idea/ThreeBody.iml
+        modified:   .idea/csv-plugin.xml
+        modified:   .idea/discord.xml
+        modified:   .idea/misc.xml
+        modified:   .idea/modules.xml
+        modified:   .idea/other.xml
+        modified:   .idea/vcs.xml
+        modified:   README.md
+        modified:   commitments/references.sh
+        modified:   data/KIC8462852-century-long-data/castelaz_mm_magnitude.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pg.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pv.csv
+        modified:   data/KIC8462852-century-long-data/sternberg_all.csv
+        modified:   data/binaryconfigs.csv
+        modified:   data/data.csv
+        modified:   data/k2_ids.txt
+        modified:   data/kepler_binary.csv
+        modified:   data/kepler_binary_configs.csv
+        modified:   data/kepler_binary_stars.csv
+        modified:   data/kepler_ids.txt
+        modified:   data/testData.csv
+        modified:   info/kepler_mission_directory.txt
+        modified:   info/keplerktc/README.md
+        modified:   info/keplerktc/data-columns.txt
+        modified:   kepler/README.md
+        modified:   kepler/__init__.py
+        modified:   kepler/curve.py
+        modified:   kepler/k2.py
+        modified:   kepler/kepler_spine/spline.py
+        modified:   kepler/requirements.txt
+        modified:   kepler/tce.py
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/median_filter.py
+        modified:   kepler/util/periodic_event.py
+        modified:   kepler/util/robust_mean.py
+        modified:   logs/keplerktc_18-58_13-5-21.txt
+        modified:   patterns/lagrange5/README.md
+        modified:   patterns/lagrange5/l5.py
+        modified:   patterns/twobody/binary.py
+        modified:   proposal/proposal.html
+        modified:   proposal/proposal.md
+        modified:   python/k2-ktc.py
+        modified:   python/kepler-ktc.py
+        modified:   python/test_if_os_works.py
+        modified:   python/threebody.py
+        modified:   requirements.txt
+        modified:   sim/L5.py
+        modified:   sim/README.md
+        modified:   sim/main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cd notebooks
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/notebooks$ cat binary_star_analysis.ipynb
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# The Analysis of several Binary Star Configurations to find the B-Spline Signal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "%load_ext autoreload\n",
+    "%autoreload 2\n",
+    "# to ensure kernel resets when files change around it"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\statsmodels\\tools\\_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.\n",
+      "  import pandas.util.testing as tm\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\Prannaya\\ThreeBody\\notebooks\n",
+      "C:\\Users\\Prannaya\\ThreeBody\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np # main library for numeric calculations\n",
+    "import pandas as pd # main library for data analysis\n",
+    "import matplotlib.pyplot as plt # main library for data plotting\n",
+    "import seaborn as sns # Another library for data plotting with more functions\n",
+    "sns.set()\n",
+    "\n",
+    "import scipy as scp # STEM software\n",
+    "from scipy import signal\n",
+    "import scipy.interpolate as interpolate\n",
+    "\n",
+    "from glob import glob # check files\n",
+    "from IPython.display import display, Markdown\n",
+    "\n",
+    "import statsmodels.api as sm\n",
+    "import statsmodels.formula.api as smf\n",
+    "import statsmodels.tsa.api as smt\n",
+    "from statsmodels.tsa.api import ExponentialSmoothing, SimpleExpSmoothing, Holt\n",
+    "\n",
+    "import lightkurve as lk\n",
+    "import astropy\n",
+    "\n",
+    "import sys, os\n",
+    "\n",
+    "file_path = os.getcwd()\n",
+    "print(file_path)\n",
+    "parent_dir = \"\\\\\".join(file_path.split(\"\\\\\")[:-1])\n",
+    "print(parent_dir)\n",
+    "\n",
+    "sys.path.append(parent_dir)\n",
+    "\n",
+    "from kepler import *\n",
+    "\n",
+    "\"\"\"\n",
+    "pd.set_option('display.max_rows', None)\n",
+    "pd.set_option('display.max_columns', None)\n",
+    "pd.set_option('display.width', None)\n",
+    "pd.set_option('display.max_colwidth', -1)\"\"\"\n",
+    "\n",
+    "import warnings\n",
+    "warnings.filterwarnings('ignore') # literally to ignore all the warnings that don't matter\n",
+    "\n",
+    "\n",
+    "def printf(*args, sep=\" \", end=\"\\n\"):\n",
+    "    string = sep.join([str(i) for i in args])+end\n",
+    "    display(Markdown(string))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: ipympl in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (0.5.8)\n",
+      "Requirement already satisfied: matplotlib>=2.0.0 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from ipympl) (3.4.2)\n",
+      "Requirement already satisfied: ipywidgets>=7.5.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipympl) (7.5.1)\n",
+      "Requirement already satisfied: ipykernel>=4.7 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipympl) (5.3.0)\n",
+      "Requirement already satisfied: traitlets>=4.1.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipykernel>=4.7->ipympl) (4.3.2)\n",
+      "Requirement already satisfied: ipython>=5.0.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipykernel>=4.7->ipympl) (7.15.0)\n",
+      "Requirement already satisfied: tornado>=4.2 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from ipykernel>=4.7->ipympl) (6.1)\n",
+      "Requirement already satisfied: jupyter-client in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipykernel>=4.7->ipympl) (6.1.3)\n",
+      "Requirement already satisfied: colorama in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.4.3)\n",
+      "Requirement already satisfied: pickleshare in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.7.5)\n",
+      "Requirement already satisfied: pygments in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (2.6.1)\n",
+      "Requirement already satisfied: setuptools>=18.5 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (49.2.0)\n",
+      "Requirement already satisfied: backcall in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.1.0)\n",
+      "Requirement already satisfied: jedi>=0.10 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.17.0)\n",
+      "Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (3.0.19)\n",
+      "Requirement already satisfied: decorator in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipython>=5.0.0->ipykernel>=4.7->ipympl) (4.4.2)\n",
+      "Requirement already satisfied: widgetsnbextension~=3.5.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipywidgets>=7.5.0->ipympl) (3.5.1)\n",
+      "Requirement already satisfied: nbformat>=4.2.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from ipywidgets>=7.5.0->ipympl) (5.0.6)\n",
+      "Requirement already satisfied: parso>=0.7.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jedi>=0.10->ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.7.0)\n",
+      "Requirement already satisfied: pillow>=6.2.0 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from matplotlib>=2.0.0->ipympl) (8.2.0)\n",
+      "Requirement already satisfied: kiwisolver>=1.0.1 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from matplotlib>=2.0.0->ipympl) (1.2.0)\n",
+      "Requirement already satisfied: pyparsing>=2.2.1 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from matplotlib>=2.0.0->ipympl) (2.4.7)\n",
+      "Requirement already satisfied: numpy>=1.16 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from matplotlib>=2.0.0->ipympl) (1.20.3)\n",
+      "Requirement already satisfied: python-dateutil>=2.7 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from matplotlib>=2.0.0->ipympl) (2.8.1)\n",
+      "Requirement already satisfied: cycler>=0.10 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from matplotlib>=2.0.0->ipympl) (0.10.0)\n",
+      "Requirement already satisfied: six in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from cycler>=0.10->matplotlib>=2.0.0->ipympl) (1.12.0)\n",
+      "Requirement already satisfied: jupyter-core in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (4.6.3)\n",
+      "Requirement already satisfied: jsonschema!=2.5.0,>=2.4 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (3.2.0)\n",
+      "Requirement already satisfied: ipython-genutils in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (0.2.0)\n",
+      "Requirement already satisfied: attrs>=17.4.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (19.3.0)\n",
+      "Requirement already satisfied: pyrsistent>=0.14.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (0.16.0)\n",
+      "Requirement already satisfied: importlib-metadata in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (1.7.0)\n",
+      "Requirement already satisfied: wcwidth in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=5.0.0->ipykernel>=4.7->ipympl) (0.1.7)\n",
+      "Requirement already satisfied: notebook>=4.4.1 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (6.0.3)\n",
+      "Requirement already satisfied: pyzmq>=17 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (19.0.1)\n",
+      "Requirement already satisfied: terminado>=0.8.1 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.10.1)\n",
+      "Requirement already satisfied: jinja2 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (2.11.2)\n",
+      "Requirement already satisfied: nbconvert in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (5.6.1)\n",
+      "Requirement already satisfied: prometheus-client in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.8.0)\n",
+      "Requirement already satisfied: Send2Trash in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (1.5.0)\n",
+      "Requirement already satisfied: pywin32>=1.0 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jupyter-core->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (227)\n",
+      "Requirement already satisfied: pywinpty>=1.1.0 in c:\\users\\prannaya\\appdata\\roaming\\python\\python37\\site-packages (from terminado>=0.8.1->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (1.1.3)\n",
+      "Requirement already satisfied: zipp>=0.5 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from importlib-metadata->jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (0.6.0)\n",
+      "Requirement already satisfied: more-itertools in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from zipp>=0.5->importlib-metadata->jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets>=7.5.0->ipympl) (8.3.0)\n",
+      "Requirement already satisfied: MarkupSafe>=0.23 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from jinja2->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (1.1.1)\n",
+      "Requirement already satisfied: bleach in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (3.1.5)\n",
+      "Requirement already satisfied: entrypoints>=0.2.2 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.3)\n",
+      "Requirement already satisfied: pandocfilters>=1.4.1 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (1.4.2)\n",
+      "Requirement already satisfied: testpath in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.4.2)\n",
+      "Requirement already satisfied: defusedxml in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.6.0)\n",
+      "Requirement already satisfied: mistune<2,>=0.8.1 in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.8.4)\n",
+      "Requirement already satisfied: packaging in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (20.4)\n",
+      "Requirement already satisfied: webencodings in c:\\users\\prannaya\\appdata\\local\\programs\\python\\python37\\lib\\site-packages (from bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets>=7.5.0->ipympl) (0.5.1)\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "17bd102b95f14b5bb0bdd726b97eea47",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "# Enabling the `widget` backend.\n",
+    "# This requires jupyter-matplotlib a.k.a. ipympl.\n",
+    "# ipympl can be install via pip or conda.\n",
+    "!pip install ipympl\n",
+    "%matplotlib widget\n",
+    "\n",
+    "# Testing matplotlib interactions with a simple plot\n",
+    "fig = plt.figure()\n",
+    "fig.canvas.header_visible = False # Hide the Figure name at the top of the figure\n",
+    "fig.canvas.toolbar_visible = True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "binarystars = pd.read_csv(\"../data/binarystars.csv\").rename(columns={\"KIC\": \"id\"}).set_index(\"id\")\n",
+    "configs = pd.read_csv(\"../data/binaryconfigs.csv\")\n",
+    "configs.columns = [\"id\", \"period\", \"duration\", \"depth\"]\n",
+    "configs = configs.set_index(\"id\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Kepler Eclipsing Binary Catalog"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>period</th>\n",
+       "      <th>period_err</th>\n",
+       "      <th>bjd0</th>\n",
+       "      <th>bjd0_err</th>\n",
+       "      <th>morph</th>\n",
+       "      <th>GLon</th>\n",
+       "      <th>GLat</th>\n",
+       "      <th>kmag</th>\n",
+       "      <th>Teff</th>\n",
+       "      <th>SC</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>id</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>3863594</th>\n",
+       "      <td>0.053268</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>55000.000000</td>\n",
+       "      <td>0.004327</td>\n",
+       "      <td>0.79</td>\n",
+       "      <td>-1.0000</td>\n",
+       "      <td>-1.0000</td>\n",
+       "      <td>-1.000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>10417986</th>\n",
+       "      <td>0.073731</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>55000.027476</td>\n",
+       "      <td>0.004231</td>\n",
+       "      <td>0.99</td>\n",
+       "      <td>81.0390</td>\n",
+       "      <td>11.0820</td>\n",
+       "      <td>9.128</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>8912468</th>\n",
+       "      <td>0.094838</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>54953.576945</td>\n",
+       "      <td>0.005326</td>\n",
+       "      <td>0.98</td>\n",
+       "      <td>80.1095</td>\n",
+       "      <td>7.8882</td>\n",
+       "      <td>11.751</td>\n",
+       "      <td>6194.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>8758716</th>\n",
+       "      <td>0.107205</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>54953.672989</td>\n",
+       "      <td>0.006197</td>\n",
+       "      <td>1.00</td>\n",
+       "      <td>77.7478</td>\n",
+       "      <td>11.6565</td>\n",
+       "      <td>13.531</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>10855535</th>\n",
+       "      <td>0.112782</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>54964.629315</td>\n",
+       "      <td>0.006374</td>\n",
+       "      <td>0.99</td>\n",
+       "      <td>79.3949</td>\n",
+       "      <td>15.9212</td>\n",
+       "      <td>13.870</td>\n",
+       "      <td>7555.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>9408440</th>\n",
+       "      <td>989.985000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>55346.365980</td>\n",
+       "      <td>0.096130</td>\n",
+       "      <td>0.00</td>\n",
+       "      <td>78.5607</td>\n",
+       "      <td>12.2615</td>\n",
+       "      <td>13.199</td>\n",
+       "      <td>5688.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>8054233</th>\n",
+       "      <td>1058.000000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>54751.806288</td>\n",
+       "      <td>0.968052</td>\n",
+       "      <td>0.03</td>\n",
+       "      <td>78.6142</td>\n",
+       "      <td>7.7321</td>\n",
+       "      <td>11.783</td>\n",
+       "      <td>4733.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>7672940</th>\n",
+       "      <td>1064.270000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>54977.092960</td>\n",
+       "      <td>0.089646</td>\n",
+       "      <td>0.00</td>\n",
+       "      <td>74.5296</td>\n",
+       "      <td>14.6136</td>\n",
+       "      <td>12.328</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>11961695</th>\n",
+       "      <td>1082.815000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>54871.395674</td>\n",
+       "      <td>0.211754</td>\n",
+       "      <td>0.02</td>\n",
+       "      <td>81.8628</td>\n",
+       "      <td>15.9404</td>\n",
+       "      <td>13.718</td>\n",
+       "      <td>5768.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4360072</th>\n",
+       "      <td>1087.300000</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>55165.611684</td>\n",
+       "      <td>1.147790</td>\n",
+       "      <td>0.05</td>\n",
+       "      <td>71.5008</td>\n",
+       "      <td>11.7046</td>\n",
+       "      <td>11.159</td>\n",
+       "      <td>4950.0</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>2922 rows × 10 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "               period  period_err          bjd0  bjd0_err  morph     GLon  \\\n",
+       "id                                                                          \n",
+       "3863594      0.053268         0.0  55000.000000  0.004327   0.79  -1.0000   \n",
+       "10417986     0.073731         0.0  55000.027476  0.004231   0.99  81.0390   \n",
+       "8912468      0.094838         0.0  54953.576945  0.005326   0.98  80.1095   \n",
+       "8758716      0.107205         0.0  54953.672989  0.006197   1.00  77.7478   \n",
+       "10855535     0.112782         0.0  54964.629315  0.006374   0.99  79.3949   \n",
+       "...               ...         ...           ...       ...    ...      ...   \n",
+       "9408440    989.985000        -1.0  55346.365980  0.096130   0.00  78.5607   \n",
+       "8054233   1058.000000        -1.0  54751.806288  0.968052   0.03  78.6142   \n",
+       "7672940   1064.270000        -1.0  54977.092960  0.089646   0.00  74.5296   \n",
+       "11961695  1082.815000        -1.0  54871.395674  0.211754   0.02  81.8628   \n",
+       "4360072   1087.300000        -1.0  55165.611684  1.147790   0.05  71.5008   \n",
+       "\n",
+       "             GLat    kmag    Teff     SC  \n",
+       "id                                        \n",
+       "3863594   -1.0000  -1.000    -1.0  False  \n",
+       "10417986  11.0820   9.128    -1.0   True  \n",
+       "8912468    7.8882  11.751  6194.0  False  \n",
+       "8758716   11.6565  13.531    -1.0  False  \n",
+       "10855535  15.9212  13.870  7555.0  False  \n",
+       "...           ...     ...     ...    ...  \n",
+       "9408440   12.2615  13.199  5688.0  False  \n",
+       "8054233    7.7321  11.783  4733.0  False  \n",
+       "7672940   14.6136  12.328    -1.0  False  \n",
+       "11961695  15.9404  13.718  5768.0  False  \n",
+       "4360072   11.7046  11.159  4950.0  False  \n",
+       "\n",
+       "[2922 rows x 10 columns]"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "binarystars"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>period</th>\n",
+       "      <th>duration</th>\n",
+       "      <th>depth</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>id</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>1026032</th>\n",
+       "      <td>7.303493e+05</td>\n",
+       "      <td>17280.0</td>\n",
+       "      <td>0.003519</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1026957</th>\n",
+       "      <td>1.127302e+06</td>\n",
+       "      <td>28512.0</td>\n",
+       "      <td>0.001687</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1161345</th>\n",
+       "      <td>3.707062e+05</td>\n",
+       "      <td>4320.0</td>\n",
+       "      <td>0.000869</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1295531</th>\n",
+       "      <td>7.281519e+04</td>\n",
+       "      <td>28512.0</td>\n",
+       "      <td>0.007980</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1571511</th>\n",
+       "      <td>3.140644e+04</td>\n",
+       "      <td>28512.0</td>\n",
+       "      <td>0.000048</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12598713</th>\n",
+       "      <td>3.332850e+04</td>\n",
+       "      <td>28512.0</td>\n",
+       "      <td>0.011091</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12599700</th>\n",
+       "      <td>8.804085e+04</td>\n",
+       "      <td>28512.0</td>\n",
+       "      <td>0.038670</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12644769</th>\n",
+       "      <td>1.055417e+06</td>\n",
+       "      <td>8640.0</td>\n",
+       "      <td>0.007281</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12645761</th>\n",
+       "      <td>2.342141e+05</td>\n",
+       "      <td>17280.0</td>\n",
+       "      <td>0.003299</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12785282</th>\n",
+       "      <td>3.404656e+04</td>\n",
+       "      <td>8640.0</td>\n",
+       "      <td>0.084576</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>2289 rows × 3 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                period  duration     depth\n",
+       "id                                        \n",
+       "1026032   7.303493e+05   17280.0  0.003519\n",
+       "1026957   1.127302e+06   28512.0  0.001687\n",
+       "1161345   3.707062e+05    4320.0  0.000869\n",
+       "1295531   7.281519e+04   28512.0  0.007980\n",
+       "1571511   3.140644e+04   28512.0  0.000048\n",
+       "...                ...       ...       ...\n",
+       "12598713  3.332850e+04   28512.0  0.011091\n",
+       "12599700  8.804085e+04   28512.0  0.038670\n",
+       "12644769  1.055417e+06    8640.0  0.007281\n",
+       "12645761  2.342141e+05   17280.0  0.003299\n",
+       "12785282  3.404656e+04    8640.0  0.084576\n",
+       "\n",
+       "[2289 rows x 3 columns]"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def day2seconds(s):\n",
+    "    if type(s) in [float, int]:\n",
+    "        return s * 86400\n",
+    "    return float(s[:-2]) * 86400\n",
+    "\n",
+    "configs[\"period\"] = configs.period.apply(day2seconds)\n",
+    "configs[\"duration\"] = configs.duration.apply(day2seconds)\n",
+    "configs = configs.dropna().sort_index()\n",
+    "configs"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "binarystars.to_csv(\"../data/kepler_binary_stars.csv\")\n",
+    "configs.to_csv(\"../data/kepler_binary_configs.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "altogether = pd.merge(configs, binarystars, how=\"left\", on=\"id\")\n",
+    "altogether.to_csv(\"../data/kepler_binary.csv\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## EDA\n",
+    "Exploratory Data Analysis"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Constants"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n = len(configs)\n",
+    "bins = int(np.sqrt(n))\n",
+    "\n",
+    "periods = configs.period\n",
+    "durations = configs.duration\n",
+    "depths = configs.depth\n",
+    "\n",
+    "percentiles = np.array([2.5, 25, 50, 75, 97.5])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Summary Statistics"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mu_period = periods.mean()\n",
+    "sigma_period = periods.std()\n",
+    "var_period = np.var(periods)\n",
+    "ptiles_per = np.percentile(periods, percentiles)\n",
+    "\n",
+    "mu_duration = durations.mean()\n",
+    "sigma_duration = durations.std()\n",
+    "var_duration = np.var(durations)\n",
+    "ptiles_dur = np.percentile(durations, percentiles)\n",
+    "\n",
+    "mu_depth = depths.mean()\n",
+    "sigma_duration = depths.std()\n",
+    "var_depth = np.var(depths)\n",
+    "ptiles_dep = np.percentile(depths, percentiles)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Functions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def ecdf(data):\n",
+    "    \"\"\"Compute ECDF for a one-dimensional array of measurements.\"\"\"\n",
+    "    # Number of data points: n\n",
+    "    n = len(data)\n",
+    "\n",
+    "    # x-data for the ECDF: x\n",
+    "    x = np.sort(data)\n",
+    "\n",
+    "    # y-data for the ECDF: y\n",
+    "    y = np.arange(1, n+1) / n\n",
+    "\n",
+    "    return x, y\n",
+    "\n",
+    "def plot_hist(data, xlabel, ylabel=\"count\", bins=bins, ax=None, **kwargs):\n",
+    "    if not ax:\n",
+    "        fig = plt.figure(figsize=(16, 12))\n",
+    "        ax = fig.add_subplot(111)\n",
+    "    \n",
+    "    ax.hist(data, bins=bins, **kwargs)\n",
+    "    ax.set_xlabel(xlabel)\n",
+    "    ax.set_ylabel(ylabel)\n",
+    "    plt.show()\n",
+    "\n",
+    "    \n",
+    "def plot_ecdf(data, xlabel, ptiles, ylabel=\"ECDF\", ax=None, marker=\".\", linestyle=\"none\", **kwargs):\n",
+    "    if not ax:\n",
+    "        fig = plt.figure(figsize=(16, 12))\n",
+    "        ax = fig.add_subplot(111)\n",
+    "        \n",
+    "    # Retrive ECDF\n",
+    "    x, y = ecdf(data)\n",
+    "\n",
+    "    # Generate plot\n",
+    "    ax.plot(x, y, marker=marker, linestyle=linestyle, **kwargs)\n",
+    "\n",
+    "    # Label the axes\n",
+    "    ax.set_xlabel(xlabel)\n",
+    "    ax.set_ylabel(ylabel)\n",
+    "    \n",
+    "    ax.plot(ptiles, percentiles/100, marker='D', color='red',\n",
+    "         linestyle=\"none\")\n",
+    "\n",
+    "    # Display the plot\n",
+    "    plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Graphical EDA\n",
+    "#### Histograms"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "49c175309d88431a93659d04f4d756e2",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_hist(periods, \"Period\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "b90f34d5432b47d9bd1aa8c09375875b",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_hist(durations, \"Duration\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "f857e1c898fb4a54b82fd5edd22931d8",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_hist(depths, \"Depth\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### ECDF"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "289631ee7f64441786e86564d6de2fef",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_ecdf(periods, \"Period\", ptiles_per)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "0edee4154b124490a1e7e45342f07180",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_ecdf(durations, \"Duration\", ptiles_dur)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "694245325d284ef09d213db4cedf9b22",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plot_ecdf(depths, \"Depth\", ptiles_dep)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Quantitative EDA"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Covariance"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cov_perdur = np.cov(periods, durations)\n",
+    "cov_perdep = np.cov(periods, depths)\n",
+    "cov_durdep = np.cov(durations, depths)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Correlation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>period</th>\n",
+       "      <th>duration</th>\n",
+       "      <th>depth</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>period</th>\n",
+       "      <td>1.000000</td>\n",
+       "      <td>-0.288703</td>\n",
+       "      <td>-0.099790</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>duration</th>\n",
+       "      <td>-0.288703</td>\n",
+       "      <td>1.000000</td>\n",
+       "      <td>-0.173623</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>depth</th>\n",
+       "      <td>-0.099790</td>\n",
+       "      <td>-0.173623</td>\n",
+       "      <td>1.000000</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "            period  duration     depth\n",
+       "period    1.000000 -0.288703 -0.099790\n",
+       "duration -0.288703  1.000000 -0.173623\n",
+       "depth    -0.099790 -0.173623  1.000000"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "configs.corr()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "fbd47eb104744f75ada7e998bae49b95",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.figure(figsize=(16, 12))\n",
+    "heatmap = sns.heatmap(configs.corr(), vmin=-1, vmax=1, annot=True)\n",
+    "heatmap.set_title('Correlation Heatmap', fontdict={'fontsize':18}, pad=12)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Pearson Coefficient"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def pearson_r(x, y):\n",
+    "    \"\"\"Compute Pearson correlation coefficient between two arrays.\"\"\"\n",
+    "    corr_mat = np.corrcoef(x, y)\n",
+    "    return corr_mat[0,1]\n",
+    "\n",
+    "pearson_perdur = pearson_r(periods, durations)\n",
+    "pearson_perdep = pearson_r(periods, depths)\n",
+    "pearson_durdep = pearson_r(durations, depths)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Signal Processing"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def evaluateAndProcessData(x, y):\n",
+    "    t, c, k = interpolate.splrep(x, y, s=0, k=4)\n",
+    "    xx = np.linspace(x.min(), x.max(), 100)\n",
+    "    spline = interpolate.BSpline(t, c, k, extrapolate=False)\n",
+    "    \n",
+    "    plt.figure(figsize=(16,6))\n",
+    "    plt.plot(x, y, \"bo\", linestyle=\"none\", label='Original points')\n",
+    "    plt.plot(x, y)\n",
+    "    plt.plot(xx, spline(xx), 'r', label='BSpline')\n",
+    "    plt.grid()\n",
+    "    plt.legend(loc='best')\n",
+    "    plt.show()\n",
+    "    \n",
+    "# Retrieving all the important details\n",
+    "def getData(id):\n",
+    "    try:\n",
+    "        return retrieveKeplerLightCurve(id)\n",
+    "    except:\n",
+    "        return None\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "11911561"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ids = list(configs.index)\n",
+    "id2 = np.random.choice(ids)\n",
+    "id2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Analysis of KIC 12055255"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<i>KeplerLightCurve length=30546 LABEL=&quot;KIC 11911561&quot; QUARTER=17 AUTHOR=Kepler</i>\n",
+       "<table id=\"table1998023834144\" class=\"table-striped table-bordered table-condensed\">\n",
+       "<thead><tr><th>time</th><th>flux</th><th>flux_err</th><th>quality</th><th>timecorr</th><th>centroid_col</th><th>centroid_row</th><th>cadenceno</th><th>sap_flux</th><th>sap_flux_err</th><th>sap_bkg</th><th>sap_bkg_err</th><th>pdcsap_flux</th><th>pdcsap_flux_err</th><th>sap_quality</th><th>psf_centr1</th><th>psf_centr1_err</th><th>psf_centr2</th><th>psf_centr2_err</th><th>mom_centr1</th><th>mom_centr1_err</th><th>mom_centr2</th><th>mom_centr2_err</th><th>pos_corr1</th><th>pos_corr2</th></tr></thead>\n",
+       "<thead><tr><th></th><th></th><th></th><th></th><th>d</th><th>pix</th><th>pix</th><th></th><th>electron / s</th><th>electron / s</th><th>electron / s</th><th>electron / s</th><th>electron / s</th><th>electron / s</th><th></th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th>pix</th></tr></thead>\n",
+       "<thead><tr><th>object</th><th>float32</th><th>float32</th><th>int32</th><th>float32</th><th>float64</th><th>float64</th><th>int32</th><th>float32</th><th>float32</th><th>float32</th><th>float32</th><th>float32</th><th>float32</th><th>int32</th><th>float64</th><th>float32</th><th>float64</th><th>float32</th><th>float64</th><th>float32</th><th>float64</th><th>float32</th><th>float32</th><th>float32</th></tr></thead>\n",
+       "<tr><td>131.5120753032097</td><td>1.0034571e+00</td><td>1.3995304e-04</td><td>0</td><td>1.081483e-03</td><td>1105.95749</td><td>428.96503</td><td>1105</td><td>5.7671352e+04</td><td>7.8041878e+00</td><td>1.6655184e+03</td><td>1.1924736e+00</td><td>6.3417262e+04</td><td>8.8448610e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95749</td><td>1.7055465e-04</td><td>428.96503</td><td>2.1096232e-04</td><td>-6.2993299e-03</td><td>-9.5218485e-03</td></tr>\n",
+       "<tr><td>131.532509650242</td><td>1.0031319e+00</td><td>1.4011889e-04</td><td>0</td><td>1.082130e-03</td><td>1105.95728</td><td>428.96541</td><td>1106</td><td>5.7686992e+04</td><td>7.8046913e+00</td><td>1.6645474e+03</td><td>1.1898097e+00</td><td>6.3396711e+04</td><td>8.8553429e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95728</td><td>1.7054168e-04</td><td>428.96541</td><td>2.1091948e-04</td><td>-6.1914125e-03</td><td>-9.5051955e-03</td></tr>\n",
+       "<tr><td>131.55294389728078</td><td>1.0029383e+00</td><td>1.4010265e-04</td><td>10000000</td><td>1.082777e-03</td><td>1105.95768</td><td>428.96588</td><td>1107</td><td>5.7675977e+04</td><td>7.8041663e+00</td><td>1.6614071e+03</td><td>1.1905518e+00</td><td>6.3384469e+04</td><td>8.8543167e+00</td><td>10000000</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95768</td><td>1.7053074e-04</td><td>428.96588</td><td>2.1093430e-04</td><td>-6.4320331e-03</td><td>-9.5977271e-03</td></tr>\n",
+       "<tr><td>131.57337804431154</td><td>1.0028213e+00</td><td>1.3971077e-04</td><td>0</td><td>1.083424e-03</td><td>1105.95741</td><td>428.96498</td><td>1108</td><td>5.7649395e+04</td><td>7.8033581e+00</td><td>1.6664121e+03</td><td>1.1921685e+00</td><td>6.3377082e+04</td><td>8.8295498e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95741</td><td>1.7063208e-04</td><td>428.96498</td><td>2.1101865e-04</td><td>-6.3965851e-03</td><td>-9.7460225e-03</td></tr>\n",
+       "<tr><td>131.59381229135033</td><td>1.0029490e+00</td><td>1.4010523e-04</td><td>0</td><td>1.084071e-03</td><td>1105.95753</td><td>428.96565</td><td>1109</td><td>5.7669672e+04</td><td>7.8036747e+00</td><td>1.6634181e+03</td><td>1.1897849e+00</td><td>6.3385152e+04</td><td>8.8544788e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95753</td><td>1.7057412e-04</td><td>428.96565</td><td>2.1095198e-04</td><td>-6.1917030e-03</td><td>-9.1767255e-03</td></tr>\n",
+       "<tr><td>131.61424663827347</td><td>1.0026515e+00</td><td>1.3985326e-04</td><td>10000000000000</td><td>1.084718e-03</td><td>1105.95736</td><td>428.96569</td><td>1110</td><td>5.7639848e+04</td><td>7.8026161e+00</td><td>1.6613070e+03</td><td>1.1901866e+00</td><td>6.3366344e+04</td><td>8.8385553e+00</td><td>10000000000000</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95736</td><td>1.7064271e-04</td><td>428.96569</td><td>2.1107127e-04</td><td>-6.0807974e-03</td><td>-9.1536036e-03</td></tr>\n",
+       "<tr><td>131.6346807851951</td><td>1.0027076e+00</td><td>1.4003170e-04</td><td>0</td><td>1.085365e-03</td><td>1105.95799</td><td>428.96581</td><td>1111</td><td>5.7629082e+04</td><td>7.8027639e+00</td><td>1.6646047e+03</td><td>1.1944673e+00</td><td>6.3369891e+04</td><td>8.8498325e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95799</td><td>1.7063013e-04</td><td>428.96581</td><td>2.1100669e-04</td><td>-6.0842247e-03</td><td>-9.1629969e-03</td></tr>\n",
+       "<tr><td>131.6551150321102</td><td>1.0024370e+00</td><td>1.4006178e-04</td><td>0</td><td>1.086012e-03</td><td>1105.95764</td><td>428.96544</td><td>1112</td><td>5.7615367e+04</td><td>7.8019924e+00</td><td>1.6641255e+03</td><td>1.1928916e+00</td><td>6.3352793e+04</td><td>8.8517332e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95764</td><td>1.7068215e-04</td><td>428.96544</td><td>2.1112173e-04</td><td>-5.8741630e-03</td><td>-8.9911846e-03</td></tr>\n",
+       "<tr><td>131.6755493789169</td><td>1.0030605e+00</td><td>1.4010430e-04</td><td>0</td><td>1.086659e-03</td><td>1105.95744</td><td>428.96571</td><td>1113</td><td>5.7647199e+04</td><td>7.8033886e+00</td><td>1.6666895e+03</td><td>1.1931021e+00</td><td>6.3392191e+04</td><td>8.8544207e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.95744</td><td>1.7066045e-04</td><td>428.96571</td><td>2.1103519e-04</td><td>-6.0511068e-03</td><td>-9.0471925e-03</td></tr>\n",
+       "<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>\n",
+       "<tr><td>1590.817486589236</td><td>1.0018357e+00</td><td>1.4255753e-04</td><td>0</td><td>2.368692e-04</td><td>1105.96895</td><td>428.95541</td><td>72522</td><td>5.6531949e+04</td><td>7.8867450e+00</td><td>2.0019668e+03</td><td>1.2455471e+00</td><td>6.1455512e+04</td><td>8.7448931e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96895</td><td>1.7750075e-04</td><td>428.95541</td><td>2.1976895e-04</td><td>-5.0306604e-03</td><td>-1.8973252e-02</td></tr>\n",
+       "<tr><td>1590.8379209183186</td><td>1.0018344e+00</td><td>1.4243044e-04</td><td>0</td><td>2.374983e-04</td><td>1105.96926</td><td>428.95535</td><td>72523</td><td>5.6531902e+04</td><td>7.8869967e+00</td><td>2.0067635e+03</td><td>1.2458630e+00</td><td>6.1455434e+04</td><td>8.7370968e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96926</td><td>1.7750599e-04</td><td>428.95535</td><td>2.1981267e-04</td><td>-5.0632036e-03</td><td>-1.8905191e-02</td></tr>\n",
+       "<tr><td>1590.8583550474796</td><td>1.0016021e+00</td><td>1.4243685e-04</td><td>0</td><td>2.381275e-04</td><td>1105.96906</td><td>428.95519</td><td>72524</td><td>5.6514441e+04</td><td>7.8862581e+00</td><td>2.0006193e+03</td><td>1.2467703e+00</td><td>6.1441184e+04</td><td>8.7374907e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96906</td><td>1.7752095e-04</td><td>428.95519</td><td>2.1980458e-04</td><td>-5.1486488e-03</td><td>-1.8924832e-02</td></tr>\n",
+       "<tr><td>1590.8787892766777</td><td>1.0013925e+00</td><td>1.4247814e-04</td><td>0</td><td>2.387567e-04</td><td>1105.96918</td><td>428.95552</td><td>72525</td><td>5.6508438e+04</td><td>7.8858252e+00</td><td>2.0012368e+03</td><td>1.2452320e+00</td><td>6.1428328e+04</td><td>8.7400227e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96918</td><td>1.7752004e-04</td><td>428.95552</td><td>2.1982894e-04</td><td>-5.0621144e-03</td><td>-1.8938608e-02</td></tr>\n",
+       "<tr><td>1590.899223605964</td><td>1.0014297e+00</td><td>1.4249381e-04</td><td>0</td><td>2.393860e-04</td><td>1105.96920</td><td>428.95568</td><td>72526</td><td>5.6506223e+04</td><td>7.8859396e+00</td><td>2.0001827e+03</td><td>1.2469124e+00</td><td>6.1430605e+04</td><td>8.7409840e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96920</td><td>1.7754117e-04</td><td>428.95568</td><td>2.1985997e-04</td><td>-5.0576576e-03</td><td>-1.8876748e-02</td></tr>\n",
+       "<tr><td>1590.9196577352704</td><td>1.0012732e+00</td><td>1.4242514e-04</td><td>0</td><td>2.400153e-04</td><td>1105.96904</td><td>428.95535</td><td>72527</td><td>5.6499230e+04</td><td>7.8861327e+00</td><td>1.9971248e+03</td><td>1.2493325e+00</td><td>6.1421004e+04</td><td>8.7367716e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96904</td><td>1.7759281e-04</td><td>428.95535</td><td>2.1990357e-04</td><td>-5.2022729e-03</td><td>-1.9012831e-02</td></tr>\n",
+       "<tr><td>1590.940092064673</td><td>1.0010673e+00</td><td>1.4247870e-04</td><td>0</td><td>2.406447e-04</td><td>1105.96942</td><td>428.95561</td><td>72528</td><td>5.6490781e+04</td><td>7.8851190e+00</td><td>1.9990331e+03</td><td>1.2456721e+00</td><td>6.1408375e+04</td><td>8.7400579e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96942</td><td>1.7760893e-04</td><td>428.95561</td><td>2.1993376e-04</td><td>-5.0864583e-03</td><td>-1.8948345e-02</td></tr>\n",
+       "<tr><td>1590.9605262941332</td><td>1.0008568e+00</td><td>1.4255286e-04</td><td>0</td><td>2.412741e-04</td><td>1105.96895</td><td>428.95542</td><td>72529</td><td>5.6472609e+04</td><td>7.8848195e+00</td><td>1.9991052e+03</td><td>1.2492406e+00</td><td>6.1395461e+04</td><td>8.7446070e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96895</td><td>1.7762600e-04</td><td>428.95542</td><td>2.1993984e-04</td><td>-5.1647630e-03</td><td>-1.8961638e-02</td></tr>\n",
+       "<tr><td>1590.9809604236434</td><td>1.0005193e+00</td><td>1.4225808e-04</td><td>0</td><td>2.419036e-04</td><td>1105.97009</td><td>428.95614</td><td>72530</td><td>5.6451051e+04</td><td>7.8836699e+00</td><td>2.0032599e+03</td><td>1.2458167e+00</td><td>6.1374758e+04</td><td>8.7265244e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.97009</td><td>1.7768257e-04</td><td>428.95614</td><td>2.2002360e-04</td><td>-4.1346592e-03</td><td>-1.8312160e-02</td></tr>\n",
+       "<tr><td>1591.0013947532207</td><td>1.0004778e+00</td><td>1.4257728e-04</td><td>0</td><td>2.425332e-04</td><td>1105.96931</td><td>428.95510</td><td>72531</td><td>5.6448738e+04</td><td>7.8836937e+00</td><td>2.0011659e+03</td><td>1.2473029e+00</td><td>6.1372219e+04</td><td>8.7461042e+00</td><td>0</td><td>nan</td><td>nan</td><td>nan</td><td>nan</td><td>1105.96931</td><td>1.7769120e-04</td><td>428.95510</td><td>2.2002131e-04</td><td>-4.9826619e-03</td><td>-1.8857196e-02</td></tr>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<KeplerLightCurve length=30546 LABEL=\"KIC 11911561\" QUARTER=17 AUTHOR=Kepler>\n",
+       "       time             flux      ...   pos_corr1      pos_corr2   \n",
+       "                                  ...      pix            pix      \n",
+       "      object          float32     ...    float32        float32    \n",
+       "------------------ -------------- ... -------------- --------------\n",
+       " 131.5120753032097  1.0034571e+00 ... -6.2993299e-03 -9.5218485e-03\n",
+       "  131.532509650242  1.0031319e+00 ... -6.1914125e-03 -9.5051955e-03\n",
+       "131.55294389728078  1.0029383e+00 ... -6.4320331e-03 -9.5977271e-03\n",
+       "131.57337804431154  1.0028213e+00 ... -6.3965851e-03 -9.7460225e-03\n",
+       "131.59381229135033  1.0029490e+00 ... -6.1917030e-03 -9.1767255e-03\n",
+       "131.61424663827347  1.0026515e+00 ... -6.0807974e-03 -9.1536036e-03\n",
+       " 131.6346807851951  1.0027076e+00 ... -6.0842247e-03 -9.1629969e-03\n",
+       " 131.6551150321102  1.0024370e+00 ... -5.8741630e-03 -8.9911846e-03\n",
+       " 131.6755493789169  1.0030605e+00 ... -6.0511068e-03 -9.0471925e-03\n",
+       "               ...            ... ...            ...            ...\n",
+       " 1590.817486589236  1.0018357e+00 ... -5.0306604e-03 -1.8973252e-02\n",
+       "1590.8379209183186  1.0018344e+00 ... -5.0632036e-03 -1.8905191e-02\n",
+       "1590.8583550474796  1.0016021e+00 ... -5.1486488e-03 -1.8924832e-02\n",
+       "1590.8787892766777  1.0013925e+00 ... -5.0621144e-03 -1.8938608e-02\n",
+       " 1590.899223605964  1.0014297e+00 ... -5.0576576e-03 -1.8876748e-02\n",
+       "1590.9196577352704  1.0012732e+00 ... -5.2022729e-03 -1.9012831e-02\n",
+       " 1590.940092064673  1.0010673e+00 ... -5.0864583e-03 -1.8948345e-02\n",
+       "1590.9605262941332  1.0008568e+00 ... -5.1647630e-03 -1.8961638e-02\n",
+       "1590.9809604236434  1.0005193e+00 ... -4.1346592e-03 -1.8312160e-02\n",
+       "1591.0013947532207  1.0004778e+00 ... -4.9826619e-03 -1.8857196e-02"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lc = getData(id2)\n",
+    "lc"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "f51e8d02a3df4ebfa1a2b3c7efbcb193",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plotKeplerLightCurve(lc)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "300df00d6a8f45b69bdf41c5f6a31e57",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plotKeplerSAPLightCurve(lc)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "a341dff352ff42e6b3cae2d6eef45620",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plotKeplerPDCSAPLightCurve(lc)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 131.5120753 ,  131.53250965,  131.5529439 , ..., 1590.96052629,\n",
+       "       1590.98096042, 1591.00139475])"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "time = np.array(list(map(lambda time: time.value, list(lc.time))))\n",
+    "time"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1.0034571, 1.0031319, 1.0029383, ..., 1.0008568, 1.0005193,\n",
+       "       1.0004778], dtype=float32)"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "flux = np.array(list(map(lambda flux: flux.value, list(lc.flux))))\n",
+    "flux"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "523844cc57b245a1b50d95829c9d1827",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "def evaluateAndProcessData(x, y):\n",
+    "    t, c, k = interpolate.splrep(x, y, s=0, k=4)\n",
+    "    xx = np.linspace(x.min(), x.max(), 100)\n",
+    "    spline = interpolate.BSpline(t, c, k, extrapolate=False)\n",
+    "    \n",
+    "    plt.figure(figsize=(30,6))\n",
+    "    plt.plot(x, y, linestyle=\"none\", label='Original points')\n",
+    "    plt.plot(x, y)\n",
+    "    plt.plot(xx, spline(xx), 'r', label='BSpline')\n",
+    "    plt.grid()\n",
+    "    plt.legend(loc='best')\n",
+    "    plt.show()\n",
+    "    \n",
+    "evaluateAndProcessData(time, flux)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.2"
+  },
+  "varInspector": {
+   "cols": {
+    "lenName": 16,
+    "lenType": 16,
+
+    "lenVar": 40
+
+   },
+   "kernels_config": {
+    "python": {
+     "delete_cmd_postfix": "",
+     "delete_cmd_prefix": "del ",
+     "library": "var_list.py",
+     "varRefreshCmd": "print(var_dic_list())"
+    },
+    "r": {
+     "delete_cmd_postfix": ") ",
+     "delete_cmd_prefix": "rm(",
+     "library": "var_list.r",
+     "varRefreshCmd": "cat(var_dic_list()) "
+    }
+   },
+   "types_to_exclude": [
+    "module",
+    "function",
+    "builtin_function_or_method",
+    "instance",
+    "_Feature"
+   ],
+   "window_display": false
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {},
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/notebooks$ vim binary_star_analysis.ipynb
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/notebooks$ nano binary_star_analysis.ipynb
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/notebooks$ sudo apt-get jed
+[sudo] password for thepyprogrammer:
+
+                         verbose=True):
+    """
+  Computes the best-fit Kepler spline across a break-point spacings.
+  Some Kepler light curves have low-frequency variability, while others have
+  very high-frequency variability (e.g. due to rapid rotation). Therefore, it is
+  suboptimal to use the same break-point spacing for every star. This function
+  computes the best-fit spline by fitting splines with different break-point
+  spacings, calculating the Bayesian Information Criterion (BIC) for each
+  spline, and choosing the break-point spacing that minimizes the BIC.
+  This function assumes a piecewise light curve, that is, a light curve that is
+  divided into different segments (e.g. split by quarter breaks or gaps in the
+  in the data). A separate spline is fit for each segment.
+  Args:
+    time: List of 1D numpy arrays; the time values of the light curve.
+    flux: List of 1D numpy arrays; the flux (brightness) values of the light
+        curve.
+    bkspaces: List of break-point spacings to try.
+    maxiter: Maximum number of attempts to fit each spline after removing badly
+        fit points.
+    penalty_coeff: Coefficient of the penalty term for using more parameters in
+        the Bayesian Information Criterion. Decreasing this value will allow
+        more parameters to be used (i.e. smaller break-point spacing), and
+        vice-versa.
+    verbose: Whether to log individual spline errors. Note that if bkspaces
+        contains many values (particularly small ones) then this may cause
+        logging pollution if calling this function for many light curves.
+  Returns:
+    spline: List of numpy arrays; values of the best-fit spline corresponding to
+        to the input flux arrays.
+    spline_mask: List of boolean numpy arrays indicating which points in the
+        flux arrays were used to fit the best-fit spline.
+    bkspace: The break-point spacing used for the best-fit spline.
+    bad_bkspaces: List of break-point spacing values that failed.
+  """
+    # Compute the assumed standard deviation of Gaussian white noise about the
+    # spline model.
+    abs_deviations = np.abs(flux[1:] - flux[:-1])
+                                                                                                                                          120,5         57%
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package jed
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/notebooks$ cd ..
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cd kepler/kepler_spline
+-bash: cd: kepler/kepler_spline: No such file or directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cd kepler/kepler-spline
+-bash: cd: kepler/kepler-spline: No such file or directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cd kepler
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd kepler-spline
+-bash: cd: kepler-spline: No such file or directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ ls
+README.md  __init__.py  __pycache__  curve.py  general.py  k2.py  kepler.py  kepler_spine  requirements.txt  tce.py  util
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd kepler_spline
+-bash: cd: kepler_spline: No such file or directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd ./kepler_spline
+-bash: cd: ./kepler_spline: No such file or directory
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ mv kepler_spine kepler_spline
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd kepler_spline
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ ls -la
+total 12
+drwxrwxrwx 1 thepyprogrammer thepyprogrammer 4096 Jul  4 12:13 .
+drwxrwxrwx 1 thepyprogrammer thepyprogrammer 4096 Jul 21 12:57 ..
+-rwxrwxrwx 1 thepyprogrammer thepyprogrammer    0 Jul  4 10:40 __init__.py
+-rwxrwxrwx 1 thepyprogrammer thepyprogrammer 8378 Jul  4 12:13 spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ vim spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ brew
+
+Command 'brew' not found, did you mean:
+
+  command 'brec' from deb bplay (0.991-10build1)
+  command 'qbrew' from deb qbrew (0.4.1-8build1)
+
+Try: sudo apt install <deb name>
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ ls
+__init__.py  spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ nvim spline.py
+
+Command 'nvim' not found, but can be installed with:
+
+sudo apt install neovim
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ neovim spline.py
+neovim: command not found
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ sudo apt install neovim
+[sudo] password for thepyprogrammer:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package neovim
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ sudo add-apt-repository ppa:neovim-ppa/unstable
+ Daily builds of Neovim.
+
+Homepage: https://neovim.io
+Source/Issues: https://github.com/neovim/neovim
+Documentation: https://neovim.io/doc
+User Manual: https://neovim.io/doc/user
+Neovim features: https://neovim.io/doc/user/nvim.html
+Packaging: https://launchpad.net/neovim-ppa
+ More info: https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu focal InRelease [18.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:7 http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu focal/main amd64 Packages [588 B]
+Get:8 http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu focal/main Translation-en [200 B]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [789 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [155 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [8284 B]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [327 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [47.4 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [428 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [633 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [97.5 kB]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [11.9 kB]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [25.4 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [4952 B]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [560 B]
+Get:21 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1126 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [245 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [364 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [52.7 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [428 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [843 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [176 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [18.4 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [27.5 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6780 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [684 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2568 B]
+Get:39 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [1120 B]
+Get:40 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [400 B]
+Get:41 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:42 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [5792 B]
+Get:43 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [2060 B]
+Get:44 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [288 B]
+Get:45 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 19.6 MB in 56s (352 kB/s)
+Reading package lists... Done
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ sudo apt-get update
+Hit:1 http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists... Done
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/kepler_spline$ sudo apt-get install neovim
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libluajit-5.1-2 libluajit-5.1-common
+The following NEW packages will be installed:
+  libluajit-5.1-2 libluajit-5.1-common neovim
+0 upgraded, 3 newly installed, 0 to remove and 40 not upgraded.
+Need to get 5599 kB of archives.
+After this operation, 25.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 libluajit-5.1-co
+
+mmon all 2.1.0~beta3+dfsg-5.1build1 [44.3 kB]
+Get:2 http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu focal/main amd64 neovim amd64 0.5.0+ubuntu2+git202107201521-2475161de-d569569c9-9cb9a8f8c~ubuntu20.04.1 [5327 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 libluajit-5.1-2 amd64 2.1.0~beta3+dfsg-5.1build1 [228 kB]
+Fetched 5599 kB in 16s (346 kB/s)
+
+
+Selecting previously unselected package libluajit-5.1-common.
+(Reading database ... 34783 files and directories currently installed.)
+Preparing to unpack .../libluajit-5.1-common_2.1.0~beta3+dfsg-5.1build1_all.deb ...
+
+
+Unpacking libluajit-5.1-common (2.1.0~beta3+dfsg-5.1build1) ...
+Selecting previously unselected package libluajit-5.1-2:amd64.
+
+
+Preparing to unpack .../libluajit-5.1-2_2.1.0~beta3+dfsg-5.1build1_amd64.deb ...
+
+
+Unpacking libluajit-5.1-2:amd64 (2.1.0~beta3+dfsg-5.1build1) ...
+Selecting previously unselected package neovim.
+Preparing to unpack .../neovim_0.5.0+ubuntu2+git202107201521-2475161de-d569569c9-9cb9a8f8c~ubuntu20.04.1_amd64.deb ...
+Unpacking neovim (0.5.0+ubuntu2+git202107201521-2475161de-d569569c9-9cb9a8f8c~ubuntu20.04.1) ...
+Setting up libluajit-5.1-common (2.1.0~beta3+dfsg-5.1build1) ...
+Setting up libluajit-5.1-2:amd64 (2.1.0~beta3+dfsg-5.1build1) ...
+Setting up neovim (0.5.0+ubuntu2+git202107201521-2475161de-d569569c9-9cb9a8f
+
+8c~ubuntu20.04.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+
+
+@dataclass
+class Event:
+    # Period of the event, in days.
+    period: float
+    # Duration of the event, in days.
+    duration: float
+    # Time of the first occurrence of the event, in days.
+    t0: float
+
+    def equals(self, other_event, period_rtol=0.001, t0_durations=1):
+        """Compares this Event to another Event, within the given tolerance.        Args:
+          other_event: An Event.
+          period_rtol: Relative tolerance in matching the periods.
+          t0_durations: Tolerance in matching the t0 values, in units of the other
+              Event's duration.
+        Returns:
+          True if this Event is the same as other_event, within the given tolerance.
+        """
+        # First compare the periods.
+        period_match = np.isclose(
+            self.period, other_event.period, rtol=period_rtol, atol=1e-8)
+        if not period_match:
+            return False
+
+        # To compare t0, we must consider that self.t0 and other_event.t0 may be at
+        # different phases. Just comparing mod(self.t0, period) to
+        # mod(other_event.t0, period) does not work because two similar values could
+        # end up at different ends of [0, period).
+        # Define t0_diff to be the absolute difference, up to multiples of period.
+        # This value is always in [0, period/2).
+periodic_event.py [+]                                     22,5           79%
+    period: float
+    # Duration of the event, in days.
+    duration: float
+    # Time of the first occurrence of the event, in days.
+    t0: float
+
+    def __eq__(self, other):
+        return self.equals(other)
+
+    def equals(self, other_event, period_rtol=0.001, t0_durations=1):
+        """Compares this Event to another Event, within the given tolerance.
+        Args:
+          other_event: An Event.
+          period_rtol: Relative tolerance in matching the periods.
+          t0_durations: Tolerance in matching the t0 values, in units of the other
+              Event's duration.
+        Returns:
+          True if this Event is the same as other_event, within the given tolerance.
+        """
+        # First compare the periods.
+        period_match = np.isclose(
+            self.period, other_event.period, rtol=period_rtol, atol=1e-8)
+        if not period_match:
+            return False
+
+        # To compare t0, we must consider that self.t0 and other_event.t0 may be at
+        # different phases. Just comparing mod(self.t0, period) to
+        # mod(other_event.t0, period) does not work because two similar values could
+        # end up at different ends of [0, period).
+        # Define t0_diff to be the absolute difference, up to multiples of period.
+        # This value is always in [0, period/2).
+        t0_diff = np.mod(self.t0 - other_event.t0, other_event.period)
+        if t0_diff > other_event.period / 2:
+            t0_diff = other_event.period - t0_diff
+
+        return t0_diff < t0_durations * other_event.duration
+periodic_event.py                                                                                                                         39,28          Bot"periodic_event.py" [dos] 59L, 2441C written
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+
+
+import numpy as np
+from dataclasses import dataclass
+
+def robust_mean(y, cut):
+    absdev = np.abs(y - np.median(y))
+    sigma = 1.4826 * np.median(absdev)
+    sigma = np.std(y[absdev <= cut * (1.253 * np.mean(absdev) if np.log1    0(sigma) < 24 else sigma)])
+    sc = cut if cut > 1 else 1
+    if cut <= 4.5:
+        sigma /= (-0.15405 + 0.90723 * sc - 0.23584 * sc ** 2 + 0.020142     * sc ** 3)
+
+    mask = absdev <= cut * sigma
+    mean, sigma = np.mean(y[mask]), np.std(y[mask])
+    if cut <= 4.5:
+        sigma /= (-0.15405 + 0.90723 * sc - 0.23584 * sc ** 2 + 0.020142     * sc ** 3)
+    mean_stddev = sigma / np.sqrt(len(y) - 1)
+    return mean, mean_stddev, mask
+
+
+@dataclass
+class Event:
+    period: float
+    duration: float
+    t0: float
+
+    def equals(self, other, period_rtol=0.001, t0_durations=1):                     return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
+~
+~
+model.py                                                  29,0-1         All"model.py" 29L, 1060C written
+ nvim __init__.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+
+  """
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len,
+                                                                           len(y)))
+
+    # Validate x_min and x_max.
+median_filter.py                                          52,75          42%
+        than x_max - x_min. Defaults to (x_max - x_min) / num_bins.
+    x_min: The inclusive leftmost value to consider on the x-axis. Must be less
+        than or equal to the largest value of x. Defaults to min(x).
+    x_max: The exclusive rightmost value to consider on the x-axis. Must be
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len, len(y)))
+
+    # Validate x_min and x_max.
+    x_min = x_min if x_min is not None else x[0]
+    x_max = x_max if x_max is not None else x[-1]
+    if x_min >= x_max:
+        raise ValueError("x_min (got: %d) must be less than x_max (got: %d)" %
+                         (x_min, x_max))
+    if x_min > x[-1]:
+        raise ValueError(
+            "x_min (got: %d) must be less than or equal to the largest value of x "
+            "(got: %d)" % (x_min, x[-1]))
+
+    # Validate bin_width.
+    bin_width = bin_width if bin_width is not None else (x_max - x_min) / num_bins
+    if bin_width <= 0:
+        raise ValueError("bin_width must be positive. Got: %d" % bin_width)
+median_filter.py [+]                                                                                                                      52,83          43%-- INSERT --
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len, len(y)))
+
+    # Validate x_min and x_max.
+    x_min = x_min if x_min is not None else x[0]
+    x_max = x_max if x_max is not None else x[-1]
+    if x_min >= x_max:
+        raise ValueError("x_min (got: %d) must be less than x_max (got: %d)" %
+                         (x_min, x_max))
+    if x_min > x[-1]:
+        raise ValueError(
+            "x_min (got: %d) must be less than or equal to the largest value of x "
+            "(got: %d)" % (x_min, x[-1]))
+
+median_filter.py [+]                                                                                  52,83          43%-- INSERT --
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]
+
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len, len(y)))
+
+    # Validate x_min and x_max.
+    x_min = x_min if x_min is not None else x[0]
+    x_max = x_max if x_max is not None else x[-1]
+    if x_min >= x_max:
+        raise ValueError("x_min (got: %d) must be less than x_max (got: %d)" %
+                         (x_min, x_max))
+    if x_min > x[-1]:
+        raise ValueError(
+            "x_min (got: %d) must be less than or equal to the largest value of x (got: %d)" % (x_min, x[-1]))
+
+    # Validate bin_width.
+    bin_width = bin_width if bin_width is not None else (x_max - x_min) / num_bins
+    if bin_width <= 0:
+        raise ValueError("bin_width must be positive. Got: %d" % bin_width)
+    if bin_width >= x_max - x_min:
+median_filter.py [+]                                      47,43          50%-- INSERT --
+                for i in range(num_bins):
+                    for j_start in range(j_start, len(x)):
+                        if x[j_start] >= bin_min: break
+
+                    for j_end in range(j_end, len(x)):
+                        if x[j_end] >= bin_max: break
+
+                    if j_end > j_start:
+                        result[i] = np.median(y[j_start:j_end])
+
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return result
+
+median_filter.py                                          69,16          45%"median_filter.py" [dos] 136L, 5884C written        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = np.repeat(np.median(y), num_bins)
+                for x_start in range(len(x)):
+                    if x[x_start] >= x_min: break
+
+                bin_min, bin_max, j_start, j_end = x_min, x_min + bin_width, x_start, x_start
+                for i in range(num_bins):
+                    for j_start in range(j_start, len(x)):
+                        if x[j_start] >= bin_min: break
+
+                    for j_end in range(j_end, len(x)):
+                        if x[j_end] >= bin_max: break
+
+                    if j_end > j_start:
+                        result[i] = np.median(y[j_start:j_end])
+
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return result
+
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+median_filter.py                                                                                      69,16          40%
+
+
+# Copyright 2018 The TensorFlow Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Utility function for smoothing data using a median filter."""
+
+import numpy as np
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    """Computes the median y-value in uniform intervals (bins) along the x-axis.
+  The interval [x_min, x_max) is divided into num_bins uniformly spaced
+  intervals of width bin_width. The value computed for each bin is the median
+  of all y-values whose corresponding x-value is in the interval.
+  NOTE: x must be sorted in ascending order or the results will be incorrect.
+  Args:
+    x: 1D array of x-coordinates sorted in ascending order. Must have at least 2
+        elements, and all elements cannot be the same value.
+    y: 1D array of y-coordinates with the same size as x.
+    num_bins: The number of intervals to divide the x-axis into. Must be at
+        least 2.
+median_filter.py [+]                                                                                                                      34,1           Top
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Utility function for smoothing data using a median filter."""
+
+import numpy as np
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    """Computes the median y-value in uniform intervals (bins) along the x-axis.
+  The interval [x_min, x_max) is divided into num_bins uniformly spaced
+  intervals of width bin_width. The value computed for each bin is the median
+  of all y-values whose corresponding x-value is in the interval.
+  NOTE: x must be sorted in ascending order or the results will be incorrect.
+  Args:
+    x: 1D array of x-coordinates sorted in ascending order. Must have at least 2
+        elements, and all elements cannot be the same value.
+    y: 1D array of y-coordinates with the same size as x.
+    num_bins: The number of intervals to divide the x-axis into. Must be at
+median_filter.py [+]                                                                                  34,1            6%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+median_filter.py [+]                                      58,1           40%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+median_filter.py [+]                                          58,1           41%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+median_filter.py [+]                                                58,1           41%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+median_filter.py [+]                                                 58,1           41%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len, len(y)))
+median_filter.py [+]                                                       58,1           41%
+        greater than x_min. Defaults to max(x).
+  Returns:
+    1D NumPy array of size num_bins containing the median y-values of uniformly
+    spaced bins on the x-axis.
+  Raises:
+    ValueError: If an argument has an inappropriate value.
+  """
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+
+    # All the weird errors why
+    if num_bins < 2:
+        raise ValueError("num_bins must be at least 2. Got: %d" % num_bins)
+
+    # Validate the lengths of x and y.
+    x_len = len(x)
+    if x_len < 2:
+        raise ValueError("len(x) must be at least 2. Got: %s" % x_len)
+    if x_len != len(y):
+        raise ValueError("len(x) (got: %d) must equal len(y) (got: %d)" % (x_len, len(y)))
+median_filter.py [+]                                                        58,1           41%
+ nvim median_filter.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ cd ../..
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ cd kepler/util
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ls
+__init__.py  median_filter.py  periodic_event.py  robust_mean.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ nvim median_filter.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ nvim periodic_event.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ nvim model.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ nvim median_filterthepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^Cim median_filterthepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ ^C
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+
+
+    duration: float
+    t0: float
+
+    def equals(self, other, period_rtol=0.001, t0_durations=1):
+        return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period
+) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+    raise ValueError("This won't work due to some reason that I don't want to notify you about because the developer of this code is lazy")
+
+
+model.py [+]                                                                 55,1           Bot-- INSERT --
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+
+            new_mask = robust_mean(flux - spline, cut=outlier_cut)[-1]
+            if np.all(new_mask == mask): break
+            mask = new_mask
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                curve = bspline.iterfit(time[mask], flux[mask], bkspace=bkspace)[0]
+            spline = curve.value(time)[0]
+        except:
+            return
+
+    return spline, mask
+
+def choose_kepler_spline(time, flux, bkspaces, maxiter=5, penalty_coeff=1.0, verbose=True):
+    abs_deviations = np.abs(flux[1:] - flux[:-1])
+    sigma =
+-- INSERT --                                                                 31,13         Bot
+        else:
+            new_mask = robust_mean(flux - spline, cut=outlier_cut)[-1]
+            if np.all(new_mask == mask): break
+            mask = new_mask
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                curve = bspline.iterfit(time[mask], flux[mask], bkspace=bkspace)[0]
+            spline = curve.value(time)[0]
+        except:
+            return
+
+    return spline, mask
+
+def choose_kepler_spline(time, flux, bkspaces, maxiter=5, penalty_coeff=1.0, verbose=True):
+    abs_deviations = np.abs(flux[1:] - flux[:-1])
+    sigma =
+-- INSERT --                                                                          31,13         Bot
+
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ nvim model.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/util$ cd ..
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ nano .gitignore
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd spline
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ vim spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ nano .gitignore
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ cd ..
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ !nano
+nano .gitignore
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ cd spline
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ cat model.py
+import numpy as np
+from dataclasses import dataclass
+
+def robust_mean(y, cut):
+    absdev = np.abs(y - np.median(y))
+    sigma = 1.4826 * np.median(absdev)
+    sigma = np.std(y[absdev <= cut * (1.253 * np.mean(absdev) if np.log1    0(sigma) < 24 else sigma)])
+    sc = cut if cut > 1 else 1
+    if cut <= 4.5:
+        sigma /= (-0.15405 + 0.90723 * sc - 0.23584 * sc ** 2 + 0.020142     * sc ** 3)
+
+    mask = absdev <= cut * sigma
+    mean, sigma = np.mean(y[mask]), np.std(y[mask])
+    if cut <= 4.5:
+        sigma /= (-0.15405 + 0.90723 * sc - 0.23584 * sc ** 2 + 0.020142     * sc ** 3)
+    mean_stddev = sigma / np.sqrt(len(y) - 1)
+    return mean, mean_stddev, mask
+
+@dataclass
+class PeriodicEvent:
+    period: float
+    duration: float
+    t0: float
+
+    def equals(self, other, period_rtol=0.001, t0_durations=1):
+        return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period
+) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+    raise ValueError("This won't work due to some reason that I don't want to notify you about because the developer of this code is lazy")
+
+def phase_fold_time(time, period, t0):
+    return np.mod(time + (period/2 - t0), period) - period/2
+
+def split(all_time, all_flux, gap_width=0.75):
+    if np.array(all_time).ndim == 1: all_time, all_flux = [all_time], [all_flux]
+    out_time, out_flux = [], []
+    for time, flux in zip(all_time, all_flux):
+        start = 0
+        for end in range(1, len(time) + 1):
+            if end == len(time) or time[end] - time[end - 1] > gap_width:
+                out_time.append(time[start:end])
+                out_flux.append(flux[start:end])
+                start = end
+
+    return out_time, out_flux
+
+def remove_events(all_time, all_flux, events, width_factor=1.0):
+    single_segment = np.array(all_time).ndim == 1
+    if single_segment: all_time, all_flux = [all_time], [all_flux]
+    output_time, output_flux = [], []
+    for time, flux in zip(all_time, all_flux):
+        mask = np.ones_like(time, dtype=np.bool)
+        for event in events:
+            mask = np.logical_and(mask, np.abs(phase_fold_time(time, event.period, event.t0)) > 0.5 * width_factor * event.duration)
+            output_time, output_flux = (time[mask], flux[mask]) if single_segment else (output_time + [time[mask]]
+, output_flux + [flux[mask]])
+
+
+    duration: float
+    t0: float
+
+    def equals(self, other, period_rtol=0.001, t0_durations=1):
+        return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
+    def count_transit_points(self, time):
+
+
+
+
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+
+                return np.array(result)
+    raise ValueError("This won't work due to some reason that I don't want to notify you about because the developer of this code is lazy")
+
+
+def phase_fold_time(time, period, t0):
+    return np.mod(time + (period/2 - t0), period) - period/2
+spline.py [+]                                                                                                                                                             33,9           19%-- INSERT --
+    def equals(self, other, period_rtol=0.001, t0_durations=1):
+        return np.arcsin(np.sin((np.pi * (self.t0 - other.t0) % other.period) / other.period)) * (other.period / np.pi) < t0_durations * other_event.duration if not np.isclose(self.period, other.period, rtol=period_rtol, atol=1e-8) else False
+
+    def count_transit_points(self, time):
+        t_min, t_max = np.min(time), np.max(time)
+        if(t_max - t_min) / self.period <= 10e6:
+            t0 = (self.t0 - t_min) % self.period + t_min
+            points_in_transit = []
+            i = j = 0
+            for transit_midpoint in np.arange(t0, t_max, self.period):
+                i = find_index_above_threshold(time, transit_midpoint - event.duration/2, i)                j = find_index_above_threshold(time, transit_midpoint + event.duration/2, j)                points_in_transit.append(j - i)
+
+            return np.array(points_in_transit)
+
+
+
+
+def find_index_above_threshold(arr, threshold, start=0, end=None):
+    for i in range(start, len(arr) if end is None else end):
+        if arr[i] >= threshold: break
+    return i
+
+
+def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
+    if num_bins >= 2 and len(x) >= 2 and len(x) == len(y):
+        if x_min is None: x_min = x[0]
+        if x_max is None: x_max = x[-1]
+        if x_min < x_max and x_min < x[-1]:
+            if bin_width is not None: bin_width = (x_max - x_min) / num_bins
+            if bin_width > 0 and bin_width < x_max - x_min:
+                bin_spacing = (x_max - x_min - bin_width) / (num_bins - 1)
+                result = []
+                j_start = j_end = find_index_above_threshold(x, x_min)
+                bin_min, bin_max = x_min, x_min + bin_width
+                for i in range(num_bins):
+                    j_start = find_index_above_threshold(x, bin_min, j_start)
+                    j_end = find_index_above_threshold(x, bin_max, j_end)
+                    result.append(np.median(y[j_start:j_end]) if j_end > j_start else y)
+                    bin_min += bin_spacing
+                    bin_max += bin_spacing
+spline.py [+]                                                             70,13          19%-- INSERT --
+
+    return output_time, output_flux
+
+def interpolate_masked_spline(all_time, all_masked_time, all_masked_spline):
+    return [np.interp(time, masked_time, masked_spline) if len(masked_time) > 0 else np.full_like(time, np.nan) for time, masked_time, masked_spline in zip(all_time, all_masked_time, masked_spline)]
+
+def count_transit_points(time, event):
+    t_min, t_max = np.min(time), np.max(time)
+    if (t_max - t_max) / event.period <= 10e6:
+        t0 = (event.t0 - t_min) % event.period + t_min
+        points_in_transit, i, j = [], 0, 0
+        for transit_midpoint in np.arange(t0, t_max, event.period):
+            i = find_index_above_threshold(time, transit_midpoint - event.duration/2, i)
+            j = find_index_above_threshold(time, transit_midpoint + event.duration/2, j)
+            points_in_transit.append(j - i)
+
+        return np.array(points_in_transit)
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ vim spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ rm model.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ ls
+__init__.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler/spline$ cd ..
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ ls
+README.md  __init__.py  __pycache__  commitments  curve.py  general.py  k2.py  kepler.py  remove_noise.py  requirements.txt  spline  tce.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ mv spline/__init__.py spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ rm -r spline
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ ls
+README.md  __init__.py  __pycache__  commitments  curve.py  general.py  k2.py  kepler.py  remove_noise.py  requirements.txt  spline.py  tce.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ nvim spline.py
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$ history
+    1  sudo bash
+    2  cd notedown
+    3  cd ..
+    4  ps
+    5  bash
+    6  cd notedown
+    7  cd vs-notedown
+    8  ls -la
+    9  tree
+   10  python3 -m pip install --user --upgrade pynvim
+   11  python3 -V
+   12  pip -V
+   13  python -m pip -V
+   14  DNVIM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/discord.nvim/start/discord.nvim"
+   15  mkdir -p "$DNVIM_HOME"
+   16  git clone https://github.com/aurieh/discord.nvim.git "$DNVIM_HOME"
+   17  sudo apt install nano
+   18  nano
+   19  bash.#
+   20  screen -r
+   21  sudo screen
+   22  bash
+   23  x = 5
+   24  $x = 5
+   25  x=5
+   26  x=5+1
+   27  x
+   28  $x
+   29  cd Documents/GitHub/ThreeBody
+   30  git
+   31  git status
+   32  wsl --list --running
+   33  wsl.exe --list --running
+   34  exit
+   35  exit() e
+   36  bash
+   37  exit
+   38  cd ThreeBody
+   39  git status
+   40  wslgit status
+   41  cat commitments/commit.sh
+   42  cat commitments
+   43  cat commitments/*
+   44  scoop install neovide
+   45  sudo apt install neovide
+   46  scoop install neovide
+   47  scoop bucket list
+   48  scoop install extras
+   49  scoop bucket add extras
+   50  scoop install neovide
+   51  vim commitments/enigma.sh
+   52  cat commitments/enigma.sh
+   53  git -h
+   54  git branch individual_stars
+   55  git init
+   56  git status
+   57  cd notebooks
+   58  cat binary_star_analysis.ipynb
+   59  vim binary_star_analysis.ipynb
+   60  nano binary_star_analysis.ipynb
+   61  sudo apt-get jed
+   62  sudo apt-get install jd
+   63  sudo apt-get install jed
+   64  cd ..
+   65  cd kepler/kepler_spline
+   66  cd kepler/kepler-spline
+   67  cd kepler
+   68  cd kepler-spline
+   69  ls
+   70  cd kepler_spline
+   71  cd ./kepler_spline
+   72  mv kepler_spine kepler_spline
+   73  cd kepler_spline
+   74  ls -la
+   75  vim spline.py
+   76  brew
+   77  ls
+   78  nvim spline.py
+   79  neovim spline.py
+   80  sudo apt install neovim
+   81  sudo add-apt-repository ppa:neovim-ppa/unstable
+   82  sudo apt-get update
+   83  sudo apt-get install neovim
+   84  l
+   85  ls
+   86  nvim spline.py
+   87  cd ../util
+   88  ls
+   89  nvim robust_mean.py
+   90  nvim __init__.py
+   91  nvim median_filter.py
+   92  cd ../..
+   93  cd kepler/util
+   94  ls
+   95  nvim median_filter.py
+   96  nvim periodic_event.py
+   97  nvim model.py
+   98  nvim median_filter.py
+   99  nvim model.py
+  100  cd ..
+  101  nano .gitignore
+  102  cd spline
+  103  vim spline.py
+  104  nano .gitignore
+  105  cd ..
+  106  nano .gitignore
+  107  cd spline
+  108  cat model.py
+  109  vim spline.py
+  110  rm model.py
+  111  ls
+  112  cd ..
+  113  ls
+  114  mv spline/__init__.py spline.py
+  115  rm -r spline
+  116  ls
+  117  nvim spline.py
+  118  history
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody/kepler$

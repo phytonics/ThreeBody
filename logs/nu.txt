@@ -1,0 +1,1729 @@
+Welcome to Nushell 0.32.0 (type 'help' for more info)
+C:\Users\Prannaya> cd Pycharm
+error: Cannot change to directory
+  ┌─ shell:1:4
+  │
+1 │ cd Pycharm
+  │    ^^^^^^^ directory not found
+
+C:\Users\Prannaya> cd PycharmProjects\EmbodiedAI
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI(master)> cd data
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> ls | where size < 100mb
+───┬────────────────────┬──────┬─────────┬────────────
+ # │        name        │ type │  size   │  modified
+───┼────────────────────┼──────┼─────────┼────────────
+ 0 │ MYNursingHome      │ Dir  │     0 B │ 6 mins ago
+ 1 │ scenenn_dec24_data │ Dir  │ 12.3 KB │ 6 mins ago
+ 2 │ scenenn_seg        │ Dir  │ 65.5 KB │ 8 mins ago
+───┴────────────────────┴──────┴─────────┴────────────
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> cd scenenn_dec24_data
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data\scenenn_dec24_data(master)> ls -la | where size < 100mb
+────┬───────────────┬──────┬────────┬──────────┬────────┬─────────────┬─────────────┬─────────────
+ #  │     name      │ type │ target │ readonly │  size  │   created   │  accessed   │  modified
+────┼───────────────┼──────┼────────┼──────────┼────────┼─────────────┼─────────────┼─────────────
+  0 │ 005           │ Dir  │        │ false    │    0 B │ 12 mins ago │ 3 mins ago  │ 12 mins ago
+  1 │ 011           │ Dir  │        │ false    │    0 B │ 12 mins ago │ 3 mins ago  │ 11 mins ago
+  2 │ 014           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  3 │ 015           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  4 │ 016           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  5 │ 021           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  6 │ 025           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  7 │ 032           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  8 │ 036           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+  9 │ 038           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 10 │ 041           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 11 │ 045           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 12 │ 047           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 13 │ 049           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 14 │ 052           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 15 │ 054           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 16 │ 057           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 17 │ 061           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 18 │ 062           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 19 │ 065           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 20 │ 066           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 21 │ 069           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 22 │ 071           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 23 │ 073           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 11 mins ago
+ 24 │ 074           │ Dir  │        │ false    │    0 B │ 11 mins ago │ 3 mins ago  │ 10 mins ago
+ 25 │ 076           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 26 │ 078           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 27 │ 080           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 28 │ 082           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 29 │ 084           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 30 │ 086           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 31 │ 087           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 32 │ 089           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 33 │ 093           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 34 │ 096           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 35 │ 098           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 36 │ 109           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 37 │ 201           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 38 │ 202           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 39 │ 206           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 40 │ 207           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 41 │ 209           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 10 mins ago
+ 42 │ 213           │ Dir  │        │ false    │    0 B │ 10 mins ago │ 3 mins ago  │ 9 mins ago
+ 43 │ 217           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 44 │ 223           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 45 │ 225           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 46 │ 227           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 47 │ 231           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 48 │ 234           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 49 │ 237           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 50 │ 240           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 51 │ 243           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 52 │ 246           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 53 │ 249           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 54 │ 251           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 55 │ 252           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 56 │ 255           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 57 │ 260           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 58 │ 263           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 59 │ 265           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 60 │ 270           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 9 mins ago
+ 61 │ 272           │ Dir  │        │ false    │    0 B │ 9 mins ago  │ 3 mins ago  │ 8 mins ago
+ 62 │ 273           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 63 │ 276           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 64 │ 279           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 65 │ 286           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 66 │ 294           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 67 │ 308           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 68 │ 522           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 69 │ 527           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 70 │ 609           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 71 │ 613           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 72 │ 614           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 73 │ 621           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 74 │ 623           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 75 │ 700           │ Dir  │        │ false    │    0 B │ 8 mins ago  │ 3 mins ago  │ 8 mins ago
+ 76 │ nyu_color.xml │ File │        │ false    │ 2.4 KB │ 3 years ago │ 12 mins ago │ 12 mins ago
+────┴───────────────┴──────┴────────┴──────────┴────────┴─────────────┴─────────────┴─────────────
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data\scenenn_dec24_data(master)> ls */*
+─────┬─────────────────────┬──────┬──────────┬─────────────
+  #  │        name         │ type │   size   │  modified
+─────┼─────────────────────┼──────┼──────────┼─────────────
+   0 │ 005\005.ply         │ File │ 103.6 MB │ 12 mins ago
+   1 │ 005\005.xml         │ File │  64.0 KB │ 12 mins ago
+   2 │ 005\trajectory.log  │ File │   1.6 MB │ 12 mins ago
+   3 │ 011\011.ply         │ File │  82.4 MB │ 12 mins ago
+   4 │ 011\011.xml         │ File │  29.1 KB │ 12 mins ago
+   5 │ 011\011_actions.txt │ File │      0 B │ 12 mins ago
+   6 │ 011\trajectory.log  │ File │ 601.1 KB │ 12 mins ago
+   7 │ 014\014.ply         │ File │  63.0 MB │ 12 mins ago
+   8 │ 014\014.xml         │ File │  60.9 KB │ 12 mins ago
+   9 │ 014\trajectory.log  │ File │ 523.3 KB │ 12 mins ago
+  10 │ 015\015.ply         │ File │  82.8 MB │ 12 mins ago
+  11 │ 015\015.xml         │ File │  70.5 KB │ 12 mins ago
+  12 │ 015\trajectory.log  │ File │ 355.8 KB │ 12 mins ago
+  13 │ 016\016.ply         │ File │  43.1 MB │ 12 mins ago
+  14 │ 016\016.xml         │ File │  22.6 KB │ 12 mins ago
+  15 │ 016\trajectory.log  │ File │ 215.7 KB │ 12 mins ago
+  16 │ 021\021.ply         │ File │  76.3 MB │ 12 mins ago
+  17 │ 021\021.xml         │ File │  54.3 KB │ 12 mins ago
+  18 │ 021\trajectory.log  │ File │ 424.0 KB │ 12 mins ago
+  19 │ 025\025.ply         │ File │  82.9 MB │ 12 mins ago
+  20 │ 025\025.xml         │ File │  53.4 KB │ 12 mins ago
+  21 │ 025\trajectory.log  │ File │ 546.6 KB │ 12 mins ago
+  22 │ 032\032.ply         │ File │ 125.1 MB │ 12 mins ago
+  23 │ 032\032.xml         │ File │  71.8 KB │ 12 mins ago
+  24 │ 032\trajectory.log  │ File │ 887.7 KB │ 12 mins ago
+  25 │ 036\036.ply         │ File │ 178.3 MB │ 12 mins ago
+  26 │ 036\036.xml         │ File │ 195.0 KB │ 12 mins ago
+  27 │ 036\trajectory.log  │ File │   1.0 MB │ 12 mins ago
+  28 │ 038\038.ply         │ File │ 138.9 MB │ 12 mins ago
+  29 │ 038\038.xml         │ File │ 142.3 KB │ 12 mins ago
+  30 │ 038\trajectory.log  │ File │   1.1 MB │ 12 mins ago
+  31 │ 041\041.ply         │ File │ 179.5 MB │ 12 mins ago
+  32 │ 041\041.xml         │ File │ 214.4 KB │ 12 mins ago
+  33 │ 041\trajectory.log  │ File │   1.4 MB │ 12 mins ago
+  34 │ 045\045.ply         │ File │ 127.7 MB │ 12 mins ago
+  35 │ 045\045.xml         │ File │  77.4 KB │ 12 mins ago
+  36 │ 045\trajectory.log  │ File │   1.3 MB │ 12 mins ago
+  37 │ 047\047.ply         │ File │ 119.8 MB │ 12 mins ago
+  38 │ 047\047.xml         │ File │  92.7 KB │ 12 mins ago
+  39 │ 047\trajectory.log  │ File │ 968.1 KB │ 12 mins ago
+  40 │ 049\049.ply         │ File │ 116.1 MB │ 12 mins ago
+  41 │ 049\049.xml         │ File │ 108.0 KB │ 12 mins ago
+  42 │ 049\trajectory.log  │ File │   1.2 MB │ 12 mins ago
+  43 │ 052\052.ply         │ File │ 120.0 MB │ 12 mins ago
+  44 │ 052\052.xml         │ File │ 130.1 KB │ 12 mins ago
+  45 │ 052\trajectory.log  │ File │   1.2 MB │ 12 mins ago
+  46 │ 054\054.ply         │ File │ 191.6 MB │ 12 mins ago
+  47 │ 054\054.xml         │ File │ 144.0 KB │ 12 mins ago
+  48 │ 054\trajectory.log  │ File │   1.4 MB │ 12 mins ago
+  49 │ 057\057.ply         │ File │  45.2 MB │ 12 mins ago
+  50 │ 057\057.xml         │ File │  55.1 KB │ 12 mins ago
+  51 │ 057\trajectory.log  │ File │ 507.7 KB │ 12 mins ago
+  52 │ 061\061.ply         │ File │  70.5 MB │ 11 mins ago
+  53 │ 061\061.xml         │ File │  36.0 KB │ 11 mins ago
+  54 │ 061\trajectory.log  │ File │ 554.3 KB │ 11 mins ago
+  55 │ 062\062.ply         │ File │  67.7 MB │ 11 mins ago
+  56 │ 062\062.xml         │ File │  25.0 KB │ 11 mins ago
+  57 │ 062\trajectory.log  │ File │ 591.8 KB │ 11 mins ago
+  58 │ 065\065.ply         │ File │ 105.4 MB │ 11 mins ago
+  59 │ 065\065.xml         │ File │  63.5 KB │ 11 mins ago
+  60 │ 065\trajectory.log  │ File │ 996.9 KB │ 11 mins ago
+  61 │ 066\066.ply         │ File │  26.4 MB │ 11 mins ago
+  62 │ 066\066.xml         │ File │  14.1 KB │ 11 mins ago
+  63 │ 066\trajectory.log  │ File │ 538.5 KB │ 11 mins ago
+  64 │ 069\069.ply         │ File │  51.0 MB │ 11 mins ago
+  65 │ 069\069.xml         │ File │  45.1 KB │ 11 mins ago
+  66 │ 069\trajectory.log  │ File │ 674.7 KB │ 11 mins ago
+  67 │ 071\071.ply         │ File │  65.2 MB │ 11 mins ago
+  68 │ 071\071.xml         │ File │  55.1 KB │ 11 mins ago
+  69 │ 071\trajectory.log  │ File │ 598.3 KB │ 11 mins ago
+  70 │ 073\073.ply         │ File │  79.3 MB │ 11 mins ago
+  71 │ 073\073.xml         │ File │  64.0 KB │ 11 mins ago
+  72 │ 073\trajectory.log  │ File │ 954.8 KB │ 11 mins ago
+  73 │ 074\074.ply         │ File │  98.6 MB │ 11 mins ago
+  74 │ 074\074.xml         │ File │ 173.9 KB │ 11 mins ago
+  75 │ 074\trajectory.log  │ File │   1.2 MB │ 11 mins ago
+  76 │ 076\076.ply         │ File │ 300.0 MB │ 11 mins ago
+  77 │ 076\076.xml         │ File │ 316.3 KB │ 11 mins ago
+  78 │ 076\trajectory.log  │ File │   2.9 MB │ 11 mins ago
+  79 │ 078\078.ply         │ File │  90.1 MB │ 11 mins ago
+  80 │ 078\078.xml         │ File │  61.6 KB │ 11 mins ago
+  81 │ 078\trajectory.log  │ File │   1.2 MB │ 11 mins ago
+  82 │ 080\080.ply         │ File │  96.8 MB │ 11 mins ago
+  83 │ 080\080.xml         │ File │  84.0 KB │ 11 mins ago
+  84 │ 080\trajectory.log  │ File │   1.2 MB │ 11 mins ago
+  85 │ 082\082.ply         │ File │  93.4 MB │ 11 mins ago
+  86 │ 082\082.xml         │ File │  88.1 KB │ 11 mins ago
+  87 │ 082\trajectory.log  │ File │   1.2 MB │ 11 mins ago
+  88 │ 084\084.ply         │ File │ 118.0 MB │ 11 mins ago
+  89 │ 084\084.xml         │ File │ 137.7 KB │ 11 mins ago
+  90 │ 084\trajectory.log  │ File │   1.3 MB │ 11 mins ago
+  91 │ 086\086.ply         │ File │  71.8 MB │ 11 mins ago
+  92 │ 086\086.xml         │ File │  63.8 KB │ 11 mins ago
+  93 │ 086\trajectory.log  │ File │ 971.3 KB │ 11 mins ago
+  94 │ 087\087.ply         │ File │ 148.6 MB │ 11 mins ago
+  95 │ 087\087.xml         │ File │ 127.1 KB │ 11 mins ago
+  96 │ 087\trajectory.log  │ File │   1.4 MB │ 11 mins ago
+  97 │ 089\089.ply         │ File │ 163.0 MB │ 11 mins ago
+  98 │ 089\089.xml         │ File │ 163.4 KB │ 11 mins ago
+  99 │ 089\trajectory.log  │ File │   1.3 MB │ 11 mins ago
+ 100 │ 093\093.ply         │ File │ 101.6 MB │ 11 mins ago
+ 101 │ 093\093.xml         │ File │ 131.5 KB │ 11 mins ago
+ 102 │ 093\trajectory.log  │ File │   1.2 MB │ 11 mins ago
+ 103 │ 096\096.ply         │ File │ 134.4 MB │ 11 mins ago
+ 104 │ 096\096.xml         │ File │ 127.8 KB │ 11 mins ago
+ 105 │ 096\trajectory.log  │ File │   1.6 MB │ 11 mins ago
+ 106 │ 098\098.ply         │ File │ 115.3 MB │ 11 mins ago
+ 107 │ 098\098.xml         │ File │  61.0 KB │ 11 mins ago
+ 108 │ 098\trajectory.log  │ File │   1.5 MB │ 11 mins ago
+ 109 │ 109\109.ply         │ File │  47.3 MB │ 11 mins ago
+ 110 │ 109\109.xml         │ File │   2.5 MB │ 11 mins ago
+ 111 │ 109\trajectory.log  │ File │   1.5 MB │ 11 mins ago
+ 112 │ 201\201.ply         │ File │ 111.1 MB │ 11 mins ago
+ 113 │ 201\201.xml         │ File │  67.7 KB │ 11 mins ago
+ 114 │ 201\trajectory.log  │ File │   1.7 MB │ 11 mins ago
+ 115 │ 202\202.ply         │ File │ 153.0 MB │ 11 mins ago
+ 116 │ 202\202.xml         │ File │ 206.9 KB │ 11 mins ago
+ 117 │ 202\trajectory.log  │ File │   1.6 MB │ 11 mins ago
+ 118 │ 206\206.ply         │ File │ 240.8 MB │ 10 mins ago
+ 119 │ 206\206.xml         │ File │ 187.0 KB │ 10 mins ago
+ 120 │ 206\trajectory.log  │ File │   1.7 MB │ 10 mins ago
+ 121 │ 207\207.ply         │ File │  58.5 MB │ 10 mins ago
+ 122 │ 207\207.xml         │ File │  69.2 KB │ 10 mins ago
+ 123 │ 207\trajectory.log  │ File │   1.2 MB │ 10 mins ago
+ 124 │ 209\209.ply         │ File │  96.8 MB │ 10 mins ago
+ 125 │ 209\209.xml         │ File │ 172.7 KB │ 10 mins ago
+ 126 │ 209\trajectory.log  │ File │   1.4 MB │ 10 mins ago
+ 127 │ 213\213.ply         │ File │ 111.9 MB │ 10 mins ago
+ 128 │ 213\213.xml         │ File │ 135.2 KB │ 10 mins ago
+ 129 │ 213\trajectory.log  │ File │   1.2 MB │ 10 mins ago
+ 130 │ 217\217.ply         │ File │ 129.5 MB │ 10 mins ago
+ 131 │ 217\217.xml         │ File │ 120.6 KB │ 10 mins ago
+ 132 │ 217\trajectory.log  │ File │   1.1 MB │ 10 mins ago
+ 133 │ 223\223.ply         │ File │  63.8 MB │ 10 mins ago
+ 134 │ 223\223.xml         │ File │  43.7 KB │ 10 mins ago
+ 135 │ 223\trajectory.log  │ File │ 739.0 KB │ 10 mins ago
+ 136 │ 225\225.ply         │ File │  79.4 MB │ 10 mins ago
+ 137 │ 225\225.xml         │ File │  65.5 KB │ 10 mins ago
+ 138 │ 225\trajectory.log  │ File │ 809.8 KB │ 10 mins ago
+ 139 │ 227\227.ply         │ File │  65.9 MB │ 10 mins ago
+ 140 │ 227\227.xml         │ File │  28.6 KB │ 10 mins ago
+ 141 │ 227\trajectory.log  │ File │ 828.1 KB │ 10 mins ago
+ 142 │ 231\231.ply         │ File │ 106.1 MB │ 10 mins ago
+ 143 │ 231\231.xml         │ File │  68.2 KB │ 10 mins ago
+ 144 │ 231\trajectory.log  │ File │ 902.6 KB │ 10 mins ago
+ 145 │ 234\234.ply         │ File │  72.0 MB │ 10 mins ago
+ 146 │ 234\234.xml         │ File │  26.6 KB │ 10 mins ago
+ 147 │ 234\trajectory.log  │ File │ 828.5 KB │ 10 mins ago
+ 148 │ 237\237.ply         │ File │  89.5 MB │ 10 mins ago
+ 149 │ 237\237.xml         │ File │  71.3 KB │ 10 mins ago
+ 150 │ 237\trajectory.log  │ File │ 864.2 KB │ 10 mins ago
+ 151 │ 240\240.ply         │ File │  86.0 MB │ 10 mins ago
+ 152 │ 240\240.xml         │ File │  62.3 KB │ 10 mins ago
+ 153 │ 240\trajectory.log  │ File │ 556.2 KB │ 10 mins ago
+ 154 │ 243\243.ply         │ File │  56.1 MB │ 10 mins ago
+ 155 │ 243\243.xml         │ File │  57.6 KB │ 10 mins ago
+ 156 │ 243\trajectory.log  │ File │ 508.9 KB │ 10 mins ago
+ 157 │ 246\246.ply         │ File │  81.8 MB │ 10 mins ago
+ 158 │ 246\246.xml         │ File │  35.2 KB │ 10 mins ago
+ 159 │ 246\trajectory.log  │ File │ 768.8 KB │ 10 mins ago
+ 160 │ 249\249.ply         │ File │  60.0 MB │ 10 mins ago
+ 161 │ 249\249.xml         │ File │  28.4 KB │ 10 mins ago
+ 162 │ 249\trajectory.log  │ File │ 592.8 KB │ 10 mins ago
+ 163 │ 251\251.ply         │ File │ 103.7 MB │ 10 mins ago
+ 164 │ 251\251.xml         │ File │ 105.7 KB │ 10 mins ago
+ 165 │ 251\trajectory.log  │ File │ 703.7 KB │ 10 mins ago
+ 166 │ 252\252.ply         │ File │  84.8 MB │ 10 mins ago
+ 167 │ 252\252.xml         │ File │  48.0 KB │ 10 mins ago
+ 168 │ 252\trajectory.log  │ File │   1.0 MB │ 10 mins ago
+ 169 │ 255\255.ply         │ File │  44.3 MB │ 10 mins ago
+ 170 │ 255\255.xml         │ File │  58.6 KB │ 10 mins ago
+ 171 │ 255\trajectory.log  │ File │ 869.7 KB │ 10 mins ago
+ 172 │ 260\260.ply         │ File │ 102.8 MB │ 10 mins ago
+ 173 │ 260\260.xml         │ File │  82.0 KB │ 10 mins ago
+ 174 │ 260\trajectory.log  │ File │ 853.7 KB │ 10 mins ago
+ 175 │ 263\263.ply         │ File │ 127.8 MB │ 9 mins ago
+ 176 │ 263\263.xml         │ File │ 129.6 KB │ 9 mins ago
+ 177 │ 263\trajectory.log  │ File │ 920.5 KB │ 9 mins ago
+ 178 │ 265\265.ply         │ File │  91.3 MB │ 9 mins ago
+ 179 │ 265\265.xml         │ File │  75.3 KB │ 9 mins ago
+ 180 │ 265\265_actions.txt │ File │      0 B │ 9 mins ago
+ 181 │ 265\trajectory.log  │ File │ 970.6 KB │ 9 mins ago
+ 182 │ 270\270.ply         │ File │  81.1 MB │ 9 mins ago
+ 183 │ 270\270.xml         │ File │  86.9 KB │ 9 mins ago
+ 184 │ 270\trajectory.log  │ File │ 664.7 KB │ 9 mins ago
+ 185 │ 272\272.ply         │ File │ 165.0 MB │ 9 mins ago
+ 186 │ 272\272.xml         │ File │ 161.1 KB │ 9 mins ago
+ 187 │ 272\trajectory.log  │ File │   1.1 MB │ 9 mins ago
+ 188 │ 273\273.ply         │ File │  64.2 MB │ 9 mins ago
+ 189 │ 273\273.xml         │ File │  46.5 KB │ 9 mins ago
+ 190 │ 273\trajectory.log  │ File │ 623.7 KB │ 9 mins ago
+ 191 │ 276\276.ply         │ File │ 105.9 MB │ 9 mins ago
+ 192 │ 276\276.xml         │ File │  84.5 KB │ 9 mins ago
+ 193 │ 276\trajectory.log  │ File │ 858.9 KB │ 9 mins ago
+ 194 │ 279\279.ply         │ File │ 114.5 MB │ 9 mins ago
+ 195 │ 279\279.xml         │ File │  50.0 KB │ 9 mins ago
+ 196 │ 279\trajectory.log  │ File │ 724.7 KB │ 9 mins ago
+ 197 │ 286\286.ply         │ File │  63.8 MB │ 9 mins ago
+ 198 │ 286\286.xml         │ File │  31.7 KB │ 9 mins ago
+ 199 │ 286\trajectory.log  │ File │ 601.5 KB │ 9 mins ago
+ 200 │ 294\294.ply         │ File │ 112.9 MB │ 9 mins ago
+ 201 │ 294\294.xml         │ File │  65.0 KB │ 9 mins ago
+ 202 │ 294\trajectory.log  │ File │ 693.0 KB │ 9 mins ago
+ 203 │ 308\308.ply         │ File │  91.2 MB │ 9 mins ago
+ 204 │ 308\308.xml         │ File │  82.2 KB │ 9 mins ago
+ 205 │ 308\trajectory.log  │ File │ 795.7 KB │ 9 mins ago
+ 206 │ 522\522.ply         │ File │  67.7 MB │ 9 mins ago
+ 207 │ 522\522.xml         │ File │  38.9 KB │ 9 mins ago
+ 208 │ 522\trajectory.log  │ File │ 515.5 KB │ 9 mins ago
+ 209 │ 527\527.ply         │ File │ 100.7 MB │ 9 mins ago
+ 210 │ 527\527.xml         │ File │  42.7 KB │ 9 mins ago
+ 211 │ 527\trajectory.log  │ File │ 454.3 KB │ 9 mins ago
+ 212 │ 609\609.ply         │ File │ 126.2 MB │ 9 mins ago
+ 213 │ 609\609.xml         │ File │ 140.9 KB │ 9 mins ago
+ 214 │ 609\trajectory.log  │ File │ 633.5 KB │ 9 mins ago
+ 215 │ 613\613.ply         │ File │  74.4 MB │ 9 mins ago
+ 216 │ 613\613.xml         │ File │ 127.5 KB │ 9 mins ago
+ 217 │ 613\trajectory.log  │ File │ 370.7 KB │ 9 mins ago
+ 218 │ 614\614.ply         │ File │  78.4 MB │ 9 mins ago
+ 219 │ 614\614.xml         │ File │  48.4 KB │ 9 mins ago
+ 220 │ 614\trajectory.log  │ File │ 474.8 KB │ 9 mins ago
+ 221 │ 621\621.ply         │ File │ 140.7 MB │ 9 mins ago
+ 222 │ 621\621.xml         │ File │  92.2 KB │ 9 mins ago
+ 223 │ 621\trajectory.log  │ File │ 537.7 KB │ 9 mins ago
+ 224 │ 623\623.ply         │ File │ 185.2 MB │ 8 mins ago
+ 225 │ 623\623.xml         │ File │ 125.6 KB │ 8 mins ago
+ 226 │ 623\trajectory.log  │ File │ 486.8 KB │ 8 mins ago
+ 227 │ 700\700.ply         │ File │ 107.3 MB │ 8 mins ago
+ 228 │ 700\700.xml         │ File │  75.9 KB │ 8 mins ago
+ 229 │ 700\trajectory.log  │ File │ 801.7 KB │ 8 mins ago
+─────┴─────────────────────┴──────┴──────────┴─────────────
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data\scenenn_dec24_data(master)> cd ..
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> ls */* | where size < 100mb
+─────┬─────────────────────────────────────┬──────┬─────────┬─────────────
+  #  │                name                 │ type │  size   │  modified
+─────┼─────────────────────────────────────┼──────┼─────────┼─────────────
+   0 │ MYNursingHome\basket_bin            │ Dir  │  4.1 KB │ 48 secs ago
+   1 │ scenenn_dec24_data\005              │ Dir  │     0 B │ 13 mins ago
+   2 │ scenenn_dec24_data\011              │ Dir  │     0 B │ 13 mins ago
+   3 │ scenenn_dec24_data\014              │ Dir  │     0 B │ 13 mins ago
+   4 │ scenenn_dec24_data\015              │ Dir  │     0 B │ 13 mins ago
+   5 │ scenenn_dec24_data\016              │ Dir  │     0 B │ 13 mins ago
+   6 │ scenenn_dec24_data\021              │ Dir  │     0 B │ 13 mins ago
+   7 │ scenenn_dec24_data\025              │ Dir  │     0 B │ 13 mins ago
+   8 │ scenenn_dec24_data\032              │ Dir  │     0 B │ 13 mins ago
+   9 │ scenenn_dec24_data\036              │ Dir  │     0 B │ 12 mins ago
+  10 │ scenenn_dec24_data\038              │ Dir  │     0 B │ 12 mins ago
+  11 │ scenenn_dec24_data\041              │ Dir  │     0 B │ 12 mins ago
+  12 │ scenenn_dec24_data\045              │ Dir  │     0 B │ 12 mins ago
+  13 │ scenenn_dec24_data\047              │ Dir  │     0 B │ 12 mins ago
+  14 │ scenenn_dec24_data\049              │ Dir  │     0 B │ 12 mins ago
+  15 │ scenenn_dec24_data\052              │ Dir  │     0 B │ 12 mins ago
+  16 │ scenenn_dec24_data\054              │ Dir  │     0 B │ 12 mins ago
+  17 │ scenenn_dec24_data\057              │ Dir  │     0 B │ 12 mins ago
+  18 │ scenenn_dec24_data\061              │ Dir  │     0 B │ 12 mins ago
+  19 │ scenenn_dec24_data\062              │ Dir  │     0 B │ 12 mins ago
+  20 │ scenenn_dec24_data\065              │ Dir  │     0 B │ 12 mins ago
+  21 │ scenenn_dec24_data\066              │ Dir  │     0 B │ 12 mins ago
+  22 │ scenenn_dec24_data\069              │ Dir  │     0 B │ 12 mins ago
+  23 │ scenenn_dec24_data\071              │ Dir  │     0 B │ 12 mins ago
+  24 │ scenenn_dec24_data\073              │ Dir  │     0 B │ 12 mins ago
+  25 │ scenenn_dec24_data\074              │ Dir  │     0 B │ 12 mins ago
+  26 │ scenenn_dec24_data\076              │ Dir  │     0 B │ 12 mins ago
+  27 │ scenenn_dec24_data\078              │ Dir  │     0 B │ 12 mins ago
+  28 │ scenenn_dec24_data\080              │ Dir  │     0 B │ 12 mins ago
+  29 │ scenenn_dec24_data\082              │ Dir  │     0 B │ 12 mins ago
+  30 │ scenenn_dec24_data\084              │ Dir  │     0 B │ 11 mins ago
+  31 │ scenenn_dec24_data\086              │ Dir  │     0 B │ 11 mins ago
+  32 │ scenenn_dec24_data\087              │ Dir  │     0 B │ 11 mins ago
+  33 │ scenenn_dec24_data\089              │ Dir  │     0 B │ 11 mins ago
+  34 │ scenenn_dec24_data\093              │ Dir  │     0 B │ 11 mins ago
+  35 │ scenenn_dec24_data\096              │ Dir  │     0 B │ 11 mins ago
+  36 │ scenenn_dec24_data\098              │ Dir  │     0 B │ 11 mins ago
+  37 │ scenenn_dec24_data\109              │ Dir  │     0 B │ 11 mins ago
+  38 │ scenenn_dec24_data\201              │ Dir  │     0 B │ 11 mins ago
+  39 │ scenenn_dec24_data\202              │ Dir  │     0 B │ 11 mins ago
+  40 │ scenenn_dec24_data\206              │ Dir  │     0 B │ 11 mins ago
+  41 │ scenenn_dec24_data\207              │ Dir  │     0 B │ 11 mins ago
+  42 │ scenenn_dec24_data\209              │ Dir  │     0 B │ 11 mins ago
+  43 │ scenenn_dec24_data\213              │ Dir  │     0 B │ 11 mins ago
+  44 │ scenenn_dec24_data\217              │ Dir  │     0 B │ 11 mins ago
+  45 │ scenenn_dec24_data\223              │ Dir  │     0 B │ 11 mins ago
+  46 │ scenenn_dec24_data\225              │ Dir  │     0 B │ 10 mins ago
+  47 │ scenenn_dec24_data\227              │ Dir  │     0 B │ 10 mins ago
+  48 │ scenenn_dec24_data\231              │ Dir  │     0 B │ 10 mins ago
+  49 │ scenenn_dec24_data\234              │ Dir  │     0 B │ 10 mins ago
+  50 │ scenenn_dec24_data\237              │ Dir  │     0 B │ 10 mins ago
+  51 │ scenenn_dec24_data\240              │ Dir  │     0 B │ 10 mins ago
+  52 │ scenenn_dec24_data\243              │ Dir  │     0 B │ 10 mins ago
+  53 │ scenenn_dec24_data\246              │ Dir  │     0 B │ 10 mins ago
+  54 │ scenenn_dec24_data\249              │ Dir  │     0 B │ 10 mins ago
+  55 │ scenenn_dec24_data\251              │ Dir  │     0 B │ 10 mins ago
+  56 │ scenenn_dec24_data\252              │ Dir  │     0 B │ 10 mins ago
+  57 │ scenenn_dec24_data\255              │ Dir  │     0 B │ 10 mins ago
+  58 │ scenenn_dec24_data\260              │ Dir  │     0 B │ 10 mins ago
+  59 │ scenenn_dec24_data\263              │ Dir  │     0 B │ 10 mins ago
+  60 │ scenenn_dec24_data\265              │ Dir  │     0 B │ 10 mins ago
+  61 │ scenenn_dec24_data\270              │ Dir  │     0 B │ 10 mins ago
+  62 │ scenenn_dec24_data\272              │ Dir  │     0 B │ 10 mins ago
+  63 │ scenenn_dec24_data\273              │ Dir  │     0 B │ 10 mins ago
+  64 │ scenenn_dec24_data\276              │ Dir  │     0 B │ 10 mins ago
+  65 │ scenenn_dec24_data\279              │ Dir  │     0 B │ 10 mins ago
+  66 │ scenenn_dec24_data\286              │ Dir  │     0 B │ 10 mins ago
+  67 │ scenenn_dec24_data\294              │ Dir  │     0 B │ 9 mins ago
+  68 │ scenenn_dec24_data\308              │ Dir  │     0 B │ 9 mins ago
+  69 │ scenenn_dec24_data\522              │ Dir  │     0 B │ 9 mins ago
+  70 │ scenenn_dec24_data\527              │ Dir  │     0 B │ 9 mins ago
+  71 │ scenenn_dec24_data\609              │ Dir  │     0 B │ 9 mins ago
+  72 │ scenenn_dec24_data\613              │ Dir  │     0 B │ 9 mins ago
+  73 │ scenenn_dec24_data\614              │ Dir  │     0 B │ 9 mins ago
+  74 │ scenenn_dec24_data\621              │ Dir  │     0 B │ 9 mins ago
+  75 │ scenenn_dec24_data\623              │ Dir  │     0 B │ 9 mins ago
+  76 │ scenenn_dec24_data\700              │ Dir  │     0 B │ 9 mins ago
+  77 │ scenenn_dec24_data\nyu_color.xml    │ File │  2.4 KB │ 13 mins ago
+  78 │ scenenn_seg\scenenn_coords_005.hdf5 │ File │ 29.3 MB │ 14 mins ago
+  79 │ scenenn_seg\scenenn_coords_011.hdf5 │ File │ 29.6 MB │ 14 mins ago
+  80 │ scenenn_seg\scenenn_coords_014.hdf5 │ File │ 17.4 MB │ 14 mins ago
+  81 │ scenenn_seg\scenenn_coords_015.hdf5 │ File │ 27.1 MB │ 14 mins ago
+  82 │ scenenn_seg\scenenn_coords_016.hdf5 │ File │ 19.0 MB │ 14 mins ago
+  83 │ scenenn_seg\scenenn_coords_021.hdf5 │ File │ 24.4 MB │ 14 mins ago
+  84 │ scenenn_seg\scenenn_coords_025.hdf5 │ File │ 14.1 MB │ 14 mins ago
+  85 │ scenenn_seg\scenenn_coords_032.hdf5 │ File │ 12.9 MB │ 14 mins ago
+  86 │ scenenn_seg\scenenn_coords_036.hdf5 │ File │ 39.3 MB │ 14 mins ago
+  87 │ scenenn_seg\scenenn_coords_038.hdf5 │ File │ 39.3 MB │ 14 mins ago
+  88 │ scenenn_seg\scenenn_coords_041.hdf5 │ File │ 31.7 MB │ 14 mins ago
+  89 │ scenenn_seg\scenenn_coords_045.hdf5 │ File │ 27.9 MB │ 14 mins ago
+  90 │ scenenn_seg\scenenn_coords_047.hdf5 │ File │ 28.8 MB │ 14 mins ago
+  91 │ scenenn_seg\scenenn_coords_049.hdf5 │ File │ 21.5 MB │ 14 mins ago
+  92 │ scenenn_seg\scenenn_coords_052.hdf5 │ File │ 21.5 MB │ 14 mins ago
+  93 │ scenenn_seg\scenenn_coords_054.hdf5 │ File │ 33.6 MB │ 14 mins ago
+  94 │ scenenn_seg\scenenn_coords_057.hdf5 │ File │ 17.6 MB │ 14 mins ago
+  95 │ scenenn_seg\scenenn_coords_061.hdf5 │ File │ 53.4 MB │ 14 mins ago
+  96 │ scenenn_seg\scenenn_coords_062.hdf5 │ File │ 28.7 MB │ 14 mins ago
+  97 │ scenenn_seg\scenenn_coords_065.hdf5 │ File │ 35.7 MB │ 14 mins ago
+  98 │ scenenn_seg\scenenn_coords_066.hdf5 │ File │ 11.6 MB │ 14 mins ago
+  99 │ scenenn_seg\scenenn_coords_069.hdf5 │ File │ 26.4 MB │ 14 mins ago
+ 100 │ scenenn_seg\scenenn_coords_071.hdf5 │ File │ 30.9 MB │ 14 mins ago
+ 101 │ scenenn_seg\scenenn_coords_073.hdf5 │ File │  8.6 MB │ 14 mins ago
+ 102 │ scenenn_seg\scenenn_coords_074.hdf5 │ File │  3.1 MB │ 14 mins ago
+ 103 │ scenenn_seg\scenenn_coords_076.hdf5 │ File │ 39.9 MB │ 14 mins ago
+ 104 │ scenenn_seg\scenenn_coords_078.hdf5 │ File │ 12.2 MB │ 14 mins ago
+ 105 │ scenenn_seg\scenenn_coords_080.hdf5 │ File │ 16.4 MB │ 14 mins ago
+ 106 │ scenenn_seg\scenenn_coords_082.hdf5 │ File │ 25.5 MB │ 14 mins ago
+ 107 │ scenenn_seg\scenenn_coords_084.hdf5 │ File │ 20.3 MB │ 14 mins ago
+ 108 │ scenenn_seg\scenenn_coords_086.hdf5 │ File │ 27.1 MB │ 14 mins ago
+ 109 │ scenenn_seg\scenenn_coords_087.hdf5 │ File │ 54.9 MB │ 14 mins ago
+ 110 │ scenenn_seg\scenenn_coords_089.hdf5 │ File │ 29.6 MB │ 14 mins ago
+ 111 │ scenenn_seg\scenenn_coords_093.hdf5 │ File │ 32.8 MB │ 14 mins ago
+ 112 │ scenenn_seg\scenenn_coords_096.hdf5 │ File │ 29.9 MB │ 14 mins ago
+ 113 │ scenenn_seg\scenenn_coords_098.hdf5 │ File │ 33.2 MB │ 13 mins ago
+ 114 │ scenenn_seg\scenenn_coords_109.hdf5 │ File │  5.7 MB │ 13 mins ago
+ 115 │ scenenn_seg\scenenn_coords_201.hdf5 │ File │ 40.3 MB │ 13 mins ago
+ 116 │ scenenn_seg\scenenn_coords_202.hdf5 │ File │ 36.0 MB │ 13 mins ago
+ 117 │ scenenn_seg\scenenn_coords_206.hdf5 │ File │ 76.3 MB │ 13 mins ago
+ 118 │ scenenn_seg\scenenn_coords_207.hdf5 │ File │ 22.0 MB │ 13 mins ago
+ 119 │ scenenn_seg\scenenn_coords_209.hdf5 │ File │  6.3 MB │ 13 mins ago
+ 120 │ scenenn_seg\scenenn_coords_213.hdf5 │ File │ 26.0 MB │ 13 mins ago
+ 121 │ scenenn_seg\scenenn_coords_217.hdf5 │ File │ 28.3 MB │ 13 mins ago
+ 122 │ scenenn_seg\scenenn_coords_223.hdf5 │ File │ 24.4 MB │ 13 mins ago
+ 123 │ scenenn_seg\scenenn_coords_225.hdf5 │ File │ 31.6 MB │ 13 mins ago
+ 124 │ scenenn_seg\scenenn_coords_227.hdf5 │ File │ 17.7 MB │ 13 mins ago
+ 125 │ scenenn_seg\scenenn_coords_231.hdf5 │ File │ 18.5 MB │ 13 mins ago
+ 126 │ scenenn_seg\scenenn_coords_234.hdf5 │ File │ 22.7 MB │ 13 mins ago
+ 127 │ scenenn_seg\scenenn_coords_237.hdf5 │ File │ 23.5 MB │ 13 mins ago
+ 128 │ scenenn_seg\scenenn_coords_240.hdf5 │ File │ 17.8 MB │ 13 mins ago
+ 129 │ scenenn_seg\scenenn_coords_243.hdf5 │ File │ 12.2 MB │ 13 mins ago
+ 130 │ scenenn_seg\scenenn_coords_246.hdf5 │ File │ 21.1 MB │ 13 mins ago
+ 131 │ scenenn_seg\scenenn_coords_249.hdf5 │ File │ 14.4 MB │ 13 mins ago
+ 132 │ scenenn_seg\scenenn_coords_251.hdf5 │ File │ 28.0 MB │ 13 mins ago
+ 133 │ scenenn_seg\scenenn_coords_252.hdf5 │ File │ 22.3 MB │ 13 mins ago
+ 134 │ scenenn_seg\scenenn_coords_255.hdf5 │ File │  6.0 MB │ 13 mins ago
+ 135 │ scenenn_seg\scenenn_coords_260.hdf5 │ File │ 21.4 MB │ 13 mins ago
+ 136 │ scenenn_seg\scenenn_coords_263.hdf5 │ File │ 33.3 MB │ 13 mins ago
+ 137 │ scenenn_seg\scenenn_coords_265.hdf5 │ File │ 27.2 MB │ 13 mins ago
+ 138 │ scenenn_seg\scenenn_coords_270.hdf5 │ File │ 35.4 MB │ 13 mins ago
+ 139 │ scenenn_seg\scenenn_coords_272.hdf5 │ File │ 39.6 MB │ 13 mins ago
+ 140 │ scenenn_seg\scenenn_coords_273.hdf5 │ File │ 21.1 MB │ 13 mins ago
+ 141 │ scenenn_seg\scenenn_coords_276.hdf5 │ File │ 32.6 MB │ 13 mins ago
+ 142 │ scenenn_seg\scenenn_coords_279.hdf5 │ File │ 30.2 MB │ 13 mins ago
+ 143 │ scenenn_seg\scenenn_coords_286.hdf5 │ File │ 34.0 MB │ 13 mins ago
+ 144 │ scenenn_seg\scenenn_coords_294.hdf5 │ File │ 33.5 MB │ 13 mins ago
+ 145 │ scenenn_seg\scenenn_coords_308.hdf5 │ File │ 62.1 MB │ 13 mins ago
+ 146 │ scenenn_seg\scenenn_coords_522.hdf5 │ File │ 18.6 MB │ 13 mins ago
+ 147 │ scenenn_seg\scenenn_coords_527.hdf5 │ File │ 76.4 MB │ 13 mins ago
+ 148 │ scenenn_seg\scenenn_coords_609.hdf5 │ File │ 49.1 MB │ 13 mins ago
+ 149 │ scenenn_seg\scenenn_coords_613.hdf5 │ File │ 17.4 MB │ 13 mins ago
+ 150 │ scenenn_seg\scenenn_coords_614.hdf5 │ File │ 30.3 MB │ 13 mins ago
+ 151 │ scenenn_seg\scenenn_coords_621.hdf5 │ File │ 55.1 MB │ 13 mins ago
+ 152 │ scenenn_seg\scenenn_coords_623.hdf5 │ File │ 66.5 MB │ 13 mins ago
+ 153 │ scenenn_seg\scenenn_coords_700.hdf5 │ File │ 34.9 MB │ 13 mins ago
+ 154 │ scenenn_seg\scenenn_seg_005.hdf5    │ File │ 97.1 MB │ 13 mins ago
+ 155 │ scenenn_seg\scenenn_seg_011.hdf5    │ File │ 95.7 MB │ 13 mins ago
+ 156 │ scenenn_seg\scenenn_seg_014.hdf5    │ File │ 57.4 MB │ 13 mins ago
+ 157 │ scenenn_seg\scenenn_seg_015.hdf5    │ File │ 93.7 MB │ 13 mins ago
+ 158 │ scenenn_seg\scenenn_seg_016.hdf5    │ File │ 62.6 MB │ 13 mins ago
+ 159 │ scenenn_seg\scenenn_seg_021.hdf5    │ File │ 82.5 MB │ 13 mins ago
+ 160 │ scenenn_seg\scenenn_seg_025.hdf5    │ File │ 47.5 MB │ 13 mins ago
+ 161 │ scenenn_seg\scenenn_seg_032.hdf5    │ File │ 43.6 MB │ 13 mins ago
+ 162 │ scenenn_seg\scenenn_seg_045.hdf5    │ File │ 94.1 MB │ 13 mins ago
+ 163 │ scenenn_seg\scenenn_seg_047.hdf5    │ File │ 95.5 MB │ 13 mins ago
+ 164 │ scenenn_seg\scenenn_seg_049.hdf5    │ File │ 69.4 MB │ 13 mins ago
+ 165 │ scenenn_seg\scenenn_seg_052.hdf5    │ File │ 72.9 MB │ 13 mins ago
+ 166 │ scenenn_seg\scenenn_seg_057.hdf5    │ File │ 57.8 MB │ 13 mins ago
+ 167 │ scenenn_seg\scenenn_seg_062.hdf5    │ File │ 94.0 MB │ 13 mins ago
+ 168 │ scenenn_seg\scenenn_seg_066.hdf5    │ File │ 39.8 MB │ 12 mins ago
+ 169 │ scenenn_seg\scenenn_seg_069.hdf5    │ File │ 89.0 MB │ 12 mins ago
+ 170 │ scenenn_seg\scenenn_seg_073.hdf5    │ File │ 28.7 MB │ 12 mins ago
+ 171 │ scenenn_seg\scenenn_seg_074.hdf5    │ File │ 10.8 MB │ 12 mins ago
+ 172 │ scenenn_seg\scenenn_seg_078.hdf5    │ File │ 41.8 MB │ 12 mins ago
+ 173 │ scenenn_seg\scenenn_seg_080.hdf5    │ File │ 55.7 MB │ 12 mins ago
+ 174 │ scenenn_seg\scenenn_seg_082.hdf5    │ File │ 85.4 MB │ 12 mins ago
+ 175 │ scenenn_seg\scenenn_seg_084.hdf5    │ File │ 67.9 MB │ 12 mins ago
+ 176 │ scenenn_seg\scenenn_seg_086.hdf5    │ File │ 90.5 MB │ 12 mins ago
+ 177 │ scenenn_seg\scenenn_seg_089.hdf5    │ File │ 96.2 MB │ 12 mins ago
+ 178 │ scenenn_seg\scenenn_seg_109.hdf5    │ File │ 19.4 MB │ 12 mins ago
+ 179 │ scenenn_seg\scenenn_seg_207.hdf5    │ File │ 75.2 MB │ 12 mins ago
+ 180 │ scenenn_seg\scenenn_seg_209.hdf5    │ File │ 20.7 MB │ 12 mins ago
+ 181 │ scenenn_seg\scenenn_seg_213.hdf5    │ File │ 85.7 MB │ 12 mins ago
+ 182 │ scenenn_seg\scenenn_seg_217.hdf5    │ File │ 95.6 MB │ 12 mins ago
+ 183 │ scenenn_seg\scenenn_seg_223.hdf5    │ File │ 80.8 MB │ 12 mins ago
+ 184 │ scenenn_seg\scenenn_seg_227.hdf5    │ File │ 59.2 MB │ 12 mins ago
+ 185 │ scenenn_seg\scenenn_seg_231.hdf5    │ File │ 63.5 MB │ 12 mins ago
+ 186 │ scenenn_seg\scenenn_seg_234.hdf5    │ File │ 76.2 MB │ 12 mins ago
+ 187 │ scenenn_seg\scenenn_seg_237.hdf5    │ File │ 77.4 MB │ 11 mins ago
+ 188 │ scenenn_seg\scenenn_seg_240.hdf5    │ File │ 60.7 MB │ 11 mins ago
+ 189 │ scenenn_seg\scenenn_seg_243.hdf5    │ File │ 39.2 MB │ 11 mins ago
+ 190 │ scenenn_seg\scenenn_seg_246.hdf5    │ File │ 69.9 MB │ 11 mins ago
+ 191 │ scenenn_seg\scenenn_seg_249.hdf5    │ File │ 47.7 MB │ 11 mins ago
+ 192 │ scenenn_seg\scenenn_seg_251.hdf5    │ File │ 95.0 MB │ 11 mins ago
+ 193 │ scenenn_seg\scenenn_seg_252.hdf5    │ File │ 74.4 MB │ 11 mins ago
+ 194 │ scenenn_seg\scenenn_seg_255.hdf5    │ File │ 19.5 MB │ 11 mins ago
+ 195 │ scenenn_seg\scenenn_seg_260.hdf5    │ File │ 73.7 MB │ 11 mins ago
+ 196 │ scenenn_seg\scenenn_seg_265.hdf5    │ File │ 88.5 MB │ 11 mins ago
+ 197 │ scenenn_seg\scenenn_seg_273.hdf5    │ File │ 73.7 MB │ 11 mins ago
+ 198 │ scenenn_seg\scenenn_seg_279.hdf5    │ File │ 98.1 MB │ 11 mins ago
+ 199 │ scenenn_seg\scenenn_seg_522.hdf5    │ File │ 61.4 MB │ 11 mins ago
+ 200 │ scenenn_seg\scenenn_seg_613.hdf5    │ File │ 56.6 MB │ 10 mins ago
+─────┴─────────────────────────────────────┴──────┴─────────┴─────────────
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> ls */* | where size < 100mb | git add
+Unsupported: Row(Dictionary { entries: {"name": Value { value: Primitive(FilePath("MYNursingHome\\basket_bin")), tag: Tag { anchor: None, span: Span { start: 164, end: 166 } } }, "type": Value { value: Primitive(String("Dir")), tag: Tag { anchor: None, span: Span { start: 164, end: 166 } } }, "size": Value { value: Primitive(Filesize(4096)), tag: Tag { anchor: None, span: Span { start: 164, end: 166 } } }, "modified": Value { value: Primitive(Date(2021-07-17T16:25:46.996238600+00:00)), tag: Tag { anchor: None, span: Span { start: 164, end: 166 } } }} })
+error: Received unexpected type from pipeline (row)
+   ┌─ shell:10:31
+   │
+10 │ ls */* | where size < 100mb | git add
+   │                               ^^^ expected a string
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+C:\Users\Prannaya\PycharmProjects\EmbodiedAI\data(master)> cd ../..
+C:\Users\Prannaya\PycharmProjects> cd ../ThreeBody
+C:\Users\Prannaya\ThreeBody(main)> cd ~
+C:\Users\Prannaya> ls -la
+─────┬────────────┬─────────┬────────────┬──────────┬──────────┬────────────┬────────────┬────────────
+  #  │    name    │  type   │   target   │ readonly │   size   │  created   │  accessed  │  modified
+─────┼────────────┼─────────┼────────────┼──────────┼──────────┼────────────┼────────────┼────────────
+   0 │ .IdeaIE201 │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ 9.2        │         │            │          │          │            │ ago        │
+   1 │ .IdeaIE201 │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ 9.3        │         │            │          │          │            │ ago        │
+   2 │ .IntelliJI │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ dea2019.2  │         │            │          │          │            │ ago        │
+   3 │ .IntelliJI │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ dea2019.3  │         │            │          │          │            │ ago        │
+   4 │ .PyCharm20 │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 years
+     │ 19.1       │         │            │          │          │ ago        │ ago        │ ago
+   5 │ .PyCharm20 │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ 19.2       │         │            │          │          │            │ ago        │
+   6 │ .PyCharm20 │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ 19.3       │         │            │          │          │            │ ago        │
+   7 │ .RubyMine2 │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ 019.2      │         │            │          │          │            │ ago        │
+   8 │ .android   │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 1 hour ago │ 3 months
+     │            │         │            │          │          │ ago        │            │ ago
+   9 │ .angular-c │ File    │            │ false    │     57 B │ 7 months   │ 2 weeks    │ 7 months
+     │ onfig.json │         │            │          │          │ ago        │ ago        │ ago
+  10 │ .astropy   │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 year ago
+  11 │ .atom      │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 1 hour ago │ 5 days ago
+     │            │         │            │          │          │ ago        │            │
+  12 │ .bash_hist │ File    │            │ false    │   2.7 KB │ 1 year ago │ 18 hours   │ 1 week ago
+     │ ory        │         │            │          │          │            │ ago        │
+  13 │ .boto      │ File    │            │ false    │  21.4 KB │ 3 months   │ 2 days ago │ 3 months
+     │            │         │            │          │          │ ago        │            │ ago
+  14 │ .briefcase │ Dir     │            │ false    │      0 B │ 3 months   │ 1 hour ago │ 3 months
+     │            │         │            │          │          │ ago        │            │ ago
+  15 │ .bundle    │ Dir     │            │ false    │      0 B │ 3 months   │ 2 hours    │ 3 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  16 │ .cache     │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 3 months
+     │            │         │            │          │          │            │ ago        │ ago
+  17 │ .canopy_ru │ File    │            │ false    │    189 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ ntimes.jso │         │            │          │          │            │ ago        │
+     │ n          │         │            │          │          │            │            │
+  18 │ .codetoget │ Dir     │            │ false    │      0 B │ 3 weeks    │ 2 hours    │ 3 weeks
+     │ her        │         │            │          │          │ ago        │ ago        │ ago
+  19 │ .coffee_hi │ File    │            │ false    │      0 B │ 2 months   │ 2 months   │ 2 months
+     │ story      │         │            │          │          │ ago        │ ago        │ ago
+  20 │ .conda     │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  21 │ .condarc   │ File    │            │ false    │     61 B │ 2 years    │ 2 days ago │ 2 months
+     │            │         │            │          │          │ ago        │            │ ago
+  22 │ .config    │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 week ago
+     │            │         │            │          │          │            │ ago        │
+  23 │ .continuum │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 years
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  24 │ .cookiecut │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 week ago
+     │ ter_replay │         │            │          │          │            │ ago        │
+  25 │ .cookiecut │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 week ago
+     │ ters       │         │            │          │          │            │ ago        │
+  26 │ .ctsystem  │ File    │            │ false    │    106 B │ 3 weeks    │ 1 week ago │ 3 weeks
+     │            │         │            │          │          │ ago        │            │ ago
+  27 │ .dataexplo │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ re         │         │            │          │          │            │ ago        │
+  28 │ .dbus-keyr │ Dir     │            │ false    │      0 B │ 10 months  │ 2 hours    │ 10 months
+     │ ings       │         │            │          │          │ ago        │ ago        │ ago
+  29 │ .degit     │ Dir     │            │ false    │      0 B │ 1 month    │ 2 hours    │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  30 │ .dotnet    │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 month
+     │            │         │            │          │          │            │ ago        │ ago
+  31 │ .eclipse   │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  32 │ .emacs.d   │ Dir     │            │ false    │   8.2 KB │ 2 weeks    │ 2 hours    │ 2 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  33 │ .emulator_ │ File    │            │ false    │     16 B │ 9 months   │ 2 weeks    │ 9 months
+     │ console_au │         │            │          │          │ ago        │ ago        │ ago
+     │ th_token   │         │            │          │          │            │            │
+  34 │ .gitconfig │ File    │            │ false    │    455 B │ 2 months   │ 6 secs ago │ 2 months
+     │            │         │            │          │          │ ago        │            │ ago
+  35 │ .glue      │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  36 │ .gnupg     │ Dir     │            │ false    │      0 B │ 3 weeks    │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  37 │ .google-co │ File    │            │ false    │   1.5 KB │ 2 years    │ 2 weeks    │ 4 months
+     │ okie       │         │            │          │          │ ago        │ ago        │ ago
+  38 │ .gradle    │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │            │ ago        │ ago
+  39 │ .idea-buil │ Dir     │            │ false    │      0 B │ 12 months  │ 2 hours    │ 12 months
+     │ d          │         │            │          │          │ ago        │ ago        │ ago
+  40 │ .idlerc    │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 27 mins    │ 1 year ago
+     │            │         │            │          │          │ ago        │ ago        │
+  41 │ .ipynb_che │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 1 year ago
+     │ ckpoints   │         │            │          │          │ ago        │ ago        │
+  42 │ .ipython   │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │ ago        │ ago        │
+  43 │ .irbrc     │ File    │            │ false    │     89 B │ 2 months   │ 1 week ago │ 2 months
+     │            │         │            │          │          │ ago        │            │ ago
+  44 │ .ivy2      │ Dir     │            │ false    │      0 B │ 12 months  │ 2 hours    │ 12 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  45 │ .jupyter   │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 18 hours
+     │            │         │            │          │          │            │ ago        │ ago
+  46 │ .keras     │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 12 months
+     │            │         │            │          │          │            │ ago        │ ago
+  47 │ .kivy      │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  48 │ .lightkurv │ Dir     │            │ false    │      0 B │ 2 months   │ 2 hours    │ 2 months
+     │ e-cache    │         │            │          │          │ ago        │ ago        │ ago
+  49 │ .local     │ Dir     │            │ false    │      0 B │ 3 months   │ 2 hours    │ 3 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  50 │ .m2        │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  51 │ .matplotli │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 2 months
+     │ b          │         │            │          │          │ ago        │ ago        │ ago
+  52 │ .nbi       │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 2 months
+     │            │         │            │          │          │            │ ago        │ ago
+  53 │ .nimble    │ Dir     │            │ false    │      0 B │ 1 month    │ 2 hours    │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  54 │ .ninja_ide │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  55 │ .node_repl │ File    │            │ false    │   1.5 KB │ 8 months   │ 2 days ago │ 2 days ago
+     │ _history   │         │            │          │          │ ago        │            │
+  56 │ .notable.j │ File    │            │ false    │    319 B │ 1 month    │ 23 hours   │ 1 month
+     │ son        │         │            │          │          │ ago        │ ago        │ ago
+  57 │ .np_inline │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 year ago
+  58 │ .npmrc     │ File    │            │ false    │     70 B │ 1 month    │ 18 hours   │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  59 │ .nuget     │ Dir     │            │ false    │      0 B │ 1 month    │ 2 hours    │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  60 │ .octave_hi │ File    │            │ false    │   7.4 KB │ 3 weeks    │ 1 week ago │ 3 weeks
+     │ st         │         │            │          │          │ ago        │            │ ago
+  61 │ .omnisharp │ Dir     │            │ false    │      0 B │ 1 month    │ 1 hour ago │ 1 month
+     │            │         │            │          │          │ ago        │            │ ago
+  62 │ .openjfx   │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  63 │ .openshot_ │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 1 year ago
+     │ qt         │         │            │          │          │ ago        │ ago        │
+  64 │ .othelloTk │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 year ago
+  65 │ .p2        │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │            │ ago        │ ago
+  66 │ .pandastab │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ le         │         │            │          │          │            │ ago        │
+  67 │ .pdfbox.ca │ File    │            │ false    │  40.4 KB │ 3 months   │ 2 weeks    │ 3 months
+     │ che        │         │            │          │          │ ago        │ ago        │ ago
+  68 │ .pyforest  │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  69 │ .pylint.d  │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  70 │ .pypirc    │ File    │            │ false    │    219 B │ 12 months  │ 2 weeks    │ 12 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  71 │ .pytest_ca │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ che        │         │            │          │          │            │ ago        │
+  72 │ .python_hi │ File    │            │ false    │   1.4 KB │ 1 year ago │ 4 days ago │ 1 week ago
+     │ story      │         │            │          │          │            │            │
+  73 │ .quokka    │ Dir     │            │ false    │   4.1 KB │ 2 months   │ 2 hours    │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  74 │ .rest-clie │ Dir     │            │ false    │   4.1 KB │ 1 month    │ 2 hours    │ 1 month
+     │ nt         │         │            │          │          │ ago        │ ago        │ ago
+  75 │ .scalaide  │ Dir     │            │ false    │      0 B │ 3 weeks    │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  76 │ .spyder-py │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 2 months
+     │ 3          │         │            │          │          │            │ ago        │ ago
+  77 │ .ssh       │ Dir     │            │ false    │      0 B │ 1 month    │ 2 hours    │ 1 month
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  78 │ .surprise_ │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 year ago
+     │ data       │         │            │          │          │            │            │
+  79 │ .templatee │ Dir     │            │ false    │      0 B │ 2 years    │ 1 hour ago │ 1 month
+     │ ngine      │         │            │          │          │ ago        │            │ ago
+  80 │ .termex    │ Dir     │            │ false    │      0 B │ 1 week ago │ 2 hours    │ 1 week ago
+     │            │         │            │          │          │            │ ago        │
+  81 │ .tooling   │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  82 │ .viminfo   │ File    │            │ false    │   2.2 KB │ 3 months   │ 1 week ago │ 3 weeks
+     │            │         │            │          │          │ ago        │            │ ago
+  83 │ .virtualen │ Dir     │            │ false    │   4.1 KB │ 3 weeks    │ 2 hours    │ 3 weeks
+     │ vs         │         │            │          │          │ ago        │ ago        │ ago
+  84 │ .vivaldi_r │ File    │            │ false    │      0 B │ 1 year ago │ 1 year ago │ 1 year ago
+     │ eporting_d │         │            │          │          │            │            │
+     │ ata        │         │            │          │          │            │            │
+  85 │ .vscode    │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │ ago        │ ago        │
+  86 │ .webclipse │ Dir     │            │ false    │      0 B │ 3 weeks    │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  87 │ .whereami  │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+  88 │ 3D Objects │ Dir     │            │ true     │      0 B │ 2 years    │ 2 hours    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  89 │ Anaconda3  │ Dir     │            │ false    │  24.6 KB │ 1 year ago │ 2 hours    │ 2 months
+     │            │         │            │          │          │            │ ago        │ ago
+  90 │ AndroidStu │ Dir     │            │ false    │  12.3 KB │ 1 year ago │ 21 secs    │ 1 month
+     │ dioProject │         │            │          │          │            │ ago        │ ago
+     │ s          │         │            │          │          │            │            │
+  91 │ AppData    │ Dir     │            │ false    │      0 B │ 10 months  │ 15 secs    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  92 │ Apple      │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 year ago
+  93 │ Applicatio │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │ n          │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │ Data       │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing        │          │          │            │            │
+  94 │ CLionProje │ Dir     │            │ false    │   4.1 KB │ 1 month    │ 2 hours    │ 1 month
+     │ cts        │         │            │          │          │ ago        │ ago        │ ago
+  95 │ CS3233     │ Dir     │            │ false    │   4.1 KB │ 10 months  │ 2 hours    │ 2 months
+     │ Module     │         │            │          │          │ ago        │ ago        │ ago
+     │ Project _  │         │            │          │          │            │            │
+     │ Prannaya   │         │            │          │          │            │            │
+  96 │ Calibre    │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 2 months
+     │ Library    │         │            │          │          │ ago        │ ago        │ ago
+  97 │ Contacts   │ Dir     │            │ true     │      0 B │ 2 years    │ 12 mins    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+  98 │ Cookies    │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Loca │          │          │            │            │
+     │            │         │ l\Microsof │          │          │            │            │
+     │            │         │ t\Windows\ │          │          │            │            │
+     │            │         │ INetCookie │          │          │            │            │
+     │            │         │ s          │          │          │            │            │
+  99 │ Desktop    │ Dir     │            │ true     │  20.5 KB │ 2 years    │ 56 secs    │ 1 hour ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 100 │ Documents  │ Dir     │            │ true     │  32.8 KB │ 2 years    │ 12 mins    │ 1 hour ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 101 │ Downloads  │ Dir     │            │ true     │ 196.6 KB │ 2 years    │ 12 mins    │ 1 hour ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 102 │ Dropbox    │ Dir     │            │ false    │  16.4 KB │ 2 years    │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 103 │ Evernote   │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 2 hours    │ 2 years
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 104 │ Favorites  │ Dir     │            │ true     │      0 B │ 2 years    │ 12 mins    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 105 │ Fortran    │ Dir     │            │ false    │      0 B │ 3 weeks    │ 2 hours    │ 3 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 106 │ GaitMonito │ Dir     │            │ false    │   8.2 KB │ 3 months   │ 2 hours    │ 3 weeks
+     │ ringForPar │         │            │          │          │ ago        │ ago        │ ago
+     │ kinsonsDis │         │            │          │          │            │            │
+     │ easePatien │         │            │          │          │            │            │
+     │ ts         │         │            │          │          │            │            │
+ 107 │ IdeaProjec │ Dir     │            │ false    │   8.2 KB │ 2 years    │ 2 hours    │ 1 week ago
+     │ ts         │         │            │          │          │ ago        │ ago        │
+ 108 │ IntelGraph │ Dir     │            │ false    │   4.1 KB │ 2 years    │ 1 day ago  │ 1 day ago
+     │ icsProfile │         │            │          │          │ ago        │            │
+     │ s          │         │            │          │          │            │            │
+ 109 │ Library    │ Dir     │            │ false    │      0 B │ 11 months  │ 2 hours    │ 11 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 110 │ Links      │ Dir     │            │ true     │   4.1 KB │ 2 years    │ 12 mins    │ 8 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 111 │ Local      │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │ Settings   │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Loca │          │          │            │            │
+     │            │         │ l          │          │          │            │            │
+ 112 │ M20307.pyp │ File    │            │ false    │    105 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ rog        │         │            │          │          │            │ ago        │
+ 113 │ MPSProject │ Dir     │            │ false    │      0 B │ 1 year ago │ 1 hour ago │ 1 day ago
+     │ s          │         │            │          │          │            │            │
+ 114 │ MPSSamples │ Dir     │            │ false    │  12.3 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │ .2019.2.3  │         │            │          │          │            │ ago        │
+ 115 │ MicrosoftE │ Dir     │            │ false    │      0 B │ 2 years    │ 3 days ago │ 2 years
+     │ dgeBackups │         │            │          │          │ ago        │            │ ago
+ 116 │ Music      │ Dir     │            │ true     │   4.1 KB │ 2 years    │ 12 mins    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 117 │ My         │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │ Documents  │         │ rannaya\Do │          │          │ ago        │ ago        │ ago
+     │            │         │ cuments    │          │          │            │            │
+ 118 │ NTUSER.DAT │ File    │            │ false    │  15.7 MB │ 10 months  │ 1 day ago  │ 1 day ago
+     │            │         │            │          │          │ ago        │            │
+ 119 │ NTUSER.DAT │ File    │            │ false    │  65.5 KB │ 10 months  │ 2 weeks    │ 10 months
+     │ {aefea1de- │         │            │          │          │ ago        │ ago        │ ago
+     │ 03a7-11eb- │         │            │          │          │            │            │
+     │ b7ca-aa950 │         │            │          │          │            │            │
+     │ aec4a8c}.T │         │            │          │          │            │            │
+     │ M.blf      │         │            │          │          │            │            │
+ 120 │ NTUSER.DAT │ File    │            │ false    │ 524.3 KB │ 10 months  │ 1 day ago  │ 10 months
+     │ {aefea1de- │         │            │          │          │ ago        │            │ ago
+     │ 03a7-11eb- │         │            │          │          │            │            │
+     │ b7ca-aa950 │         │            │          │          │            │            │
+     │ aec4a8c}.T │         │            │          │          │            │            │
+     │ MContainer │         │            │          │          │            │            │
+     │ 0000000000 │         │            │          │          │            │            │
+     │ 0000000001 │         │            │          │          │            │            │
+     │ .regtrans- │         │            │          │          │            │            │
+     │ ms         │         │            │          │          │            │            │
+ 121 │ NTUSER.DAT │ File    │            │ false    │ 524.3 KB │ 10 months  │ 2 weeks    │ 10 months
+     │ {aefea1de- │         │            │          │          │ ago        │ ago        │ ago
+     │ 03a7-11eb- │         │            │          │          │            │            │
+     │ b7ca-aa950 │         │            │          │          │            │            │
+     │ aec4a8c}.T │         │            │          │          │            │            │
+     │ MContainer │         │            │          │          │            │            │
+     │ 0000000000 │         │            │          │          │            │            │
+     │ 0000000002 │         │            │          │          │            │            │
+     │ .regtrans- │         │            │          │          │            │            │
+     │ ms         │         │            │          │          │            │            │
+ 122 │ NetHood    │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\Network  │          │          │            │            │
+     │            │         │ Shortcuts  │          │          │            │            │
+ 123 │ NimProject │ Dir     │            │ false    │      0 B │ 1 month    │ 2 hours    │ 1 month
+     │ s          │         │            │          │          │ ago        │ ago        │ ago
+ 124 │ OneDrive   │ Dir     │            │ true     │   4.1 KB │ 2 years    │ 1 hour ago │ 1 year ago
+     │            │         │            │          │          │ ago        │            │
+ 125 │ OneDrive - │ Dir     │            │ true     │  28.7 KB │ 2 years    │ 1 hour ago │ 3 hours
+     │ NUS High   │         │            │          │          │ ago        │            │ ago
+     │ School     │         │            │          │          │            │            │
+ 126 │ PQRS       │ Dir     │            │ false    │  65.5 KB │ 1 year ago │ 1 hour ago │ 1 week ago
+ 127 │ Pictures   │ Dir     │            │ true     │   8.2 KB │ 2 years    │ 1 min ago  │ 1 month
+     │            │         │            │          │          │ ago        │            │ ago
+ 128 │ PrintHood  │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\Printer  │          │          │            │            │
+     │            │         │ Shortcuts  │          │          │            │            │
+ 129 │ PycharmPro │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 23 mins    │ 1 week ago
+     │ jects      │         │            │          │          │            │ ago        │
+ 130 │ Python     │ Dir     │            │ false    │  12.3 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+ 131 │ Recent     │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\Recent   │          │          │            │            │
+ 132 │ Regression │ File    │            │ false    │  10.0 KB │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ -Tensorflo │         │            │          │          │            │ ago        │
+     │ w.ipynb    │         │            │          │          │            │            │
+ 133 │ Roaming    │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 years
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 134 │ RubyminePr │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ ojects     │         │            │          │          │            │ ago        │
+ 135 │ RunHACK.sp │ File    │            │ false    │   1.0 KB │ 2 years    │ 2 weeks    │ 1 year ago
+     │ ec         │         │            │          │          │ ago        │ ago        │
+ 136 │ Saved      │ Dir     │            │ true     │      0 B │ 2 years    │ 12 mins    │ 10 months
+     │ Games      │         │            │          │          │ ago        │ ago        │ ago
+ 137 │ Searches   │ Dir     │            │ true     │   4.1 KB │ 2 years    │ 12 mins    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 138 │ SendTo     │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\SendTo   │          │          │            │            │
+ 139 │ Sites      │ Dir     │            │ false    │   4.1 KB │ 3 months   │ 2 hours    │ 1 day ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 140 │ Start Menu │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\Start    │          │          │            │            │
+     │            │         │ Menu       │          │          │            │            │
+ 141 │ Templates  │ Symlink │ C:\Users\P │ false    │      0 B │ 10 months  │ 10 months  │ 10 months
+     │            │         │ rannaya\Ap │          │          │ ago        │ ago        │ ago
+     │            │         │ pData\Roam │          │          │            │            │
+     │            │         │ ing\Micros │          │          │            │            │
+     │            │         │ oft\Window │          │          │            │            │
+     │            │         │ s\Template │          │          │            │            │
+     │            │         │ s          │          │          │            │            │
+ 142 │ ThreeBody  │ Dir     │            │ false    │   4.1 KB │ 2 months   │ 2 hours    │ 18 hours
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 143 │ Untitled.i │ File    │            │ false    │    946 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ pynb       │         │            │          │          │            │ ago        │
+ 144 │ Untitled1. │ File    │            │ false    │    600 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ ipynb      │         │            │          │          │            │ ago        │
+ 145 │ Videos     │ Dir     │            │ true     │  16.4 KB │ 2 years    │ 12 mins    │ 1 week ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 146 │ WebstormPr │ Dir     │            │ false    │   4.1 KB │ 2 months   │ 2 hours    │ 1 week ago
+     │ ojects     │         │            │          │          │ ago        │ ago        │
+ 147 │ YandexDisk │ Dir     │            │ true     │   4.1 KB │ 1 year ago │ 56 secs    │ 1 hour ago
+     │            │         │            │          │          │            │ ago        │
+ 148 │ _.swp      │ File    │            │ false    │  12.3 KB │ 1 week ago │ 1 week ago │ 1 week ago
+ 149 │ _netrc     │ File    │            │ false    │    206 B │ 3 months   │ 23 mins    │ 3 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 150 │ _viminfo   │ File    │            │ false    │  14.6 KB │ 8 months   │ 2 days ago │ 2 days ago
+     │            │         │            │          │          │ ago        │            │
+ 151 │ cmon.pypro │ File    │            │ false    │    755 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ g          │         │            │          │          │            │ ago        │
+ 152 │ cpython    │ Dir     │            │ false    │   8.2 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+ 153 │ creme_data │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+ 154 │ dist       │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 years
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 155 │ eclipse    │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 1 hour ago │ 3 weeks
+     │            │         │            │          │          │            │            │ ago
+ 156 │ eclipse-in │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 3 weeks
+     │ staller    │         │            │          │          │            │ ago        │ ago
+ 157 │ eclipse-wo │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 3 weeks
+     │ rkspace    │         │            │          │          │            │ ago        │ ago
+ 158 │ github     │ Dir     │            │ false    │      0 B │ 2 weeks    │ 1 hour ago │ 2 weeks
+     │            │         │            │          │          │ ago        │            │ ago
+ 159 │ i          │ Dir     │            │ false    │      0 B │ 1 month    │ 1 hour ago │ 1 month
+     │            │         │            │          │          │ ago        │            │ ago
+ 160 │ iCloudDriv │ Dir     │            │ true     │  65.5 KB │ 12 months  │ 2 hours    │ 7 months
+     │ e          │         │            │          │          │ ago        │ ago        │ ago
+ 161 │ install-ha │ File    │            │ false    │    272 B │ 1 month    │ 6 days ago │ 1 month
+     │ bitat.cmd  │         │            │          │          │ ago        │            │ ago
+ 162 │ installed_ │ File    │            │ false    │  10.7 KB │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ modules.tx │         │            │          │          │            │ ago        │
+     │ t          │         │            │          │          │            │            │
+ 163 │ java_error │ File    │            │ false    │ 944.0 MB │ 10 months  │ 1 week ago │ 10 months
+     │ _in_idea.h │         │            │          │          │ ago        │            │ ago
+     │ prof       │         │            │          │          │            │            │
+ 164 │ java_error │ File    │            │ false    │   1.2 GB │ 2 months   │ 1 week ago │ 2 months
+     │ _in_pychar │         │            │          │          │ ago        │            │ ago
+     │ m64.hprof  │         │            │          │          │            │            │
+ 165 │ java_error │ File    │            │ false    │  45.5 KB │ 2 months   │ 2 weeks    │ 2 months
+     │ _in_pychar │         │            │          │          │ ago        │ ago        │ ago
+     │ m64_31004. │         │            │          │          │            │            │
+     │ log        │         │            │          │          │            │            │
+ 166 │ java_error │ File    │            │ false    │  71.2 KB │ 2 months   │ 2 weeks    │ 2 months
+     │ _in_pychar │         │            │          │          │ ago        │ ago        │ ago
+     │ m_8960.log │         │            │          │          │            │            │
+ 167 │ javafx-sdk │ Dir     │            │ false    │      0 B │ 12 months  │ 2 hours    │ 12 months
+     │ -14.0.2.1  │         │            │          │          │ ago        │ ago        │ ago
+ 168 │ jupyterhub │ File    │            │ false    │ 102.4 KB │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ .sqlite    │         │            │          │          │            │ ago        │
+ 169 │ jupyterhub │ File    │            │ false    │  35.8 KB │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ _config.py │         │            │          │          │            │ ago        │
+ 170 │ jupyterhub │ File    │            │ false    │     66 B │ 1 year ago │ 2 weeks    │ 1 year ago
+     │ _cookie_se │         │            │          │          │            │ ago        │
+     │ cret       │         │            │          │          │            │            │
+ 171 │ manim      │ Dir     │            │ false    │   4.1 KB │ 8 months   │ 2 hours    │ 8 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 172 │ mu_code    │ Dir     │            │ false    │      0 B │ 9 months   │ 2 hours    │ 9 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 173 │ nim-1.0.6  │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+ 174 │ ninja-ide  │ Dir     │            │ false    │   4.1 KB │ 1 year ago │ 2 hours    │ 1 year ago
+     │            │         │            │          │          │            │ ago        │
+ 175 │ node_modul │ Dir     │            │ false    │  65.5 KB │ 1 month    │ 2 hours    │ 1 month
+     │ es         │         │            │          │          │ ago        │ ago        │ ago
+ 176 │ notedown   │ Dir     │            │ false    │   4.1 KB │ 3 weeks    │ 2 hours    │ 1 week ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 177 │ ntuser.dat │ File    │            │ false    │   4.3 MB │ 10 months  │ 10 months  │ 10 months
+     │ .LOG1      │         │            │          │          │ ago        │ ago        │ ago
+ 178 │ ntuser.dat │ File    │            │ false    │   1.9 MB │ 10 months  │ 10 months  │ 10 months
+     │ .LOG2      │         │            │          │          │ ago        │ ago        │ ago
+ 179 │ ntuser.ini │ File    │            │ false    │     20 B │ 10 months  │ 2 weeks    │ 10 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 180 │ package-lo │ File    │            │ false    │ 177.7 KB │ 3 months   │ 2 weeks    │ 1 month
+     │ ck.json    │         │            │          │          │ ago        │ ago        │ ago
+ 181 │ package.js │ File    │            │ false    │    166 B │ 2 months   │ 18 hours   │ 1 month
+     │ on         │         │            │          │          │ ago        │ ago        │ ago
+ 182 │ rubygems-3 │ Dir     │            │ false    │   4.1 KB │ 3 months   │ 2 hours    │ 3 months
+     │ .2.16      │         │            │          │          │ ago        │ ago        │ ago
+ 183 │ scoop      │ Dir     │            │ false    │      0 B │ 2 weeks    │ 2 hours    │ 1 week ago
+     │            │         │            │          │          │ ago        │ ago        │
+ 184 │ seaborn-da │ Dir     │            │ false    │      0 B │ 1 year ago │ 2 hours    │ 1 year ago
+     │ ta         │         │            │          │          │            │ ago        │
+ 185 │ source     │ Dir     │            │ false    │      0 B │ 2 years    │ 2 hours    │ 2 years
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 186 │ tracker.pr │ File    │            │ false    │    601 B │ 12 months  │ 2 weeks    │ 12 months
+     │ efs        │         │            │          │          │ ago        │ ago        │ ago
+ 187 │ verificati │ File    │            │ false    │     68 B │ 3 months   │ 2 weeks    │ 3 months
+     │ on.txt     │         │            │          │          │ ago        │ ago        │ ago
+ 188 │ vimfiles   │ Dir     │            │ false    │   4.1 KB │ 8 months   │ 2 hours    │ 7 months
+     │            │         │            │          │          │ ago        │ ago        │ ago
+ 189 │ ~          │ Dir     │            │ false    │      0 B │ 2 weeks    │ 26 secs    │ 2 weeks
+     │            │         │            │          │          │ ago        │ ago        │ ago
+─────┴────────────┴─────────┴────────────┴──────────┴──────────┴────────────┴────────────┴────────────
+
+C:\Users\Prannaya> ls -la | select name size
+─────┬──────────────────────────────────────────────────────────────────────────────────────┬──────────
+  #  │                                         name                                         │   size
+─────┼──────────────────────────────────────────────────────────────────────────────────────┼──────────
+   0 │ .IdeaIE2019.2                                                                        │      0 B
+   1 │ .IdeaIE2019.3                                                                        │      0 B
+   2 │ .IntelliJIdea2019.2                                                                  │      0 B
+   3 │ .IntelliJIdea2019.3                                                                  │      0 B
+   4 │ .PyCharm2019.1                                                                       │      0 B
+   5 │ .PyCharm2019.2                                                                       │      0 B
+   6 │ .PyCharm2019.3                                                                       │      0 B
+   7 │ .RubyMine2019.2                                                                      │      0 B
+   8 │ .android                                                                             │   4.1 KB
+   9 │ .angular-config.json                                                                 │     57 B
+  10 │ .astropy                                                                             │      0 B
+  11 │ .atom                                                                                │   4.1 KB
+  12 │ .bash_history                                                                        │   2.7 KB
+  13 │ .boto                                                                                │  21.4 KB
+  14 │ .briefcase                                                                           │      0 B
+  15 │ .bundle                                                                              │      0 B
+  16 │ .cache                                                                               │      0 B
+  17 │ .canopy_runtimes.json                                                                │    189 B
+  18 │ .codetogether                                                                        │      0 B
+  19 │ .coffee_history                                                                      │      0 B
+  20 │ .conda                                                                               │      0 B
+  21 │ .condarc                                                                             │     61 B
+  22 │ .config                                                                              │   4.1 KB
+  23 │ .continuum                                                                           │      0 B
+  24 │ .cookiecutter_replay                                                                 │   4.1 KB
+  25 │ .cookiecutters                                                                       │   4.1 KB
+  26 │ .ctsystem                                                                            │    106 B
+  27 │ .dataexplore                                                                         │      0 B
+  28 │ .dbus-keyrings                                                                       │      0 B
+  29 │ .degit                                                                               │      0 B
+  30 │ .dotnet                                                                              │   4.1 KB
+  31 │ .eclipse                                                                             │   4.1 KB
+  32 │ .emacs.d                                                                             │   8.2 KB
+  33 │ .emulator_console_auth_token                                                         │     16 B
+  34 │ .gitconfig                                                                           │    455 B
+  35 │ .glue                                                                                │      0 B
+  36 │ .gnupg                                                                               │      0 B
+  37 │ .google-cookie                                                                       │   1.5 KB
+  38 │ .gradle                                                                              │   4.1 KB
+  39 │ .idea-build                                                                          │      0 B
+  40 │ .idlerc                                                                              │   4.1 KB
+  41 │ .ipynb_checkpoints                                                                   │   4.1 KB
+  42 │ .ipython                                                                             │   4.1 KB
+  43 │ .irbrc                                                                               │     89 B
+  44 │ .ivy2                                                                                │      0 B
+  45 │ .jupyter                                                                             │      0 B
+  46 │ .keras                                                                               │      0 B
+  47 │ .kivy                                                                                │      0 B
+  48 │ .lightkurve-cache                                                                    │      0 B
+  49 │ .local                                                                               │      0 B
+  50 │ .m2                                                                                  │      0 B
+  51 │ .matplotlib                                                                          │   4.1 KB
+  52 │ .nbi                                                                                 │   4.1 KB
+  53 │ .nimble                                                                              │      0 B
+  54 │ .ninja_ide                                                                           │   4.1 KB
+  55 │ .node_repl_history                                                                   │   1.5 KB
+  56 │ .notable.json                                                                        │    319 B
+  57 │ .np_inline                                                                           │      0 B
+  58 │ .npmrc                                                                               │     70 B
+  59 │ .nuget                                                                               │      0 B
+  60 │ .octave_hist                                                                         │   7.4 KB
+  61 │ .omnisharp                                                                           │      0 B
+  62 │ .openjfx                                                                             │      0 B
+  63 │ .openshot_qt                                                                         │   4.1 KB
+  64 │ .othelloTk                                                                           │      0 B
+  65 │ .p2                                                                                  │   4.1 KB
+  66 │ .pandastable                                                                         │      0 B
+  67 │ .pdfbox.cache                                                                        │  40.4 KB
+  68 │ .pyforest                                                                            │      0 B
+  69 │ .pylint.d                                                                            │   4.1 KB
+  70 │ .pypirc                                                                              │    219 B
+  71 │ .pytest_cache                                                                        │      0 B
+  72 │ .python_history                                                                      │   1.4 KB
+  73 │ .quokka                                                                              │   4.1 KB
+  74 │ .rest-client                                                                         │   4.1 KB
+  75 │ .scalaide                                                                            │      0 B
+  76 │ .spyder-py3                                                                          │   4.1 KB
+  77 │ .ssh                                                                                 │      0 B
+  78 │ .surprise_data                                                                       │      0 B
+  79 │ .templateengine                                                                      │      0 B
+  80 │ .termex                                                                              │      0 B
+  81 │ .tooling                                                                             │      0 B
+  82 │ .viminfo                                                                             │   2.2 KB
+  83 │ .virtualenvs                                                                         │   4.1 KB
+  84 │ .vivaldi_reporting_data                                                              │      0 B
+  85 │ .vscode                                                                              │      0 B
+  86 │ .webclipse                                                                           │      0 B
+  87 │ .whereami                                                                            │   4.1 KB
+  88 │ 3D Objects                                                                           │      0 B
+  89 │ Anaconda3                                                                            │  24.6 KB
+  90 │ AndroidStudioProjects                                                                │  12.3 KB
+  91 │ AppData                                                                              │      0 B
+  92 │ Apple                                                                                │      0 B
+  93 │ Application Data                                                                     │      0 B
+  94 │ CLionProjects                                                                        │   4.1 KB
+  95 │ CS3233 Module Project _ Prannaya                                                     │   4.1 KB
+  96 │ Calibre Library                                                                      │   4.1 KB
+  97 │ Contacts                                                                             │      0 B
+  98 │ Cookies                                                                              │      0 B
+  99 │ Desktop                                                                              │  20.5 KB
+ 100 │ Documents                                                                            │  32.8 KB
+ 101 │ Downloads                                                                            │ 196.6 KB
+ 102 │ Dropbox                                                                              │  16.4 KB
+ 103 │ Evernote                                                                             │   4.1 KB
+ 104 │ Favorites                                                                            │      0 B
+ 105 │ Fortran                                                                              │      0 B
+ 106 │ GaitMonitoringForParkinsonsDiseasePatients                                           │   8.2 KB
+ 107 │ IdeaProjects                                                                         │   8.2 KB
+ 108 │ IntelGraphicsProfiles                                                                │   4.1 KB
+ 109 │ Library                                                                              │      0 B
+ 110 │ Links                                                                                │   4.1 KB
+ 111 │ Local Settings                                                                       │      0 B
+ 112 │ M20307.pyprog                                                                        │    105 B
+ 113 │ MPSProjects                                                                          │      0 B
+ 114 │ MPSSamples.2019.2.3                                                                  │  12.3 KB
+ 115 │ MicrosoftEdgeBackups                                                                 │      0 B
+ 116 │ Music                                                                                │   4.1 KB
+ 117 │ My Documents                                                                         │      0 B
+ 118 │ NTUSER.DAT                                                                           │  15.7 MB
+ 119 │ NTUSER.DAT{aefea1de-03a7-11eb-b7ca-aa950aec4a8c}.TM.blf                              │  65.5 KB
+ 120 │ NTUSER.DAT{aefea1de-03a7-11eb-b7ca-aa950aec4a8c}.TMContainer00000000000000000001.reg │ 524.3 KB
+     │ trans-ms                                                                             │
+ 121 │ NTUSER.DAT{aefea1de-03a7-11eb-b7ca-aa950aec4a8c}.TMContainer00000000000000000002.reg │ 524.3 KB
+     │ trans-ms                                                                             │
+ 122 │ NetHood                                                                              │      0 B
+ 123 │ NimProjects                                                                          │      0 B
+ 124 │ OneDrive                                                                             │   4.1 KB
+ 125 │ OneDrive - NUS High School                                                           │  28.7 KB
+ 126 │ PQRS                                                                                 │  65.5 KB
+ 127 │ Pictures                                                                             │   8.2 KB
+ 128 │ PrintHood                                                                            │      0 B
+ 129 │ PycharmProjects                                                                      │   4.1 KB
+ 130 │ Python                                                                               │  12.3 KB
+ 131 │ Recent                                                                               │      0 B
+ 132 │ Regression-Tensorflow.ipynb                                                          │  10.0 KB
+ 133 │ Roaming                                                                              │      0 B
+ 134 │ RubymineProjects                                                                     │      0 B
+ 135 │ RunHACK.spec                                                                         │   1.0 KB
+ 136 │ Saved Games                                                                          │      0 B
+ 137 │ Searches                                                                             │   4.1 KB
+ 138 │ SendTo                                                                               │      0 B
+ 139 │ Sites                                                                                │   4.1 KB
+ 140 │ Start Menu                                                                           │      0 B
+ 141 │ Templates                                                                            │      0 B
+ 142 │ ThreeBody                                                                            │   4.1 KB
+ 143 │ Untitled.ipynb                                                                       │    946 B
+ 144 │ Untitled1.ipynb                                                                      │    600 B
+ 145 │ Videos                                                                               │  16.4 KB
+ 146 │ WebstormProjects                                                                     │   4.1 KB
+ 147 │ YandexDisk                                                                           │   4.1 KB
+ 148 │ _.swp                                                                                │  12.3 KB
+ 149 │ _netrc                                                                               │    206 B
+ 150 │ _viminfo                                                                             │  14.6 KB
+ 151 │ cmon.pyprog                                                                          │    755 B
+ 152 │ cpython                                                                              │   8.2 KB
+ 153 │ creme_data                                                                           │   4.1 KB
+ 154 │ dist                                                                                 │      0 B
+ 155 │ eclipse                                                                              │   4.1 KB
+ 156 │ eclipse-installer                                                                    │   4.1 KB
+ 157 │ eclipse-workspace                                                                    │   4.1 KB
+ 158 │ github                                                                               │      0 B
+ 159 │ i                                                                                    │      0 B
+ 160 │ iCloudDrive                                                                          │  65.5 KB
+ 161 │ install-habitat.cmd                                                                  │    272 B
+ 162 │ installed_modules.txt                                                                │  10.7 KB
+ 163 │ java_error_in_idea.hprof                                                             │ 944.0 MB
+ 164 │ java_error_in_pycharm64.hprof                                                        │   1.2 GB
+ 165 │ java_error_in_pycharm64_31004.log                                                    │  45.5 KB
+ 166 │ java_error_in_pycharm_8960.log                                                       │  71.2 KB
+ 167 │ javafx-sdk-14.0.2.1                                                                  │      0 B
+ 168 │ jupyterhub.sqlite                                                                    │ 102.4 KB
+ 169 │ jupyterhub_config.py                                                                 │  35.8 KB
+ 170 │ jupyterhub_cookie_secret                                                             │     66 B
+ 171 │ manim                                                                                │   4.1 KB
+ 172 │ mu_code                                                                              │      0 B
+ 173 │ nim-1.0.6                                                                            │   4.1 KB
+ 174 │ ninja-ide                                                                            │   4.1 KB
+ 175 │ node_modules                                                                         │  65.5 KB
+ 176 │ notedown                                                                             │   4.1 KB
+ 177 │ ntuser.dat.LOG1                                                                      │   4.3 MB
+ 178 │ ntuser.dat.LOG2                                                                      │   3.9 MB
+ 179 │ ntuser.ini                                                                           │     20 B
+ 180 │ package-lock.json                                                                    │ 177.7 KB
+ 181 │ package.json                                                                         │    166 B
+ 182 │ rubygems-3.2.16                                                                      │   4.1 KB
+ 183 │ scoop                                                                                │      0 B
+ 184 │ seaborn-data                                                                         │      0 B
+ 185 │ source                                                                               │      0 B
+ 186 │ tracker.prefs                                                                        │    601 B
+ 187 │ verification.txt                                                                     │     68 B
+ 188 │ vimfiles                                                                             │   4.1 KB
+ 189 │ ~                                                                                    │      0 B
+─────┴──────────────────────────────────────────────────────────────────────────────────────┴──────────
+
+C:\Users\Prannaya> cpython -h
+error: Command not found
+   ┌─ shell:17:1
+   │
+17 │ cpython -h
+   │ ^^^^^^^ command cpython not found
+
+C:\Users\Prannaya> pip install thefuck
+Requirement already satisfied: thefuck in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (3.29)
+Requirement already satisfied: decorator in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (4.4.2)
+Requirement already satisfied: psutil in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (5.7.0)
+Requirement already satisfied: colorama in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (0.4.3)
+Requirement already satisfied: win-unicode-console in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (0.5)
+Requirement already satisfied: six in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (1.12.0)
+Requirement already satisfied: pyte in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from thefuck) (0.8.0)
+Requirement already satisfied: wcwidth in c:\users\prannaya\appdata\local\programs\python\python37\lib\site-packages (from pyte->thefuck) (0.1.7)
+C:\Users\Prannaya> cd Three
+error: Cannot change to directory
+   ┌─ shell:19:4
+   │
+19 │ cd Three
+   │    ^^^^^ directory not found
+
+C:\Users\Prannaya> fuck
+Seems like fuck alias isn't configured!
+More details - https://github.com/nvbn/thefuck#manual-installation
+C:\Users\Prannaya> cd ThreeBody
+C:\Users\Prannaya\ThreeBody(main)> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   data/dataRetrieved.csv
+        modified:   notebooks/retrieve_binary_star_configs_updated.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\Prannaya\ThreeBody(main)> git add .
+warning: LF will be replaced by CRLF in notebooks/retrieve_binary_star_configs_updated.ipynb.
+The file will have its original line endings in your working directory
+C:\Users\Prannaya\ThreeBody(main)> git commit -m "Update Retrieval Process"
+[main 11f2731] Update Retrieval Process
+ 2 files changed, 191 insertions(+), 1 deletion(-)
+C:\Users\Prannaya\ThreeBody(main)> mkdir commitments
+C:\Users\Prannaya\ThreeBody(main)> nano commitments/commit_retrieval.sh
+error: Command not found
+   ┌─ shell:26:1
+   │
+26 │ nano commitments/commit_retrieval.sh
+   │ ^^^^ command nano not found
+
+C:\Users\Prannaya\ThreeBody(main)> the fuck
+error: Command not found
+   ┌─ shell:27:1
+   │
+27 │ the fuck
+   │ ^^^ command the not found
+
+C:\Users\Prannaya\ThreeBody(main)> thefuck
+usage: thefuck [-v] [-a [ALIAS]] [-l SHELL_LOGGER]
+               [--enable-experimental-instant-mode] [-h] [-y | -r] [-d]
+               [command [command ...]]
+C:\Users\Prannaya\ThreeBody(main)> git push
+Everything up-to-date
+C:\Users\Prannaya\ThreeBody(main)> thefuck --yeah
+usage: thefuck [-v] [-a [ALIAS]] [-l SHELL_LOGGER]
+               [--enable-experimental-instant-mode] [-h] [-y | -r] [-d]
+               [command [command ...]]
+C:\Users\Prannaya\ThreeBody(main)> for i in $(seq 2 10); echo $i; done
+error: for requires the block to run on each item parameter
+   ┌─ shell:31:1
+   │
+31 │ for i in $(seq 2 10); echo $i; done
+   │ ^^^ requires the block to run on each item parameter
+
+C:\Users\Prannaya\ThreeBody(main)> seq 2 10
+───┬────
+ 0 │  2
+ 1 │  3
+ 2 │  4
+ 3 │  5
+ 4 │  6
+ 5 │  7
+ 6 │  8
+ 7 │  9
+ 8 │ 10
+───┴────
+
+C:\Users\Prannaya\ThreeBody(main)> for i in $(seq 2 10); echo $i; done
+error: for requires the block to run on each item parameter
+   ┌─ shell:33:1
+   │
+33 │ for i in $(seq 2 10); echo $i; done
+   │ ^^^ requires the block to run on each item parameter
+
+C:\Users\Prannaya\ThreeBody(main)> bash commitments/retrieval.sh
+Refresh index: 100% (91/91), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   .idea/.gitignore
+        modified:   .idea/ThreeBody.iml
+        modified:   .idea/csv-plugin.xml
+        modified:   .idea/discord.xml
+        modified:   .idea/misc.xml
+        modified:   .idea/modules.xml
+        modified:   .idea/other.xml
+        modified:   .idea/vcs.xml
+        modified:   README.md
+        modified:   data/KIC8462852-century-long-data/castelaz_mm_magnitude.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pg.csv
+        modified:   data/KIC8462852-century-long-data/sonneberg_stata_output_pv.csv
+        modified:   data/KIC8462852-century-long-data/sternberg_all.csv
+        modified:   data/binaryconfigs.csv
+        modified:   data/data.csv
+        modified:   data/dataRetrieved.csv
+        modified:   data/k2_ids.txt
+        modified:   data/kepler_binary.csv
+        modified:   data/kepler_binary_configs.csv
+        modified:   data/kepler_binary_stars.csv
+        modified:   data/kepler_ids.txt
+        modified:   data/testData.csv
+        modified:   info/kepler_mission_directory.txt
+        modified:   info/keplerktc/README.md
+        modified:   info/keplerktc/data-columns.txt
+        modified:   kepler/README.md
+        modified:   kepler/__init__.py
+        modified:   kepler/curve.py
+        modified:   kepler/k2.py
+        modified:   kepler/kepler_spine/spline.py
+        modified:   kepler/requirements.txt
+        modified:   kepler/tce.py
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/median_filter.py
+        modified:   kepler/util/periodic_event.py
+        modified:   kepler/util/robust_mean.py
+        modified:   logs/keplerktc_18-58_13-5-21.txt
+        modified:   notebooks/YX_retriever.ipynb
+        modified:   notebooks/retrieve_binary_star_config_data.ipynb
+        modified:   patterns/lagrange5/README.md
+        modified:   patterns/lagrange5/l5.py
+        modified:   patterns/twobody/binary.py
+        modified:   proposal/proposal.html
+        modified:   proposal/proposal.md
+        modified:   python/k2-ktc.py
+        modified:   python/kepler-ktc.py
+        modified:   python/test_if_os_works.py
+        modified:   python/threebody.py
+        modified:   requirements.txt
+        modified:   sim/L5.py
+        modified:   sim/README.md
+        modified:   sim/main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <thepyprogrammer@Prannaya-Laptop.localdomain>) not allowed
+Username for 'https://github.com': ^C
+C:\Users\Prannaya\ThreeBody(main)> echo "Why am I dying"
+Why am I dying
+C:\Users\Prannaya\ThreeBody(main)> echo "this is cool ngl"
+this is cool ngl
+C:\Users\Prannaya\ThreeBody(main)> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   data/dataRetrieved.csv
+        modified:   notebooks/YX_retriever.ipynb
+        modified:   notebooks/retrieve_binary_star_config_data.ipynb
+
+C:\Users\Prannaya\ThreeBody(main)> cat commitments/retrieval.sh
+# First, we check status for the sake of checking
+git status
+
+# Next, we must add all the files cuz why not right
+git add */*retrieve*.* */*Retrieve*.*
+
+# Commit files with a very specific command
+git commit -m "Update Retrieval Process"
+
+# Push to origin repository
+git push origin
+
+# Recheck status (for debugging purposes)
+git status
+C:\Users\Prannaya\ThreeBody(main)> cd notebooks
+C:\Users\Prannaya\ThreeBody\notebooks(main)> ls -la
+───┬────────────────────────────────────────────┬──────┬────────┬──────────┬──────────┬──────────────┬─────────────┬──────────────
+ # │                    name                    │ type │ target │ readonly │   size   │   created    │  accessed   │   modified
+───┼────────────────────────────────────────────┼──────┼────────┼──────────┼──────────┼──────────────┼─────────────┼──────────────
+ 0 │ .ipynb_checkpoints                         │ Dir  │        │ false    │   4.1 KB │ 2 weeks ago  │ 7 hours ago │ 10 hours ago
+ 1 │ YX_retriever.ipynb                         │ File │        │ false    │   4.2 KB │ 12 hours ago │ 7 hours ago │ 12 hours ago
+ 2 │ binary_star_analysis.ipynb                 │ File │        │ false    │  58.5 KB │ 1 week ago   │ 6 hours ago │ 6 hours ago
+ 3 │ kic_8462852_analysis.ipynb                 │ File │        │ false    │  34.0 KB │ 12 hours ago │ 6 hours ago │ 6 hours ago
+ 4 │ retrieve_binary_star_config_data.ipynb     │ File │        │ false    │ 122.3 KB │ 1 day ago    │ 7 hours ago │ 12 hours ago
+ 5 │ retrieve_binary_star_configs_updated.ipynb │ File │        │ false    │ 112.9 KB │ 1 day ago    │ 7 hours ago │ 10 hours ago
+───┴────────────────────────────────────────────┴──────┴────────┴──────────┴──────────┴──────────────┴─────────────┴──────────────
+
+C:\Users\Prannaya\ThreeBody\notebooks(main)> git init
+Initialized empty Git repository in C:/Users/Prannaya/ThreeBody/notebooks/.git/
+C:\Users\Prannaya\ThreeBody\notebooks> cd ..
+C:\Users\Prannaya\ThreeBody(main)> git init
+Reinitialized existing Git repository in C:/Users/Prannaya/ThreeBody/.git/
+C:\Users\Prannaya\ThreeBody(main)> git status
+Refresh index: 100% (124/124), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+C:\Users\Prannaya\ThreeBody(main)> cd ..
+C:\Users\Prannaya> mv PycharmProjects/EmbodiedAI EmbodiedAI
+C:\Users\Prannaya> ls -la
+─────┬──────────────────────────────────┬─────────┬──────────────────────────────────┬──────────┬──────────┬───────────────┬───────────────┬───────────────
+  #  │               name               │  type   │              target              │ readonly │   size   │    created    │   accessed    │   modified
+─────┼──────────────────────────────────┼─────────┼──────────────────────────────────┼──────────┼──────────┼───────────────┼───────────────┼───────────────
+   0 │ +                                │ File    │                                  │ false    │     60 B │ 2 days ago    │ 1 day ago     │ 2 days ago
+   1 │ .IdeaIE2019.2                    │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   2 │ .IdeaIE2019.3                    │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   3 │ .IntelliJIdea2019.2              │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   4 │ .IntelliJIdea2019.3              │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   5 │ .PyCharm2019.1                   │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+   6 │ .PyCharm2019.2                   │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   7 │ .PyCharm2019.3                   │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   8 │ .RubyMine2019.2                  │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+   9 │ .android                         │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 3 months ago
+  10 │ .angular-config.json             │ File    │                                  │ false    │     57 B │ 7 months ago  │ 2 weeks ago   │ 7 months ago
+  11 │ .astropy                         │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  12 │ .atom                            │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 week ago
+  13 │ .bash_history                    │ File    │                                  │ false    │   2.7 KB │ 1 year ago    │ 1 day ago     │ 2 weeks ago
+  14 │ .boto                            │ File    │                                  │ false    │  21.4 KB │ 3 months ago  │ 1 day ago     │ 3 months ago
+  15 │ .briefcase                       │ Dir     │                                  │ false    │      0 B │ 3 months ago  │ 12 hours ago  │ 3 months ago
+  16 │ .bundle                          │ Dir     │                                  │ false    │      0 B │ 3 months ago  │ 12 hours ago  │ 3 months ago
+  17 │ .cache                           │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 3 months ago
+  18 │ .canopy_runtimes.json            │ File    │                                  │ false    │    189 B │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+  19 │ .codetogether                    │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  20 │ .coffee_history                  │ File    │                                  │ false    │      0 B │ 2 months ago  │ 2 months ago  │ 2 months ago
+  21 │ .conda                           │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 months ago
+  22 │ .condarc                         │ File    │                                  │ false    │     61 B │ 2 years ago   │ 6 mins ago    │ 2 months ago
+  23 │ .config                          │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 2 weeks ago
+  24 │ .continuum                       │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+  25 │ .cookiecutter_replay             │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 2 weeks ago
+  26 │ .cookiecutters                   │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 2 weeks ago
+  27 │ .ctsystem                        │ File    │                                  │ false    │    106 B │ 1 month ago   │ 1 day ago     │ 1 month ago
+  28 │ .dataexplore                     │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  29 │ .dbus-keyrings                   │ Dir     │                                  │ false    │      0 B │ 10 months ago │ 12 hours ago  │ 10 months ago
+  30 │ .degit                           │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  31 │ .dotnet                          │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 month ago
+  32 │ .eclipse                         │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  33 │ .emacs.d                         │ Dir     │                                  │ false    │   8.2 KB │ 3 weeks ago   │ 12 hours ago  │ 3 weeks ago
+  34 │ .emulator_console_auth_token     │ File    │                                  │ false    │     16 B │ 9 months ago  │ 1 day ago     │ 9 months ago
+  35 │ .gitconfig                       │ File    │                                  │ false    │    455 B │ 2 months ago  │ 12 hours ago  │ 2 months ago
+  36 │ .glue                            │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  37 │ .gnupg                           │ Dir     │                                  │ false    │      0 B │ 3 weeks ago   │ 12 hours ago  │ 3 weeks ago
+  38 │ .google-cookie                   │ File    │                                  │ false    │   1.5 KB │ 2 years ago   │ 1 day ago     │ 4 months ago
+  39 │ .gradle                          │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 month ago
+  40 │ .idea-build                      │ Dir     │                                  │ false    │      0 B │ 12 months ago │ 12 hours ago  │ 12 months ago
+  41 │ .idlerc                          │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+  42 │ .ipynb_checkpoints               │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+  43 │ .ipython                         │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+  44 │ .irbrc                           │ File    │                                  │ false    │     89 B │ 2 months ago  │ 1 day ago     │ 2 months ago
+  45 │ .ivy2                            │ Dir     │                                  │ false    │      0 B │ 12 months ago │ 12 hours ago  │ 12 months ago
+  46 │ .jupyter                         │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 3 days ago
+  47 │ .keras                           │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 12 months ago
+  48 │ .kivy                            │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  49 │ .lightkurve-cache                │ Dir     │                                  │ false    │      0 B │ 2 months ago  │ 12 hours ago  │ 2 months ago
+  50 │ .local                           │ Dir     │                                  │ false    │      0 B │ 3 months ago  │ 12 hours ago  │ 3 months ago
+  51 │ .m2                              │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  52 │ .matplotlib                      │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 2 months ago
+  53 │ .nbi                             │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 2 months ago
+  54 │ .nimble                          │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  55 │ .ninja_ide                       │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  56 │ .node_repl_history               │ File    │                                  │ false    │   1.5 KB │ 8 months ago  │ 1 day ago     │ 5 days ago
+  57 │ .notable.json                    │ File    │                                  │ false    │    298 B │ 2 days ago    │ 2 days ago    │ 2 days ago
+  58 │ .np_inline                       │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  59 │ .npmrc                           │ File    │                                  │ false    │     70 B │ 1 month ago   │ 3 days ago    │ 1 month ago
+  60 │ .nuget                           │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  61 │ .octave_hist                     │ File    │                                  │ false    │   7.4 KB │ 3 weeks ago   │ 1 day ago     │ 3 weeks ago
+  62 │ .omnisharp                       │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  63 │ .openjfx                         │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  64 │ .openshot_qt                     │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+  65 │ .othelloTk                       │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  66 │ .p2                              │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 3 weeks ago
+  67 │ .pandastable                     │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  68 │ .pdfbox.cache                    │ File    │                                  │ false    │  40.4 KB │ 4 months ago  │ 1 day ago     │ 4 months ago
+  69 │ .pyforest                        │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  70 │ .pylint.d                        │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  71 │ .pypirc                          │ File    │                                  │ false    │    219 B │ 12 months ago │ 1 day ago     │ 12 months ago
+  72 │ .pytest_cache                    │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  73 │ .python_history                  │ File    │                                  │ false    │   1.4 KB │ 1 year ago    │ 1 day ago     │ 2 weeks ago
+  74 │ .quokka                          │ Dir     │                                  │ false    │   4.1 KB │ 2 months ago  │ 12 hours ago  │ 2 months ago
+  75 │ .rest-client                     │ Dir     │                                  │ false    │   4.1 KB │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  76 │ .scalaide                        │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  77 │ .spyder-py3                      │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 2 months ago
+  78 │ .ssh                             │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  79 │ .surprise_data                   │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  80 │ .templateengine                  │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 1 month ago
+  81 │ .termex                          │ Dir     │                                  │ false    │      0 B │ 2 weeks ago   │ 12 hours ago  │ 2 weeks ago
+  82 │ .tooling                         │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  83 │ .viminfo                         │ File    │                                  │ false    │   3.7 KB │ 3 months ago  │ 19 hours ago  │ 1 day ago
+  84 │ .virtualenvs                     │ Dir     │                                  │ false    │   4.1 KB │ 3 weeks ago   │ 12 hours ago  │ 3 weeks ago
+  85 │ .vivaldi_reporting_data          │ File    │                                  │ false    │      0 B │ 1 year ago    │ 1 year ago    │ 1 year ago
+  86 │ .vscode                          │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 1 year ago
+  87 │ .webclipse                       │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 3 weeks ago
+  88 │ .whereami                        │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  89 │ 3D Objects                       │ Dir     │                                  │ true     │      0 B │ 2 years ago   │ 12 hours ago  │ 10 months ago
+  90 │ Anaconda3                        │ Dir     │                                  │ false    │  24.6 KB │ 1 year ago    │ 12 hours ago  │ 2 months ago
+  91 │ AndroidStudioProjects            │ Dir     │                                  │ false    │  12.3 KB │ 1 year ago    │ 12 hours ago  │ 1 month ago
+  92 │ AppData                          │ Dir     │                                  │ false    │      0 B │ 10 months ago │ 13 secs ago   │ 10 months ago
+  93 │ Apple                            │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+  94 │ Application Data                 │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g                                │          │          │               │               │
+  95 │ CLionProjects                    │ Dir     │                                  │ false    │   4.1 KB │ 1 month ago   │ 12 hours ago  │ 1 month ago
+  96 │ CS3233 Module Project _ Prannaya │ Dir     │                                  │ false    │   4.1 KB │ 10 months ago │ 12 hours ago  │ 2 months ago
+  97 │ Calibre Library                  │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 2 months ago
+  98 │ Contacts                         │ Dir     │                                  │ true     │      0 B │ 2 years ago   │ 5 mins ago    │ 10 months ago
+  99 │ Cookies                          │ Symlink │ C:\Users\Prannaya\AppData\Local\ │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ Microsoft\Windows\INetCookies    │          │          │               │               │
+ 100 │ Desktop                          │ Dir     │                                  │ true     │  20.5 KB │ 2 years ago   │ 5 mins ago    │ 2 days ago
+ 101 │ Documents                        │ Dir     │                                  │ true     │  32.8 KB │ 2 years ago   │ 13 secs ago   │ 19 hours ago
+ 102 │ Downloads                        │ Dir     │                                  │ true     │ 196.6 KB │ 2 years ago   │ 13 secs ago   │ 1 day ago
+ 103 │ Dropbox                          │ Dir     │                                  │ false    │  16.4 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+ 104 │ EmbodiedAI                       │ Dir     │                                  │ false    │   4.1 KB │ 3 weeks ago   │ 12 hours ago  │ 23 hours ago
+ 105 │ Evernote                         │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 2 years ago
+ 106 │ Favorites                        │ Dir     │                                  │ true     │      0 B │ 2 years ago   │ 5 mins ago    │ 10 months ago
+ 107 │ Fortran                          │ Dir     │                                  │ false    │      0 B │ 3 weeks ago   │ 12 hours ago  │ 3 weeks ago
+ 108 │ GaitMonitoringForParkinsonsDisea │ Dir     │                                  │ false    │   8.2 KB │ 3 months ago  │ 12 hours ago  │ 1 month ago
+     │ sePatients                       │         │                                  │          │          │               │               │
+ 109 │ IdeaProjects                     │ Dir     │                                  │ false    │   8.2 KB │ 2 years ago   │ 12 hours ago  │ 2 weeks ago
+ 110 │ IntelGraphicsProfiles            │ Dir     │                                  │ false    │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 4 days ago
+ 111 │ Library                          │ Dir     │                                  │ false    │      0 B │ 11 months ago │ 12 hours ago  │ 11 months ago
+ 112 │ Links                            │ Dir     │                                  │ true     │   4.1 KB │ 2 years ago   │ 5 mins ago    │ 8 months ago
+ 113 │ Local Settings                   │ Symlink │ C:\Users\Prannaya\AppData\Local  │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+ 114 │ M20307.pyprog                    │ File    │                                  │ false    │    105 B │ 1 year ago    │ 1 day ago     │ 1 year ago
+ 115 │ MPSProjects                      │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 4 days ago
+ 116 │ MPSSamples.2019.2.3              │ Dir     │                                  │ false    │  12.3 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 117 │ MicrosoftEdgeBackups             │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+ 118 │ Music                            │ Dir     │                                  │ true     │   4.1 KB │ 2 years ago   │ 5 mins ago    │ 10 months ago
+ 119 │ My Documents                     │ Symlink │ C:\Users\Prannaya\Documents      │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+ 120 │ NTUSER.DAT                       │ File    │                                  │ false    │  15.7 MB │ 10 months ago │ 4 days ago    │ 4 days ago
+ 121 │ NTUSER.DAT{aefea1de-03a7-11eb-b7 │ File    │                                  │ false    │  65.5 KB │ 10 months ago │ 2 weeks ago   │ 10 months ago
+     │ ca-aa950aec4a8c}.TM.blf          │         │                                  │          │          │               │               │
+ 122 │ NTUSER.DAT{aefea1de-03a7-11eb-b7 │ File    │                                  │ false    │ 524.3 KB │ 10 months ago │ 4 days ago    │ 10 months ago
+     │ ca-aa950aec4a8c}.TMContainer0000 │         │                                  │          │          │               │               │
+     │ 0000000000000001.regtrans-ms     │         │                                  │          │          │               │               │
+ 123 │ NTUSER.DAT{aefea1de-03a7-11eb-b7 │ File    │                                  │ false    │ 524.3 KB │ 10 months ago │ 2 weeks ago   │ 10 months ago
+     │ ca-aa950aec4a8c}.TMContainer0000 │         │                                  │          │          │               │               │
+     │ 0000000000000002.regtrans-ms     │         │                                  │          │          │               │               │
+ 124 │ NetHood                          │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\Network      │          │          │               │               │
+     │                                  │         │ Shortcuts                        │          │          │               │               │
+ 125 │ NimProjects                      │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+ 126 │ OneDrive                         │ Dir     │                                  │ true     │   4.1 KB │ 2 years ago   │ 12 hours ago  │ 1 year ago
+ 127 │ OneDrive - NUS High School       │ Dir     │                                  │ true     │  28.7 KB │ 2 years ago   │ 2 hours ago   │ 2 hours ago
+ 128 │ PQRS                             │ Dir     │                                  │ false    │  65.5 KB │ 1 year ago    │ 6 mins ago    │ 1 week ago
+ 129 │ Pictures                         │ Dir     │                                  │ true     │   8.2 KB │ 2 years ago   │ 5 mins ago    │ 2 days ago
+ 130 │ PrintHood                        │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\Printer      │          │          │               │               │
+     │                                  │         │ Shortcuts                        │          │          │               │               │
+ 131 │ PycharmProjects                  │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 23 hours ago
+ 132 │ Python                           │ Dir     │                                  │ false    │  12.3 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 133 │ Recent                           │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\Recent       │          │          │               │               │
+ 134 │ Regression-Tensorflow.ipynb      │ File    │                                  │ false    │  10.0 KB │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+ 135 │ Roaming                          │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+ 136 │ RubymineProjects                 │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 137 │ RunHACK.spec                     │ File    │                                  │ false    │   1.0 KB │ 2 years ago   │ 1 day ago     │ 1 year ago
+ 138 │ Saved Games                      │ Dir     │                                  │ true     │      0 B │ 2 years ago   │ 5 mins ago    │ 10 months ago
+ 139 │ Searches                         │ Dir     │                                  │ true     │   4.1 KB │ 2 years ago   │ 5 mins ago    │ 10 months ago
+ 140 │ SendTo                           │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\SendTo       │          │          │               │               │
+ 141 │ Sites                            │ Dir     │                                  │ false    │   4.1 KB │ 3 months ago  │ 12 hours ago  │ 4 days ago
+ 142 │ Start Menu                       │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\Start        │          │          │               │               │
+     │                                  │         │ Menu                             │          │          │               │               │
+ 143 │ Templates                        │ Symlink │ C:\Users\Prannaya\AppData\Roamin │ false    │      0 B │ 10 months ago │ 10 months ago │ 10 months ago
+     │                                  │         │ g\Microsoft\Windows\Templates    │          │          │               │               │
+ 144 │ ThreeBody                        │ Dir     │                                  │ false    │   4.1 KB │ 2 months ago  │ 12 hours ago  │ 2 days ago
+ 145 │ Untitled.ipynb                   │ File    │                                  │ false    │    946 B │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+ 146 │ Untitled1.ipynb                  │ File    │                                  │ false    │    600 B │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+ 147 │ Videos                           │ Dir     │                                  │ true     │  16.4 KB │ 2 years ago   │ 5 mins ago    │ 2 weeks ago
+ 148 │ WebstormProjects                 │ Dir     │                                  │ false    │   4.1 KB │ 2 months ago  │ 12 hours ago  │ 2 weeks ago
+ 149 │ YandexDisk                       │ Dir     │                                  │ true     │   4.1 KB │ 1 year ago    │ 14 mins ago   │ 3 days ago
+ 150 │ _.swp                            │ File    │                                  │ false    │  12.3 KB │ 2 weeks ago   │ 1 day ago     │ 2 weeks ago
+ 151 │ _netrc                           │ File    │                                  │ false    │    206 B │ 3 months ago  │ 23 hours ago  │ 3 months ago
+ 152 │ _viminfo                         │ File    │                                  │ false    │  14.6 KB │ 8 months ago  │ 1 day ago     │ 5 days ago
+ 153 │ cmon.pyprog                      │ File    │                                  │ false    │    755 B │ 1 year ago    │ 1 day ago     │ 1 year ago
+ 154 │ cpython                          │ Dir     │                                  │ false    │   8.2 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 155 │ dist                             │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+ 156 │ eclipse                          │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 3 weeks ago
+ 157 │ eclipse-installer                │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 3 weeks ago
+ 158 │ eclipse-workspace                │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 3 weeks ago
+ 159 │ github                           │ Dir     │                                  │ false    │      0 B │ 2 weeks ago   │ 12 hours ago  │ 2 weeks ago
+ 160 │ hello.txt                        │ File    │                                  │ false    │     83 B │ 2 days ago    │ 2 days ago    │ 2 days ago
+ 161 │ i                                │ Dir     │                                  │ false    │      0 B │ 1 month ago   │ 12 hours ago  │ 1 month ago
+ 162 │ iCloudDrive                      │ Dir     │                                  │ true     │  65.5 KB │ 12 months ago │ 12 hours ago  │ 7 months ago
+ 163 │ install-habitat.cmd              │ File    │                                  │ false    │    272 B │ 1 month ago   │ 1 week ago    │ 1 month ago
+ 164 │ installed_modules.txt            │ File    │                                  │ false    │  10.7 KB │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+ 165 │ java_error_in_idea.hprof         │ File    │                                  │ false    │ 944.0 MB │ 10 months ago │ 1 day ago     │ 10 months ago
+ 166 │ java_error_in_pycharm64.hprof    │ File    │                                  │ false    │   1.2 GB │ 2 months ago  │ 1 day ago     │ 2 months ago
+ 167 │ java_error_in_pycharm64_31004.lo │ File    │                                  │ false    │  45.5 KB │ 2 months ago  │ 1 day ago     │ 2 months ago
+     │ g                                │         │                                  │          │          │               │               │
+ 168 │ java_error_in_pycharm_8960.log   │ File    │                                  │ false    │  71.2 KB │ 2 months ago  │ 1 day ago     │ 2 months ago
+ 169 │ javafx-sdk-14.0.2.1              │ Dir     │                                  │ false    │      0 B │ 12 months ago │ 12 hours ago  │ 12 months ago
+ 170 │ jupyterhub.sqlite                │ File    │                                  │ false    │ 102.4 KB │ 1 year ago    │ 1 day ago     │ 1 year ago
+ 171 │ jupyterhub_config.py             │ File    │                                  │ false    │  35.8 KB │ 1 year ago    │ 2 weeks ago   │ 1 year ago
+ 172 │ jupyterhub_cookie_secret         │ File    │                                  │ false    │     66 B │ 1 year ago    │ 1 day ago     │ 1 year ago
+ 173 │ manim                            │ Dir     │                                  │ false    │   4.1 KB │ 9 months ago  │ 12 hours ago  │ 9 months ago
+ 174 │ mu_code                          │ Dir     │                                  │ false    │      0 B │ 9 months ago  │ 12 hours ago  │ 9 months ago
+ 175 │ nim-1.0.6                        │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 6 mins ago    │ 1 year ago
+ 176 │ ninja-ide                        │ Dir     │                                  │ false    │   4.1 KB │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 177 │ node_modules                     │ Dir     │                                  │ false    │  65.5 KB │ 1 month ago   │ 12 hours ago  │ 1 month ago
+ 178 │ notedown                         │ Dir     │                                  │ false    │   4.1 KB │ 1 month ago   │ 12 hours ago  │ 1 week ago
+ 179 │ ntuser.dat.LOG1                  │ File    │                                  │ false    │   2.3 MB │ 10 months ago │ 10 months ago │ 10 months ago
+ 180 │ ntuser.dat.LOG2                  │ File    │                                  │ false    │   4.0 MB │ 10 months ago │ 10 months ago │ 10 months ago
+ 181 │ ntuser.ini                       │ File    │                                  │ false    │     20 B │ 10 months ago │ 2 weeks ago   │ 10 months ago
+ 182 │ package-lock.json                │ File    │                                  │ false    │ 177.7 KB │ 3 months ago  │ 2 weeks ago   │ 1 month ago
+ 183 │ package.json                     │ File    │                                  │ false    │    166 B │ 2 months ago  │ 1 day ago     │ 1 month ago
+ 184 │ rubygems-3.2.16                  │ Dir     │                                  │ false    │   4.1 KB │ 3 months ago  │ 12 hours ago  │ 3 months ago
+ 185 │ scoop                            │ Dir     │                                  │ false    │      0 B │ 3 weeks ago   │ 6 mins ago    │ 2 weeks ago
+ 186 │ seaborn-data                     │ Dir     │                                  │ false    │      0 B │ 1 year ago    │ 12 hours ago  │ 1 year ago
+ 187 │ source                           │ Dir     │                                  │ false    │      0 B │ 2 years ago   │ 12 hours ago  │ 2 years ago
+ 188 │ tracker.prefs                    │ File    │                                  │ false    │    601 B │ 12 months ago │ 1 day ago     │ 12 months ago
+ 189 │ verification.txt                 │ File    │                                  │ false    │     68 B │ 3 months ago  │ 2 weeks ago   │ 3 months ago
+ 190 │ vimfiles                         │ Dir     │                                  │ false    │   4.1 KB │ 8 months ago  │ 12 hours ago  │ 7 months ago
+ 191 │ wslgit                           │ Dir     │                                  │ false    │      0 B │ 2 days ago    │ 6 mins ago    │ 2 days ago
+ 192 │ ~                                │ Dir     │                                  │ false    │      0 B │ 3 weeks ago   │ 12 hours ago  │ 3 weeks ago
+─────┴──────────────────────────────────┴─────────┴──────────────────────────────────┴──────────┴──────────┴───────────────┴───────────────┴───────────────
+C:\Users\Prannaya>
+C:\Users\Prannaya> rm Documents/GitHub
+error: Cannot remove C:\Users\Prannaya\Documents\GitHub. try --recursive
+   ┌─ shell:48:4
+   │
+48 │ rm Documents/GitHub
+   │    ^^^^^^^^^^^^^^^^ cannot remove non-empty directory
+
+C:\Users\Prannaya> cd Documents/GitHub
+C:\Users\Prannaya\Documents\GitHub> mv -r CS4132 CS4232
+error: mv unexpected -r
+   ┌─ shell:50:5
+   │
+50 │ mv -r CS4132 CS4232
+   │     ^ unexpected flag (try mv -h)
+
+C:\Users\Prannaya\Documents\GitHub> mv CS4132 CS4232
+C:\Users\Prannaya\Documents\GitHub> ls
+───┬──────────────────────┬──────┬─────────┬──────────────
+ # │         name         │ type │  size   │   modified
+───┼──────────────────────┼──────┼─────────┼──────────────
+ 0 │ CS4232               │ Dir  │  4.1 KB │ 3 days ago
+ 1 │ TeachAssist          │ Dir  │     0 B │ 1 month ago
+ 2 │ TheDiscordProgrammer │ Dir  │  4.1 KB │ 1 month ago
+ 3 │ archive              │ Dir  │  4.1 KB │ 3 months ago
+ 4 │ lens-teck-kong.zip   │ File │ 21.7 KB │ 2 months ago
+ 5 │ peerwise             │ Dir  │  4.1 KB │ 2 months ago
+───┴──────────────────────┴──────┴─────────┴──────────────
+
+C:\Users\Prannaya\Documents\GitHub> cd ../..
+C:\Users\Prannaya> cd Documents
+C:\Users\Prannaya\Documents> mv GitHub/CS4232 "Education/NUS High/Year 4/CS4232"
+C:\Users\Prannaya\Documents> cd "Education/NUS High/Year 4/CS4232"
+C:\Users\Prannaya\Documents\Education\NUS High\Year 4\CS4232(master)> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Lab3.3PrannayaGupta.ipynb
+        Lab3_3PrannayaGupta.pdf
+        assignments/
+
+nothing added to commit but untracked files present (use "git add" to track)
+C:\Users\Prannaya\Documents\Education\NUS High\Year 4\CS4232(master)> git add .
+warning: LF will be replaced by CRLF in Lab3.3PrannayaGupta.ipynb.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assignments/one/Assignment1PrannayaGupta.ipynb.
+The file will have its original line endings in your working directory
+C:\Users\Prannaya\Documents\Education\NUS High\Year 4\CS4232(master)> git commit -m "Submit"
+[master b72b294] Submit
+ 7 files changed, 17080 insertions(+)
+ create mode 100644 Lab3.3PrannayaGupta.ipynb
+ create mode 100644 Lab3_3PrannayaGupta.pdf
+ create mode 100644 assignments/Assignment1PrannayaGupta.pdf
+ create mode 100644 assignments/one/Assignment1PrannayaGupta.ipynb
+ create mode 100644 assignments/one/dogcolor.jpg
+ create mode 100644 assignments/one/doggrey.jpg
+ create mode 100644 assignments/one/netflix.csv
+C:\Users\Prannaya\Documents\Education\NUS High\Year 4\CS4232(master)> git push origin
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 3.86 MiB | 2.00 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/ThePyProgrammer/CS4132.git
+   ece9b4d..b72b294  master -> master
+C:\Users\Prannaya\Documents\Education\NUS High\Year 4\CS4232(master)>

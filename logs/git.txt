@@ -1,0 +1,3916 @@
+        modified:   data/kepler_ids.txt
+        modified:   data/testData.csv
+        modified:   info/kepler_mission_directory.txt
+        modified:   info/keplerktc/README.md
+        modified:   info/keplerktc/data-columns.txt
+        modified:   kepler/README.md
+        modified:   kepler/__init__.py
+        modified:   kepler/curve.py
+        modified:   kepler/k2.py
+        modified:   kepler/kepler_spine/spline.py
+        modified:   kepler/requirements.txt
+        modified:   kepler/tce.py
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/median_filter.py
+        modified:   kepler/util/periodic_event.py
+        modified:   kepler/util/robust_mean.py
+        modified:   logs/keplerktc_18-58_13-5-21.txt
+        modified:   patterns/lagrange5/README.md
+        modified:   patterns/lagrange5/l5.py
+        modified:   patterns/twobody/binary.py
+        modified:   proposal/proposal.html
+        modified:   proposal/proposal.md
+        modified:   python/k2-ktc.py
+        modified:   python/kepler-ktc.py
+        modified:   python/test_if_os_works.py
+        modified:   python/threebody.py
+        modified:   requirements.txt
+        modified:   sim/L5.py
+        modified:   sim/README.md
+        modified:   sim/main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ wsl --list --running
+
+Command 'wsl' not found, but can be installed with:
+
+sudo apt install wsl
+
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ wsl.exe --list --running
+Windows Subsystem for Linux Distributions:
+Ubuntu-20.04 (Default)
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ exit
+exit
+thepyprogrammer@Prannaya-Laptop:/mnt/c/Users/Prannaya/ThreeBody$ exit
+logout
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+Refresh index: 100% (91/91), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ # yeet commiting is workin
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+Refresh index: 100% (91/91), done.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add some references" references/*.pdf
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: pathspec 'references/An' did not match any files
+Committed references/An
+fatal: pathspec 'references/Critical' did not match any files
+Committed references/Critical
+fatal: pathspec 'references/Identifying' did not match any files
+Committed references/Identifying
+fatal: pathspec 'references/Kepler' did not match any files
+Committed references/Kepler
+fatal: pathspec 'references/Lecture' did not match any files
+Committed references/Lecture
+fatal: pathspec 'references/Light' did not match any files
+Committed references/Light
+fatal: pathspec 'references/Light' did not match any files
+Committed references/Light
+fatal: pathspec 'references/Measurements' did not match any files
+Committed references/Measurements
+fatal: pathspec 'references/PHYS' did not match any files
+Committed references/PHYS
+fatal: pathspec 'references/Satellite' did not match any files
+Committed references/Satellite
+fatal: pathspec 'references/Secular' did not match any files
+Committed references/Secular
+fatal: pathspec 'references/Secular' did not match any files
+Committed references/Secular
+fatal: pathspec 'references/The' did not match any files
+Committed references/The
+fatal: pathspec 'references/The' did not match any files
+Committed references/The
+fatal: pathspec 'references/The' did not match any files
+Committed references/The
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+        "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+nothing added to commit but untracked files present
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git add .
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add some reference files" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+        new file:   references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+        new file:   references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+
+Committed .
+[main 46442f1] Add some reference files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "references/Light Curve Analysis of Ground\342\200\220Based Data from Exoplanets Transit Database.pdf"
+ create mode 100644 references/Light Curve Modeling of Eclipsing Binary Stars.pdf
+ create mode 100644 references/Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 10.33 MiB | 2.47 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   402257c..46442f1  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add some reference files" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Binary-Star Light-Curve Models.pdf
+        references/Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf
+        references/Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf
+        references/The three-body system V 505 Sagittarii.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed .
+[main 5cc9e64] Add some reference files
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/Binary-Star Light-Curve Models.pdf
+ create mode 100644 references/Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf
+ create mode 100644 references/Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf
+ create mode 100644 references/The three-body system V 505 Sagittarii.pdf
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 12.48 MiB | 1.59 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   46442f1..5cc9e64  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Databases in Networked Information Systems.pdf
+        references/Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf
+        references/Light curve analysis of the new eclipsing binary LD355.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ !commit
+commit "Add some reference files" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Databases in Networked Information Systems.pdf
+        references/Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf
+        references/Light curve analysis of the new eclipsing binary LD355.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed .
+[main 45beefe] Add some reference files
+ 3 files changed, 86304 insertions(+)
+ create mode 100644 references/Databases in Networked Information Systems.pdf
+ create mode 100644 references/Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf
+ create mode 100644 references/Light curve analysis of the new eclipsing binary LD355.pdf
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 20.33 MiB | 2.41 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   5cc9e64..45beefe  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ !git
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update Binary Star Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/binary_star_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed .
+[main 145a2e3] Update Binary Star Analysis
+ 1 file changed, 106 insertions(+), 106 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.75 KiB | 1.25 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   45beefe..145a2e3  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update KIC 8462852 Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/kic_8462852_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed .
+[main c95278a] Update KIC 8462852 Analysis
+ 1 file changed, 252 insertions(+), 1 deletion(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.76 KiB | 1.88 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   145a2e3..c95278a  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ !commit
+commit "Update KIC 8462852 Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Committed .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ !commit
+commit "Update KIC 8462852 Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/kic_8462852_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed .
+[main a21f79a] Update KIC 8462852 Analysis
+ 1 file changed, 161 insertions(+), 14 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.73 KiB | 763.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   c95278a..a21f79a  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update KIC 8462852 Analysis" notebooks/kic*.*
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/kic_8462852_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed notebooks/kic_8462852_analysis.ipynb
+[main 8ee5987] Update KIC 8462852 Analysis
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 538 bytes | 538.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   a21f79a..8ee5987  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update Binary Star Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/binary_star_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed .
+[main b109995] Update Binary Star Analysis
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 464 bytes | 464.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   8ee5987..b109995  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ ls -la
+total 156
+drwxr-xr-x 1 Prannaya 197121     0 Jul 18 22:50 ./
+drwxr-xr-x 1 Prannaya 197121     0 Jul 18 23:11 ../
+drwxr-xr-x 1 Prannaya 197121     0 Jul 19 00:34 .git/
+-rw-r--r-- 1 Prannaya 197121  2017 Jun 21 22:11 .gitignore
+drwxr-xr-x 1 Prannaya 197121     0 Jul  8 01:00 .idea/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 18 20:54 commitments/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 18 19:06 data/
+drwxr-xr-x 1 Prannaya 197121     0 May 14 00:15 info/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 16 17:27 kepler/
+drwxr-xr-x 1 Prannaya 197121     0 May 13 19:00 logs/
+drwxr-xr-x 1 Prannaya 197121     0 May 13 18:19 models/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 19 00:32 notebooks/
+drwxr-xr-x 1 Prannaya 197121     0 Jun 18 10:03 patterns/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 18 19:09 proposal/
+drwxr-xr-x 1 Prannaya 197121     0 Jul 15 16:57 python/
+-rw-r--r-- 1 Prannaya 197121 10474 Jul 18 19:36 README.md
+drwxr-xr-x 1 Prannaya 197121     0 Jul 19 00:07 references/
+-rw-r--r-- 1 Prannaya 197121   149 Jul  4 13:08 requirements.txt
+drwxr-xr-x 1 Prannaya 197121     0 May 30 11:47 sim/
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git branch individual_analysis
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git switch individual_analysis
+Switched to branch 'individual_analysis'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (individual_analysis)
+$ git switch main
+Switched to branch 'main'
+M       notebooks/binary_star_analysis.ipynb
+M       notebooks/kic_8462852_analysis.ipynb
+Your branch is up to date with 'origin/main'.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cat commitments/enigma.sh
+# First, we check status for the sake of checking all grounds
+git status
+
+# Next, we add the actual files to the blob
+git add notebooks/*8462852*.ipynb
+
+# Next, of course, we must commit
+git commit -m "Update KIC 8462852 Analysis"
+
+# We now push it to origin
+git push origin
+
+# We shall check the status again just in case
+git status
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ alias enigma="commitments/enigma.sh"
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ enigma
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+        modified:   notebooks/kic_8462852_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/kic_8462852_analysis.ipynb.
+The file will have its original line endings in your working directory
+[main fcb9cd7] Update KIC 8462852 Analysis
+ 1 file changed, 36 insertions(+), 4 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 563 bytes | 187.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   b109995..fcb9cd7  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ alias retrieval="commitments/retrieval.sh"
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ retrieval
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+        commitments/enigma.sh
+
+no changes added to commit
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ enigma
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+        commitments/enigma.sh
+
+no changes added to commit
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cat enigma
+cat: enigma: No such file or directory
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cat commitments/enigma.sh
+# First, we check status for the sake of checking all grounds
+git status
+
+# Next, we add the actual files to the blob
+git add notebooks/*8462852*.ipynb
+
+# Next, of course, we must commit
+git commit -m "Update KIC 8462852 Analysis"
+
+# We now push it to origin
+git push origin
+
+# We shall check the status again just in case
+git status
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add enigma.sh" commitments/enigma.sh
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/enigma.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in commitments/enigma.sh.
+The file will have its original line endings in your working directory
+Committed commitments/enigma.sh
+[main dd48551] Add enigma.sh
+ 1 file changed, 14 insertions(+)
+ create mode 100644 commitments/enigma.sh
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 606 bytes | 303.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/ThreeBody.git
+   fcb9cd7..dd48551  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update Binary Star Analysis" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notebooks/binary_star_analysis.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in notebooks/binary_star_analysis.ipynb.
+The file will have its original line endings in your working directory
+Committed .
+[main e92ca37] Update Binary Star Analysis
+ 1 file changed, 18 insertions(+), 3 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 488 bytes | 244.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   dd48551..e92ca37  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git branch upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git switch upload-files
+Switched to branch 'upload-files'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Astroinformatics - A 21st Century Approach to Astronomy.pdf
+        references/The Sky is Your Laboratory.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ commit "Upload some more reference material" .
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Astroinformatics - A 21st Century Approach to Astronomy.pdf
+        references/The Sky is Your Laboratory.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed .
+[upload-files 2616db2] Upload some more reference material
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/Astroinformatics - A 21st Century Approach to Astronomy.pdf
+ create mode 100644 references/The Sky is Your Laboratory.pdf
+fatal: The current branch upload-files has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin upload-files
+
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push --set-upstram origin upload-files
+error: unknown option `set-upstram'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge main individual-analysis
+merge: individual-analysis - not something we can merge
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge --help
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git help merge
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge individual-analysis main
+merge: individual-analysis - not something we can merge
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge upload-files main
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git push origin
+Everything up-to-date
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git switch upload-files
+Switched to branch 'upload-files'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push origin
+fatal: The current branch upload-files has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin upload-files
+
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push main upload-files
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push origin upload-files
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 12.08 MiB | 2.77 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'upload-files' on GitHub by visiting:
+remote:      https://github.com/three-body-analysis/ThreeBody/pull/new/upload-files
+remote:
+To https://github.com/three-body-analysis/ThreeBody.git
+ * [new branch]      upload-files -> upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf
+        references/Reduction and processing of the photometric data of exoplanet transits.pdf
+        references/Transit Light Curve Tutorial.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ commit "Add some references" references
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf
+        references/Reduction and processing of the photometric data of exoplanet transits.pdf
+        references/Transit Light Curve Tutorial.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed references
+[upload-files 53da903] Add some references
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf
+ create mode 100644 references/Reduction and processing of the photometric data of exoplanet transits.pdf
+ create mode 100644 references/Transit Light Curve Tutorial.pdf
+fatal: The current branch upload-files has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin upload-files
+
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push origin upload-files
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 4.92 MiB | 2.42 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   2616db2..53da903  upload-files -> upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge upload-files main
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ cd references
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ ls -la
+total 98864
+drwxr-xr-x 1 Prannaya 197121        0 Jul 20 09:13  ./
+drwxr-xr-x 1 Prannaya 197121        0 Jul 18 22:50  ../
+-rw-r--r-- 1 Prannaya 197121  4592222 Jun 18 10:45 'An Algorithm for the Visualization of Relevant Patterns in Astronomical Light Curves.pdf'
+-rw-r--r-- 1 Prannaya 197121   612367 Jul 20 09:02 'Astroinformatics - A 21st Century Approach to Astronomy.pdf'
+-rw-r--r-- 1 Prannaya 197121  1355325 Jul 18 23:46 'Binary-Star Light-Curve Models.pdf'
+-rw-r--r-- 1 Prannaya 197121   215511 May 15 12:10 'Critical orbits in the elliptic restricted three-body problem.pdf'
+-rw-r--r-- 1 Prannaya 197121 24142421 Jul 19 00:07 'Databases in Networked Information Systems.pdf'
+-rw-r--r-- 1 Prannaya 197121  8576766 Jul 19 00:07 'Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf'
+-rw-r--r-- 1 Prannaya 197121  3896520 Jul 20 09:12 'Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf'
+-rw-r--r-- 1 Prannaya 197121  3586989 May 15 12:15 'Identifying Exoplanets with Deep Learning - A Five Planet Resonant Chain Around Kepler-80 and An Eight Planet Around Kepler-90.pdf'
+-rw-r--r-- 1 Prannaya 197121   983346 May 15 12:13 'Kepler Eclipsing Binary Stars. IV. Precise Eclipse Times for Close Binaries and Identification of Candidate Three-Body Systems.pdf'
+-rw-r--r-- 1 Prannaya 197121  2058747 May 15 12:10 'Lecture notes on black hole binary astrophysics.pdf'
+-rw-r--r-- 1 Prannaya 197121  1547614 Jul 18 23:40 'Light Curve Analysis of Ground‐Based Data from Exoplanets Transit Database.pdf'
+-rw-r--r-- 1 Prannaya 197121   273686 Jul 18 23:59 'Light curve analysis of the new eclipsing binary LD355.pdf'
+-rw-r--r-- 1 Prannaya 197121  9105791 Jul 18 23:43 'Light Curve Modeling of Eclipsing Binary Stars.pdf'
+-rw-r--r-- 1 Prannaya 197121  1586501 May 15 12:12 'Measurements of CP violation in the three-body phase space of charmless B± decays.pdf'
+-rw-r--r-- 1 Prannaya 197121 11548587 Jul 18 23:49 'Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf'
+-rw-r--r-- 1 Prannaya 197121   711034 Jul 18 23:56 'Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf'
+-rw-r--r-- 1 Prannaya 197121   592255 May 15 12:11 'PHYS 7221 - The Three-Body Problem - Juhan Frank, LSU.pdf'
+-rw-r--r-- 1 Prannaya 197121   336448 Jul 20 09:13 'Reduction and processing of the photometric data of exoplanet transits.pdf'
+-rw-r--r-- 1 Prannaya 197121   644625 Jul 18 23:40 'Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf'
+-rw-r--r-- 1 Prannaya 197121  1990858 May 15 12:08 'Secular dynamics in hierarchical three-body systems.pdf'
+-rw-r--r-- 1 Prannaya 197121   421475 May 15 12:09 'Secular Dynamics of the Three-Body Problem - Application to the υ Andromedae Planetary System.pdf'
+-rw-r--r-- 1 Prannaya 197121 12406596 Jul 20 09:02 'The Sky is Your Laboratory.pdf'
+-rw-r--r-- 1 Prannaya 197121   356668 May 15 12:08 'The stability of periodic orbits in the Three-Body Problem.pdf'
+-rw-r--r-- 1 Prannaya 197121  3145811 May 15 12:09 'The three-body problem - Musielak and Quarles.pdf'
+-rw-r--r-- 1 Prannaya 197121  5256541 May 15 12:10 'The three-body problem - Valtonen and Karttunen.pdf'
+-rw-r--r-- 1 Prannaya 197121    62031 Jul 18 23:55 'The three-body system V 505 Sagittarii.pdf'
+-rw-r--r-- 1 Prannaya 197121  1150151 Jul 20 09:09 'Transit Light Curve Tutorial.pdf'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ ls
+'An Algorithm for the Visualization of Relevant Patterns in Astronomical Light Curves.pdf'
+'Astroinformatics - A 21st Century Approach to Astronomy.pdf'
+'Binary-Star Light-Curve Models.pdf'
+'Critical orbits in the elliptic restricted three-body problem.pdf'
+'Databases in Networked Information Systems.pdf'
+'Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf'
+'Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf'
+'Identifying Exoplanets with Deep Learning - A Five Planet Resonant Chain Around Kepler-80 and An Eight Planet Around Kepler-90.pdf'
+'Kepler Eclipsing Binary Stars. IV. Precise Eclipse Times for Close Binaries and Identification of Candidate Three-Body Systems.pdf'
+'Lecture notes on black hole binary astrophysics.pdf'
+'Light Curve Analysis of Ground‐Based Data from Exoplanets Transit Database.pdf'
+'Light curve analysis of the new eclipsing binary LD355.pdf'
+'Light Curve Modeling of Eclipsing Binary Stars.pdf'
+'Measurements of CP violation in the three-body phase space of charmless B± decays.pdf'
+'Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf'
+'Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf'
+'PHYS 7221 - The Three-Body Problem - Juhan Frank, LSU.pdf'
+'Reduction and processing of the photometric data of exoplanet transits.pdf'
+'Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf'
+'Secular dynamics in hierarchical three-body systems.pdf'
+'Secular Dynamics of the Three-Body Problem - Application to the υ Andromedae Planetary System.pdf'
+'The Sky is Your Laboratory.pdf'
+'The stability of periodic orbits in the Three-Body Problem.pdf'
+'The three-body problem - Musielak and Quarles.pdf'
+'The three-body problem - Valtonen and Karttunen.pdf'
+'The three-body system V 505 Sagittarii.pdf'
+'Transit Light Curve Tutorial.pdf'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (main)
+$ ls
+'An Algorithm for the Visualization of Relevant Patterns in Astronomical Light Curves.pdf'
+'Binary-Star Light-Curve Models.pdf'
+'Critical orbits in the elliptic restricted three-body problem.pdf'
+'Databases in Networked Information Systems.pdf'
+'Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf'
+'Identifying Exoplanets with Deep Learning - A Five Planet Resonant Chain Around Kepler-80 and An Eight Planet Around Kepler-90.pdf'
+'Kepler Eclipsing Binary Stars. IV. Precise Eclipse Times for Close Binaries and Identification of Candidate Three-Body Systems.pdf'
+'Lecture notes on black hole binary astrophysics.pdf'
+'Light Curve Analysis of Ground‐Based Data from Exoplanets Transit Database.pdf'
+'Light curve analysis of the new eclipsing binary LD355.pdf'
+'Light Curve Modeling of Eclipsing Binary Stars.pdf'
+'Measurements of CP violation in the three-body phase space of charmless B± decays.pdf'
+'Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf'
+'Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf'
+'PHYS 7221 - The Three-Body Problem - Juhan Frank, LSU.pdf'
+'Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf'
+'Secular dynamics in hierarchical three-body systems.pdf'
+'Secular Dynamics of the Three-Body Problem - Application to the υ Andromedae Planetary System.pdf'
+'The stability of periodic orbits in the Three-Body Problem.pdf'
+'The three-body problem - Musielak and Quarles.pdf'
+'The three-body problem - Valtonen and Karttunen.pdf'
+'The three-body system V 505 Sagittarii.pdf'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (main)
+$ git merge main upload-files
+Updating e92ca37..53da903
+Fast-forward
+ ...matics - A 21st Century Approach to Astronomy.pdf | Bin 0 -> 612367 bytes
+ ...planet Observing for Amateurs, Second Edition.pdf | Bin 0 -> 3896520 bytes
+ ...of the photometric data of exoplanet transits.pdf | Bin 0 -> 336448 bytes
+ references/The Sky is Your Laboratory.pdf            | Bin 0 -> 12406596 bytes
+ references/Transit Light Curve Tutorial.pdf          | Bin 0 -> 1150151 bytes
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/Astroinformatics - A 21st Century Approach to Astronomy.pdf
+ create mode 100644 references/Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf
+ create mode 100644 references/Reduction and processing of the photometric data of exoplanet transits.pdf
+ create mode 100644 references/The Sky is Your Laboratory.pdf
+ create mode 100644 references/Transit Light Curve Tutorial.pdf
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (main)
+$ git diff main..upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (main)
+$ git push origin
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/three-body-analysis/ThreeBody.git
+   e92ca37..53da903  main -> main
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (main)
+$ git switch upload-files
+Switched to branch 'upload-files'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ git status
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        A study of power spectral densities of real and simulated Kepler light curves.pdf
+        Background Short Period Eclipsing Binaries in the Original Kepler Field.pdf
+        Detecting Reflected Light from Close-In Extrasolar Giant Planets with the Kepler Photometer.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ git status
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        A study of power spectral densities of real and simulated Kepler light curves.pdf
+        An application of the unscented Kalman filter for Spacecraft Altitude Estimation on Real and Simulated Light Curve Data.pdf
+        Asteroseismology of the heartbeat star KIC 5006817.pdf
+        Background Short Period Eclipsing Binaries in the Original Kepler Field.pdf
+        Binary Central Stars of Planetary Nebulae Identified With Kepler or K2.pdf
+        Characterizing Exoplanet Transits and Stellar Activity in Kepler Lightcurves with Scalable Gaussian Processes.pdf
+        Detecting Reflected Light from Close-In Extrasolar Giant Planets with the Kepler Photometer.pdf
+        Finding flares in Kepler and TESS data with recurrent deep neural networks.pdf
+        KIC 9406652 - A laboratory for tilted disks in cataclysmic variable stars II - Modeling of the.pdf
+        Photometry Analysis of Exoplanets WASP-80b & HD 189733b.pdf
+        Removing systematic noise from lightcurves.pdf
+        "TESS Data for Asteroseismology (T\342\200\231DA) Stellar Variability Classification Pipeline - Set-Up and Application to the Kepler Q9 Data.pdf"
+        TESS Data for Asteroseismology - Photometry.pdf
+        Transit, Secondary Eclipse, and Phase Curve Analysis to Characterize Kepler Exoplanets.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/references (upload-files)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ commit "Add references" references
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/A study of power spectral densities of real and simulated Kepler light curves.pdf
+        references/An application of the unscented Kalman filter for Spacecraft Altitude Estimation on Real and Simulated Light Curve Data.pdf
+        references/Asteroseismology of the heartbeat star KIC 5006817.pdf
+        references/Background Short Period Eclipsing Binaries in the Original Kepler Field.pdf
+        references/Binary Central Stars of Planetary Nebulae Identified With Kepler or K2.pdf
+        references/Characterizing Exoplanet Transits and Stellar Activity in Kepler Lightcurves with Scalable Gaussian Processes.pdf
+        references/Detecting Reflected Light from Close-In Extrasolar Giant Planets with the Kepler Photometer.pdf
+        references/Finding flares in Kepler and TESS data with recurrent deep neural networks.pdf
+        references/KIC 9406652 - A laboratory for tilted disks in cataclysmic variable stars II - Modeling of the.pdf
+        references/Photometry Analysis of Exoplanets WASP-80b & HD 189733b.pdf
+        references/Removing systematic noise from lightcurves.pdf
+        "references/TESS Data for Asteroseismology (T\342\200\231DA) Stellar Variability Classification Pipeline - Set-Up and Application to the Kepler Q9 Data.pdf"
+        references/TESS Data for Asteroseismology - Photometry.pdf
+        references/Transit, Secondary Eclipse, and Phase Curve Analysis to Characterize Kepler Exoplanets.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed references
+[upload-files 81791c2] Add references
+ 14 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/A study of power spectral densities of real and simulated Kepler light curves.pdf
+ create mode 100644 references/An application of the unscented Kalman filter for Spacecraft Altitude Estimation on Real and Simulated Light Curve Data.pdf
+ create mode 100644 references/Asteroseismology of the heartbeat star KIC 5006817.pdf
+ create mode 100644 references/Background Short Period Eclipsing Binaries in the Original Kepler Field.pdf
+ create mode 100644 references/Binary Central Stars of Planetary Nebulae Identified With Kepler or K2.pdf
+ create mode 100644 references/Characterizing Exoplanet Transits and Stellar Activity in Kepler Lightcurves with Scalable Gaussian Processes.pdf
+ create mode 100644 references/Detecting Reflected Light from Close-In Extrasolar Giant Planets with the Kepler Photometer.pdf
+ create mode 100644 references/Finding flares in Kepler and TESS data with recurrent deep neural networks.pdf
+ create mode 100644 references/KIC 9406652 - A laboratory for tilted disks in cataclysmic variable stars II - Modeling of the.pdf
+ create mode 100644 references/Photometry Analysis of Exoplanets WASP-80b & HD 189733b.pdf
+ create mode 100644 references/Removing systematic noise from lightcurves.pdf
+ create mode 100644 "references/TESS Data for Asteroseismology (T\342\200\231DA) Stellar Variability Classification Pipeline - Set-Up and Application to the Kepler Q9 Data.pdf"
+ create mode 100644 references/TESS Data for Asteroseismology - Photometry.pdf
+ create mode 100644 references/Transit, Secondary Eclipse, and Phase Curve Analysis to Characterize Kepler Exoplanets.pdf
+fatal: The current branch upload-files has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin upload-files
+
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push origin upload-files
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 84.63 MiB | 3.77 MiB/s, done.
+Total 17 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   53da903..81791c2  upload-files -> upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge main upload-files
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge upload-files main
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Analyzing Variability in Exoplanetary Eclipses.pdf
+        references/Deep Learning in Asteroseismology.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ commit "Add references" references
+On branch upload-files
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        references/Analyzing Variability in Exoplanetary Eclipses.pdf
+        references/Deep Learning in Asteroseismology.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+Committed references
+[upload-files 3518cd7] Add references
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 references/Analyzing Variability in Exoplanetary Eclipses.pdf
+ create mode 100644 references/Deep Learning in Asteroseismology.pdf
+fatal: The current branch upload-files has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin upload-files
+
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git push origin upload-files
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 10.56 MiB | 2.26 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   81791c2..3518cd7  upload-files -> upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git diff upload-files..main
+diff --git a/references/A study of power spectral densities of real and simulated Kepler light curves.pdf b/references/A study of power spectral densities of real and simulated Kepler light curves.pdf
+deleted file mode 100644
+index b2bad00..0000000
+--- a/references/A study of power spectral densities of real and simulated Kepler light curves.pdf
+
++++ /dev/null
+@@ -1,1930 +0,0 @@
+-^LAbstract
+-
+-During the last decade, the transit method has evolved to one of the most promising techniques in
+-the search for extrasolar planets and the quest to ﬁnd other earth-like worlds. In theory, the transit
+-method is straight forward being based on the detection of an apparent dimming of the host star’s
+-light due to an orbiting planet traversing in front of the observer. However, in practice, the detection
+-of such light curve dips and their conﬁdent ascription to a planetary transit is heavily burdened by the
+-presence of diﬀerent sources of noise, the most prominent of which is probably the so called intrinsic
+-stellar variability. Filtering out potential transit signals from background noise requires a well adjusted
+-high-pass ﬁlter. In order to optimize such a ﬁlter, i.e. to achieve best separation between signal and
+-noise, one typically requires access to benchmark datasets that exhibit the same light curve with
+-and without obstructing noise. Several methods for simulating stellar variability have been proposed
+-for the construction of such benchmark datasets. However, while such methods have been widely
+-used in testing transit method detection algorithms in the past, it is not very well known how such
+-simulations compare to real recorded light curves - a fact that might be contributed to the lack of large
+-databases of stellar light curves for comparisons at that time. With the increasing amount of light
+-curve data now available due to missions such as Kepler, I have here undertaken such a comparison
+-of synthetic and real light curves for one particular method that simulates stellar variability based on
+-scaled power spectra of the Sun’s ﬂux variations. Conducting the respective comparison also in terms
+-of estimated power spectra of real and simulated light curves, I have revealed that the two datasets
+-exhibit substantial diﬀerences in average power, with the synthetic power spectra having generally a
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git pull origin
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/three-body-analysis/ThreeBody
+   53da903..1157d3d  main       -> origin/main
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git pull origin
+Updating files: 100% (16/16), done.
+Updating 53da903..1157d3d
+Fast-forward
+ ...ies of real and simulated Kepler light curves.pdf | Bin 0 -> 29077346 bytes
+ ...mation on Real and Simulated Light Curve Data.pdf | Bin 0 -> 6133198 bytes
+ ...nalyzing Variability in Exoplanetary Eclipses.pdf | Bin 0 -> 687916 bytes
+ ...oseismology of the heartbeat star KIC 5006817.pdf | Bin 0 -> 2304783 bytes
+ ...lipsing Binaries in the Original Kepler Field.pdf | Bin 0 -> 19010684 bytes
+ ...lanetary Nebulae Identified With Kepler or K2.pdf | Bin 0 -> 3083820 bytes
+ ... Lightcurves with Scalable Gaussian Processes.pdf | Bin 0 -> 1458470 bytes
+ references/Deep Learning in Asteroseismology.pdf     | Bin 0 -> 11757117 bytes
+ ...olar Giant Planets with the Kepler Photometer.pdf | Bin 0 -> 519470 bytes
+ ...TESS data with recurrent deep neur
+ ...taclysmic variable stars II - Mode
+ ... Analysis of Exoplanets WASP-80b &
+ .../Removing systematic noise from li
+ ...Set-Up and Application to the Kepl
+ .../TESS Data for Asteroseismology -
+ ...ve Analysis to Characterize Kepler
+ 16 files changed, 0 insertions(+), 0
+ create mode 100644 references/A study
+curves.pdf
+ create mode 100644 references/An appl
+stimation on Real and Simulated Light
+ create mode 100644 references/Analyzi
+ create mode 100644 references/Asteros
+ create mode 100644 references/Backgro
+.pdf
+ create mode 100644 references/Binary
+pdf
+ create mode 100644 references/Charact
+urves with Scalable Gaussian Processes
+ create mode 100644 references/Deep Le
+ create mode 100644 references/Detecti
+he Kepler Photometer.pdf
+ create mode 100644 references/Finding
+rks.pdf
+ create mode 100644 references/KIC 940
+rs II - Modeling of the.pdf
+ create mode 100644 references/Photome
+ create mode 100644 references/Removin
+ create mode 100644 "references/TESS D
+lassification Pipeline - Set-Up and Ap
+ create mode 100644 references/TESS Da
+ create mode 100644 references/Transit
+pler Exoplanets.pdf
+
+Prannaya@Prannaya-Laptop MINGW64 ~/Thr
+$ vim commitments/references.sh
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cat commitments/references.sh
+# switch branch to upload-files
+git switch upload-files
+
+# check status of upload-files
+git status
+
+# add files in references
+git add references
+
+# commit with a message
+git commit -m "Upload References"
+
+# push to upload-files
+git push origin upload-files
+
+# check the difference between branches
+git diff upload-files..main
+
+# merge git branches
+git merge main upload-files
+
+# new git status
+git status
+
+# switch back to main branch
+git switch main
+
+# check git status in main branch
+git status
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   commitments/.references.sh.swp
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    commitments/.references.sh.swp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/references.sh
+
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Introduces references Script" *references*
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   commitments/.references.sh.swp
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    commitments/.references.sh.swp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/references.sh
+
+Committed references
+[main 8440510] Introduces references Script
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commitments/.references.sh.swp
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 902 bytes | 451.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/ThreeBody.git
+   1157d3d..8440510  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    commitments/.references.sh.swp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/references.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add References Shell Script" commitments/.references.sh.swp commitments/references.sh
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    commitments/.references.sh.swp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/references.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed commitments/.references.sh.swp
+warning: LF will be replaced by CRLF in commitments/references.sh.
+The file will have its original line endings in your working directory
+Committed commitments/references.sh
+[main 01e57a8] Add References Shell Script
+ 2 files changed, 29 insertions(+)
+ delete mode 100644 commitments/.references.sh.swp
+ create mode 100644 commitments/references.sh
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 628 bytes | 314.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/ThreeBody.git
+   8440510..01e57a8  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ alias reference="bash commitments/references.sh"
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ reference
+Switched to branch 'upload-files'
+On branch upload-files
+nothing to commit, working tree clean
+On branch upload-files
+nothing to commit, working tree clean
+Everything up-to-date
+diff --git a/commitments/references.sh b/commitments/references.sh
+new file mode 100644
+index 0000000..06151aa
+--- /dev/null
++++ b/commitments/references.sh
+@@ -0,0 +1,29 @@
++# switch branch to upload-files
++git switch upload-files
++
++# check status of upload-files
++git status
++
++# add files in references
++git add references
++
++# commit with a message
++git commit -m "Upload References"
++
++# push to upload-files
++git push origin upload-files
++
++# check the difference between branches
++git diff upload-files..main
++
++# merge git branches
++git merge main upload-files
++
++# new git status
++git status
++
++# switch back to main branch
++git switch main
++
++# check git status in main branch
++git status
+Updating 3518cd7..01e57a8
+Fast-forward
+ commitments/references.sh | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+ create mode 100644 commitments/references.sh
+On branch upload-files
+nothing to commit, working tree clean
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git diff upload-files..main
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git diff main..upload-files
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git switch upload-files
+Switched to branch 'upload-files'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge main upload-files
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git merge upload-files main
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git status
+On branch upload-files
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git pull main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git pull origin main
+From https://github.com/three-body-analysis/ThreeBody
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git pull origin upload-files
+From https://github.com/three-body-analysis/ThreeBody
+ * branch            upload-files -> FETCH_HEAD
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (upload-files)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git pull origin upload-files
+From https://github.com/three-body-analysis/ThreeBody
+ * branch            upload-files -> FETCH_HEAD
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git pull origin main
+From https://github.com/three-body-analysis/ThreeBody
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~
+$ cd EmbodiedAI
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ git clone https://github.com/hszhao/semseg.git
+Cloning into 'semseg'...
+remote: Enumerating objects: 197, done.
+remote: Total 197 (delta 0), reused 0 (delta 0), pack-reused 197
+Receiving objects: 100% (197/197), 1.40 MiB | 6.18 MiB/s, done.
+Resolving deltas: 100% (91/91), done.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        data/MYNursingHome/basket_bin/00028.jpg
+        data/MYNursingHome/basket_bin/00029.jpg
+        data/MYNursingHome/basket_bin/00030.jpg
+        data/MYNursingHome/basket_bin/00031.jpg
+        data/MYNursingHome/basket_bin/00032.jpg
+        data/MYNursingHome/basket_bin/00033.jpg
+        data/MYNursingHome/basket_bin/00034.jpg
+        data/MYNursingHome/basket_bin/00035.jpg
+        data/MYNursingHome/basket_bin/00036.jpg
+        data/MYNursingHome/basket_bin/00037.jpg
+        data/MYNursingHome/basket_bin/00038.jpg
+        data/MYNursingHome/basket_bin/00039.jpg
+        data/MYNursingHome/basket_bin/00040.jpg
+        data/MYNursingHome/basket_bin/00041.jpg
+        data/MYNursingHome/basket_bin/00042.jpg
+        data/MYNursingHome/basket_bin/00043.jpg
+        data/MYNursingHome/basket_bin/00044.jpg
+        data/MYNursingHome/basket_bin/00045.jpg
+        data/MYNursingHome/basket_bin/00046.jpg
+        data/MYNursingHome/basket_bin/00047.jpg
+        data/MYNursingHome/basket_bin/00048.jpg
+        data/MYNursingHome/basket_bin/00049.jpg
+        data/MYNursingHome/basket_bin/00050.jpg
+        data/MYNursingHome/basket_bin/00051.jpg
+        data/MYNursingHome/basket_bin/00052.jpg
+        data/MYNursingHome/basket_bin/00053.jpg
+        data/MYNursingHome/basket_bin/00054.jpg
+        data/MYNursingHome/basket_bin/00055.jpg
+        data/MYNursingHome/basket_bin/00056.jpg
+        data/MYNursingHome/basket_bin/00057.jpg
+        data/MYNursingHome/basket_bin/00058.jpg
+        data/MYNursingHome/basket_bin/00059.jpg
+        data/MYNursingHome/basket_bin/00060.jpg
+        data/MYNursingHome/basket_bin/00061.jpg
+        data/MYNursingHome/basket_bin/00062.jpg
+        data/MYNursingHome/basket_bin/00063.jpg
+        data/MYNursingHome/basket_bin/00064.jpg
+        data/MYNursingHome/basket_bin/00065.jpg
+        data/MYNursingHome/basket_bin/00066.jpg
+        data/MYNursingHome/basket_bin/00067.jpg
+        data/MYNursingHome/basket_bin/00068.jpg
+        data/MYNursingHome/basket_bin/00069.jpg
+        data/MYNursingHome/basket_bin/00070.jpg
+        data/MYNursingHome/basket_bin/00071.jpg
+        data/MYNursingHome/basket_bin/00072.jpg
+        data/MYNursingHome/basket_bin/00073.jpg
+        data/MYNursingHome/basket_bin/00074.jpg
+        data/MYNursingHome/basket_bin/00075.jpg
+        data/MYNursingHome/basket_bin/00076.jpg
+        data/MYNursingHome/basket_bin/00077.jpg
+        data/MYNursingHome/basket_bin/00078.jpg
+        data/MYNursingHome/basket_bin/00079.jpg
+        data/MYNursingHome/basket_bin/00080.jpg
+        data/MYNursingHome/basket_bin/00081.jpg
+        data/MYNursingHome/basket_bin/00082.jpg
+        data/MYNursingHome/basket_bin/00083.jpg
+        data/MYNursingHome/basket_bin/00084.jpg
+        data/MYNursingHome/basket_bin/00085.jpg
+        data/MYNursingHome/basket_bin/00086.jpg
+        data/MYNursingHome/basket_bin/00087.jpg
+        data/MYNursingHome/basket_bin/00088.jpg
+        data/MYNursingHome/basket_bin/00089.jpg
+        data/MYNursingHome/basket_bin/00090.jpg
+        data/MYNursingHome/basket_bin/00091.jpg
+        data/MYNursingHome/basket_bin/00092.jpg
+        data/MYNursingHome/basket_bin/00093.jpg
+        data/MYNursingHome/basket_bin/00094.jpg
+        data/MYNursingHome/basket_bin/00095.jpg
+        data/MYNursingHome/basket_bin/00096.jpg
+        data/MYNursingHome/basket_bin/00097.jpg
+        data/MYNursingHome/basket_bin/00098.jpg
+        data/MYNursingHome/basket_bin/00099.jpg
+        data/MYNursingHome/basket_bin/00100.jpg
+        data/MYNursingHome/basket_bin/00101.jpg
+        data/MYNursingHome/basket_bin/00102.jpg
+        data/MYNursingHome/basket_bin/00103.jpg
+        data/MYNursingHome/basket_bin/00104.jpg
+        data/MYNursingHome/basket_bin/00105.jpg
+        data/MYNursingHome/basket_bin/00106.jpg
+        data/MYNursingHome/basket_bin/00107.jpg
+        data/MYNursingHome/basket_bin/00108.jpg
+        data/MYNursingHome/basket_bin/00109.jpg
+        data/MYNursingHome/basket_bin/00110.jpg
+        data/MYNursingHome/basket_bin/00111.jpg
+        data/MYNursingHome/basket_bin/00112.jpg
+        data/MYNursingHome/basket_bin/00113.jpg
+        semseg/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ cp ~/ThreeBody/commitments commitments
+cp: -r not specified; omitting directory '/c/Users/Prannaya/ThreeBody/commitments'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ cp -r ~ThreeBody/commitments commitments
+cp: cannot stat '~ThreeBody/commitments': No such file or directory
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ cp -r ~/ThreeBody/commitments commitments
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ cd commitments
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI/commitments (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ commit "Add MyNursingHome Data" data
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        data/MYNursingHome/basket_bin/00028.jpg
+        data/MYNursingHome/basket_bin/00029.jpg
+        data/MYNursingHome/basket_bin/00030.jpg
+        data/MYNursingHome/basket_bin/00031.jpg
+        data/MYNursingHome/basket_bin/00032.jpg
+        data/MYNursingHome/basket_bin/00033.jpg
+        data/MYNursingHome/basket_bin/00034.jpg
+        data/MYNursingHome/basket_bin/00035.jpg
+        data/MYNursingHome/basket_bin/00036.jpg
+        data/MYNursingHome/basket_bin/00037.jpg
+        data/MYNursingHome/basket_bin/00038.jpg
+        data/MYNursingHome/basket_bin/00039.jpg
+        data/MYNursingHome/basket_bin/00040.jpg
+        data/MYNursingHome/basket_bin/00041.jpg
+        data/MYNursingHome/basket_bin/00042.jpg
+        data/MYNursingHome/basket_bin/00043.jpg
+        data/MYNursingHome/basket_bin/00044.jpg
+        data/MYNursingHome/basket_bin/00045.jpg
+        data/MYNursingHome/basket_bin/00046.jpg
+        data/MYNursingHome/basket_bin/00047.jpg
+        data/MYNursingHome/basket_bin/00048.jpg
+        data/MYNursingHome/basket_bin/00049.jpg
+        data/MYNursingHome/basket_bin/00050.jpg
+        data/MYNursingHome/basket_bin/00051.jpg
+        data/MYNursingHome/basket_bin/00052.jpg
+        data/MYNursingHome/basket_bin/00053.jpg
+        data/MYNursingHome/basket_bin/00054.jpg
+        data/MYNursingHome/basket_bin/00055.jpg
+        data/MYNursingHome/basket_bin/00056.jpg
+        data/MYNursingHome/basket_bin/00057.jpg
+        data/MYNursingHome/basket_bin/00058.jpg
+        data/MYNursingHome/basket_bin/00059.jpg
+        data/MYNursingHome/basket_bin/00060.jpg
+        data/MYNursingHome/basket_bin/00061.jpg
+        data/MYNursingHome/basket_bin/00062.jpg
+        data/MYNursingHome/basket_bin/00063.jpg
+        data/MYNursingHome/basket_bin/00064.jpg
+        data/MYNursingHome/basket_bin/00065.jpg
+        data/MYNursingHome/basket_bin/00066.jpg
+        data/MYNursingHome/basket_bin/00067.jpg
+        data/MYNursingHome/basket_bin/00068.jpg
+        data/MYNursingHome/basket_bin/00069.jpg
+        data/MYNursingHome/basket_bin/00070.jpg
+        data/MYNursingHome/basket_bin/00071.jpg
+        data/MYNursingHome/basket_bin/00072.jpg
+        data/MYNursingHome/basket_bin/00073.jpg
+        data/MYNursingHome/basket_bin/00074.jpg
+        data/MYNursingHome/basket_bin/00075.jpg
+        data/MYNursingHome/basket_bin/00076.jpg
+        data/MYNursingHome/basket_bin/00077.jpg
+        data/MYNursingHome/basket_bin/00078.jpg
+        data/MYNursingHome/basket_bin/00079.jpg
+        data/MYNursingHome/basket_bin/00080.jpg
+        data/MYNursingHome/basket_bin/00081.jpg
+        data/MYNursingHome/basket_bin/00082.jpg
+        data/MYNursingHome/basket_bin/00083.jpg
+        data/MYNursingHome/basket_bin/00084.jpg
+        data/MYNursingHome/basket_bin/00085.jpg
+        data/MYNursingHome/basket_bin/00086.jpg
+        data/MYNursingHome/basket_bin/00087.jpg
+        data/MYNursingHome/basket_bin/00088.jpg
+        data/MYNursingHome/basket_bin/00089.jpg
+        data/MYNursingHome/basket_bin/00090.jpg
+        data/MYNursingHome/basket_bin/00091.jpg
+        data/MYNursingHome/basket_bin/00092.jpg
+        data/MYNursingHome/basket_bin/00093.jpg
+        data/MYNursingHome/basket_bin/00094.jpg
+        data/MYNursingHome/basket_bin/00095.jpg
+        data/MYNursingHome/basket_bin/00096.jpg
+        data/MYNursingHome/basket_bin/00097.jpg
+        data/MYNursingHome/basket_bin/00098.jpg
+        data/MYNursingHome/basket_bin/00099.jpg
+        data/MYNursingHome/basket_bin/00100.jpg
+        data/MYNursingHome/basket_bin/00101.jpg
+        data/MYNursingHome/basket_bin/00102.jpg
+        data/MYNursingHome/basket_bin/00103.jpg
+        data/MYNursingHome/basket_bin/00104.jpg
+        data/MYNursingHome/basket_bin/00105.jpg
+        data/MYNursingHome/basket_bin/00106.jpg
+        data/MYNursingHome/basket_bin/00107.jpg
+        data/MYNursingHome/basket_bin/00108.jpg
+        data/MYNursingHome/basket_bin/00109.jpg
+        data/MYNursingHome/basket_bin/00110.jpg
+        data/MYNursingHome/basket_bin/00111.jpg
+        data/MYNursingHome/basket_bin/00112.jpg
+        data/MYNursingHome/basket_bin/00113.jpg
+        semseg/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed data
+[master 74becd9] Add MyNursingHome Data
+ 86 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 data/MYNursingHome/basket_bin/00028.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00029.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00030.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00031.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00032.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00033.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00034.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00035.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00036.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00037.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00038.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00039.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00040.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00041.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00042.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00043.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00044.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00045.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00046.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00047.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00048.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00049.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00050.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00051.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00052.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00053.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00054.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00055.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00056.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00057.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00058.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00059.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00060.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00061.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00062.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00063.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00064.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00065.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00066.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00067.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00068.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00069.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00070.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00071.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00072.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00073.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00074.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00075.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00076.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00077.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00078.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00079.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00080.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00081.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00082.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00083.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00084.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00085.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00086.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00087.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00088.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00089.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00090.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00091.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00092.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00093.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00094.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00095.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00096.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00097.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00098.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00099.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00100.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00101.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00102.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00103.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00104.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00105.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00106.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00107.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00108.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00109.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00110.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00111.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00112.jpg
+ create mode 100644 data/MYNursingHome/basket_bin/00113.jpg
+Enumerating objects: 584, done.
+Counting objects: 100% (584/584), done.
+Delta compression using up to 8 threads
+Compressing objects:  87% (510/581)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/EmbodiedAI (master)
+$ cd ../ThreeBody
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/vcs.xml
+        deleted:    kepler/kepler_spine/__init__.py
+        deleted:    kepler/kepler_spine/spline.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/kepler_spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Rename kepler_spine subpackage to kepler_spline" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/vcs.xml
+        deleted:    kepler/kepler_spine/__init__.py
+        deleted:    kepler/kepler_spine/spline.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/kepler_spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed .
+[main 5caadc0] Rename kepler_spine subpackage to kepler_spline
+ 3 files changed, 1 insertion(+)
+ rename kepler/{kepler_spine => kepler_spline}/__init__.py (100%)
+ rename kepler/{kepler_spine => kepler_spline}/spline.py (100%)
+To https://github.com/three-body-analysis/ThreeBody.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/three-body-analysis/ThreeBody.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git push origin
+To https://github.com/three-body-analysis/ThreeBody.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/three-body-analysis/ThreeBody.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git pull origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/three-body-analysis/ThreeBody
+   01e57a8..15aa14f  main       -> origin/main
+Merge made by the 'recursive' strategy.
+ kepler/spline/__init__.py     | 0
+ kepler/spline/b_spline.py     | 0
+ kepler/spline/curve.py        | 0
+ kepler/spline/remove_noise.py | 0
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 kepler/spline/__init__.py
+ create mode 100644 kepler/spline/b_spline.py
+ create mode 100644 kepler/spline/curve.py
+ create mode 100644 kepler/spline/remove_noise.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git push origin
+Enumerating objects: 16, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 807 bytes | 161.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 4 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   15aa14f..e405534  main -> main
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git diff origin main
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git diff origin upload-files
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+index 7786a88..b8a5707 100644
+--- a/.idea/vcs.xml
++++ b/.idea/vcs.xml
+@@ -3,7 +3,6 @@
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+     <mapping directory="$PROJECT_DIR$/kepler" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/notebooks" vcs="Git" />
+     <mapping directory="$PROJECT_DIR$/threebody" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+diff --git a/kepler/kepler_spline/__init__.py b/kepler/kepler_spine/__init__.py
+similarity index 100%
+rename from kepler/kepler_spline/__init__.py
+rename to kepler/kepler_spine/__init__.py
+diff --git a/kepler/kepler_spline/spline.py b/kepler/kepler_spine/spline.py
+similarity index 100%
+rename from kepler/kepler_spline/spline.py
+rename to kepler/kepler_spine/spline.py
+diff --git a/kepler/spline/__init__.py b/kepler/spline/__init__.py
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/kepler/spline/b_spline.py b/kepler/spline/b_spline.py
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/kepler/spline/curve.py b/kepler/spline/curve.py
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/kepler/spline/remove_noise.py b/kepler/spline/remove_noise.py
+deleted file mode 100644
+index e69de29..0000000
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Update kepler package" kepler
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/__init__.py
+        modified:   kepler/util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed kepler
+[main 3cac968] Update kepler package
+ 2 files changed, 11 insertions(+), 21 deletions(-)
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 776 bytes | 388.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   e405534..3cac968  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cd kepler
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler_spline/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Rename kepler_spine to kepler_spline" kepler_*
+bash: commitments/commit.sh: No such file or directory
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cp ../commitments commitments
+cp: -r not specified; omitting directory '../commitments'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cp -r ../commitments commitments
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "Rename kepler_spine to kepler_spline" kepler_*
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        kepler_spline/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed kepler_spline
+[master d843633] Rename kepler_spine to kepler_spline
+ 2 files changed, 191 insertions(+)
+ create mode 100644 kepler_spline/__init__.py
+ create mode 100644 kepler_spline/spline.py
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 277 bytes | 277.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   4130395..d843633  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "Rename kepler_spine to kepler_spline" kepler_*
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed kepler_spline
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+        commitments/
+        spline/
+
+no changes added to commit
+Everything up-to-date
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Add commitments to the kepler package" commitments
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commitments/
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in commitments/commit.sh.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in commitments/enigma.sh.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in commitments/retrieval.sh.
+The file will have its original line endings in your working directory
+Committed commitments
+[master ded4380] Add commitments to the kepler package
+ 4 files changed, 79 insertions(+)
+ create mode 100644 commitments/commit.sh
+ create mode 100644 commitments/enigma.sh
+ create mode 100644 commitments/references.sh
+ create mode 100644 commitments/retrieval.sh
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.28 KiB | 437.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   d843633..ded4380  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Remove kepler_spine why does this even exist bruh" kepler_spine
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spine/__init__.py
+        deleted:    kepler_spine/spline.py
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed kepler_spine
+[master 833b535] Remove kepler_spine why does this even exist bruh
+ 2 files changed, 191 deletions(-)
+ delete mode 100644 kepler_spine/__init__.py
+ delete mode 100644 kepler_spine/spline.py
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 272 bytes | 90.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   ded4380..833b535  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Add spline, by Yap Yuan Xi" spline
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed spline
+[master 4932078] Add spline, by Yap Yuan Xi
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 spline/__init__.py
+ create mode 100644 spline/b_spline.py
+ create mode 100644 spline/curve.py
+ create mode 100644 spline/remove_noise.py
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 378 bytes | 189.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   833b535..4932078  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Add util functions" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/__init__.py
+        modified:   util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed util
+[master 30ec96c] Add util functions
+ 2 files changed, 11 insertions(+), 21 deletions(-)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 712 bytes | 356.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   4932078..30ec96c  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/commitments/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add kepler/commitments" kepler/commitments
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/commitments/
+
+nothing added to commit but untracked files present (use "git add" to track)
+warning: LF will be replaced by CRLF in kepler/commitments/commit.sh.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in kepler/commitments/enigma.sh.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in kepler/commitments/retrieval.sh.
+The file will have its original line endings in your working directory
+Committed kepler/commitments
+[main 13789da] Add kepler/commitments
+ 4 files changed, 79 insertions(+)
+ create mode 100644 kepler/commitments/commit.sh
+ create mode 100644 kepler/commitments/enigma.sh
+ create mode 100644 kepler/commitments/references.sh
+ create mode 100644 kepler/commitments/retrieval.sh
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   3cac968..13789da  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/periodic_event.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Add a compilation model.py" kepler
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/periodic_event.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in kepler/util/model.py.
+The file will have its original line endings in your working directory
+Committed kepler
+[main ccc55af] Add a compilation model.py
+ 2 files changed, 76 insertions(+), 73 deletions(-)
+ create mode 100644 kepler/util/model.py
+ rewrite kepler/util/periodic_event.py (84%)
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.30 KiB | 332.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   13789da..ccc55af  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cd kepler
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "Add a compilation model.py" kepler
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/periodic_event.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+fatal: pathspec 'kepler' did not match any files
+Committed kepler
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+        modified:   util/periodic_event.py
+
+Untracked files:
+        util/model.py
+
+no changes added to commit
+Everything up-to-date
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/periodic_event.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Add model" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/periodic_event.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in util/model.py.
+The file will have its original line endings in your working directory
+Committed util
+[master 5647f4e] Add model
+ 2 files changed, 76 insertions(+), 73 deletions(-)
+ create mode 100644 util/model.py
+ rewrite util/periodic_event.py (84%)
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.23 KiB | 629.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   30ec96c..5647f4e  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git diff origin..main
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Upload Kepler model" kepler
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   kepler/util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in kepler/util/model.py.
+The file will have its original line endings in your working directory
+Committed kepler
+[main addded3] Upload Kepler model
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 443 bytes | 443.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   ccc55af..addded3  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cd kepler
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Upload Kepler model" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in util/model.py.
+The file will have its original line endings in your working directory
+Committed util
+[master 3ef7d4c] Upload Kepler model
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 380 bytes | 380.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   5647f4e..3ef7d4c  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/median_filter.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Update median_filter.py" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/median_filter.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed util
+[master ae81f3c] Update median_filter.py
+ 1 file changed, 28 insertions(+), 5 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 835 bytes | 835.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   3ef7d4c..ae81f3c  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "Update median_filter.py" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in util/model.py.
+The file will have its original line endings in your working directory
+Committed util
+[master a6f1a0b] Update median_filter.py
+ 1 file changed, 57 insertions(+), 2 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.61 KiB | 548.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   ae81f3c..a6f1a0b  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "Update median_filter.py" util
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util/model.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in util/model.py.
+The file will have its original line endings in your working directory
+Committed util
+[master 8feaece] Update median_filter.py
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 720 bytes | 360.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   a6f1a0b..8feaece  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cp util/model.py spline/model.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        spline/.spline.py.swp
+        spline/model.py
+        spline/spline.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        spline/model.py
+        spline/spline.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Update spline" spline .gitignore
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        spline/model.py
+        spline/spline.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+warning: LF will be replaced by CRLF in spline/model.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in spline/spline.py.
+The file will have its original line endings in your working directory
+Committed spline
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+Committed .gitignore
+[master 377d866] Update spline
+ 3 files changed, 160 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 spline/model.py
+ create mode 100644 spline/spline.py
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.28 KiB | 656.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   8feaece..377d866  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git rm kepler_spline util
+fatal: not removing 'kepler_spline' recursively without -r
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git rm -r kepler_spline util
+rm 'kepler_spline/__init__.py'
+rm 'kepler_spline/spline.py'
+rm 'util/__init__.py'
+rm 'util/median_filter.py'
+rm 'util/model.py'
+rm 'util/periodic_event.py'
+rm 'util/robust_mean.py'
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    kepler_spline/__init__.py
+        deleted:    kepler_spline/spline.py
+        deleted:    util/__init__.py
+        deleted:    util/median_filter.py
+        deleted:    util/model.py
+        deleted:    util/periodic_event.py
+        deleted:    util/robust_mean.py
+
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git restore --staged .
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spline/__init__.py
+        deleted:    kepler_spline/spline.py
+        deleted:    util/__init__.py
+        deleted:    util/median_filter.py
+        deleted:    util/model.py
+        deleted:    util/periodic_event.py
+        deleted:    util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git restore .
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        deleted:    spline/model.py
+        modified:   spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ rm .gitignore
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cp spline/remove_noise.py .
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ ls
+__init__.py   curve.py    kepler.py       remove_noise.py   tce.py
+__pycache__/  general.py  kepler_spline/  requirements.txt  util/
+commitments/  k2.py       README.md       spline/
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd spline
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ ls
+__init__.py  b_spline.py  curve.py  remove_noise.py  spline.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ rm remove_noise.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ cat __init__.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ ls
+__init__.py  b_spline.py  curve.py  spline.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ rm curve.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ ls
+__init__.py  b_spline.py  spline.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    spline/curve.py
+        deleted:    spline/model.py
+        deleted:    spline/remove_noise.py
+        modified:   spline/spline.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Move remove_noise.py to main directory" spline/remove_noise.py remove_noise.py
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    spline/curve.py
+        deleted:    spline/model.py
+        deleted:    spline/remove_noise.py
+        modified:   spline/spline.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed spline/remove_noise.py
+Committed remove_noise.py
+[master b91d2a4] Move remove_noise.py to main directory
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename spline/remove_noise.py => remove_noise.py (100%)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   377d866..b91d2a4  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    spline/curve.py
+        deleted:    spline/model.py
+        modified:   spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Remove unnecessary files" spline/curve.py spline/model.py .gitignore
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    spline/curve.py
+        deleted:    spline/model.py
+        modified:   spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed spline/curve.py
+Committed spline/model.py
+Committed .gitignore
+[master 1c9a093] Remove unnecessary files
+ 3 files changed, 97 deletions(-)
+ delete mode 100644 .gitignore
+ delete mode 100644 spline/curve.py
+ delete mode 100644 spline/model.py
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 106.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   b91d2a4..1c9a093  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Compile spline.py" .
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in spline/spline.py.
+The file will have its original line endings in your working directory
+Committed .
+[master 9d87ce3] Compile spline.py
+ 1 file changed, 107 insertions(+), 1 deletion(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.48 KiB | 847.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   1c9a093..9d87ce3  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ rm spline/b_spline.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/b_spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Remove more unnecessary files" .
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/b_spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed .
+[master aab10ea] Remove more unnecessary files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 spline/b_spline.py
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/kepler.git
+   9d87ce3..aab10ea  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd spline
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ rm __init__.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ mv spline.py __init__.py
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   __init__.py
+        deleted:    spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ commit "spline subpackage" .
+bash: commitments/commit.sh: No such file or directory
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ cd .
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ commit "spline subpackage" .
+bash: commitments/commit.sh: No such file or directory
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler/spline (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ !commit
+commit "spline subpackage" .
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   spline/__init__.py
+        deleted:    spline/spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in spline/__init__.py.
+The file will have its original line endings in your working directory
+Committed .
+[master ab32002] spline subpackage
+ 2 files changed, 169 insertions(+), 169 deletions(-)
+ delete mode 100644 spline/spline.py
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 161.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   aab10ea..ab32002  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ rm -r kepler_spline util
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Remove unnecessary packages" .
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler_spline/__init__.py
+        deleted:    kepler_spline/spline.py
+        deleted:    util/__init__.py
+        deleted:    util/median_filter.py
+        deleted:    util/model.py
+        deleted:    util/periodic_event.py
+        deleted:    util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed .
+[master 758d167] Remove unnecessary packages
+ 7 files changed, 719 deletions(-)
+ delete mode 100644 kepler_spline/__init__.py
+ delete mode 100644 kepler_spline/spline.py
+ delete mode 100644 util/__init__.py
+ delete mode 100644 util/median_filter.py
+ delete mode 100644 util/model.py
+ delete mode 100644 util/periodic_event.py
+ delete mode 100644 util/robust_mean.py
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 256 bytes | 128.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   ab32002..758d167  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        modified:   kepler/spline/__init__.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Create spline __init__.py" spline/__init__.py
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        modified:   kepler/spline/__init__.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+fatal: pathspec 'spline/__init__.py' did not match any files
+Committed spline/__init__.py
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        modified:   kepler/spline/__init__.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+        kepler/remove_noise.py
+
+no changes added to commit
+Everything up-to-date
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        modified:   kepler/spline/__init__.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Create spline __init__.py" kepler/spline/__init__.py
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        modified:   kepler/spline/__init__.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in kepler/spline/__init__.py.
+The file will have its original line endings in your working directory
+Committed kepler/spline/__init__.py
+[main 52f2a1e] Create spline __init__.py
+ 1 file changed, 169 insertions(+)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.60 KiB | 888.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   addded3..52f2a1e  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Move remove_noise.py to kepler package" kepler/remove_noise.py kepler/spline/remove_
+noise.py
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/spline/remove_noise.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/remove_noise.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed kepler/remove_noise.py
+Committed kepler/spline/remove_noise.py
+[main 6cd92dd] Move remove_noise.py to kepler package
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename kepler/{spline => }/remove_noise.py (100%)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 429 bytes | 214.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   52f2a1e..6cd92dd  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Delete a lot of stuff" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/kepler_spline/__init__.py
+        deleted:    kepler/kepler_spline/spline.py
+        deleted:    kepler/spline/b_spline.py
+        deleted:    kepler/spline/curve.py
+        deleted:    kepler/util/__init__.py
+        deleted:    kepler/util/median_filter.py
+        deleted:    kepler/util/model.py
+        deleted:    kepler/util/periodic_event.py
+        deleted:    kepler/util/robust_mean.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Committed .
+[main e440d6c] Delete a lot of stuff
+ 9 files changed, 629 deletions(-)
+ delete mode 100644 kepler/kepler_spline/__init__.py
+ delete mode 100644 kepler/kepler_spline/spline.py
+ delete mode 100644 kepler/spline/b_spline.py
+ delete mode 100644 kepler/spline/curve.py
+ delete mode 100644 kepler/util/__init__.py
+ delete mode 100644 kepler/util/median_filter.py
+ delete mode 100644 kepler/util/model.py
+ delete mode 100644 kepler/util/periodic_event.py
+ delete mode 100644 kepler/util/robust_mean.py
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 392 bytes | 196.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/three-body-analysis/ThreeBody.git
+   6cd92dd..e440d6c  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ cd kepler
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Move spline subpackage to just a spline.py"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+        deleted:    spline/__init__.py
+
+Untracked files:
+        spline.py
+
+no changes added to commit
+Everything up-to-date
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ commit "Move spline subpackage to just a spline.py" .
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spline.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in spline.py.
+The file will have its original line endings in your working directory
+Committed .
+[master 75bef49] Move spline subpackage to just a spline.py
+ 1 file changed, 20 insertions(+), 6 deletions(-)
+ rename spline/__init__.py => spline.py (87%)
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.53 KiB | 1.27 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/three-body-analysis/kepler.git
+   758d167..75bef49  master -> master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ git pull origin
+Already up to date.
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody/kepler (master)
+$ cd ..
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/spline.py
+        logs/linux.txt
+        logs/nu.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$ commit "Reduce kepler spline" kepler
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kepler/spline/__init__.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        kepler/spline.py
+        logs/linux.txt
+        logs/nu.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in kepler/spline.py.
+The file will have its original line endings in your working directory
+Committed kepler
+[main cd1c153] Reduce kepler spline
+ 1 file changed, 20 insertions(+), 6 deletions(-)
+ rename kepler/{spline/__init__.py => spline.py} (87%)
+To https://github.com/three-body-analysis/ThreeBody.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/three-body-analysis/ThreeBody.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        logs/linux.txt
+        logs/nu.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Prannaya@Prannaya-Laptop MINGW64 ~/ThreeBody (main)
+$
