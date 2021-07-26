@@ -1,27 +1,58 @@
 from kepler.core import LightCurve, LightCurveAction
+import lightkurve as lk
 
-def reduceNoise(lc: LightCurve):
-    """
-    Removes Instrumental noise from the light curve.
+def removeNoise(tpf: lk.KeplerTargetPixelFile):
+    """ Removes Instrument noise from the light curve.
     
     This function uses the lightkurve library to perform this function
-    The lightkurve library uses Pixel Level Decorrelation (PLD)
+    The SFF and PLD correctors are used for noise reduction
     A corrector for the curve is created and then applied to itself.
     The result of that is returned.
 
-    NOTE: The intention of this function is to count exoplanet transits as noise
+    NOTE: This function will count exoplanet transits as noise
 
-    :param lc: The original light curve
-    :return The light curve with reduced instrumental noise, and some values describing the extent of the noise reduction.
+    Parameters
+    -----------------------------------------
+    tpf: 
+        A valid target pixel file form Kepler
+
+    Returns
+    -----------------------------------------
+    LightCurve
+        The light curve with reduced instrument noise
+
+    Diagnostics
+        Some values describing the extent of PLD corrector performance
     """
 
-    pld = lc.to_corrector('pld')
-    correct_lc = pld.correct()
 
-    # Some instructions:
-    # if you could, could you please research a bit more about noise reduction algorithms?
+    """
+    1) Why not Linear Regression?
+    
+    This is only required for TESS Data as it has scattered light background signal.
+    As Kepler does not have this issue, it is not used.
 
-    return LightCurve(correct_lc, lc.id), pld.diagnose()
+    2) Why Self Flat Fielding (SFF)?
+
+    This is only required for K2 data as it has spacecraft motion noise.
+    As a result, we need to use it for noise reduction
+
+    3) Why Pixel Light Decorrelation (PLD)?
+
+    It removes instrument noise from the lightcurve
+
+    TODO Understand and use CBV Corrector
+    """
+
+    # PLD corrector
+    pld = tpf.to_corrector('pld')
+    lc_pld = pld.correct()
+
+    # SFF corrector
+    sff = lc_pld.to_corrector("sff")
+    correct_lc = sff.correct()
+    
+    return (LightCurve(correct_lc, tpf.id), pld.diagnose())
 
 
 class NoiseReduction(LightCurveAction):
