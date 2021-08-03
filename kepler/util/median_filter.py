@@ -20,7 +20,8 @@ def median_filter(x, y, num_bins, bin_width=None, x_min=None, x_max=None):
                     bin_max += bin_spacing
 
                 return np.array(result)
-    raise ValueError("This won't work due to some reason that I don't want to notify you about because the developer of this code is lazy")
+    raise ValueError("This won't work due to some reason that I don't want to notify you about because the developer "
+                     "of this code is lazy.")
 
 
 

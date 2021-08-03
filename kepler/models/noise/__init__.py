@@ -35,11 +35,11 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
     2) Why Self Flat Fielding (SFF)?
 
     This is only required for K2 data as it has spacecraft motion noise.
-    As a result, we need to use it for noise reduction
+    As a result, we need to use it for noise reduction.
 
     3) Why Pixel Light Decorrelation (PLD)?
 
-    It removes instrument noise from the lightcurve
+    It removes instrument noise from the lightcurve.
 
     TODO Understand and use CBV Corrector
     """
@@ -55,6 +55,8 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
     return (LightCurve(correct_lc, tpf.id), pld.diagnose())
 
 
+
 class NoiseReduction(LightCurveAction):
     def perform(self, lc):
         return reduceNoise(lc)
+
