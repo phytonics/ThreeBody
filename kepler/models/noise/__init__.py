@@ -1,5 +1,6 @@
 from kepler.core import LightCurve, LightCurveAction
 import lightkurve as lk
+import numpy as np
 
 def removeNoise(tpf: lk.KeplerTargetPixelFile):
     """ Removes Instrument noise from the light curve.
@@ -30,7 +31,7 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
     1) Why not Linear Regression?
     
     This is only required for TESS Data as it has scattered light background signal.
-    As Kepler does not have this issue, it is not used.
+    As Kepler does not have this issue, it is not used to improve performance
 
     2) Why Self Flat Fielding (SFF)?
 
@@ -41,7 +42,15 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
 
     It removes instrument noise from the lightcurve.
 
-    TODO Understand and use CBV Corrector
+    4) Why Cotrending Basis Vector (CBV)?
+
+    It removes systemic trends in lightcurves.
+    As CBV has a risk of overfitting and underfitting, 
+    I will use the builtin goodness metrics to get the best fit.
+    
+    The CBV I will be using is Single-Scale and Spike, as Multi-Scale is for detecting exoplanets
+    ! The CBV may not be effective (over/under fitted), if necessary refer to diagnostics
+
     """
 
     # PLD corrector
@@ -50,11 +59,16 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
 
     # SFF corrector
     sff = lc_pld.to_corrector("sff")
-    correct_lc = sff.correct()
-    
-    return (LightCurve(correct_lc, tpf.id), pld.diagnose())
+    lc_sff = sff.correct()
 
+    # CBV Corrector
+    cbv = lk.CBVCorrector(lc_sff)
+    correct_lc = cbv.correct_elasticnet(
+        cbv_type = ["SingleScale", "Spike"],
+        cbv_indices = np.arange(1, 9) # Default the first 8 correctors, after it adds noise
+    )
 
+    return (LightCurve(correct_lc, tpf.id), pld.diagnose(), cbv.diagnose())
 
 class NoiseReduction(LightCurveAction):
     def perform(self, lc):
