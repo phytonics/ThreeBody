@@ -2,11 +2,11 @@ from kepler.core import LightCurve, LightCurveAction
 import lightkurve as lk
 import numpy as np
 
-def removeNoise(tpf: lk.KeplerTargetPixelFile):
+def keplerRemoveNoise(tpfs: lk.TargetPixelFileCollection):
     """ Removes Instrument noise from the light curve.
     
     This function uses the lightkurve library to perform this function
-    The SFF and PLD correctors are used for noise reduction
+    The SFF, CBV and PLD correctors are used for noise reduction
     A corrector for the curve is created and then applied to itself.
     The result of that is returned.
 
@@ -50,26 +50,31 @@ def removeNoise(tpf: lk.KeplerTargetPixelFile):
     
     The CBV I will be using is Single-Scale and Spike, as Multi-Scale is for detecting exoplanets
     ! The CBV may not be effective (over/under fitted), if necessary refer to diagnostics
-
     """
 
-    # PLD corrector
-    pld = tpf.to_corrector('pld')
-    lc_pld = pld.correct()
+    for tpf in tpfs:
+        
+        # PLD corrector
+        pld = tpf.to_corrector('pld')
+        lc_pld = pld.correct()
 
-    # SFF corrector
-    sff = lc_pld.to_corrector("sff")
-    lc_sff = sff.correct()
+        # SFF corrector
+        sff = lc_pld.to_corrector("sff")
+        lc_sff = sff.correct()
 
-    # CBV Corrector
-    cbv = lk.CBVCorrector(lc_sff)
-    correct_lc = cbv.correct_elasticnet(
-        cbv_type = ["SingleScale", "Spike"],
-        cbv_indices = np.arange(1, 9) # Default the first 8 correctors, after it adds noise
-    )
+        # CBV Corrector 
+        # TODO: Get this shit to work
+        # cbv = lk.CBVCorrector(lc_sff)
+        # correct_lc = cbv.correct_elasticnet(
+        #     cbv_type = ["SingleScale"],
+        #     cbv_indices = ["1"]
+        # )
 
-    return (LightCurve(correct_lc, tpf.id), pld.diagnose(), cbv.diagnose())
+        yield (lc_sff, pld.diagnose()) #, cbv.diagnose())
 
+# TODO: Implement the TESS
+def TESSreduceNoise():
+    pass
 class NoiseReduction(LightCurveAction):
     def perform(self, lc):
         return reduceNoise(lc)
