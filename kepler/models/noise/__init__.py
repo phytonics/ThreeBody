@@ -2,7 +2,7 @@ from kepler.core import LightCurve, LightCurveAction
 import lightkurve as lk
 import numpy as np
 # TODO: Change the comments as they are incorrect now
-def keplerRemoveNoise(tpf: lk.LightCurve):
+def keplerRemoveNoise(lc: lk.LightCurve):
     """ Removes Instrument noise from the light curve.
     
     This function uses the lightkurve library to perform this function
@@ -14,16 +14,13 @@ def keplerRemoveNoise(tpf: lk.LightCurve):
 
     Parameters
     -----------------------------------------
-    tpf: 
-        A valid target pixel file form Kepler
+    lc: 
+        A valid lightcurve form Kepler
 
     Returns
     -----------------------------------------
     LightCurve
         The light curve with reduced instrument noise
-
-    Diagnostics
-        Some values describing the extent of PLD corrector performance
     """
 
 
@@ -38,34 +35,21 @@ def keplerRemoveNoise(tpf: lk.LightCurve):
     This is required for Kepler data as it has spacecraft motion noise.
     As a result, we need to use it for noise reduction.
 
-    3) Why Pixel Light Decorrelation (PLD)?
-
-    It removes instrument noise from the lightcurve.
-
-    4) Why Cotrending Basis Vector (CBV)?
+    4) Why not Cotrending Basis Vector (CBV)?
 
     It removes systemic trends in lightcurves.
-    As CBV has a risk of overfitting and underfitting, 
-    I will use the builtin goodness metrics to get the best fit.
+    However, Kepler data has little CBV correctors, and SFF is sufficient.
+    (Mentioned on Lightkurve 2.0 site)
     
-    The CBV I will be using is Single-Scale and Spike, as Multi-Scale is for detecting exoplanets
+    The CBV used is Single-Scale and Spike, as Multi-Scale is for detecting exoplanets
     ! The CBV may not be effective (over/under fitted), if necessary refer to diagnostics
     """
 
     # SFF corrector
-    sff = lc_pld.to_corrector("sff")
+    sff = lc.to_corrector("sff")
     lc_sff = sff.correct()
 
-    # CBV Corrector 
-    # TODO: Get this shit to work
-    cbv = lk.CBVCorrector(lc_sff)
-    print(cbv.cbvs)
-    # correct_lc = cbv.correct_elasticnet(
-    #     cbv_type = ["SingleScale"],
-    #     cbv_indices = ["1"]
-    # )
-
-    return (lc_sff, pld.diagnose()) #, cbv.diagnose())
+    return (lc_sff)
 
 # TODO: Implement the TESS
 def TESSreduceNoise():
@@ -73,7 +57,8 @@ def TESSreduceNoise():
 
 def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
 
-    assert source.lower() in ["tess", 'kepler', 'k2'], "Source not in TESS, Kepler or K2"
+    source = source.lower()
+    assert source in ["tess", 'kepler', 'k2'], "Source not in TESS, Kepler or K2"
 
     # The compulsory pass through PLDCorrector
     lc_pld = lk.LightCurveCollection([])
@@ -85,6 +70,8 @@ def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
     # TODO: Implement the differentiation between Kepler and TESS
     if source == "kepler" or source == "k2":
         return keplerRemoveNoise(lc_pld)
+    else:
+        return TESSRemoveNoise(lc_pld)
 
     return lc_pld
 
