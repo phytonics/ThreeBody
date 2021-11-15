@@ -3,7 +3,7 @@ import lightkurve as lk
 import numpy as np
 # TODO: Change the comments as they are incorrect now
 def keplerRemoveNoise(lc: lk.LightCurve):
-    """ Removes Instrument noise from the light curve.
+    """ Removes Instrument noise from kepler light curve.
     
     This function uses the lightkurve library to perform this function
     The SFF, CBV and PLD correctors are used for noise reduction
@@ -40,9 +40,6 @@ def keplerRemoveNoise(lc: lk.LightCurve):
     It removes systemic trends in lightcurves.
     However, Kepler data has little CBV correctors, and SFF is sufficient.
     (Mentioned on Lightkurve 2.0 site)
-    
-    The CBV used is Single-Scale and Spike, as Multi-Scale is for detecting exoplanets
-    ! The CBV may not be effective (over/under fitted), if necessary refer to diagnostics
     """
 
     # SFF corrector
@@ -52,11 +49,43 @@ def keplerRemoveNoise(lc: lk.LightCurve):
     return (lc_sff)
 
 # TODO: Implement the TESS
-def TESSreduceNoise():
+def TESSRemoveNoise():
     pass
 
 def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
+    """ Removes Instrument noise from target pixel collection.
+    
+    This function uses the lightkurve library to perform this function
+    Firstly, it uses the PLD corrector to correct the target pixel collection
+    The resulting lightcurve is then passed to the respective 
 
+    NOTE: This function will count exoplanet transits as noise
+
+    Parameters
+    -----------------------------------------
+    tpfs: 
+        A valid target pixel file collection
+
+    Returns
+    -----------------------------------------
+    LightCurve
+        The light curve with reduced instrument noise
+    
+    Diagnostics
+        Multiple graphs representing the corresponding correctors correction extent
+    """
+
+
+    """
+    1) Why Pixel Level Decorrelation?
+
+    It removes instrument noise for all kepler and TESS.
+
+    
+    * The other correctors will be used in the differentiated functions
+    """
+
+    # Differentiating the keplers from the TESS
     source = source.lower()
     assert source in ["tess", 'kepler', 'k2'], "Source not in TESS, Kepler or K2"
 
