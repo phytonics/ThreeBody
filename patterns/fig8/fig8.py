@@ -1,3 +1,6 @@
+import numpy as np # To simulate the vectors
+import turtle, time
+
 """
 * Assuming equal mass, luminosity and radius
 * Assuming the fact that light detected is parallel (due to large distance between us and system)
@@ -24,9 +27,35 @@ Star 3
 ]
 
 """
+# Seconds per Frame
+PERIOD = 1/100
 
-import numpy as np # To simulate the vectors
-import turtle, time
+# Mass of star
+MASS = 1
+
+stars = (
+    dict(
+        pos = np.array([0.97000436, -0.24308753], dtype = np.float64),
+        vel = np.array([0.466203685, 0.43236573], dtype = np.float64)
+    ),
+    dict(
+        pos = np.array([-0.97000436, 0.24308753], dtype = np.float64),
+        vel = np.array([0.466203685, 0.43236573], dtype = np.float64)
+    ),
+    dict(
+        pos = np.array([0.0, 0.0], dtype = np.float64),
+        vel = np.array([-0.93240737, -0.86473146], dtype = np.float64)
+    )
+    # dict(
+    #     pos = np.array([0, 0], dtype = np.float64),
+    #     vel = np.array([0, 0], dtype = np.float64)
+    # ),
+    # dict(
+    #     pos = np.array([0, 1], dtype = np.float64),
+    #     vel = np.array([0, 0], dtype = np.float64)
+    # )
+)
+
 
 def deltaV(stars):
 
@@ -36,30 +65,11 @@ def deltaV(stars):
         for j in range(i + 1, len(stars)):
             # Generate all unordered pairs (all interactions)
             r = stars[i]["pos"] - stars[j]["pos"]
-            change[j] += -6.67e-11 / (r ** 2.0).sum() * r / (r**2.0).sum() ** 0.5
-            change[i] -= -6.67e-11 / (r ** 2.0).sum() * r / (r**2.0).sum() ** 0.5
-            print(change)
+            change[j] = change[j] + (MASS / (r ** 2.0).sum()) * (r / ((r**2.0).sum() ** 0.5))
+            change[i] = change[i] + (MASS / (r ** 2.0).sum()) * (-r / ((r**2.0).sum() ** 0.5))
 
     return change
 
-
-star1, star2, star3 = (
-    dict(
-        pos = np.array([0.97000436, -0.24308753]),
-        vel = np.array([0.466203685, 0.43236573])
-    ),
-    dict(
-        pos = np.array([-0.97000436, 0.24308753]),
-        vel = np.array([0.466203685, 0.43236573])
-    ),
-    dict(
-        pos = np.array([0.0, 0.0]),
-        vel = np.array([-0.93240737, -0.86473146])
-    )
-)
-
-# Seconds per Frame
-PERIOD = 1
 
 # Instant drawing
 turtle.speed(0)
@@ -70,27 +80,15 @@ while True:
 
     # First star
     turtle.up()
-    turtle.goto(tuple(star1["pos"] * 100))
-    turtle.stamp()
 
-    # Second star
-    turtle.goto(tuple(star2["pos"] * 100))
-    turtle.stamp()
-
-    # Third star
-    turtle.goto(tuple(star3["pos"] * 100))
-    turtle.stamp()
+    for s in stars:
+        turtle.goto(tuple(s["pos"] * 100))
+        turtle.stamp()
 
     time.sleep(PERIOD)
 
-    vel_change = deltaV((star1, star2, star3))
+    vel_change = deltaV(stars)
 
-    star1["pos"] += star1["vel"] * PERIOD
-    star2["pos"] += star2["vel"] * PERIOD
-    star3["pos"] += star3["vel"] * PERIOD
-
-    star1["vel"] += vel_change[0] * PERIOD
-    star2["vel"] += vel_change[1] * PERIOD
-    star3["vel"] += vel_change[2] * PERIOD
-
-    print("FRAME")
+    for s, delv in zip(stars, vel_change):
+        s["pos"] = s["pos"] + s["vel"] * PERIOD
+        s["vel"] = s["vel"] + delv * PERIOD
