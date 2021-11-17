@@ -75,37 +75,21 @@ def lightkurve(pos):
 
     * Assuming the star is a square when viewed from the side
     * This becomes a interval summing problem
-    * Checked on https://www.codewars.com/kata/52b7ed099cdc285c300001cd
+    ! I did not copy others solution I swear
     """
 
     # Calculating intervals to consider
-    xpos = pos[:, 0]
-    intervals = []
-    for i in xpos: intervals.append([i - RADIUS, i + RADIUS])
-
-    intervals = sorted(intervals, key = lambda x:x[0])
-
-    summed = []
-    # Summing the intervals
-    for i in intervals:
-        
-        if len(summed) == 0:
-            summed.append(i)
-            continue
-
-        # Extension of previous interval
-        if i[0] < summed[-1][1]:
-            summed[-1][1] = max(i[1], summed[-1][1])
-        else: # Or not
-            summed.append(i)
-
-    # Append it to the array
-    global LIGHTKURVE
-    LIGHTKURVE.append(0)
-    for i in summed:
-        LIGHTKURVE[-1] += i[1] - i[0]
     
-    return LIGHTKURVE[0]
+    xpos = pos[:, 0]
+
+    s, top = 0, float("-inf")
+    for x in sorted(xpos):
+        a, b = x - RADIUS, x + RADIUS
+        if top < a: top    = a
+        if top < b: s, top = s+b-top, b
+    
+    np.append(LIGHTKURVE, s)
+    return s
 
 # Instant drawing
 turtle.speed(0)
