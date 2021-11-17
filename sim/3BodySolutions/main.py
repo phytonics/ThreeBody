@@ -4,6 +4,10 @@ from typing import Tuple
 from turtle import *
 
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+
+rcParams["figure.dpi"] = 150
+rcParams["figure.figsize"] = (16.0, 8.0)
 
 
 def ode45_step(f, x, t, dt, *args):
@@ -78,7 +82,7 @@ def getSoln(n:int=1) -> Tuple[np.ndarray, float]:
         return (
             np.m[-0.97000436, 0.24308753::0.97000436, -0.24308753::0, 0::-0.5*0.93240737, -
                  0.5*0.86473146::-0.5*0.93240737, -0.5*0.86473146::0.93240737, 0.86473146],
-            5
+            632
         )
 
     elif n == 4:  # Ovals with flourishes
@@ -184,6 +188,20 @@ def lightkurve(pos, axis=0):
     return s
 
 
+def lightcurve(pos, axis=0):
+    xpos = pos[:, axis]
+
+    s, top = 0, float("-inf")
+    for x in sorted(xpos):
+        a, b = x - RADIUS, x + RADIUS
+        if top < a:
+            top = a
+        if top < b:
+            s, top = s+b-top, b
+
+    return s
+
+
 if __name__ == "__main__":
     G = 1
     m = np[1, 1, 1]
@@ -191,7 +209,7 @@ if __name__ == "__main__":
     z, tend = getSoln(3)
 
     # Radius of star
-    RADIUS = 0.25
+    RADIUS = 1
 
     # Array storing the relative light intensity at every point
     # light intensity of a star is taken to be its radius
@@ -211,7 +229,7 @@ if __name__ == "__main__":
     move(obj3, 300*z[2])
     obj3.speed(0)
 
-    for i in range(240):
+    for i in range(tend): # 240
         t, z = ode45(lambda t, z: zdot(1, np[1, 1, 1], z), [0, dt], z)
         #z -= dt * zdot(G, m, z)
         p = z[:3]*300
@@ -220,11 +238,15 @@ if __name__ == "__main__":
         obj2.goto(*p[1])
         obj3.goto(*p[2])
 
+        if p[2][0] == 0 and p[2][1] == 0: print(i)
+
         lightcurve_x.append(lightkurve(p))
         lightcurve_y.append(lightkurve(p, 1))
 
-    plt.plot(lightcurve_x, label="Light Curve measured about x-axis")
-    plt.plot(lightcurve_y, label="Light Curve mesasured about y-axis")
-    plt.legend()
+    fig, axes = plt.subplots(1, 2, sharey=True)
+    axes[0].plot(lightcurve_x)
+    axes[0].set_title("Light Curve measured about x-axis")
+    axes[1].plot(lightcurve_y, color="orange")
+    axes[1].set_title("Light Curve mesasured about y-axis")
     plt.show()
 
