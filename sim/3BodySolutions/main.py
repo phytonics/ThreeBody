@@ -176,10 +176,8 @@ def lightkurve(pos, axis=0):
     s, top = 0, float("-inf")
     for x in sorted(xpos):
         a, b = x - RADIUS, x + RADIUS
-        if top < a:
-            top = a
-        if top < b:
-            s, top = s+b-top, b
+        if top < a: top = a
+        if top < b: s, top = s+b-top, b
     
     return s
 
@@ -191,7 +189,7 @@ if __name__ == "__main__":
     z, tend = getSoln(3)
 
     # Radius of star
-    RADIUS = 0.25
+    RADIUS = 1
 
     # Array storing the relative light intensity at every point
     # light intensity of a star is taken to be its radius
@@ -224,7 +222,7 @@ if __name__ == "__main__":
         lightcurve_y.append(lightkurve(p, 1))
 
     plt.plot(lightcurve_x, label="Light Curve measured about x-axis")
-    plt.plot(lightcurve_y, label="Light Curve mesasured about y-axis")
+    plt.plot(lightcurve_y, label="Light Curve measured about y-axis")
     plt.legend()
     plt.show()
 
