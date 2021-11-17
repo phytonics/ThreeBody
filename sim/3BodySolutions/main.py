@@ -2,6 +2,7 @@ from np.magic import np
 from numpy.linalg import norm
 from typing import Tuple
 from turtle import *
+from io import StringIO
 
 import math
 import matplotlib.pyplot as plt
@@ -66,6 +67,7 @@ def getSoln(n:int=1) -> Tuple[np.ndarray, float]:
     """
     Returns z, tend
     """
+
     if n == 1:  # Triple Rings Lined Up
         return (
             np.m[-0.0347, 1.1856::0.2693, -1.0020::-0.2328, -
@@ -149,13 +151,24 @@ def getSoln(n:int=1) -> Tuple[np.ndarray, float]:
             448
         )
 
-    else:  # Oval and crossed triple loop
+    if n == 13:  # Oval and crossed triple loop
         return (
             np.m[1.451145020734434, -0.209755165361865::-0.729818019566695, 0.408242931368610::0.509179927131025,
                  0.050853900894748::0.424769074671482, -0.201525344687377::0.074058478590899, 0.054603427320703::-0.498827553247650, 0.146921917372517],
 
         )
-
+    
+    with open("data/data.csv") as f:
+        data = f.readlines()[14 - 13].split(',')
+        return (
+            np.loadtxt(
+                StringIO(
+                    ",".join(data[:-4])
+                ),
+                delimiter = ','
+            ).reshape(6, 2),
+            math.ceil(124.4 * float(data[-4]))
+        )
 
 def move(turtle: Turtle, coords: Tuple[float, float]):
     turtle.pu()
@@ -221,9 +234,7 @@ def lightcurve(pos, axis=0):
 
             # Update new top
             top = b
-    
-        print(top)
-    print("===========================================")
+
     # Divided to normalise the data
     return s / (len(pos) * C_AREA)
 
@@ -235,7 +246,7 @@ if __name__ == "__main__":
     z, tend = getSoln(int(input()))
 
     # Radius of star
-    RADIUS = 0.25
+    RADIUS = 0.05
 
     # Array storing the relative light intensity at every point
     # light intensity of a star is taken to be its radius
