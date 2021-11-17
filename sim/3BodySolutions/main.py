@@ -180,10 +180,8 @@ def lightkurve(pos, axis=0):
     s, top = 0, float("-inf")
     for x in sorted(xpos):
         a, b = x - RADIUS, x + RADIUS
-        if top < a:
-            top = a
-        if top < b:
-            s, top = s+b-top, b
+        if top < a: top = a
+        if top < b: s, top = s+b-top, b
     
     return s
 
