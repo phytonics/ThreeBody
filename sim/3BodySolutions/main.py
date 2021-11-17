@@ -3,6 +3,7 @@ from numpy.linalg import norm
 from typing import Tuple
 from turtle import *
 
+import math
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 
@@ -180,24 +181,49 @@ def lightkurve(pos, axis=0):
     s, top = 0, float("-inf")
     for x in sorted(xpos):
         a, b = x - RADIUS, x + RADIUS
+        
         if top < a: top = a
+
         if top < b: s, top = s+b-top, b
     
     return s
 
 
 def lightcurve(pos, axis=0):
+    """
+    Same as lightkurve but c
+    c for circle!
+    stars are now circles
+    """
+
+    # Area of circle is constant as they are all the same circle
+    C_AREA = RADIUS * RADIUS * math.pi
+
     xpos = pos[:, axis]
 
     s, top = 0, float("-inf")
     for x in sorted(xpos):
         a, b = x - RADIUS, x + RADIUS
-        if top < a:
-            top = a
-        if top < b:
-            s, top = s+b-top, b
 
-    return s
+        if top < a: top = a
+
+        if top < b:
+            # Set dist to be the distance between the centre of circle and chord bisecting area intersecting prev circle
+            # min ensures distance is at most the radius (floating point error i am looking at u)
+            dist = min(RADIUS, x - (top + a) / 2)
+
+            # Add the circle sector added
+            # The max is to counter stupid errors due to floating point
+            tri = math.sqrt(RADIUS * RADIUS - dist * dist) * dist
+            sector = math.acos(dist / RADIUS) * RADIUS * RADIUS 
+
+            s += C_AREA - 2 * (sector - tri)
+
+            # Update new top
+            top = b
+    
+    # Divided to normalise the data
+    return s / (len(pos) * C_AREA)
 
 
 if __name__ == "__main__":
