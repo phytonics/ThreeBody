@@ -6,32 +6,36 @@ import turtle, time
 * Assuming the fact that light detected is parallel (due to large distance between us and system)
 * Assuming the fact that light intensity is equal at all distance (distance between stars << distance between us and system)
 
-mass = 1, radius = 6 pixels (whatever that means)
+How to use
 
-Star 1
-[
-    Position: x = 0.97000436, y = -0.24308753,
-    Speed: x: -0.466203685, y: -0.43236573
-]
+1) Input Frames per second for animation
+2) Input Calculations per frame for accuracy
+3) Input Mass of each body for gravitational effect
+4) Input stars position and velocity as tuple of dictionaries like the example given
 
-Star 2
-[
-    Position: x = -0.97000436, y = 0.24308753,
-    Speed: x: -0.466203685, y: -0.43236573
-]
-
-Star 3
-[
-    Position: x = 0, y = 0,
-    Speed: x = -0.93240737, y = -0.86473146
-]
-
+e.g.
+{
+    "pos": np.array([0, 0], dtype = np.float64),
+    "vel": np.array([0, 0], dtype = np.float64)
+}
 """
-# Seconds per Frame
-PERIOD = 1/100
 
-# Mass of star
+"""<INPUT REGION>"""
+# Frames per second
+FPS = 30
+
+# Calculations per frame
+CPF = 10000
+
+# Mass of star (Affects gravitational force)
 MASS = 1
+
+# Radius of star
+RADIUS = 0.25
+
+# Array storing the relative light intensity at every point
+# light intensity of a star is taken to be its radius
+LIGHTKURVE = np.array([], dtype = np.float64)
 
 stars = (
     dict(
@@ -46,17 +50,10 @@ stars = (
         pos = np.array([0.0, 0.0], dtype = np.float64),
         vel = np.array([-0.93240737, -0.86473146], dtype = np.float64)
     )
-    # dict(
-    #     pos = np.array([0, 0], dtype = np.float64),
-    #     vel = np.array([0, 0], dtype = np.float64)
-    # ),
-    # dict(
-    #     pos = np.array([0, 1], dtype = np.float64),
-    #     vel = np.array([0, 0], dtype = np.float64)
-    # )
 )
+"""</INPUT REGION>"""
 
-
+"""====Code===="""
 def deltaV(stars):
 
     change = [np.array([0.0, 0.0], dtype = np.float64)] * len(stars)
@@ -70,6 +67,45 @@ def deltaV(stars):
 
     return change
 
+def lightkurve(pos):
+    """
+    Takes an array of vectors mapping the positions of the bodies
+    Calculates the light intensity when viewed from the side at a far distance
+    Appends it to the array of the curve
+
+    * Assuming the star is a square when viewed from the side
+    * This becomes a interval summing problem
+    * Checked on https://www.codewars.com/kata/52b7ed099cdc285c300001cd
+    """
+
+    # Calculating intervals to consider
+    xpos = pos[:, 0]
+    intervals = []
+    for i in xpos: intervals.append([i - RADIUS, i + RADIUS])
+
+    intervals = sorted(intervals, key = lambda x:x[0])
+
+    summed = []
+    # Summing the intervals
+    for i in intervals:
+        
+        if len(summed) == 0:
+            summed.append(i)
+            continue
+
+        # Extension of previous interval
+        if i[0] < summed[-1][1]:
+            summed[-1][1] = max(i[1], summed[-1][1])
+        else: # Or not
+            summed.append(i)
+
+    # Append it to the array
+    global LIGHTKURVE
+    LIGHTKURVE.append(0)
+    for i in summed:
+        LIGHTKURVE[-1] += i[1] - i[0]
+    
+    return LIGHTKURVE[0]
 
 # Instant drawing
 turtle.speed(0)
@@ -85,10 +121,11 @@ while True:
         turtle.goto(tuple(s["pos"] * 100))
         turtle.stamp()
 
-    time.sleep(PERIOD)
+    time.sleep(1 / FPS)
 
     vel_change = deltaV(stars)
 
-    for s, delv in zip(stars, vel_change):
-        s["pos"] = s["pos"] + s["vel"] * PERIOD
-        s["vel"] = s["vel"] + delv * PERIOD
+    for i in range(CPF): # Calculations per frame
+        for s, delv in zip(stars, vel_change):
+            s["pos"] = s["pos"] + s["vel"] * (1/CPF/FPS)
+            s["vel"] = s["vel"] + delv * (1/CPF/FPS)
