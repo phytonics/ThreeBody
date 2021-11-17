@@ -16,6 +16,8 @@ import math
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 
+import pathlib
+
 rcParams["figure.dpi"] = 150
 rcParams["figure.figsize"] = (16.0, 8.0)
 
@@ -166,7 +168,7 @@ def getSoln(n: int = 1) -> Tuple[np.ndarray, int]:
             5
         )
 
-    with open("data/data.csv") as f:
+    with open(pathlib.Path(__file__).parent.resolve().parent.resolve() / "data/data.csv") as f:
         data = f.readlines()[14 - 13].split(',')
         return (
             np.loadtxt(
@@ -348,6 +350,7 @@ if __name__ == "__main__":
     window = Tk()
     window.state("zoomed")
     window.minsize(600, 550)
+    window.iconbitmap(pathlib.Path(__file__).parent.resolve() / 'phyton.ico')
     style = ttk.Style(window)
     style.theme_use("vista")
     window.title("Three Body Simulator")
