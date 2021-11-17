@@ -90,7 +90,7 @@ def getSoln(n:int=1) -> Tuple[np.ndarray, float]:
         return (
             np.m[0.716248295712871, 0.384288553041130::0.086172594591232, 1.342795868576616::0.538777980807643, 0.481049882655556::1.245268230895990,
                  2.444311951776573::-0.675224323690062, -0.962879613630031::-0.570043907205925, -1.481432338146543],
-            1024
+            2048  #1024
         )
 
     if n == 5:  # Three Diving Into Middle
@@ -153,7 +153,7 @@ def getSoln(n:int=1) -> Tuple[np.ndarray, float]:
         return (
             np.m[1.451145020734434, -0.209755165361865::-0.729818019566695, 0.408242931368610::0.509179927131025,
                  0.050853900894748::0.424769074671482, -0.201525344687377::0.074058478590899, 0.054603427320703::-0.498827553247650, 0.146921917372517],
-
+                 5
         )
 
 
@@ -251,6 +251,7 @@ if __name__ == "__main__":
     obj1 = Turtle()
     obj1.shape("circle")
     obj1.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
+    obj1.color("red")
     move(obj1, 300*z[0])
     obj1.speed(0)
 
@@ -259,6 +260,7 @@ if __name__ == "__main__":
     obj2.shape("circle")
     obj2.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
     obj2.speed(0)
+    obj2.color("blue")
     move(obj2, 300*z[1])
 
     # Turtle 3
@@ -266,6 +268,7 @@ if __name__ == "__main__":
     obj3.shape("circle")
     obj3.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
     move(obj3, 300*z[2])
+    obj3.color("green")
     obj3.speed(0)
 
     for i in range(tend): # 240
@@ -285,13 +288,13 @@ if __name__ == "__main__":
         lightcurve_y.append(lightcurve(p, 1))
 
     fig, axes = plt.subplots(1, 2, sharey = True)
-    axes[0].plot(lightcurve_x, color="blue", label = "Kurve")
-    axes[0].plot(lightkurve_x, color="orange", label = "Curve")
+    axes[0].plot(lightcurve_x, color="orange", label = "Kurve")
+    axes[0].plot(lightkurve_x, color="blue", label = "Curve")
     axes[0].set_title("Light Curve measured about x-axis")
     axes[0].legend(loc="upper right")
 
-    axes[1].plot(lightcurve_y, color="blue", label = "Kurve")
-    axes[1].plot(lightkurve_y, color="orange", label = "Curve")
+    axes[1].plot(lightcurve_y, color="orange", label = "Kurve")
+    axes[1].plot(lightkurve_y, color="blue", label = "Curve")
     axes[1].set_title("Light Curve mesasured about y-axis")
     axes[1].legend(loc="upper right")
     plt.show()
