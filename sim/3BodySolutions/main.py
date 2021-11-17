@@ -186,7 +186,7 @@ def lightkurve(pos, axis=0):
 
         if top < b: s, top = s+b-top, b
     
-    return s / len(pos) / RADIUS / 2
+    return s / (len(pos) * RADIUS * 2)
 
 
 def lightcurve(pos, axis=0):
@@ -222,6 +222,8 @@ def lightcurve(pos, axis=0):
             # Update new top
             top = b
     
+        print(top)
+    print("===========================================")
     # Divided to normalise the data
     return s / (len(pos) * C_AREA)
 
@@ -230,10 +232,10 @@ if __name__ == "__main__":
     G = 1
     m = np[1, 1, 1]
     dt = 0.01
-    z, tend = getSoln(5)
+    z, tend = getSoln(int(input()))
 
     # Radius of star
-    RADIUS = 1
+    RADIUS = 0.25
 
     # Array storing the relative light intensity at every point
     # light intensity of a star is taken to be its radius
@@ -242,16 +244,27 @@ if __name__ == "__main__":
     lightcurve_x = []
     lightcurve_y = []
 
+    # Scaling the RADIUS, such that 1 unit = 300 pixels
+    RADIUS *= 300
+
+    # Turtle 1
     obj1 = Turtle()
     obj1.shape("circle")
+    obj1.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
     move(obj1, 300*z[0])
     obj1.speed(0)
+
+    # Turtle 2
     obj2 = Turtle()
     obj2.shape("circle")
-    move(obj2, 300*z[1])
+    obj2.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
     obj2.speed(0)
+    move(obj2, 300*z[1])
+
+    # Turtle 3
     obj3 = Turtle()
     obj3.shape("circle")
+    obj3.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
     move(obj3, 300*z[2])
     obj3.speed(0)
 
@@ -275,8 +288,11 @@ if __name__ == "__main__":
     axes[0].plot(lightcurve_x, color="blue", label = "Kurve")
     axes[0].plot(lightkurve_x, color="orange", label = "Curve")
     axes[0].set_title("Light Curve measured about x-axis")
+    axes[0].legend(loc="upper right")
+
     axes[1].plot(lightcurve_y, color="blue", label = "Kurve")
     axes[1].plot(lightkurve_y, color="orange", label = "Curve")
     axes[1].set_title("Light Curve mesasured about y-axis")
+    axes[1].legend(loc="upper right")
     plt.show()
 
