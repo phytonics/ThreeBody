@@ -11,11 +11,12 @@ from numpy.linalg import norm
 from typing import Tuple
 from turtle import *
 from io import StringIO
-
+from tkinter.filedialog import asksaveasfilename as save
+import pyscreenshot as ImageGrab
 import math
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
-
+import pandas as pd
 import pathlib
 
 rcParams["figure.dpi"] = 150
@@ -187,7 +188,7 @@ def move(turtle: RawTurtle, coords: Tuple[float, float]):
     turtle.pd()
 
 
-def lightcurve(pos, axis=0):
+def lightcurve(pos, RADIUS, axis=0):
     """
     Same as lightkurve but c
     c for circle!
@@ -248,18 +249,27 @@ class Plot(ttk.Frame):
         self.canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=1)
 
         self.pack(side=BOTTOM, fill=BOTH, expand=1)
+
+    def clear(self):
+        self.axes[0].clear()
+        self.axes[1].clear()
+    
+    def systemClear(self):
+        self.clear()
+        self.lightcurve_x = np.array([])
+        self.lightcurve_y = np.array([])
     
     def updateXY(self, x, y):
         self.lightcurve_x = np.append(self.lightcurve_x, x)
         self.lightcurve_y = np.append(self.lightcurve_y, y)
 
-        self.axes[0].clear()
+        self.clear()
+
         self.line_x = self.axes[0].plot(self.lightcurve_x, color="orange")[0]
         #self.axes[0].plot(self.lightkurve_x, color="blue", label="Curve")
         self.axes[0].set_title("Light Curve measured about x-axis")
         #self.axes[0].legend(loc="upper right")
 
-        self.axes[1].clear()
         self.line_y = self.axes[1].plot(self.lightcurve_y, color="orange")[0]
         #self.axes[1].plot(self.lightkurve_y, color="blue", label="Curve")
         self.axes[1].set_title("Light Curve mesasured about y-axis")
@@ -278,8 +288,26 @@ class ThreeBodySim(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
 
-        self.runButton = ttk.Button(parent, text="Start Simulation", command=self.runSimulation)
-        self.runButton.pack(side=TOP)
+        self.parent = parent
+
+        self.menu = ttk.Frame(self)
+
+        self.runButton = ttk.Button(self.menu, text="Start Simulation", command=self.runSimulation)
+        self.runButton.pack(side=LEFT)
+
+        self.bodyConfig = IntVar(value=3)
+        self.chooseConfig = ttk.Spinbox(self.menu, from_=1, to=30, width=5, textvariable=self.bodyConfig)
+        self.chooseConfig.pack(side=LEFT)
+
+        self.stopButton = ttk.Button(
+            self.menu, text="Stop Simulation", command=self.stopSimulation)
+        self.stopButton.pack(side=LEFT)
+
+        self.saveButton = ttk.Button(
+            self.menu, text="Save Simulation", command=self.saveSimulation)
+        self.saveButton.pack(side=RIGHT)
+
+        self.menu.pack(side=TOP)
 
         self.canvas = ScrolledCanvas(self)
         self.canvas.pack(side=TOP, fill=BOTH, expand=1)
@@ -287,35 +315,105 @@ class ThreeBodySim(ttk.Frame):
 
         self.screen = TurtleScreen(self.canvas)
 
-        # Turtle 1
-        self.obj1 = RawTurtle(self.canvas, shape="circle")
-        self.obj1.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
-        self.obj1.color("red")
-        move(self.obj1, 300*z[0])
-        self.obj1.speed(0)
-
-        # Turtle 2
-        self.obj2 = RawTurtle(self.canvas, shape="circle")
-        self.obj2.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
-        self.obj2.speed(0)
-        self.obj2.color("blue")
-        move(self.obj2, 300*z[1])
-
-        # Turtle 3
-        self.obj3 = RawTurtle(self.canvas, shape="circle")
-        self.obj3.shapesize(RADIUS / 20, RADIUS / 20, RADIUS / 20)
-        move(self.obj3, 300*z[2])
-        self.obj3.color("green")
-        self.obj3.speed(0)
+        self.radius = 0.05 * 300
 
         self.plot = Plot(self)
 
         self.screen.listen()
+        
+        self.pack(fill=BOTH, expand=1)
+
+        self.isRunning = BooleanVar(value=False)
+    
+    def saveSimulation(self):
+        lightcurve_x = self.plot.lightcurve_x.copy()
+        lightcurve_y = self.plot.lightcurve_y.copy()
+        df = pd.DataFrame({"lightcurve_x": lightcurve_x, "lightcurve_y": lightcurve_y})
+
+        x2 = self.parent.winfo_rootx()
+        y2 = self.parent.winfo_rooty()
+        x1 = x2 + self.parent.winfo_width()
+        y1 = y2 + self.parent.winfo_height()
+
+        imageFile = save(title="Save ThreeBody Configuration Image at:",
+                    filetypes=(
+                        ("PNG Image Files", "*.png"),
+                        ("JPEG Image Files", "*.jpg"),
+                        ("GIF Image Files", "*.gif"),
+                        ("Icon Image Files", "*.ico")
+                    ))
+        if imageFile:
+            ImageGrab.grab().crop((x2, y2, x1, y1)).save(imageFile)
+
+        csvFile = save(title="Save ThreeBody LightCurve at:",
+                    filetypes=(
+                        ("CSV Files", "*.csv"),
+                        ("TXT Files", "*.txt"),
+                        ("TSV Files", "*.tsv"),
+                        ("Excel Files", "*.xlsx *.xls"),
+                        ("JSON Files", "*.json"),
+                        ("HTML Files", "*.html *.xhtml *.htm *.php"),
+                        ("All Files", "*")
+                    ))
+        if csvFile:
+            extension = csvFile.split(".")[-1].lower()
+            if extension == "tsv":
+                df.to_csv(csvFile, sep="\t", index=False)
+            elif "xls" in extension:
+                df.to_excel(csvFile, index=False)
+            elif "json" in extension:
+                df.to_json(csvFile, index=False)
+            elif "htm" in extension:
+                df.to_html(csvFile, index=False)
+            else:
+                df.to_csv(csvFile, index=False)
+
+
+        
+
+
+
     
     def runSimulation(self):
-        global z
+        self.stopSimulation()
+        self.plot.systemClear()
+        self.screen.clearscreen()
+
+
+        self.isRunning.set(True)
+        G = 1
+        m = np[1, 1, 1]
+        dt = 0.01
+        z, tend = getSoln(self.bodyConfig.get())
+        
+
+        # Turtle 1
+        self.obj1 = RawTurtle(self.canvas, shape="circle")
+        self.obj1.shapesize(
+            self.radius / 20, self.radius / 20, self.radius / 20)
+        self.obj1.color("red")
+        self.obj1.speed(0)
+
+        # Turtle 2
+        self.obj2 = RawTurtle(self.canvas, shape="circle")
+        self.obj2.shapesize(
+            self.radius / 20, self.radius / 20, self.radius / 20)
+        self.obj2.speed(0)
+        self.obj2.color("blue")
+
+        # Turtle 3
+        self.obj3 = RawTurtle(self.canvas, shape="circle")
+        self.obj3.shapesize(
+            self.radius / 20, self.radius / 20, self.radius / 20)
+        self.obj3.color("green")
+        self.obj3.speed(0)
+
+        move(self.obj1, 300*z[0])
+        move(self.obj2, 300*z[1])
+        move(self.obj3, 300*z[2])
+
         #for i in range(tend):  # 240
-        while True:
+        while self.isRunning.get():
             t, z = ode45(lambda t, z: zdot(1, np[1, 1, 1], z), [0, dt], z)
             #z -= dt * zdot(G, m, z)
             p = z[:3]*300
@@ -324,40 +422,27 @@ class ThreeBodySim(ttk.Frame):
             sim.obj2.goto(*p[1])
             sim.obj3.goto(*p[2])
 
-            sim.plot.updateXY(lightcurve(p), lightcurve(p, 1))
+            sim.plot.updateXY(lightcurve(p, self.radius), lightcurve(p, self.radius, 1))
+        
+        self.isRunning.set(False)
+        #self.screen.clearscreen()
+        #self.plot.systemClear()
+    
+    def stopSimulation(self):
+        self.isRunning.set(False)
 
 
 
 
 if __name__ == "__main__":
-    G = 1
-    m = np[1, 1, 1]
-    dt = 0.01
-    z, tend = getSoln(int(input()))
-
-    # Radius of star
-    RADIUS = 0.05
-
-    # Array storing the relative light intensity at every point
-    # light intensity of a star is taken to be its radius
-    lightkurve_x = []
-    lightkurve_y = []
-    lightcurve_x = []
-    lightcurve_y = []
-
-    # Scaling the RADIUS, such that 1 unit = 300 pixels
-    RADIUS *= 300
-
     window = Tk()
     window.state("zoomed")
-    window.minsize(600, 550)
     window.iconbitmap(pathlib.Path(__file__).parent.resolve() / 'phyton.ico')
     style = ttk.Style(window)
     style.theme_use("vista")
     window.title("Three Body Simulator")
 
     sim = ThreeBodySim(window)
-    sim.pack(fill=BOTH, expand=1)
     window.mainloop()
 
 
