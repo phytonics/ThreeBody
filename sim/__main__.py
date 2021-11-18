@@ -307,6 +307,10 @@ class ThreeBodySim(ttk.Frame):
             self.menu, text="Save Simulation", command=self.saveSimulation)
         self.saveButton.pack(side=RIGHT)
 
+        self.resetButton = ttk.Button(
+            self.menu, text="Reset Simulation", command=self.resetSimulation)
+        self.resetButton.pack(side=RIGHT)
+
         self.menu.pack(side=TOP)
 
         self.canvas = ScrolledCanvas(self)
@@ -369,16 +373,14 @@ class ThreeBodySim(ttk.Frame):
                 df.to_csv(csvFile, index=False)
 
 
-        
-
-
-
     
-    def runSimulation(self):
+    def resetSimulation(self):
         self.stopSimulation()
         self.plot.systemClear()
         self.screen.clearscreen()
 
+    def runSimulation(self):
+        self.resetSimulation()
 
         self.isRunning.set(True)
         G = 1
