@@ -283,6 +283,7 @@ class ThreeBodySim(ttk.Frame):
 
         self.canvas = ScrolledCanvas(self)
         self.canvas.pack(side=TOP, fill=BOTH, expand=1)
+        #self.canvas.config(width=1000, height=1000)
 
         self.screen = TurtleScreen(self.canvas)
 
