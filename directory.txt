@@ -1,0 +1,303 @@
+Folder PATH listing for volume Acer
+Volume serial number is 06F4-9C1C
+C:.
+¦   .gitignore
+¦   directory.txt
+¦   README.md
+¦   requirements.txt
+¦   
++---.idea
+¦   ¦   .gitignore
+¦   ¦   csv-plugin.xml
+¦   ¦   discord.xml
+¦   ¦   misc.xml
+¦   ¦   modules.xml
+¦   ¦   other.xml
+¦   ¦   ThreeBody.iml
+¦   ¦   vcs.xml
+¦   ¦   workspace.xml
+¦   ¦   
+¦   +---inspectionProfiles
+¦           profiles_settings.xml
+¦           Project_Default.xml
+¦           
++---.ipynb_checkpoints
++---.vscode
+¦       settings.json
+¦       
++---commitments
+¦       commit.sh
+¦       enigma.sh
+¦       references.sh
+¦       retrieval.sh
+¦       
++---data
+¦   ¦   binaryconfigs.csv
+¦   ¦   binarystars.csv
+¦   ¦   data.csv
+¦   ¦   data.xlsx
+¦   ¦   dataRetrieved.csv
+¦   ¦   k2_ids.txt
+¦   ¦   kepler_binary.csv
+¦   ¦   kepler_binary_configs.csv
+¦   ¦   kepler_binary_stars.csv
+¦   ¦   kepler_ids.txt
+¦   ¦   kepler_tce.csv
+¦   ¦   koi.csv
+¦   ¦   testData.csv
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       binaryconfigs-checkpoint.csv
+¦   ¦       binarystars-checkpoint.csv
+¦   ¦       out-checkpoint.csv
+¦   ¦       
+¦   +---KIC8462852-century-long-data
+¦           castelaz_mm_magnitude.csv
+¦           short_20_06_15.4553_+44_27_24.793_N0302221335_0000.txt
+¦           short_20_06_15.5_+44_27_24.6_APASS_J200615.5+442725_0000.txt
+¦           short_KIC8462852_K8462852_0000.txt
+¦           sonneberg_stata_output_pg.csv
+¦           sonneberg_stata_output_pv.csv
+¦           sternberg_all.csv
+¦           
++---info
+¦   ¦   Data Processing Pipeline Source Code Road Map.pdf
+¦   ¦   kepler_mission_directory.txt
+¦   ¦   
+¦   +---documents
+¦   ¦       SMP Proposal 2021 - Detecting Stable Three-Body Systems.pdf
+¦   ¦       
+¦   +---keplerktc
+¦           data-columns.txt
+¦           README.md
+¦           
++---kepler
+¦   ¦   README.md
+¦   ¦   requirements.txt
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---commitments
+¦   ¦       commit.sh
+¦   ¦       
+¦   +---core
+¦   ¦   ¦   base.py
+¦   ¦   ¦   curve.py
+¦   ¦   ¦   pipeline.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           base.cpython-38.pyc
+¦   ¦           curve.cpython-38.pyc
+¦   ¦           pipeline.cpython-38.pyc
+¦   ¦           __init__.cpython-38.pyc
+¦   ¦           
+¦   +---exo
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           __init__.cpython-38.pyc
+¦   ¦           
+¦   +---io
+¦   ¦   ¦   general.py
+¦   ¦   ¦   k2.py
+¦   ¦   ¦   kepler.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           general.cpython-38.pyc
+¦   ¦           k2.cpython-38.pyc
+¦   ¦           kepler.cpython-38.pyc
+¦   ¦           
+¦   +---models
+¦   ¦   +---fft
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---noise
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---spline
+¦   ¦           __init__.py
+¦   ¦           
+¦   +---util
+¦   ¦       base.py
+¦   ¦       median_filter.py
+¦   ¦       periodic_event.py
+¦   ¦       remove_events.py
+¦   ¦       robust_mean.py
+¦   ¦       __init__.py
+¦   ¦       
+¦   +---__pycache__
+¦           general.cpython-37.pyc
+¦           k2.cpython-37.pyc
+¦           kepler.cpython-37.pyc
+¦           tce.cpython-37.pyc
+¦           __init__.cpython-37.pyc
+¦           __init__.cpython-38.pyc
+¦           
++---logs
+¦       git.txt
+¦       keplerktc_18-58_13-5-21.txt
+¦       linux.txt
+¦       nu.txt
+¦       
++---models
++---notebooks
+¦   ¦   binary_star_analysis.ipynb
+¦   ¦   kic_8462852_analysis.ipynb
+¦   ¦   Noise Reduction Tests.ipynb
+¦   ¦   retrieve_binary_star_configs_updated.ipynb
+¦   ¦   retrieve_binary_star_config_data.ipynb
+¦   ¦   Time Series Analysis of Light Curve Data from Kepler Space Probe.ipynb
+¦   ¦   Untitled.ipynb
+¦   ¦   YX_retriever.ipynb
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦           Binary Star Analysis-checkpoint.ipynb
+¦           binary_star_analysis-checkpoint.ipynb
+¦           kic_8462852_analysis-checkpoint.ipynb
+¦           retrieve_binary_star_configs_updated-checkpoint.ipynb
+¦           retrieve_binary_star_config_data-checkpoint.ipynb
+¦           Untitled-checkpoint.ipynb
+¦           
++---patterns
+¦   +---fig8
+¦   ¦       fig8.py
+¦   ¦       
+¦   +---lagrange5
+¦   ¦       l5.py
+¦   ¦       README.md
+¦   ¦       
+¦   +---twobody
+¦           binary.py
+¦           __init__.py
+¦           
++---proposal
+¦   ¦   proposal.html
+¦   ¦   proposal.md
+¦   ¦   
+¦   +---images
+¦           image1.png
+¦           image2.png
+¦           image3.png
+¦           image4.png
+¦           image5.png
+¦           
++---python
+¦       k2-ktc.py
+¦       kepler-ktc.py
+¦       test_if_os_works.py
+¦       threebody.py
+¦       
++---references
+¦       A study of power spectral densities of real and simulated Kepler light curves.pdf
+¦       An Algorithm for the Visualization of Relevant Patterns in Astronomical Light Curves.pdf
+¦       An application of the unscented Kalman filter for Spacecraft Altitude Estimation on Real and Simulated Light Curve Data.pdf
+¦       Analyzing Variability in Exoplanetary Eclipses.pdf
+¦       Asteroseismology of the heartbeat star KIC 5006817.pdf
+¦       Astroinformatics - A 21st Century Approach to Astronomy.pdf
+¦       Background Short Period Eclipsing Binaries in the Original Kepler Field.pdf
+¦       Binary Central Stars of Planetary Nebulae Identified With Kepler or K2.pdf
+¦       Binary-Star Light-Curve Models.pdf
+¦       Characterizing Exoplanet Transits and Stellar Activity in Kepler Lightcurves with Scalable Gaussian Processes.pdf
+¦       Critical orbits in the elliptic restricted three-body problem.pdf
+¦       Databases in Networked Information Systems.pdf
+¦       Deep Learning in Asteroseismology.pdf
+¦       Detecting Reflected Light from Close-In Extrasolar Giant Planets with the Kepler Photometer.pdf
+¦       ellc - A fast, flexible light curve model for detached eclipsing binary stars and transiting exoplanets.pdf
+¦       Exploratory Analysis of Light Curves - A Case-Study in Astronomy Data Understanding.pdf
+¦       Finding flares in Kepler and TESS data with recurrent deep neural networks.pdf
+¦       Gary, Bruce L. (2010). Exoplanet Observing for Amateurs, Second Edition.pdf
+¦       Identifying Exoplanets with Deep Learning - A Five Planet Resonant Chain Around Kepler-80 and An Eight Planet Around Kepler-90.pdf
+¦       InceptionTime - Finding AlexNet for Time Series Classification.pdf
+¦       Kepler Eclipsing Binary Stars. IV. Precise Eclipse Times for Close Binaries and Identification of Candidate Three-Body Systems.pdf
+¦       KIC 9406652 - A laboratory for tilted disks in cataclysmic variable stars II - Modeling of the.pdf
+¦       Lecture notes on black hole binary astrophysics.pdf
+¦       Light Curve Analysis of Ground-Based Data from Exoplanets Transit Database.pdf
+¦       Light curve analysis of the new eclipsing binary LD355.pdf
+¦       Light Curve Modeling of Eclipsing Binary Stars.pdf
+¦       Measurements of CP violation in the three-body phase space of charmless B± decays.pdf
+¦       Mysterious eclipses in the light curve of KIC8462852 - a possible explanation.pdf
+¦       Over a thousand new periodic orbits of a planar three-body system with unequal masses.pdf
+¦       Photometry Analysis of Exoplanets WASP-80b & HD 189733b.pdf
+¦       PHYS 7221 - The Three-Body Problem - Juhan Frank, LSU.pdf
+¦       Reduction and processing of the photometric data of exoplanet transits.pdf
+¦       Removing systematic noise from lightcurves.pdf
+¦       Satellite Characterization - Angles and Light Curve Data Fusion for Spacecraft State and Parameter Estimation.pdf
+¦       Searching for exoplanets using artificial intelligence (ArXiv).pdf
+¦       Searching for exoplanets using artificial intelligence.pdf
+¦       Secular dynamics in hierarchical three-body systems.pdf
+¦       Secular Dynamics of the Three-Body Problem - Application to the ? Andromedae Planetary System.pdf
+¦       TESS Data for Asteroseismology (T’DA) Stellar Variability Classification Pipeline - Set-Up and Application to the Kepler Q9 Data.pdf
+¦       TESS Data for Asteroseismology - Photometry.pdf
+¦       The Sky is Your Laboratory.pdf
+¦       The stability of periodic orbits in the Three-Body Problem.pdf
+¦       The three-body problem - Musielak and Quarles.pdf
+¦       The three-body problem - Valtonen and Karttunen.pdf
+¦       The three-body system V 505 Sagittarii.pdf
+¦       Time Series Classification from Scratch with Deep Neural Networks - A Strong Baseline.pdf
+¦       Transit Light Curve Tutorial.pdf
+¦       Transit, Secondary Eclipse, and Phase Curve Analysis to Characterize Kepler Exoplanets.pdf
+¦       Wotan - Comprehensive time-series de-trending in Python.pdf
+¦       
++---signal
+¦   +---.ipynb_checkpoints
+¦           Untitled-checkpoint.ipynb
+¦           
++---sim
+¦   ¦   phyton.ico
+¦   ¦   README.md
+¦   ¦   __init__.py
+¦   ¦   __main__.py
+¦   ¦   
+¦   +---3BodySolutions
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   __main__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           main.cpython-37.pyc
+¦   ¦           
+¦   +---L5
+¦   ¦   ¦   L5.py
+¦   ¦   ¦   phyton.ico
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   __main__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           __main__.cpython-37.pyc
+¦   ¦           
+¦   +---logs
+¦   ¦   +---4
+¦   ¦   ¦       Config 4 18112021-1343.csv
+¦   ¦   ¦       Config 4 18112021-1343.png
+¦   ¦   ¦       
+¦   ¦   +---adobe
+¦   ¦   ¦       adobe-21112021-2227.csv
+¦   ¦   ¦       adobe-21112021-2227.png
+¦   ¦   ¦       
+¦   ¦   +---figure8
+¦   ¦   ¦       Figure Eight 18112021-1220.csv
+¦   ¦   ¦       Figure Eight 18112021-1220.png
+¦   ¦   ¦       Figure Eight 18112021-1230.csv
+¦   ¦   ¦       Figure Eight 18112021-1230.png
+¦   ¦   ¦       
+¦   ¦   +---Flower
+¦   ¦           Flower 21112021-1031.csv
+¦   ¦           Flower 21112021-1031.png
+¦   ¦           
+¦   +---__pycache__
+¦           __main__.cpython-37.pyc
+¦           
++---simulator
+    ¦   .gitignore
+    ¦   LICENSE
+    ¦   main.py
+    ¦   phyton.ico
+    ¦   Pipfile
+    ¦   Pipfile.lock
+    ¦   README.md
+    ¦   requirements.txt
+    ¦   
+    +---.github
+        +---workflows
+                python-app.yml
+                python-publish.yml
+                
