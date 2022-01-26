@@ -2,6 +2,17 @@ from lightkurve.lightcurve import KeplerLightCurve
 from typing import Union
 import os
 
+"""
+A wrapper class for LightCurve
+It handles the memory storage, ensuring minimal storage space
+
+Attributes
+----------
+klc: KeplerLightCurve
+    The lightcurve object that is wrapped
+id: str
+    The ID of the lightcurve wrapped
+"""
 class LightCurve:
     def __init__(self, klc: KeplerLightCurve, kplrId: Union[int, str, float]):
         self.klc = klc

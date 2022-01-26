@@ -1,7 +1,7 @@
 from kepler.core import LightCurve, LightCurveAction
 import lightkurve as lk
 import numpy as np
-# TODO: Change the comments as they are incorrect now
+
 def keplerRemoveNoise(lc: lk.LightCurve):
     """ Removes Instrument noise from kepler light curve.
     
@@ -48,23 +48,41 @@ def keplerRemoveNoise(lc: lk.LightCurve):
 
     return (lc_sff)
 
-# TODO: Implement the TESS
 def TESSRemoveNoise():
+    """ Removes Instrument noise from TESS light curve
+
+    This function uses the lightkurve library to perform this function.
+    ! However, it is currently not working properly.
+    
+    Parameters
+    -----------------------------------------
+    lc: 
+        A valid lightcurve form TESS
+
+    Returns
+    -----------------------------------------
+    LightCurve
+        The light curve with reduced instrument noise
+    """
+
     pass
 
-def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
+def removeNoise(tpfs: lk.TargetPixelFileCollection, source: str = 'kepler'):
     """ Removes Instrument noise from target pixel collection.
     
     This function uses the lightkurve library to perform this function
     Firstly, it uses the PLD corrector to correct the target pixel collection
     The resulting lightcurve is then passed to the respective 
 
-    NOTE: This function will count exoplanet transits as noise
+    NOTE: This function should treat exoplanet transits as noise
 
     Parameters
     -----------------------------------------
-    tpfs: 
+    tpfs: TargetPixelFileCollection
         A valid target pixel file collection
+
+    source: str
+        A string stating the source of the target pixel file
 
     Returns
     -----------------------------------------
@@ -80,7 +98,6 @@ def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
     1) Why Pixel Level Decorrelation?
 
     It removes instrument noise for all kepler and TESS.
-
     
     * The other correctors will be used in the differentiated functions
     """
@@ -96,7 +113,6 @@ def removeNoise(tpfs: lk.TargetPixelFileCollection, source):
     
     lc_pld = lc_pld.stitch().remove_outliers().flatten()
 
-    # TODO: Implement the differentiation between Kepler and TESS
     if source == "kepler" or source == "k2":
         return keplerRemoveNoise(lc_pld)
     else:
