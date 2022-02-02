@@ -5,7 +5,8 @@ from typing import Union, List, Callable, Any
 
 
 def getK2Ids() -> List[int]:
-    """
+    """Retrieves all the Ids
+    
     :returns: A list containing all the certified K2 Ids.
     """
     with open("data/k2_ids.txt") as ids_file:

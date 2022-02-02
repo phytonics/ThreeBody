@@ -1,5 +1,6 @@
 # sim.py
 
+
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from tkinter import *
@@ -50,6 +51,9 @@ def ode45(f, t, x0, *args):
 
 def zdot(G: float, m: np.ndarray, z: np.ndarray) -> np.ndarray:
     """
+    Gets the differential of every value
+    TODO: What the **** does this even do? @Prannaya
+
     G is the Gravitational Constant
     m is an array of shape [1, 3], i.e. a row vector with [m1 m2 m3]
     z is the location and velocity each of the points in the following format:
@@ -67,6 +71,7 @@ def zdot(G: float, m: np.ndarray, z: np.ndarray) -> np.ndarray:
 
 
 def toSolve(t, z):
+    """Uses the Runge-Kutta algorithm to """
     x = ode45(lambda t, z: zdot(1, np[1, 1, 1], z), [0, t], z)
     tarray, zarray = x[0], x[1]
     defect = zarray[-1] - zarray[0]
@@ -74,8 +79,27 @@ def toSolve(t, z):
 
 
 def getSoln(n: int = 1) -> Tuple[np.ndarray, int]:
-    """
-    Returns z, tend
+    """ Retrieves the prebuild solution
+
+    Parameters
+    ----------
+    n: int
+        The index of the solution
+
+    Returns
+    ----------
+    pos
+        The positions and velocities of the initial state
+        Formatted as:
+            [p1_x  p1_y
+             p2_x  p2_y
+             p3_x  p3_y
+             v1_x  v1_y
+             v2_x  v2_y
+             v3_x  v3_y]
+
+    tend
+        Number of frames till end of cycle
     """
 
     if n == 1:  # Triple Rings Lined Up
@@ -183,6 +207,17 @@ def getSoln(n: int = 1) -> Tuple[np.ndarray, int]:
 
 
 def move(turtle: RawTurtle, coords: Tuple[float, float]):
+    """Moves the turtle to given coords
+    Doesn't draw a line between cur pos and new pos
+
+    Parameters
+    ----------
+    turtle
+        The turtle object to move
+
+    coords
+        The coordinates to move the turtle to
+    """
     turtle.pu()
     turtle.goto(*coords)
     turtle.pd()
@@ -227,118 +262,213 @@ def lightcurve(pos, RADIUS, axis=0):
 
 
 class Plot(ttk.Frame):
+    """ An singleton object to plot graph on window
+    
+    Inherits from tkinter.Frame
+
+    Attributes
+    ----------
+    lightcurve_x: np.array
+        A 1D array describing the data for lightcurve from x direction
+
+    line_x: matplotlib.lines.Line2D
+        The line representing the curve on the axes
+    
+    lightcurve_y: np.array
+        A 1D array describing the data for lightcurve from y direction
+
+    line_y: matplotlib.lines.Line2D
+        The line representing the curve on the axes
+    
+    axes: matplotlib.axes.Axes
+        The axes to plot on
+
+    fig: matplotlib.figure.Figure
+        The figure holding the axes
+    
+    canvas: matplotlib.backends.backend_tkagg.FigureCanvasTkAgg
+        The window holding the figure
+    """
+
     def __init__(self, parent, x=np.array([]), y=np.array([])):
+        # Initialise the superclass with parent in node tree
         super().__init__(parent)
+
+        # Generates the subplots for the graphs
         self.fig, self.axes = plt.subplots(
             1, 2, figsize=(16, 8), facecolor="white", sharey=True)
 
+        # Assigns the data
         self.lightcurve_x = x
         self.lightcurve_y = y
 
+        # Creates the line object represeting lightcurve_x
         self.line_x = self.axes[0].plot(self.lightcurve_x, color="orange")[0]
-        #self.axes[0].plot(self.lightkurve_x, color="blue", label="Curve")
         self.axes[0].set_title("Light Curve measured about x-axis")
-        #self.axes[0].legend(loc="upper right")
 
+        # # self.axes[0].plot(self.lightkurve_x, color="blue", label="Curve")
+        # # self.axes[0].legend(loc="upper right")
+
+        # Creates the line object represeting lightcurve_y
         self.line_y = self.axes[1].plot(self.lightcurve_y, color="orange")[0]
-        #self.axes[1].plot(self.lightkurve_y, color="blue", label="Curve")
         self.axes[1].set_title("Light Curve mesasured about y-axis")
-        #self.axes[1].legend(loc="upper right")
+        
+        # #self.axes[1].plot(self.lightkurve_y, color="blue", label="Curve")
+        # #self.axes[1].legend(loc="upper right")
 
+        # Creates the canvas holding the figure
         self.canvas = FigureCanvasTkAgg(self.fig, master=self)
-        self.canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=1)
 
+        # Start initialisation of window
+        self.canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=1)
         self.pack(side=BOTTOM, fill=BOTH, expand=1)
 
     def clear(self):
+        """ Clears the axis for redrawing
+        Only clears attr axes
+        """
         self.axes[0].clear()
         self.axes[1].clear()
     
     def systemClear(self):
+        """ Clears the axis and the data
+        This will clear the data collected on top of clearing the axes
+        """
         self.clear()
         self.lightcurve_x = np.array([])
         self.lightcurve_y = np.array([])
     
     def updateXY(self, x, y):
+        """ Appends x and y data of timestep
+
+        Parameters
+        ----------
+        x: float
+            The light intensity at x
+        y: float
+            The light intensity at y
+        """
+
+        # Appends the data
         self.lightcurve_x = np.append(self.lightcurve_x, x)
         self.lightcurve_y = np.append(self.lightcurve_y, y)
 
+        # Clears the axes
         self.clear()
 
+        # Redraws the line for x
         self.line_x = self.axes[0].plot(self.lightcurve_x, color="orange")[0]
-        #self.axes[0].plot(self.lightkurve_x, color="blue", label="Curve")
         self.axes[0].set_title("Light Curve measured about x-axis")
-        #self.axes[0].legend(loc="upper right")
 
+
+        # Redraws the line for y
         self.line_y = self.axes[1].plot(self.lightcurve_y, color="orange")[0]
-        #self.axes[1].plot(self.lightkurve_y, color="blue", label="Curve")
         self.axes[1].set_title("Light Curve mesasured about y-axis")
-        #self.axes[1].legend(loc="upper right")
+        
+        # <Removed graph style settings>
+        # # self.axes[0].plot(self.lightkurve_x, color="blue", label="Curve")
+        # # self.axes[0].legend(loc="upper right")
+        # # self.axes[1].plot(self.lightkurve_y, color="blue", label="Curve")
+        # # self.axes[1].legend(loc="upper right")
 
-        # self.line_x.set_xdata(np.arange(self.lightcurve_x.shape[0]))
-        # self.line_x.set_ydata(self.lightcurve_x)
+        # # self.line_x.set_xdata(np.arange(self.lightcurve_x.shape[0]))
+        # # self.line_x.set_ydata(self.lightcurve_x)
 
-        # self.line_y.set_xdata(np.arange(self.lightcurve_y.shape[0]))
-        # self.line_y.set_ydata(self.lightcurve_y)
+        # # self.line_y.set_xdata(np.arange(self.lightcurve_y.shape[0]))
+        # # self.line_y.set_ydata(self.lightcurve_y)
 
+        # Displays it on screen
         self.canvas.draw()
 
 
 class ThreeBodySim(ttk.Frame):
+    """ A singleton object representing the window
+    
+    Inherits from tkinter.Frame
+    """
+
     def __init__(self, parent):
         super().__init__(parent)
 
         self.parent = parent
 
+        # Top bar menu window
         self.menu = ttk.Frame(self)
 
+        # Button to start simulation
         self.runButton = ttk.Button(self.menu, text="Start Simulation", command=self.runSimulation)
         self.runButton.pack(side=LEFT)
 
+        # Preset config ID
         self.bodyConfig = IntVar(value=3)
+
+        # UI to change preset ID
         self.chooseConfig = ttk.Spinbox(self.menu, from_=1, to=30, width=5, textvariable=self.bodyConfig)
         self.chooseConfig.pack(side=LEFT)
 
+        # Button to stop simulation
         self.stopButton = ttk.Button(
             self.menu, text="Stop Simulation", command=self.stopSimulation)
         self.stopButton.pack(side=LEFT)
 
+        # Button to save simulation data and image
         self.saveButton = ttk.Button(
             self.menu, text="Save Simulation", command=self.saveSimulation)
         self.saveButton.pack(side=RIGHT)
 
+        # Button to reset simulation
         self.resetButton = ttk.Button(
             self.menu, text="Reset Simulation", command=self.resetSimulation)
         self.resetButton.pack(side=RIGHT)
 
+        # Button to reset simulation
         self.menu.pack(side=TOP)
 
+        # Window Scene init
         self.canvas = ScrolledCanvas(self)
         self.canvas.pack(side=TOP, fill=BOTH, expand=1)
         #self.canvas.config(width=1000, height=1000)
 
+        # Turtle output window, with parent as window
         self.screen = TurtleScreen(self.canvas)
 
+        # Radius of body
         self.radius = 0.05 * 300
 
+        # Plot object defined above
         self.plot = Plot(self)
 
+        # Set up listener
         self.screen.listen()
         
+        # Prepares window creation
         self.pack(fill=BOTH, expand=1)
 
+        # Init variable, stating simulation state
         self.isRunning = BooleanVar(value=False)
     
+
     def saveSimulation(self):
+        """ Function to save the simulation data
+
+        Saves picture as png, jpeg, gif and ico
+        Saves data as csv, txt, tsv, excel, json, html and more
+        """
+
+        # Retrieves the lightcurve data
         lightcurve_x = self.plot.lightcurve_x.copy()
         lightcurve_y = self.plot.lightcurve_y.copy()
+        
+        # Creates a dataframe for the data
         df = pd.DataFrame({"lightcurve_x": lightcurve_x, "lightcurve_y": lightcurve_y})
 
+        # Gets data for the window
         x2 = self.parent.winfo_rootx()
         y2 = self.parent.winfo_rooty()
         x1 = x2 + self.parent.winfo_width()
         y1 = y2 + self.parent.winfo_height()
 
+        # Asks user to save screen capture of simulation
         imageFile = save(title="Save ThreeBody Configuration Image at:",
                     filetypes=(
                         ("PNG Image Files", "*.png"),
@@ -346,9 +476,12 @@ class ThreeBodySim(ttk.Frame):
                         ("GIF Image Files", "*.gif"),
                         ("Icon Image Files", "*.ico")
                     ))
+
+        # If selected, then save
         if imageFile:
             ImageGrab.grab().crop((x2, y2, x1, y1)).save(imageFile)
 
+        # Asks user to save data from simulation
         csvFile = save(title="Save ThreeBody LightCurve at:",
                     filetypes=(
                         ("CSV Files", "*.csv"),
@@ -359,6 +492,8 @@ class ThreeBodySim(ttk.Frame):
                         ("HTML Files", "*.html *.xhtml *.htm *.php"),
                         ("All Files", "*")
                     ))
+
+        # If selected, then save
         if csvFile:
             extension = csvFile.split(".")[-1].lower()
             if extension == "tsv":
@@ -372,79 +507,110 @@ class ThreeBodySim(ttk.Frame):
             else:
                 df.to_csv(csvFile, index=False)
 
-
     
     def resetSimulation(self):
+        """ Resets the simulation
+        # ? What more do you want ?
+        """
         self.stopSimulation()
         self.plot.systemClear()
         self.screen.clearscreen()
 
     def runSimulation(self):
+        """ Function to start and run the simulation
+        """
+
+        # Prepares simulation
         self.resetSimulation()
 
+        # Starts the simulation
         self.isRunning.set(True)
-        G = 1
-        m = np[1, 1, 1]
-        dt = 0.01
-        z, tend = getSoln(self.bodyConfig.get())
+
+        # Some settings for the simulation
+        G = 1 # Gravity
+        m = np[1, 1, 1] # Mass
+        dt = 0.01 # Time step
+        z, tend = getSoln(self.bodyConfig.get()) # Initial pos + cycle time
         
 
-        # Turtle 1
+        # Body 1 Settings
         self.obj1 = RawTurtle(self.canvas, shape="circle")
         self.obj1.shapesize(
             self.radius / 20, self.radius / 20, self.radius / 20)
         self.obj1.color("red")
         self.obj1.speed(0)
 
-        # Turtle 2
+        # Body 2 Settings
         self.obj2 = RawTurtle(self.canvas, shape="circle")
         self.obj2.shapesize(
             self.radius / 20, self.radius / 20, self.radius / 20)
         self.obj2.speed(0)
         self.obj2.color("blue")
 
-        # Turtle 3
+        # Body 3 Settings
         self.obj3 = RawTurtle(self.canvas, shape="circle")
         self.obj3.shapesize(
             self.radius / 20, self.radius / 20, self.radius / 20)
         self.obj3.color("green")
         self.obj3.speed(0)
 
+        # Moves the bodies to stated initial positions
         move(self.obj1, 300*z[0])
         move(self.obj2, 300*z[1])
         move(self.obj3, 300*z[2])
 
-        #for i in range(tend):  # 240
+        # Time loop
         while self.isRunning.get():
+            # Takes a step using zdot function
             t, z = ode45(lambda t, z: zdot(1, np[1, 1, 1], z), [0, dt], z)
-            #z -= dt * zdot(G, m, z)
+            
+            # Scales up the size
             p = z[:3]*300
 
+            # Moves bodies, drawing a line to trace path
             sim.obj1.goto(*p[0])
             sim.obj2.goto(*p[1])
             sim.obj3.goto(*p[2])
 
+            # Calculates light intensity from side and adds the data
             sim.plot.updateXY(lightcurve(p, self.radius), lightcurve(p, self.radius, 1))
         
+        # When it exits, it is not running
         self.isRunning.set(False)
-        #self.screen.clearscreen()
-        #self.plot.systemClear()
+
+        # # self.screen.clearscreen()
+        # # self.plot.systemClear()
     
     def stopSimulation(self):
+        """Stops the simulation
+        # ? What more do you want ?
+        """
         self.isRunning.set(False)
 
 
 
-
+# Driver code
 if __name__ == "__main__":
+    # Creates window
     window = Tk()
-    window.state("zoomed")
+
+    # Setting regarding window
+    window.state("zoomed") # State of window
+
+    # Window icon
     window.iconbitmap(pathlib.Path(__file__).parent.resolve() / 'phyton.ico')
+
+    # Style of window
     style = ttk.Style(window)
     style.theme_use("vista")
+
+    # Title of window
     window.title("Three Body Simulator")
 
+    # Create scene on window
     sim = ThreeBodySim(window)
+
+    # Prevents shutdown of program and await user input
     window.mainloop()
 
 
