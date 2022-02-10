@@ -1,3 +1,8 @@
+"""This didnt work out
+B-spline didnt work well with the data
+Ignore this file
+"""
+
 import numpy as np
 import warnings
 from pydl.pydlutils import bspline
@@ -8,7 +13,6 @@ Extends inbuilt Exception class
 """
 class SplineError(Exception): pass
 
-# TODO: Add documentation for this
 def interpolate_masked_spline(all_time, all_masked_time, all_masked_spline):
     return [np.interp(time, masked_time, masked_spline) if len(masked_time) > 0 else np.full_like(time, np.nan) for time, masked_time, masked_spline in zip(all_time, all_masked_time, all_masked_spline)]
 

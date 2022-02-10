@@ -109,7 +109,7 @@ def removeNoise(tpfs: lk.TargetPixelFileCollection, source: str = 'kepler'):
     # The compulsory pass through PLDCorrector
     lc_pld = lk.LightCurveCollection([])
     for tpf in tpfs:
-        lc_pld.append(tpf.to_corrector('pld').correct())
+        lc_pld.append(tpf.to_corrector('pld').correct().remove_nans())
     
     lc_pld = lc_pld.stitch().remove_outliers().flatten()
 
